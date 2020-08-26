@@ -146,17 +146,16 @@ We hebben al gezien hoe je variabelen kan printen. Bijvoorbeeld:
 
 Je kan dit ook op een andere manier te doen:
 
-    print("De temperatuur is {} graden.".format(temperature))
+    print(f"De temperatuur is {temperatuur} graden.")
 
-De accolades, `{}`, in de string geven aan dat er nog een waarde ingevuld moet worden. Met `format` geef je vervolgens aan welke waarde dat moet zijn.
+Let op die `f` voor de string (men noemt dit meestal een f-string!). Deze maakt dat je met accolades de waarde van een variabele kunt invoeren in de string. Zo kun je preciezer kiezen hoe de string eruit komt te zien.
 
 Dit kan vooral handig zijn voor het printen van meerdere variabelen:
 
     temperature = 1000
     pressure = 1.013
-    print("Het is {} graden en de luchtdruk is {} bar.".format(temperature, pressure))
+    print(f"Het is {temperature} graden en de luchtdruk is {pressure} bar.")
 
-In dit geval zijn er twee placeholders, `{}`, die door `format` worden ingevuld.
 
 # Commentaar
 

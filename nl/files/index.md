@@ -109,9 +109,9 @@ We wilden het aantal totaal aantal doelpunten uitreken dat Van Basten voor zijn 
         totaal_doelpunten = totaal_doelpunten + doelpunten   
 
         if(doelpunten > 20):
-            print("In {} scoorde Van Basten > 20 doelpunten, nl {}".format(seizoen, doelpunten))
+            print(f"In {seizoen} scoorde Van Basten > 20 doelpunten, nl {doelpunten}")
 
-    print("TOTAAL: In totaal scoorde Van Basten {} clubdoelpunten".format(totaal_doelpunten))
+    print(f"TOTAAL: In totaal scoorde Van Basten {totaal_doelpunten} clubdoelpunten")
     input_file.close()
 
 Gebruik altijd `close()` om het bestand netjes te sluiten na gebruik.
