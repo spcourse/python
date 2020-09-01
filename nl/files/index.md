@@ -2,7 +2,7 @@
 
 Een veel voorkomende toepassing van computerprogramma’s is het inlezen, verwerken en analyseren van grote databestanden. Big data! We zullen in deze module leren hoe we data inlezen, en we gebruiken onze kennis van Python om de data te rubriceren en grafieken te maken van onze resultaten.
 
-# Inlezen files en verwerken van de data
+## Inlezen files en verwerken van de data
 
 ![](VanBastenKlein.jpg){:.inline}
 
@@ -109,9 +109,9 @@ We wilden het aantal totaal aantal doelpunten uitreken dat Van Basten voor zijn 
         totaal_doelpunten = totaal_doelpunten + doelpunten   
 
         if(doelpunten > 20):
-            print("In {} scoorde Van Basten > 20 doelpunten, nl {}".format(seizoen, doelpunten))
+            print(f"In {seizoen} scoorde Van Basten > 20 doelpunten, nl {doelpunten}")
 
-    print("TOTAAL: In totaal scoorde Van Basten {} clubdoelpunten".format(totaal_doelpunten))
+    print(f"TOTAAL: In totaal scoorde Van Basten {totaal_doelpunten} clubdoelpunten")
     input_file.close()
 
 Gebruik altijd `close()` om het bestand netjes te sluiten na gebruik.
@@ -120,11 +120,11 @@ Gebruik altijd `close()` om het bestand netjes te sluiten na gebruik.
 
 Download de file met de doelpunten statistiek van Van Basten en probeer de bovenstaande resultaten te reproduceren.
 
-# Schrijven naar een bestand
+## Schrijven naar een bestand
 
 Hoewel we dat in deze cursus niet tegen zullen komen is het belangrijk dat je weet hoe je gegevens naar een file schrijft in plaats van ze alleen maar in te lezen. Het is vrij eenvoudig zoals je in de volgende 2 voorbeelden zult zien. Belangrijkste is dat je bij het gebruik van het `open()` commando nu de extra parameter `'w'` (write) meegeeft.
 
-## Voorbeeld: tekst schrijven naar een file
+### Voorbeeld: tekst schrijven naar een file
 
 Dit stuk code opent een file 'outputfile.txt', schrijft daar 1 regel tekst in weg  en sluit de file weer.
 
@@ -132,7 +132,7 @@ Dit stuk code opent een file 'outputfile.txt', schrijft daar 1 regel tekst in we
     output_file.write("Het vak Inleiding Programmeren is bere-interessant")
     output_file.close()
 
-## Voorbeeld: extra tekst achter bestaande regel plakken
+### Voorbeeld: extra tekst achter bestaande regel plakken
 
 Dit stuk code opent de file inputfile, plakt voor elke regel de letters "XXX" en schrijft deze nieuwe regel vervolgens weg in een outputfile.
 

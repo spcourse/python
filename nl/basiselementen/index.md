@@ -23,7 +23,7 @@ En geloof het of niet, maar dat is zo'n beetje alles wat je nodig hebt. Elk prog
 
 Hieronder vind je enkele van deze elementen zoals je ze in Python kunt terugvinden. De oplossing voor de eerste opdracht kun je straks met behulp van deze elementen implementeren.
 
-# Printen
+## Printen
 
 Als je een programma hebt geschreven kun je het uitvoeren (*runnen*). De computer loopt dan stap voor stap door je programma en voert de instructies uit die op elke regel staan.
 
@@ -89,7 +89,7 @@ Hieronder vind je een lijstje van operators die je kunt gebruiken om formules sa
 
 Let op: als je twee gehele getallen deelt met de `//`-operator, zal er altijd een geheel getal uitkomen. Dan is `3 // 2` niet `1.5`, maar `1`. Dat is waarom de `%`-operator er mooi bijpast; die geeft de "rest", ofwel wat overblijft.
 
-# Variabelen
+## Variabelen
 
 Een **waarde** is een van de basale onderdelen in een programma. In de voorbeelden hierboven heb je bijvoorbeeld al reeksen letters en ook cijfers gezien. Tot nu toe zijn we alleen bezig geweest met **constante waarden**, die bij het schrijven van het programma al uitgespeld worden (in het bovenstaande geval ging het bijvoorbeeld om een tekstje `"Hello, world!"`). Maar als we bij het programmeren al weten wat het antwoord wordt, dan hebben we natuurlijk eigenlijk geen computer nodig! Laten we dus doen waar computers goed in zijn: rekenen.
 
@@ -123,7 +123,7 @@ Je kunt waarden ook **converteren** van het ene naar het andere type. Gebruik bi
 
 Is het trouwens opgevallen dat kommagetallen op z'n Amerikaans worden geschreven? Met een punt dus! Dit is in vrijwel alle programmeertalen het geval.
 
-# Invoer door een gebruiker
+## Invoer door een gebruiker
 
 Behalve printen naar een gebruiker van jouw programma, kun je ook om invoer van een gebruiker vragen. Zo kun je **interactieve programma's** schrijven die op basis van gebruikersinvoer berekeningen doen. In Python zijn er verschillende functies om om invoer te vragen. Eén daarvan is `input()`, en deze gebruik je zoals hieronder:
 
@@ -137,7 +137,7 @@ Nu komt uit `input` altijd een string. Maar soms wil je natuurlijk dat de gebrui
     aantal_stoelen = input("Hoeveel stoelen moeten gereserveerd worden? ")
     aantal_stoelen = int(aantal_stoelen)
 
-# Format
+## Format
 
 We hebben al gezien hoe je variabelen kan printen. Bijvoorbeeld:
 
@@ -146,19 +146,18 @@ We hebben al gezien hoe je variabelen kan printen. Bijvoorbeeld:
 
 Je kan dit ook op een andere manier te doen:
 
-    print("De temperatuur is {} graden.".format(temperature))
+    print(f"De temperatuur is {temperatuur} graden.")
 
-De accolades, `{}`, in de string geven aan dat er nog een waarde ingevuld moet worden. Met `format` geef je vervolgens aan welke waarde dat moet zijn.
+Let op die `f` voor de string (men noemt dit meestal een f-string!). Deze maakt dat je met accolades de waarde van een variabele kunt invoeren in de string. Zo kun je preciezer kiezen hoe de string eruit komt te zien.
 
 Dit kan vooral handig zijn voor het printen van meerdere variabelen:
 
     temperature = 1000
     pressure = 1.013
-    print("Het is {} graden en de luchtdruk is {} bar.".format(temperature, pressure))
+    print(f"Het is {temperature} graden en de luchtdruk is {pressure} bar.")
 
-In dit geval zijn er twee placeholders, `{}`, die door `format` worden ingevuld.
 
-# Commentaar
+## Commentaar
 
 Als je in één bestand redelijk wat Python-code hebt geschreven, dan is het handig om duidelijk te maken *wat waar staat* (voor de lezer van de code zelf, niet voor de gebruiker van het programma). Daarom kun je regels commentaar toevoegen in je code. Die zien er zo uit:
 

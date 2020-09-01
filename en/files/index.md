@@ -108,9 +108,9 @@ We wanted to calculate the total number of goals van Basten has made for his clu
         total_goals = total_goals + goals   
 
         if(goals > 20):
-            print("In {} Van Basten scored > 20 goals, nl {}".format(season, goals))
+            print(f"In {season} Van Basten scored > 20 goals, nl {goals}")
 
-    print("TOTAAL: In total Van Basten scored {} clubgoals".format(total_goals))
+    print(f"TOTAAL: In total Van Basten scored {total_goals} clubgoals")
     input_file.close()
 
 Always use `close()` to close the file you worked with after use. 
