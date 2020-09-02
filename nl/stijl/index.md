@@ -123,7 +123,7 @@ Zoals hierboven beschreven bij "commentaar" kun je je programma vaak opdelen in 
 
     number = int(input("Please enter a number: "))
     while number < 0:
-        number = input("Please enter a *positive* number: ")
+        number = int(input("Please enter a *positive* number: "))
 
     # calculations: uses a complex loop to handle special cases
     while(number > 0):
