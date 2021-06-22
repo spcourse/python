@@ -27,3 +27,5 @@ Design is tot op zekere hoogte subjectief. Er zijn heel veel keuzes die je kunt 
 - Probeer je code zo **bondig** mogelijk te houden. Door goed gebruik te maken van de elementen van de programmeertaal, kun je sommige dingen korter opschrijven. Denk bijvoorbeeld aan de keuze voor een `for`- of een `while`-loop. **Let op:** in deze cursus ben je beperkt tot de taalelementen die wij introduceren. Als je al programmeerervaring hebt kan dat soms lastig zijn, maar ook dan kun je vaak creatief omgaan met de elementen die je gekregen hebt.
 
 - Probeer blokjes code **apart** te zetten in functies met een duidelijke naam (decompositie). Als je code wat lang begint te worden kun je vaak stukjes code een eigen plek geven. Zelfs als je een functie maar één keer gebruikt kan het nuttig zijn om er een te maken. Zo'n functie heeft een eigen naam en als je de code snel doorleest hoef je de inhoud van de functie niet eens helemaal te lezen om 'm te begrijpen.
+
+<!-- TODO dit zou geweldig zijn om ergens in de cursus te zetten! Wel in het engels dan -->

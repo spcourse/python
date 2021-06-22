@@ -95,6 +95,15 @@ From here on out when you open a terminal we can use the following command to en
 
     conda activate progLab
 
-If everything worked, you will now see that your terminal shows `(progLab)`. 
+If everything worked, you will now see that your terminal shows `(progLab)`.
 
 **Important:** If you want to use all of the libraries you've just installed and `import` them in your own code, you will have to have *this* environment active. We recommend you *always* have this environment active when working on assignments for the minor.
+
+<!-- TODO dit moet even geverifieerd worden voor non-windows users.. -->
+To make sure that this environment is activated every time that we start a terminal, we can run the following command:
+
+    echo 'conda activate progLab' >> ~/.bash_profile
+
+**Windows users** now need to perform one more command, that will ensure that Python functions as intended:
+
+     echo "alias python='winpty python'" >> ~/.bash_profile
