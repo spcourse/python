@@ -1,4 +1,4 @@
-# Example: Improving `count_occurrence()`
+# Example: Improving count_occurrence()
 
 Writing efficient code can be tricky and will take practice, but here we will
 try and walk you through the process step-by-step. If at any point you think
@@ -15,7 +15,7 @@ some questions:
    * We will **have to** loop over every element at least once, in order to
      include everything in the count correctly.
 
-From this we can conclude that we will definitely need the *outer* loop and it cannot be 
+From this we can conclude that we will definitely need the *outer* loop and it cannot be
 reduced, as it will be necessary to visit every element once. So then we should try
 and reduce the *inner* loop, where we try to make the count for each number.
 
@@ -27,7 +27,7 @@ and reduce the *inner* loop, where we try to make the count for each number.
 				if elem_1 == elem_2:
 					c += 1
 
-			counts.append(c) 
+			counts.append(c)
 		return counts
 
 Our first idea might be to avoid counting elements that have already been
@@ -77,6 +77,5 @@ version
 				counts[elem] += 1
 			else:
 				counts[elem] = 1
-		
-		return counts
 
+		return counts
