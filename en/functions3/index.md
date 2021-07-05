@@ -17,20 +17,26 @@ Which would give the following output:
     100
     ['a', 'b', 123]
 
+In most cases you will want to return two or three values. More is possible, but if you want to return a lot of values it is probably better to return a list or some other datastructure.
+
 One could also save the result of the function as a single variable, and specific elements of the result can be indexed as in a list:
 
-    test_result = test()
+    def hours_to_days(hours):
+      days = floor(hours / 24)
+      remainder = hours % 24
+
+      return days, remainder
+
+    test_result = hours_to_days(123)
 
     print(test_result)
     print(test_result[0])
     print(test_result[1])
-    print(test_result[2])
 
 Would give the following output:
 
-    ('abc', 100, ['a', 'b', 123])
-    abc
-    100
-    ['a', 'b', 123]
+    (5, 3)
+    5
+    3
 
 The round brackets indicating that the values are packed together in a tuple. A tuple is a special type of "collection" in Python, but for now it suffices to know that it behaves similar to a list.
