@@ -61,10 +61,39 @@ And read more about the computational complexity dictionaries: [complexity](/pyt
 
 ### Practice
 
+#### Exercise 5
+Measure the dictionaries and list in a similar way as in the video, but now focus on the `in` operator. Use runs with lists and dictionaries of different sizes. Use 10, 100, 1000, and 10,000 (ad maybe 100,000 if you have a fast computer). For every run, execute the `in`-operation 100,000 times (to get reliable results). Write down the results (you can do this manually), and create a table with the runtimes that looks something like this:
+
+	size  |  list |  dict
+	10    |  0.14 |  0.09
+	100   | ??.?? | ??.??
+	1000  | ??.?? | ??.??
+	10000 | ??.?? | ??.??
+
+You can use the code below to get started
+
+	from time import time
+	from random import randint
+
+    # create a list and dictionary containing both n items
+	n = 10
+	my_list = list(range(n))
+	my_dict = {}
+	for i in my_list:
+	    my_dict[i] = randint(0, 10)
+
+	# test speed
+	iterations = 100000
+	start = time()
+	for _ in range(iterations):
+
+		# TODO: enter code to test
+
+	end = time()
+	print(f'The time elapsed: {end-start:.2f} seconds (with {iterations} iterations)')
 
 
-#### Exercise 1
-
+#### End
 
 This concludes this introduction to dictionaries.
 
