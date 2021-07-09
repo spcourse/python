@@ -110,15 +110,27 @@ we also get a *KeyError*
 
 ### get
 
-We can also use the `get()` function instead of the square brackets, and as the
-second argument tell the dictionary what value we want if the key is not
-present in the dictionary
+Sometimes when we use a key that's not in the dictionary we do not want it to throw an error. But instead return a default value (for example `0`). For this, we can use the `get()` function instead of the square brackets, and as the second argument tell the dictionary what value we want if the key is not present in the dictionary:
 
     >>> basket.get('mango', 0)
     0
 
 So now we know that our fruit basket unfortunately contains zero mangoes, but in
 many situations this result is much more useful then producing an error.
+
+Note that when an item *is* present in the dictionary `get()` will behave just the same as the square brackets:
+
+    >>> basket.get('apple', 0)
+    6
+    >>> basket['apple']
+    6
+
+It is also important to realize that `get()` **does not add items to the dictionary**. After using `get()` to lookup `'mango'`, it is not added to the dictionary.
+
+    >>> basket.get('mango', 0)
+    0
+    >>> basket
+    {'apple': 6, 'orange': 2, 'strawberry': 10, 'banana': 6}
 
 ### in
 
