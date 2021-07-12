@@ -19,7 +19,7 @@ conditional execution
 repetition
 : Repeating a single task or set of tasks multiple times, often times with variation between repetitions.
 
-And believe it or not, but that's about all you'll be needing. Every program you've ever used on the computer, no matter how complicated, at the core consists out of some nature of these action. **Programming** can be seen as repeatedly decomposing a large, complex task in to smaller, easier subtasks, until you can **implement** a program in a programming language, using only the above 5 elements.
+And believe it or not, but that's about all you'll be needing. Every program you've ever used on the computer, no matter how complicated, at the core consists of some nature of these actions. **Programming** can be seen as repeatedly decomposing a large, complex task into smaller, easier subtasks, until you can **implement** a program in a programming language, using only the above 5 elements.
 
 Here you'll find some of these elements in the way that you can use them in Python. Using these elements will help you implement the solution for the very first assignment shortly.
 
@@ -37,7 +37,7 @@ Make a text file **exercise.py** (remember how?) and add the following lines to 
     print("Ivo's computer does not work today.")
     print('He said: "Hello."')
 
-> Practicing for this course can be done by literally copying examples word for word. Don't use the *copy-paste* function though, because that way you don't make any mistakes and you'll learn less. Type out all examples you see and fix your mistakes if you get an error message!
+> Practicing for this course can be done by literally copying examples word for word. Don't use the *copy-paste* function though, because that way you won't make any mistakes and you probably wouldn't learn much. Type out all examples you see and fix your mistakes if you get an error message!
 
 Now start the program you've just carefully copied, word for word:
 
@@ -73,7 +73,7 @@ Next, add the following lines to your `exercise.py`:
 
 You can also perform basic math. The *result* of the calculation is displayed on the screen. Except the last line: that one shows the formula (*expression*) between parentheses. Just like earlier with the texts. The expression within the brackets is a string and not a formula that can readily be calculated.
 
-> Do you get an error message if you run the program? Chances are that you've made a mistake copying the commands leaving Python confused what you meant in the first place. Take a close look to find where you've made that mistake. If you can't seem to find it, do ask for some assistance. Learning to understand error messages is an important part of this course. That's why we want you to make a mistake every now and then!
+> Do you get an error message if you run the program? Chances are that you've made a mistake copying the commands leaving Python confused about what you meant in the first place. Take a close look to find where you've made that mistake. If you can't seem to find it, do ask for some assistance. Learning to understand error messages is an important part of this course. That's why we want you to make a mistake every now and then!
 
 ## Operators
 
@@ -89,7 +89,7 @@ Below you'll find a list of mathematical operators you can use to compose formul
 | `2 ** 1` | exponentiation            |
 
 
-Note: when two whole numbers are divided by using two `/`-operator, the result will always be a whole number. SO `3//2` won't be `1.5` but `1`. That is why the `%`-operator fits in so nicely; it gives the remainder after division.
+Note: when two whole numbers are divided by using two `/`-operators, the result will always be a whole number. SO `3//2` won't be `1.5` but `1`. That is why the `%`-operator fits in so nicely; it gives the remainder after division.
 
 ## Variables
 
@@ -129,13 +129,13 @@ Did you notice that decimals are denoted in the American Style (with a point ins
 
 ## User input
 
-Besides having your program printing to the user, you can also ask for input from the user. This way you can write **interactive programs** that can perform calculations based on user provided values. Python comes with a variety of different function to prompt for input. One of which is `input()`, which can be used as shown below:
+Besides having your program printing to the user, you can also ask for input from the user. This way you can write **interactive programs** that can perform calculations based on user provided values. Python comes with a variety of different functions to prompt for input. One of which is `input()`, which can be used as shown below:
 
     name = input("Please enter your first name: ")
     print("Hello,", name)
 
 
-The string `"Please enter your first name: "` that follows the function `input`, is immediately displayed on the users screen when `input` is executed. After which `input` will patiently wait for the user to fill in any value and until they press **enter**. The provided value is now assigned a name. In the example above it is coincidentally assigned the name `name`. After which it is printed on the next line using the variable `name` within the print statement.
+The string `"Please enter your first name: "` that follows the function `input`, is immediately displayed on the user's screen when `input` is executed, after which `input` will patiently wait for the user to fill in any value and press **enter**. The provided value is now assigned a name. In the example above it is coincidentally assigned the name `name`, after which it is printed on the next line using the variable `name` within the print statement.
 
 The `input` function always gives you the user provided value as a string. But sometimes you might want the user to provide a number, so you can perform a calculation. Then you'd have to use one of the conversions demonstrated above. For instance:
 
@@ -153,7 +153,7 @@ There is also another, better, way of printing variables in a string:
 
     print(f"The temperature is {temperature} degrees.")
 
-The `f` that precedes the quotation marks of the string denotes that this is a **formatted string**. In which the accolades, `{}`, signify a placeholder that contains a variable. Upon printing the part of the string in accolades is replaced for the the value that variable has at the time of printing.
+The `f` that precedes the quotation marks of the string denotes that this is a **formatted string**. In which the accolades, `{}`, signify a placeholder that contains a variable. Upon printing, the part of the string in accolades is replaced with the value that the variable has at the time of printing.
 
 This is especially useful when printing multiple variables:
 
@@ -165,7 +165,7 @@ You can also perform arithmetic or other actions within the curly braces `{}`, t
 
 ## Comments
 
-If a single file contains a sizable amount of Python-code, it is good practice to clearly denote *what is where* (for the reader of the code, not the user of the program). To that end you can add lines of commentary to your code. They look like this:
+If a single file contains a sizable amount of Python-code, it is good practice to clearly denote *what is where* (for the reader of the code, not the user of the program). That way you can add lines of commentary to your code. They look like this:
 
     # calculation
     x = x + 1
