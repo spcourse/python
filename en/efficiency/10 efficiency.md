@@ -8,9 +8,9 @@ a `for` loop with a `while` loop should result in functionally the same code, bu
 most cases the choice for one approach over another will have a measurable effect
 on the code. Which approach you end up choosing, can depend on a few different factors:
 
-1. Some approaches might be less lines of code to write than others (not always the
+1. Some approaches might have fewer lines of code to write than others (not always the
    best reason).
-2. Some approaches might be more readable, requiring less documentation to be
+2. Some approaches might be more readable, requiring less documentation for the code to be
    understandable.
 3. Some approaches might take less time computing when solving the same
    problem, making them faster to compute the same solution.
@@ -24,14 +24,14 @@ definitely does not imply faster to compute. If it isn't code length, then what
 A general rule for efficiency is that it becomes more important as the data you
 are working with gets larger. If you have to process millions of data points,
 then inefficient code might have you waiting for the results for a long time,
-or worse, make your solution infeasible altogether. In science we often
+or worse, make your solution infeasible altogether. In science, we often
 work with large data sets, so studying the fundamentals of efficient code for any
 size of input will prove to be a useful tool.
 
 In computer science, efficiency is usually expressed by the relationship
 between the computation time of a piece of code and the size of its input. If
-there is more data for a piece code to process, then logically the
-computation will take longer, but how much longer exactly, determines how
+there is more data for a piece of code to process, then logically the
+computation will take longer, but how much longer exactly determines how
 efficient the code is. Let's take the simple function below as an example
 
 	def sum_list(inputs):
@@ -42,20 +42,20 @@ efficient the code is. Let's take the simple function below as an example
 
 As the number of elements in this list grows, so does the number of steps
 in this for loop. So, we would naturally expect longer lists to take longer to
-compute. Let's test that hypothesis, by seeing how long different calls of this
+compute. Let's test that hypothesis by seeing how long different calls of this
 function end up taking. We'll do this using the `time` library, which we can use
 to measure the current time directly before and after the function. Below is a
 general function, which will apply some function to a list and measure how long
 this takes.
 
-Next we'll use the `random` library to generate an integer between *0* and *100*
+Next, we'll use the `random` library to generate an integer between *0* and *100*
 and repeat this *N* times, to have a list of *N* random integers. You do not
-have to understand the details of these function, but they are used for all
-tests and thus shown here for completeness.
+have to understand the details of these functions, but they are used for all
+tests and are, thus, shown here for completeness.
 
 	import time
 	import random
-	  
+
 	def timed_function_list(function, input_list):
 		# Measure start time
 		start = time.time()
@@ -64,16 +64,16 @@ tests and thus shown here for completeness.
 		# Measure end time
 		end = time.time()
 
-		print("The %s of %s elements took %6f seconds to compute." % 
+		print("The %s of %s elements took %6f seconds to compute." %
 			  (function.__name__, str(len(input_list)).rjust(10), end-start))
 
 		return result
-	  
+
 	def random_list(N, max_int=100):
 		# Generate N random numbers between 0 and max_int
 		return [random.randint(0, max_int) for i in range(N)]
 
-Now we have all the components to measure the `sum_list()` function. We can generate random inputs of size *N* using `random_list()` and use `timed_function_list()`to measure how long it takes to process each input.
+Now we have all the components to measure the `sum_list()` function. We can generate random inputs of size *N* using `random_list()` and use `timed_function_list()` to measure how long it takes to process each input.
 
 The code below uses different powers of 10 as increasingly larger inputs (`**` is the power operator in *Python*). For each input size it generates a random list and times how long it took to compute the total using `sum_list()`.
 
@@ -91,8 +91,8 @@ The code below uses different powers of 10 as increasingly larger inputs (`**` i
 	The sum_list of  100000000 elements took 7.268038 seconds to compute.
 	The sum total was 4949616780
 
-Although not exactly, we can see that for each factor of 10 larger input list,
-approximately requires a factor of 10 longer to compute. Intuitively, this
+Although not exactly, we can see that for each factor of 10 by which the length of the input list increases,
+the result approximately requires 10 times longer to compute. Intuitively, this
 might make sense, as the number of steps in the for loop grows linearly with
 each element added to the list. This means the `sum_list()` function has a
 linear increasing efficiency.
@@ -101,7 +101,7 @@ Quantifying this increase in efficiency is done more formally in computer
 science using the big $$O$$ notation. The big $$O$$ is written
 as a function of the input size *N*, so a simple linear increase would be
 denoted as $$O(N)$$. As the size of the input *N* increases, so does
-the computation time increase by a factor $$O(N)$$.
+the computation time by a factor $$O(N)$$.
 
 ### Timing tests and the big O notation
 
@@ -127,8 +127,8 @@ in mind when comparing the results between experiments.*
 
 ## Quadratic Complexity
 
-So, the `sum_list` function has complexity of $$O(N)$$, but
-unfortunately, not all problems can be solved with a linear complexity. Lets
+So, the `sum_list` function has a complexity of $$O(N)$$, but
+unfortunately, not all problems can be solved with a linear complexity. Let's
 take a look at another example, where we are trying to count how often each
 number occurs in our list. We will take a somewhat naive approach and generate
 a new list indicating how often each number occurs:
@@ -142,17 +142,17 @@ a new list indicating how often each number occurs:
 				# If the elements match, increase the count by 1
 				if elem_1 == elem_2:
 					c += 1
-			
+
 			# After comparing to all the elements in the list, add the count
 			counts.append(c)
-		
+
 		# Return the list of counts for each element
 		return counts
 
 	for i in range(2, 5):
 		inputs = random_list(10**i)
 		counts = timed_function_list(count_occurrence, inputs)
-		
+
 		# Show the counts for the first 5 numbers
 		for j in range(5):
 			print("The number", inputs[j], "occurs", counts[j], "times")
@@ -176,13 +176,12 @@ a new list indicating how often each number occurs:
 	The number 9 occurs 84 times
 	The number 22 occurs 112 times
 
-Some important things to note here: Firstly, the number of elements we are
+There are some important things to note here. Firstly, the number of elements we are
 using to make this comparison is **much** smaller, in order to keep the
-computation times manageable. Secondly, for this function, with every factor 10
-more elements, the computation time appears to scale up by a much larger factor than 10!
+computation times manageable. Secondly, for this function, the computation time for every factor 10 more elements, appears to scale up by a much larger factor than 10!
 
-Going from 1000 to 10000 elements the input size *N* grows by a factor of 10.
-What we measured is the time grows from *0.0421* to *4.2984* or a factor of 102,
+Going from 1000 to 10000 elements, the input size *N* grows by a factor of 10.
+We measured an increase in time from *0.0421* to *4.2984* or a factor of 102,
 which seems  closer to a factor of  *100*, or $$10^2$$.
 
 This is because our function `count_occurrence` actually has a quadratic complexity,
@@ -204,7 +203,7 @@ input size compared to $$10^5$$ elements. Given the quadratic complexity, we wou
 a $$(10^4)^2$$ increase in computation time, meaning about *4* seconds *x*
 $$10^8$$, which is about **13 years!**
 
-Here we can really see a practical difference between a $$O(N)$$ or a
+Here we can really see a practical difference between an $$O(N)$$ or an
 $$O(N^2)$$ function. For $$10^3$$ elements or less, you probably won't
 notice any difference at all, as all computations will be well under 1 second.
 For $$10^6$$ it already makes the difference between less than 1 second and
@@ -227,7 +226,7 @@ roughly the same, even if you have billions of elements to process.
 What kind of function could meet this ideal complexity might be hard to
 imagine for now, but we'll start with a trivial example. Later in this module we'll see
 much more interesting functions with $$O(1)$$ complexity, specifically
-when we cover dictionaries. Lets start by considering this simple function, which
+when we cover dictionaries. Let's start by considering this simple function, which
 always returns the first element from a list:
 
 
@@ -237,7 +236,7 @@ always returns the first element from a list:
 
 	for i in range(5, 9):
 		inputs = random_list(10**i)
-		
+
 		elem = timed_function_list(get_first_element, inputs)
 		print("The first element was", elem)
 
@@ -252,13 +251,13 @@ always returns the first element from a list:
 	The first element was 46
 
 
-As you a can see, getting the first element takes about the same time for each
+As you can see, getting the first element takes about the same time for each
 of these input sizes, even though the inputs get bigger with a factor 10 each
 time. This means the function `get_first_element` has a complexity of
 $$O(1)$$. So in theory, we could get the first element from a list with
-*any* number of elements and it would still only take 0.000004 seconds (although at some point we might have some trouble fitting that list in our computers memory).
+*any* number of elements and it would still only take 0.000004 seconds (although at some point, we might have some trouble fitting that list in our computer's memory).
 
-Next, take a look at the readings on data structures. These reading will not
+Next, take a look at the readings on data structures. These readings will not
 just cover the operations that a data structure supports, but also what the
-complexity is of each these operations. Many data structures are used *specifically*
+complexity is of each of these operations. Many data structures are used *specifically*
 because they are more efficient in certain situations.
