@@ -11,11 +11,10 @@ The difference between dictionaries and lists is that instead of using an index
 to access elements, we use a key. Searching for things by their keys is the
 main reason dictionaries are used so often and why they are such an efficient
 data structure. In a list, if we don't know at what index something is stored
-exactly, we'd have to loop over the list until we found the matching element.
-Whereas in a dictionary, we can just search by key. More on why this is
-efficient later, for now lets just see a simple example.
+exactly, we'd have to loop over the list until we found the matching element, whereas in a dictionary, we can just search by key. More on why this is
+efficient later, for now let's just see a simple example.
 
-One way we could use a dictionary, is to store the mappings in an actual
+One way we could use a dictionary is to store the mappings in an actual
 English-Spanish translation dictionary. We might have the string "Yes" and we
 want to store its Spanish translation:
 
@@ -34,14 +33,14 @@ translation in the dictionary.
 
 The mapping here is from one element to another associated element (its
 translation), which we might want to look up. This is generally how
-dictionaries are used in Python. Lets take a closer look at at the syntax in
+dictionaries are used in Python. Let's take a closer look at the syntax in
 Python and some more cases where we might want to use dictionaries.
 
 So, dictionaries are an efficient way to store pairs of variables together. As
 another example, we could make a fruit basket and store the quantity we have of the different types of fruit. In our previous example we stored Spanish
 translations for English words in our dictionary, and here we are going to
 store counts for each type of fruit. Using dictionaries in this way, as a
-mapping from elements to some count (or a score) is another very common way to use dictionaries
+mapping from elements to some count (or a score), is another very common way to use dictionaries
 
     >>> basket = {'apple': 4, 'banana': 7, 'orange': 2}
     >>> basket
@@ -65,16 +64,16 @@ Using this same syntax, we can add a new *key-value pair*
     >>> basket
     {'apple': 4, 'orange': 2, 'strawberry': 10, 'banana': 7}
 
-Or we could use this syntax to modify an existing pair. Lets say we ate one of
+Or we could use this syntax to modify an existing pair. Let's say we ate one of
 the bananas, then we could update the dictionary by writing
 
     >>> basket['banana'] -= 1
     >>> basket
     {'apple': 4, 'orange': 2, 'strawberry': 10, 'banana': 6}
 
-Each *key* in a dictionary **must** be unique, so if we try to adding a *key*
+Each *key* in a dictionary **must** be unique, so if we try to add a *key*
 that already exists, we'll end up overwriting the corresponding *value*. So,
-if we try to add another key for apples, will just end up replacing the old
+if we try to add another key for apples, we'll just end up replacing the old
 pair
 
     >>> basket['apple'] = 6
@@ -97,7 +96,7 @@ course occur in our basket, stored under the key `'orange'`
     >>> basket['orange']
     2
 
-If we try to retrieve the number of *mango*, which aren't in the basket at all,
+If we try to retrieve the number of *mangoes*, which aren't in the basket at all,
 we also get a *KeyError*
 
     >>> basket['mango']
@@ -112,8 +111,8 @@ present in the dictionary
     >>> basket.get('mango', 0)
     0
 
-So now we know that our fruit basket unfortunately contains zero mangoes, but in
-many situations this result is much more useful then producing an error.
+So, now we know that our fruit basket unfortunately contains zero mangoes, but in
+many situations this result is much more useful than producing an error.
 
 We can also explicitly ask if a key is present in the dictionary using `in`
 
@@ -128,7 +127,7 @@ this will actually take longer to complete as more elements are added to the
 list, because it is actually an $$O(N)$$ operation. As stated in the
 introduction, dictionaries are not just convenient to use, but also very
 efficient. In fact, they are so efficient that searching in a dictionary in
-practice almost always is is an $$O(1)$$ operation (in very improbable cases,
+practice almost always is an $$O(1)$$ operation (in very improbable cases,
 the big $O$ might be $O(N)$). This means the search will take approximately the
 same time if the dictionary contains 1 or **1 million** elements!
 
@@ -137,15 +136,15 @@ Learn more about the speed of dictionaries in this video:
 ![embed](https://api.eu.kaltura.com/p/120/sp/12000/embedIframeJs/uiconf_id/23449960/partner_id/120?iframeembed=true&playerId=kaltura_player&entry_id=0_mjatxx9k&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en_US&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[hotspots.plugin]=1&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=0_t24tqi37)
 
 
-That lookup times for dictionaries are an $$O(1)$$ operation is a *strange and counter-intuitive* fact, and why this is true is well
+The fact that look-up times for dictionaries are an $$O(1)$$ operation is a *strange and counter-intuitive* fact, and why this is true is well
 beyond the scope of this text, but it should give you an idea of the power of
-dictionaries and why they are used so often: Checking if a key is present in a
+dictionaries and why they are used so often. Checking if a key is present in a
 dictionary or retrieving the value stored with that key are both **constant
 time** $$O(1)$$ operations, irrespective of the number of elements
 stored in that dictionary.
 
 As a result, dictionaries are mostly used for these look-up operations, but
-sometime you'll also want to loop over the elements in your dictionary.
+sometimes you'll also want to loop over the elements in your dictionary.
 Dictionaries support many of the same operations that lists do. For instance,
 you can use `len` to ask how many pairs there are in the dictionary
 
