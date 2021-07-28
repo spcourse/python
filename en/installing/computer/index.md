@@ -18,7 +18,7 @@ This package can be downloaded at their [website](https://www.anaconda.com/downl
 
 As soon as the download is finished, you have to execute the downloaded file (double click?). Follow the installation instructions and choose "Install for me only" where you can; if everything is okay you don't need to alter anything else.
 
-**Note: for Windows always choose the "advanced" installation and tick the following box! If you did not, you have to reinstall anaconda!**
+**For Windows always choose the "advanced" installation and tick the following box! If you did not, you have to reinstall anaconda!**
 
 ![Tick the box: "Add to PATH" when installing Anaconda](anaconda_vinkje.gif)
 
