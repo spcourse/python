@@ -1,6 +1,6 @@
 # Lists
 
-A list in Python is a useful way of grouping data so they can be interacted with as a whole. This way calculations can be performed on the entire collection in one go instead of each number individually.
+A list in Python is a useful way of grouping data so they can be interacted with as a whole. This way, calculations can be performed on the entire collection in one go instead of each number individually.
 
 ## Video
 
@@ -22,7 +22,7 @@ Beware that you start counting at `0` with indexing lists. So the following code
     my_name = staff[0]
 	print(my_name)
 
-You can also manipulating the contents of a list. The following code changes the 4th element of the list, which is at index `3`, because we start with counting at `0`.
+You can also manipulate the contents of a list. The following code changes the 4th element of the list, which is at index `3`, because we start with counting at `0`.
 
     staff[3] = "Vera"
 
@@ -56,7 +56,7 @@ This will print:
     Measurement #3 was 14.5 degrees.
     Measurement #4 was 19.0 degrees.
 
-Remember that `range()` basically returns a sequence of numbers, that can be determined as a list. This second method of going over the elements in a list can be very useful wwhen you also need the index of each element.
+Remember that `range()` basically returns a sequence of numbers that can be determined as a list. This second method of going over the elements in a list can be very useful when you also need the index of each element.
 
 ## For more details:
 
