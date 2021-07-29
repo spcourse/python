@@ -1,6 +1,6 @@
 # Loops
 
-In a computer program you often encounter a (small) set of instructions that you want to execute multiple times. They way to do and steer that is by using loops. On this page we discuss the format and features of loops and we will also explore a few examples where loops can be very useful.
+In a computer program you often encounter a (small) set of instructions that you want to execute multiple times. The way to do and steer that is by using loops. On this page we discuss the format and features of loops and we will also explore a few examples in which loops can be very useful.
 
 Please create a file called `practicing_loops.py` and use it to implement the various examples and exercises on this page.
 
@@ -29,11 +29,11 @@ The loop starts by setting the value of `x` to `1` and then executing *all* inst
 
 There are a few important things to note:
 
--   **Note:** Python counts *up to* the last number in the function range(): range(1,11) runs from *up to and including* 10. This is a very common mistake to make when you begin programming in Python. It might feel unintuitive, but that's just the way it is.
+-   **Note:** Python counts *up to* the last number in the function range(): range(1,11) runs from 1 *up to and including* 10. This is a very common mistake to make when you begin programming in Python. It might feel unintuitive, but that's just the way it is.
 
 -   In the above example we assigned the name 'x' to the variable, but we could of course have used a different name like 'number', 'i', 'counter' etc. You can use whatever you want.
 
--   With range you can also specify the step size. This is standard set to 1, but if you prefer to take steps of 10 you would use the following syntax:
+-   With range you can also specify the step size. This is set to 1 by default, but if you prefer to take steps of 10 you would use the following syntax:
 
          for x in range (1, 100, 10):
 
@@ -43,7 +43,7 @@ There are a few important things to note:
 
 In Python, just like in almost every other programming language, there are two different constructions to loop over a variable: the **for-loop** and the **while-loop**.
 
-A for-loop is used when you know beforehand how often you want to repeat the set of instructions. In cases where you do not know the number of repetitions in advance and want to re-evaluate at every iteration whether you want to continue, you use the while-loop. In a while-loop, just like in the for-loop, all instructions are executed for a specific value of the variable. Ths difference is that each time the variable is changed, there is an evaluation wether or not to re-do the block again.
+A for-loop is used when you know beforehand how often you want to repeat the set of instructions. In cases where you do not know the number of repetitions in advance and want to re-evaluate at every iteration whether you want to continue, you use the while-loop. In a while-loop, just like in the for-loop, all instructions are executed for a specific value of the variable. The difference is that each time the variable is changed, there is an evaluation whether or not to re-do the block again.
 
 In most cases, `for` and `while` are interchangeable. This for-loop:
 
@@ -57,7 +57,7 @@ is equal to the following `while-loop`:
 	        print(f"x now has the value {x}")
 	        x = x + 1
 
-The reason that the `for`-loop is more often used is that it is a bit more compact and also more easily readable. However this can only be done if you know beforehand how often the code needs to be executed. In other cases, like with user input, the only way to do it is to use a `while`-loop.
+The reason that the `for`-loop is more often used is that it is a bit more compact and also more easily readable. However, this can only be done if you know beforehand how often the code needs to be executed. In other cases, like with user input, the only way to do it is to use a `while`-loop.
 
 <!-- TODO vervangen -->
 <!-- ![embed](https://player.vimeo.com/video/287247106) -->
@@ -80,7 +80,7 @@ As soon as all instructions have been executed for the highest value the variabl
 
     print(f"The sum of all numbers from 1 to 10 = {total}")
 
-**Exercise 1:** Please change this program by including another print statement: `print(f"The sum of all numbers from 1 to {x} = {total}")`. Include this line beneath `total = total + x`, in such a way that it starts at the same position (the same level of indentation). Run the program and try to understand what happens. Problems with indentation are a very common mistake when using loops, so it is important to see these type of 'mistakes' so you can recognize them later.
+**Exercise 1:** Please change this program by including another print statement: `print(f"The sum of all numbers from 1 to {x} = {total}")`. Include this line beneath `total = total + x`, in such a way that it starts at the same position (the same level of indentation). Run the program and try to understand what happens. Problems with indentation are a very common mistake when using loops, so it is important to see these types of 'mistakes' so you can recognize them later.
 
 **Exercise 2:** At this moment we use the numbers from 1 to 10. Please try to adapt the program in such a way that you define a new variable once at the beginning of the program (so not in the range() function) that holds the maximum number. Use this maximum number as the maximum value for the for-loop: `for x in range(1, maximum)`.
 
@@ -104,7 +104,7 @@ As soon as all instructions have been executed for the highest value the variabl
 <!-- TODO vervangen -->
 <!-- ![embed](https://player.vimeo.com/video/287247135) -->
 
-Within the set of instructions you can also use conditionals. For example, if you want the loop to go from 1 to 20, but want to only print the numbers that are larger than 15 or numbers if it is divisible by three you could use the following code:
+Within the set of instructions you can also use conditionals. For example, if you want the loop to go from 1 to 20, but only want to print the numbers that are larger than 15 or divisible by three, you could use the following code:
 
     for number in range(1, 20):
         if number > 15:
@@ -114,7 +114,7 @@ Within the set of instructions you can also use conditionals. For example, if yo
 
 We have already mentioned that you can decide on the name of the variable. And as you see, in the above example we have changed the name of our variable `x` to `number`.
 
-**Exercise:** Try to adapt the example above in such a way that at the end of the loop, the program rints to the screen how many numbers were exactly divisible by 3. To do this you will have to define a so-called 'counter', a variable that is set to zero at the start of the program and that is incremented by 1 every time you encounter a number that is exactly divisible by 3. Also take some time to format the output to the screen and have your program print:
+**Exercise:** Try to adapt the example above in such a way that at the end of the loop, the program prints to the screen how many numbers were exactly divisible by 3. To do this you will have to define a so-called 'counter', a variable that is set to zero at the start of the program and that is incremented by 1 every time you encounter a number that is exactly divisible by 3. Also take some time to format the output to the screen and have your program print:
 
     From the numbers 1 to 20 there are ... numbers that are exactly divisible by 3.
 
@@ -123,7 +123,7 @@ We have already mentioned that you can decide on the name of the variable. And a
 
 In the examples we have looked at up to now we have only printed things and saved some variables. Nothing too complex. This is not always the case and loops are often used in more complex constructions.
 
-It is also possible to make loops within loops, so-called 'nested loops'*. If you for example want to vary a specific variable `y` from 1 to 3 for every value the variable `x` takes (for example when `x` is the student number and `y` is the mark for three different assignments during an exam) you can use the following construction:
+It is also possible to make loops within loops, so-called 'nested loops'. If you, for example, want to vary a specific variable `y` from 1 to 3 for every value the variable `x` takes on (for example, when `x` is the student number and `y` is the mark for three different assignments during an exam) you can use the following construction:
 
     for x in range(1, 6):
        for y in range(1, 4):
@@ -141,7 +141,7 @@ This program has as output:
 
 **Exercise 6:** Adapt the program in such a way that the print-statement is only executed *if* the sum of `x` and `y` is more than 6.
 
-**Exercise 7:** Adapt the program in such a way that the program, at the moment just before a new value is assigned to `x` (i.e. just after the loop over y is finished) the program prints: `The value of x is now ... and we have just finished the loop over y`.
+**Exercise 7:** Adapt the program in such a way that at the moment just before a new value is assigned to `x` (i.e. just after the loop over y is finished), the program prints: `The value of x is now ... and we have just finished the loop over y`.
 
 The output should look as follows:
 
