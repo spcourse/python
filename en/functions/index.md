@@ -9,7 +9,7 @@ Functions are an important aspect of learning how to code. The start of a functi
     def print_greeting():
         print("Hello")
 
-Note that much like with `if`-statements and `for`-loops, all code that is indented is part of the functions **code block**. Thus you can terminate a function by simply *unindenting* any following code that you write.
+Note that much like with `if`-statements and `for`-loops, all code that is indented is part of the function's **code block**. Thus, you can terminate a function by simply *unindenting* any following code that you write.
 
 This is a function that `print`s the string `Hello` to the terminal. If you add the aforementioned *definition* to a Python file, your computer will know that a function with the name `print_greeting()` exists. But the function hasn't yet been *executed*! You have to do so manually, by explicitly *calling* the function. This is how:
 
@@ -27,16 +27,16 @@ Read more about functions here: [Think Python](http://greenteapress.com/thinkpyt
 
 ## Style and design
 
-Using functions improves readability of your code. With a well-chosen name for each function you can easily gain an overview of what the code is meant to do as a whole. It allows you to first quickly read all function names of a program before having to try and comprehend the functional code.
+Using functions improves the readability of your code. With a well-chosen name for each function you can easily gain an overview of what the code is meant to do as a whole. It allows you to first quickly read all function names of a program before having to try and comprehend the functional code.
 
-Functions can also be expedient when you repeatedly have to use a more or less identical piece of code. Often times when you catch yourself copy pasting parts of your own code, you can better spend some time to find a way to efficiently reuse the code your copying by defining a function!
+Functions can also be expedient when you repeatedly have to use a more or less identical piece of code. Oftentimes when you catch yourself copy-pasting parts of your own code, you'd better spend this time trying to find a way to efficiently reuse the code your copying by defining a function!
 
 <!-- TODO Ik heb dit nu toegevoegd, is dat OK? -->
 ## Programming Basics book
 
 To further aid you in practicing with functions, we have created an [excerpt of the Programming Basics book on functions](book_en.pdf).
 
-The idea in the book is that every sub-chapter consists of two pages; one page with exercises, and one page with an in-depth explanation. We advice you to open the book in a two page view. If you already have some experience with calculations in programming languages, be sure to do the last few exercises of every pages. Otherwise, make exercises until you think you can do it without making _any_ mistakes. Check if your answer is indeed correct! All answers to the exercises are in the back of the book.
+The idea in the book is that every sub-chapter consists of two pages; one page with exercises, and one page with an in-depth explanation. We advise you to open the book in a two-page view. If you already have some experience with calculations in programming languages, be sure to do the last few exercises of every page. Otherwise, make exercises until you think you can do it without making _any_ mistakes. Check if your answer is indeed correct! All answers to the exercises are in the back of the book.
 
 ## Details
 
