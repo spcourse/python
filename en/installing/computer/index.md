@@ -6,7 +6,7 @@ To be able to program on your own computer you need a couple different programs:
 
 2. **Atom**, an *editor* to write code in. This is, in a way, just a text writing program, but specifically meant for programming code. For example, it highlights particular parts of your code in specific colors, so can more easily distinguish which part of your code does what.
 
-3. Finally, you will need a *command line interface* from which will provide you with methods to start and interact with your programs. One comes pre-installed with macOS, but Windows users will need to install one.
+3. Finally, you will need a *command line interface* from which we will provide you with methods to start and interact with your programs. One comes pre-installed with macOS, but Windows users will need to install one.
 
 Stuck? Consult an assistant!
 
@@ -28,13 +28,13 @@ The installation can take a while.
 
 ### Step 2: Atom
 
-This package can be downloaded at their [website](https://atom.io/). Once again you have to execute the downloaded file. This time though you do not have to alter any settings during the installation process. Are you on a Mac? Just move the file to your applications folder. From there you can simply run it.
+This package can be downloaded at their [website](https://atom.io/). Once again you have to execute the downloaded file. This time though, you do not have to alter any settings during the installation process. Are you on a Mac? Just move the file to your applications folder. From there you can simply run it.
 
 ### Step 3: Command Line Interface
 
 As a programmer, you will be using a command line interface (also often called terminal or shell) frequently. Through your terminal, you will be able to start and interact with programs, view outcomes of code you've written, and otherwise interact with your computer. What to do now depends on whether you work on a Mac or a Windows machine:
 
-On Mac, the terminal is included with the Operating System, and comes pre-installed. You will be able to open a terminal by clicking on Spotlight (the small magnifying glass) in the upper right corner of your screen, and typing "Terminal" then pressing enter. No further actions are required for this step.
+On Mac, the terminal is included in the Operating System, and comes pre-installed. You will be able to open a terminal by clicking on Spotlight (the small magnifying glass) in the upper right corner of your screen, and typing "Terminal" then pressing enter. No further actions are required for this step.
 
 On Windows, it is slightly more complicated and you will want to download and install Git Bash using the [instructions from this website](https://www.stanleyulili.com/git/how-to-install-git-bash-on-windows/). After installation, you will be able to open a terminal by clicking the windows button in the lower left corner, and typing "bash" then pressing enter.
 
@@ -44,11 +44,11 @@ Navigating through your computer using the command line will be a vital skill. W
 
 ### Quick installation test
 
-To test whether each of our steps has gone correctly, we will write a small program named "hello". Open Atom and create a new file named `hello.py`. In this program, place the following code:
+To test whether each of our steps has been done correctly, we will write a small program named "hello". Open Atom and create a new file named `hello.py`. In this program, place the following code:
 
 	print('Hello, world!')
 
-Save your program in a folder that is easily accessable (we recommend you create a folder that will contain all your code from here on out) and open a terminal.
+Save your program in a folder that is easily accessible (we recommend you create a folder that will contain all your code from here on out) and open a terminal.
 
 Using your terminal, navigate to the folder containing the file `hello.py`. Remember, use `cd` to change directory, `pwd` to print your current directory, and `ls` to verify that `hello.py` is in the folder you are currently in. Now, run the following command:
 
@@ -62,7 +62,7 @@ To help you verify whether a program functions in compliance with the specificat
 
 	pip install checkpy
 
-This can take a while and you will see some text move over your screen. Afterwards `checkpy` is installed. In addition `checkpy` we also need the tests that correspond to the assignments that you'll have to make. These tests can be downloaded by executing the following command in the terminal:
+This can take a while and you will see some text move over your screen. Afterwards `checkpy` is installed. In addition to `checkpy` we also need the tests that correspond to the assignments that you'll have to make. These tests can be downloaded by executing the following command in the terminal:
 
 	checkpy -d uva-sp/sp1
 
@@ -70,7 +70,7 @@ To test whether your installation of `checkpy` was successful, you can test `hel
 
 	checkpy hello
 
-Is everything colored green and do you see only happy smileys? That means you've done a-okay, and that you've met our requirements for the assignment! Should there still be some red smileys, no worries! Carefully examine your code and verify it with each of the specifications. And don't forget you can always send us an email if you're stuck.
+Is everything colored green and do you only see happy smileys? That means you've done a-okay, and that you've met our requirements for the assignment! Should there still be some red smileys, no worries! Carefully examine your code and verify it with each of the specifications. And don't forget you can always send us an email if you're stuck.
 
 ### Install other Python libraries
 

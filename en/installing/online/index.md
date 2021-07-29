@@ -34,7 +34,7 @@ The command `cd` is an abbreviation of the word compact disc... uh, no... *chang
 
     touch hello.py
 
-Now we've created a file called `hello.py` inside of the folder `module1`. To verify that actually happened, you can execute another `ls`. The command `touch` checks whether a file (in this case `hello.py`) already exists, and if not creates that file.
+Now we've created a file called `hello.py` inside of the folder `module1`. To verify that this actually happened, you can execute another `ls`. The command `touch` checks whether a file (in this case `hello.py`) already exists, and if not creates that file.
 
 To open the file `hello.py` you have to use your mouse pointer to open the folder icon at the left hand side of the screen. First open the folder `~/workspace`, by clicking the triangle in front of it. Then do the same thing for the folder `module1`, and finally double click the file `hello.py`. Now a new tab has opened up called `hello.py` and this is where we can start programming!
 
@@ -58,11 +58,11 @@ Here `..` stands for the folder directly 'above' the current one. Want to go bac
 
     cd ~/workspace/module1
 
-That immediately brings you back to the folder `module1` inside of `workspace`.
+This immediately brings you back to the folder `module1` inside of `workspace`.
 
 ## Installing Matplotlib and Checkpy
 
-We use a program to check whether your assignments are implemented correctly. We expect you to be very precise when you give the correct output. To do so, we have written a program called `checkpy`, which is not standard in your developing environment. Aside from that we'll get to work with plotting graphs and for that we need a specific module in Python called `matplotlib`. Both of these need to be downloaded additionally.
+We use a program to check whether your assignments are implemented correctly. We expect you to be very precise when you give the correct output. To do so, we have written a program called `checkpy`, which is not standard in your developing environment. Aside from that, we'll get to work with plotting graphs and for that we need a specific module in Python called `matplotlib`. Both of these need to be downloaded additionally.
 
 To download both `matplotlib` and `checkpy` you have to run the following command separately in your terminal:
 
@@ -76,4 +76,4 @@ To test if everything is in working order and whether `hello.py` is implemented 
 
     checkpy hello
 
-Is everything colored green and do you see only happy smileys? That means you've done a-okay, and that you've met our requirements for the assignment! Should there still be some red smileys, no worries! Carefully examine your code and verify it with each of the specifications. And don't forget you can always send us an email if your stuck.
+Is everything colored green and do you only see happy smileys? That means you've done a-okay, and that you've met our requirements for the assignment! Should there still be some red smileys, no worries! Carefully examine your code and verify it with each of the specifications. And don't forget you can always send us an email if you're stuck.
