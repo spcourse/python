@@ -1,6 +1,6 @@
 # Functional programming
 
-Functional programming is the process of building software by composing so-called "pure" functions. These functions avoid having interactions outside of their own scope and as such have no side-effects. All these functions do, is somehow transform an input into an output. We will discuss some higher-order functions that abide by the principles of functional programming that can be used to manipulate lists.
+Functional programming is the process of building software by composing so-called "pure" functions. These functions avoid having interactions outside of their own scope and as such have no side-effects. All these functions do is somehow transform an input into an output. We will discuss some higher-order functions that abide by the principles of functional programming that can be used to manipulate lists.
 
 When manipulating lists, we often find ourselves writing more or less the same code in different applications. In fact most list operations can be categorized in three main patterns: *map*, *filter* and *reduce*. Here, we will discuss those patterns one by one and understand their use cases.
 
@@ -33,7 +33,7 @@ Or, this very similar program that doubles all elements:
     >>> print(squared)
     [2, 4, 6, 8, 10]
 
-The two examples are almost identical. In fact, only the function that is applied to each element differs. We could say that both examples follow the same *design pattern*. In fact this is such a common pattern there is a special name for it: a *map*. Since this is such a common pattern, it can be convenient to generalize it.
+The two examples are almost identical. In fact, only the function that is applied to each element differs. We could say that both examples follow the same *design pattern*. Actually, this is such a common pattern there is a special name for it: a *map*. Since this is such a common pattern, it can be convenient to generalize it.
 
 The idea is to have a function `my_map` that applies a function to all the items in an input list, using the following blueprint:
 
@@ -77,7 +77,7 @@ Also here, the idea is to generalize this pattern using a function with the foll
 
     my_filter(function_to_apply, list_of_inputs)
 
-This function simply applies the provide function to all elements in the list and returns a new list with only those elements for which `True` is returned. Like so:
+This function simply applies the provided function to all elements in the list and returns a new list with only those elements for which `True` is returned. Like so:
 
     >>> number_list = [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]
     >>> less_than_zero = my_filter(is_negative, number_list)
@@ -122,7 +122,7 @@ Example usage:
     >>> print(product)
     24
 
-The implementation of this function is a bit trickier then `my_map` and `my_filter`. For one, what is the initial value of the accumulator? If it is `0` it would not work for multiplication, but `1` does not work for addition. The best solution is to initialize the accumulator with the first element of the list and then start applying the function starting with the second element of the list.
+The implementation of this function is a bit trickier than `my_map` and `my_filter`. For one, what is the initial value of the accumulator? If it is `0` it would not work for multiplication, but `1` does not work for addition. The best solution is to initialize the accumulator with the first element of the list and then start applying the function starting with the second element of the list.
 
 ## Lambda expressions
 
@@ -137,14 +137,14 @@ For creating very simple functions you can use the lambda notation like below:
     >>> print(square(5))
     25
 
-One of the advantages of  having lambda's is that they don't need to be explicitly named first. They can be created on the spot. Which makes it particularly useful to use in combination with map:
+One of the advantages of  having lambdas is that they don't need to be explicitly named first. They can be created on the spot. Which makes it particularly useful to use in combination with map:
 
     >>> items = [1, 2, 3, 4, 5]
     >>> squared = my_map(lambda x : x * x, items)
     >>> print(squared)
     [1, 4, 9, 16, 25]
 
-Lambda functions can take any number of arguments. Lambda's that take two arguments are useful to use with reduce.
+Lambda functions can take any number of arguments. Lambdas that take two arguments are useful to use with reduce.
 
     >>> product = my_reduce(lambda x, y : x * y, [1, 2, 3, 4])
     >>> print(product)
@@ -152,7 +152,7 @@ Lambda functions can take any number of arguments. Lambda's that take two argume
 
 ## Summary
 
-All in all, we introduced many ways we could implement the same functionality. For example let's say we want to define a function `only_upper` that selects all strings from a list that are uppercase. We can do this many different ways:
+All in all, we introduced many ways we could implement the same functionality. For example, let's say we want to define a function `only_upper` that selects all strings from a list that are uppercase. We can do this many different ways:
 
 Method 1, classic:
 
@@ -181,7 +181,7 @@ Method 4, map and lambda:
     def only_upper(t):
         return map(lambda s: s.isupper(), t)
 
-So, which is better? That depends on the goal, personal taste, and context. I tend to prefer functional solutions because the resulting code looks cleaner. But I tend to avoid lambda functions because they don't help the readability of the code. So in this case I would probably opt for method 3. But there are many good arguments to make for the other methods. The most important is to be consistent. Try to choose one style of programming and stick to it throughout the project.
+So, which is better? That depends on the goal, personal taste, and context. I tend to prefer functional solutions because the resulting code looks cleaner. But I tend to avoid lambda functions because they don't help with the readability of the code. So in this case I would probably opt for method 3. But there are many good arguments to make for the other methods. The most important thing is to be consistent. Try to choose one style of programming and stick to it throughout the project.
 
 ## Notes on MapReduce
 
