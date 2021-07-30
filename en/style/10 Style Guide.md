@@ -6,7 +6,7 @@ Preferably, code is easy to read and understand. Not only for yourself, but also
 
 To start, some terminology:
 
-- We often talk about "programs". A *program* is an entity, a piece of software designed to execute a task or an action. Think about a calculator on your phone, or Microsoft Word. Python itself is also a program. In this course, you write a variety of programs yourself.
+- We often talk about "programs". A *program* is an entity, a piece of software designed to execute a task or an action. Think about a calculator on your phone, or Microsoft Word. Python itself is also a program. In this course, you'll write a variety of programs yourself.
 - We also often talk about "code". A piece of *code* is a fragment, often a part of a program. The word code is not countable (i.e. you cannot talk about "one code" or "two codes"). You can say "my code doesn't work", in that case it is evident that you talk about the code you just have been working on.
 - A program consists of "lines" of code.
 
@@ -16,21 +16,21 @@ In this course, we work in English. Make sure you work in one language only: var
 
 ## Comments
 
-It is just as easy to write a lot of comments in your code as it is to write too little comments. To determine where comments are really needed, we should put ourselves in the position of the reader of the code. This could be someone else, someone that uses your code to write their own nice program. However, it could also be yourself, a few months later, desparately trying to decipher your own code. What information does this reader need?
+It is just as easy to write a lot of comments in your code as it is to write too few comments. To determine where comments are really needed, we should put ourselves in the position of the reader of the code. This could be someone else, someone that uses your code to write their own nice program. However, it could also be yourself, a few months later, desperately trying to decipher your own code. What information does this reader need?
 
-- Summaries of blocks of code. Often you will have divided your code in functional blocks. Sometimes, these are comprised of only a few lines of code. It is ususally not difficult to summarize and describe the functionality of that piece of code.
-- Warnings for potential problems. Maybe you came up with a temporary solution to a problem, of which you know it will not work for some cases (but for now its fine). In that case, it is handy to document your doubts with a comment.
-- Explanation of complex algorithms. Sometimes you write very complex code. In that case you can give an explanation of the algorithm or provide a link for more information.
+- Summaries of blocks of code. Often, you will have divided your code in functional blocks. Sometimes, these are composed of only a few lines of code. It is usually not difficult to summarize and describe the functionality of that piece of code.
+- Warnings for potential problems. Maybe you came up with a temporary solution to a problem, of which you know it will not work for some cases (but for now, it's fine). In that case, it is handy to document your doubts with a comment.
+- Explanation of complex algorithms. Sometimes you write very complex code. In that case, you can give an explanation of the algorithm or provide a link for more information.
 - Source references. To avoid plagiarism, it is of course important to mention all sources used when fully or partially using other people's code. Even if you change this person's code it is important to still refer to the source.
 
 ### Example 1
 
-Comments are not always necessary. When variable or function names are very clear, and operations relatively simple, it might not be necessary to add a comment. Sometimes comments are still useful though:
+Comments are not always necessary. When variable or function names are very clear, and the operations are relatively simple, it might not be necessary to add a comment. Sometimes, comments are still useful though:
 
     # calculate the average grade for this student
     average = sum / assignment_count + 1
 
-(We now know the average is the average grade of the student. Depending on the rest of the program this comment can be useful.)
+(We now know the average is the average grade of the student. Depending on the rest of the program, this comment can be useful.)
 
 #### Writing Style
 
@@ -39,6 +39,8 @@ Also pay attention to your writing style: do not use capital letters or interpun
     # comments go here
     solution = 12 + partial_solution # not here
     # or here
+
+<!-- TODO Misschien kun je eraan toevoegen dat er altijd een witregel boven een comment moet staan. Ook zou er misschien nog een uitleg kunnen worden toegevoegd over functie-comments (die met """ comment """). Wat je daar in zet en hoeveel witregels erboven en onder en hoeveel spaties ervoor en erna moeten komen. Groetjes, Nina -->
 
 ### Example 2
 
@@ -64,7 +66,7 @@ Indentation is about adding whitespace at the start of a new line. In Python it 
         result = x + y
         return result
 
-Beware! Always use tabs OR spaces, not both! In many cases a tab is visible as 8 spaces, but sometimes also as 4 or 2 spaces. However, this becomes a problem when tabs and spaces are used interchangeably, it is then unclear how the code should be executed.
+Beware! Always use tabs OR spaces, not both! In many cases, a tab is visible as 8 spaces, but sometimes also as 4 or 2 spaces. However, this becomes a problem when tabs and spaces are used interchangeably. It is then unclear how the code should be executed.
 
     def sum(x, y):
         # 4 spaces
@@ -72,7 +74,7 @@ Beware! Always use tabs OR spaces, not both! In many cases a tab is visible as 8
             # 1 tab became 8 spaces here
             return result  
 
-The `return` is shown slightly more to the right, although only one tab is used. The result is that the code is less readable. In addition, Python will not be able to understand your code and error messages probably pop up. Be consequent in using spaces, or tabs to indent your code.
+The `return` is shown slightly more to the right, although only one tab is used. The result is that the code is less readable. In addition, Python will not be able to understand your code and error messages will probably pop up. Be consequent in using spaces or tabs to indent your code.
 
 Oh, and as mentioned before, if a line ends with a colon (`:`), all lines below should be indented if they belong to the rule with the colon.  
 
@@ -90,22 +92,22 @@ Many elements in your code, such as variables and functions, have a *name*. Here
 
 ### Functions
 
-Names of functions can be as long as you like, but keep it reasonable (and readable). In this case it is important that the goal of the function is described as clear and precise as possible.
+Names of functions can be as long as you like, but keep it reasonable (and readable). In this case, it is important that the goal of the function is described as clearly and precisely as possible.
 
     def user_average_this_year():
         ...
 
-You can see there are multiple words in this function name, divided by an underscore (`_`). This is conventional in Python, all function names are written with multiple words divided by underscores and without capital letters.
+You can see that there are multiple words in this function name, divided by an underscore (`_`). This is conventional in Python; all function names are written with multiple words divided by underscores and without capital letters.
 
 ### Variables
 
-Preferably, names of variables are shorter, they are generally used more often. Think about a length on one to two words, a few examples:
+Preferably, names of variables are shorter, as they are generally used more often. Think about a length on one to two words, a few examples:
 
     wall_height = 2.34
     earth_circumference = 40007.86
     total_rainfall = 823.3
 
-Making abbreviations of words is often not preferred. By doing so, your code will be more difficult to read (a lazy programmer could abbreviate the above examples as `wh`, `ecirc` and `t_rain` , how can you find out afterwards what was meant here?).
+Making abbreviations of words is often not preferred. By doing so, your code will be more difficult to read (a lazy programmer could abbreviate the above examples as `wh`, `ecirc` and `t_rain`, how can you find out afterwards what was meant here?).
 
 There are exceptions. When your program is about topics where abbreviations are conventional. Physics and mathematics, for example.
 
@@ -137,7 +139,7 @@ As described in the "comments" section, you can divide your program in logical c
     # output: might not print zero (e.g., if user put in a float)
     print(user_input)
 
-The three components are respectively: the user's input, the calculation and the output. You will encounter these components very often in programs. Also, pay attention to the instructions in the comments: first an explanation of the algorithm, and then a warning that that part of the code might not always work (and more important: when this happens!).
+The three components are the user's input, the calculation and the output, respectively. You will encounter these components very often in programs. Also, pay attention to the instructions in the comments: first an explanation of the algorithm, and then a warning that that part of the code might not always work (and more important: when this happens!).
 
 ### Spaces Around Operators
 
@@ -151,7 +153,7 @@ Operators such as `+`, `==`, `%` and `**` are often used in formulas and equatio
 
 ## Pure functions
 
-Ideally functions should, given an input always produce the same output. And not change their behavior depending on the context. This means that a function shouldn't rely on variables outside of that function. Let's look at a couple of examples.
+Ideally functions should, given an input, always produce the same output, and not change their behavior depending on the context. This means that a function shouldn't rely on variables outside of that function. Let's look at a couple of examples.
 
 Bad implementation:
 
@@ -255,7 +257,7 @@ Good implementation:
 
 Don't use unnecessary conditions. In the code below, the _condition_ in the `elif`
 statement is mutually exclusive with the condition from the `if` statement above.
-In this case an `else` suffices.
+In this case, an `else` suffices.
 
 Bad implementation:
 
@@ -298,14 +300,14 @@ Good implementation:
             print(f'{i} is divisible by three')
         i = i + 1
 
-In the code above it was rather easy to avoid a lot of the nesting. The bad
+In the code above, it was rather easy to avoid a lot of the nesting. The bad
 implementation is nested four levels deep whereas the good implementation has only
 two levels. It is not always this straight forward, but it is rarely necessary to
 have very deeply nested code.
 
 #### Rule of thumb
 
-This is by no means a exhaustive list of examples, and it will be impossible to
+This is by no means an exhaustive list of examples, and it would be impossible to
 give you one. But, as a general rule of thumb, typical indicators of overly complex
 code are repeated code fragments and deeply nested code fragments. When you catch
 yourself writing such code, always ask yourself if it can be simplified.
