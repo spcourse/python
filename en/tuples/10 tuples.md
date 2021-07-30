@@ -35,7 +35,7 @@ cannot append things to a tuple either
 	  File "<stdin>", line 1, in <module>
 	AttributeError: 'tuple' object has no attribute 'append'
 
-So once a tuple is created, we cannot change the elements it contains or add
+So, once a tuple is created, we cannot change the elements it contains or add
 more elements. This what it means to be immutable; it *cannot be mutated* or
 changed at all.
 
@@ -59,13 +59,13 @@ a function.
 	>>> find_max_index(list_of_values)
 	(2, 9.7)
 
-This function tries to find the maximum value in a list, however it does not
+This function tries to find the maximum value in a list. However, it does not
 just return the maximum value, it also returns the index of that maximum value
 in the list. Both values are returned together in a tuple.
 
-When you combine several things with comma's in between, they automatically
+When you combine several things with commas in between, they automatically
 become a tuple, even without the round brackets around it. This is called
-tuple *packing*. The last line of the function could therefore also have been
+tuple *packing*. The last line of the function could, therefore, also have been
 `return max_ind, max_val` which is the form you will see more often.
 
 	>>> maximum_index, maximum_value = find_max_index(list_of_values)
@@ -79,7 +79,7 @@ Here we assign to 2 new variables `maximum_index` and `maximum_value` in just 1
 line. This is called tuple unpacking and assigns the values from the tuple to
 the variables in the same order as they were in the tuple.
 
-The number of elements must therefore match however many variables you are
+The number of elements must, therefore, match however many variables you are
 trying to unpack.
 
 	>>> t
@@ -96,21 +96,21 @@ trying to unpack.
 	>>> a
 	42
 
-When unpacking a tuple the number of elements must match exactly and we end
+When unpacking a tuple, the number of elements must match exactly and we end
 up giving every element a different variable name. This should start to give
 you an idea of how and when tuples are used versus lists. If we have some large
 number of the same type of thing, all stored together, you would store them in
-a list. That way you can append new elements, loop over each element and
+a list. That way, you can append new elements, loop over each element and
 process them all the same way.
-If however, you have a small fixed number of different things you want to store
+If, however, you have a small fixed number of different things you want to store
 together, like a maximum value and its index, then you would use a tuple. You
-can then return these things, pass them to a function or even store several of
+can then return these things, pass them to a function, or even store several of
 them in a list, but the items will remain together, unchanged, in the tuple.
 Things stored together in a tuple should always be able to be unpacked; you
 should know exactly how many elements you are expecting to be in the tuple and
 what different things are stored at each index.
 
-The main purpose of tuples therefore is storing a small fixed number of
+The main purpose of tuples, therefore, is storing a small fixed number of
 different things together in one structure. There is one other important
 application of tuples which we haven't discussed yet; **hashing**. Hashing is
 the underlying magic that makes dictionaries so efficient. In the previous text
@@ -118,10 +118,10 @@ we talked about the fact that searching for keys in dictionaries was just about
 always a constant time $$O(1)$$ operation. Dictionaries achieve this by a
 process called *hashing* of the key, which is some computation that tells the
 computer where in the dictionary to look for the key. In Python, the hashing
-operation is only allowed to be performed with **immutable** elements, because
+operation is only allowed to be performed with **immutable** elements because,
 if we could change a key, then hashing might give a different location to search
 after a key was changed, making it impossible to find back. If we try to create
-a dictionary with a list as a key, which is of course mutable, we get an error
+a dictionary with a list as a key, which is of course mutable, we get an error:
 
 	>>> phonebook = {}
 	>>> john = ['John', 'Smith']
@@ -144,6 +144,6 @@ tuple, which is immutable, we *can* use the two names together as a key.
 	{('John', 'Smith'): 5551234}
 
 Storing several things together as a dictionary key is quite common and is
-another situation where you really need a tuple and cannot use a list.
+another situation in which you really need a tuple and cannot use a list.
 
 This concludes this introduction on tuples.
