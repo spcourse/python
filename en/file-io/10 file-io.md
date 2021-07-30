@@ -2,9 +2,9 @@
 
 The following code will open a file and print every line:
 
-with open('some_file.txt', 'r') as f:
-    for line in f:
-        print(line, end='')
+    with open('some_file.txt', 'r') as f:
+        for line in f:
+            print(line, end='')
 
 This will `open` `'some_file.txt'` in read mode (`'r'`), and assign it to the variable named `f`. Then, a for loop loops over every `line` in the file by finding the line endings indicated by `'\n'`. This `'\n'` is included in the variable `line`. The function print always adds a newline (another `\n`) when printing, unless we pass it `end=''`, which will make it add an empty string at the end. Let's say our file is set up as follows:
 
@@ -51,6 +51,8 @@ To read an entire file's contents at once, call `f.read()`.
 'This is the first line of the file.\n Second line of the file.\n'
 >>> f.read()
 ''
+
+<!-- TODO Is het de bedoeling dat regel 50 tm 53 zo printen? Gr. Nina -->
 
 > `f.read()` has an optional argument named `size` that can be used to read specific quantities of data from the file. When it is omitted, or negative, the entire contents of the file will be returned. This is not advisable for large files, as it will try to allocate memory for the entire file at once, which may not be available. The method is, however, very useful when you want to read a specific amount of data from a file. If the end of the file is reached, `f.read()` returns an empty string: `''`.
 
@@ -107,7 +109,7 @@ The advantage of using `with` is that the file is automatically properly closed,
 
 ## CSV files
 
-The Comma Separated Values (CSV) format and variations of it is one of the most common formats for scientific data. There is no standard method of generating files in this format, and as such it can be quite annoying to process CSV files. Python's `csv`-module implements functions that are able to read and write most variations of data that is in CSV format. CSV files can be opened as any normal file, and then processed through `csv.reader()` as follows:
+The Comma Separated Values (CSV) format and variations of it are some of the most common formats for scientific data. There is no standard method of generating files in this format, and as such it can be quite annoying to process CSV files. Python's `csv`-module implements functions that are able to read and write most variations of data that is in CSV format. CSV files can be opened as any normal file, and then processed through `csv.reader()` as follows:
 
     >>> import csv
     >>> with open('example.csv', 'r') as csvfile:
