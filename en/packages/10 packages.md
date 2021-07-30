@@ -124,7 +124,7 @@ We need to change the import statement in `my_program.py` such that it knows to 
     my_number_list = convert_to_ints(my_string3)
     print(my_number_list)
 
-The label `my_string_package.manipulations` in the import statement tells python to look in the folder `my_string_package` at the file `manipulations.py`.
+The label `my_string_package.manipulations` in the import statement tells Python to look in the folder `my_string_package` at the file `manipulations.py`.
 
 ### Add init
 
@@ -162,7 +162,7 @@ Now we can simplify the import statement in `my_program.py`:
     my_number_list = convert_to_ints(my_string3)
     print(my_number_list)
 
-When python comes across the statement `from my_string_package import ...` it knows to look for a file `__init__.py` in the `my_string_package` folder. The other files can remain unchanged.
+When Python comes across the statement `from my_string_package import ...` it knows to look for a file `__init__.py` in the `my_string_package` folder. The other files can remain unchanged.
 
 Code `conversions.py`:
 
@@ -179,7 +179,7 @@ Code `manipulations.py`:
 
 ## Add documentation
 
-Once you've created a package, you need to document it so that the next person using the package (most likely your future self), can find out how to use it without having to read all the code. The tool `pydoc` can automatically extract information from python packages.
+Once you've created a package, you need to document it so that the next person using the package (most likely your future self), can find out how to use it without having to read all the code. The tool `pydoc` can automatically extract information from Python packages.
 
 Run `$ pydoc my_string_package` (from the `my project` directory):
 
@@ -313,7 +313,7 @@ We should still add documentation to `conversions.py` and, of course, normally y
 
 ## README and LICENSE
 
-We only documented the `my_string_package` package above. It is good practice to always document every function you write and every python file you create, even if it is not part of a package.
+We only documented the `my_string_package` package above. It is good practice to always document every function you write and every Python file you create, even if it is not part of a package.
 
 When you publish your project you also typically add at least a LICENSE and a README file to the root of your project. The LICENSE file is a text file called `LICENSE`. It is best to stick to existing LICENSE texts (you can find an overview [here](https://choosealicense.com/)).
 

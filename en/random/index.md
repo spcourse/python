@@ -1,6 +1,6 @@
 # Random numbers
 
-A very useful building block in your computer is the *random* number. In the library `random` you can find a function called `random()` that generates a random number between 0 and 1. In python you can use the function as follows:
+A very useful building block in your computer is the *random* number. In the library `random` you can find a function called `random()` that generates a random number between 0 and 1. In Python you can use the function as follows:
 
     import random
     x = random.random()

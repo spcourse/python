@@ -7,7 +7,7 @@ A string is a *sequence* of characters. You can access the characters one at a t
 	>>> fruit = 'banana'
 	>>> letter = fruit[1]
 
-The second statement selects character number 1 from fruit and assigns it to letter. The expression in brackets is called an *index*. The index indicates which character in the sequence you want (hence the name).
+The second statement selects character number 1 from fruit and assigns it to `letter`. The expression in brackets is called an *index*. The index indicates which character in the sequence you want (hence the name).
 
 But you might not get what you expect:
 
@@ -74,7 +74,7 @@ Another way to write a traversal is with a `for` loop:
 
 Each time through the loop, the next character in the string is assigned to the variable `char`. The loop continues until no characters are left.
 
-The following example shows how to use concatenation (string addition) and a for loop to generate an abecedarian series (that is, in alphabetical order). In Robert McCloskey's book *Make Way for Ducklings*, the names of the ducklings are Jack, Kack, Lack, Mack, Nack, Ouack, Pack, and Quack. This loop outputs these names in order:
+The following example shows how to use concatenation (string addition) and a `for` loop to generate an abecedarian series (that is, in alphabetical order). In Robert McCloskey's book *Make Way for Ducklings*, the names of the ducklings are Jack, Kack, Lack, Mack, Nack, Ouack, Pack, and Quack. This loop outputs these names in order:
 
 	prefixes = 'JKLMNOPQ'
 	suffix = 'ack'
@@ -108,7 +108,7 @@ To take only some characters of a string, we can employ a *conditional traversal
         if char.isdigit():
             print(char)
 
-Like above, the loop will consider all individual characters in the string. However, there is a conditional inside that loop, which will only trigger if the condition `char.isdecimal()` has been met. In this case, only characters that represent a numeric digit are printed:
+Like above, the loop will consider all individual characters in the string. However, there is a conditional inside that loop, which will only trigger if the condition `char.isdigit()` has been met. In this case, only characters that represent a numeric digit are printed:
 
     2
     1
@@ -124,7 +124,7 @@ The following program counts the number of times the letter `a` appears in a str
             count = count + 1
     print(count)
 
-This program demonstrates another pattern of computation called a *counter*. The variable `count` is initialized to 0 and then incremented each time an `a` is found. When the loop exits, count contains the result: the total number of `a`'s.
+This program demonstrates another pattern of computation called a *counter*. The variable `count` is initialized to 0 and then incremented each time an `a` is found. When the loop exits, `count` contains the result: the total number of `a`'s.
 
 
 ## String methods
