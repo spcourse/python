@@ -32,6 +32,7 @@ Using functions improves readability of your code. With a well-chosen name for e
 Functions can also be expedient when you repeatedly have to use a more or less identical piece of code. Often times when you catch yourself copy pasting parts of your own code, you can better spend some time to find a way to efficiently reuse the code your copying by defining a function!
 
 <!-- TODO Ik heb dit nu toegevoegd, is dat OK? -->
+
 ## Programming Basics book
 
 To further aid you in practicing with functions, we have created an [excerpt of the Programming Basics book on functions](book_en.pdf).
