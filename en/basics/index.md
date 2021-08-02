@@ -19,7 +19,7 @@ conditional execution
 repetition
 : Repeating a single task or set of tasks multiple times, often times with variation between repetitions.
 
-And believe it or not, but that's about all you'll be needing. Every program you've ever used on the computer, no matter how complicated, at the core consists of some nature of these actions. **Programming** can be seen as repeatedly decomposing a large, complex task into smaller, easier subtasks, until you can **implement** a program in a programming language, using only the above 5 elements.
+And believe it or not, but that's about all you'll be needing. Every program you've ever used on the computer, no matter how complicated, at the core consists of some combination of actions of these nature. **Programming** can be seen as repeatedly decomposing a large, complex task into smaller, easier subtasks, until you can **implement** a program in a programming language, using only the above 5 elements.
 
 Here you'll find some of these elements in the way that you can use them in Python. Using these elements will help you implement the solution for the very first assignment shortly.
 
@@ -37,7 +37,7 @@ Make a text file **exercise.py** (remember how?) and add the following lines to 
     print("Ivo's computer does not work today.")
     print('He said: "Hello."')
 
-> Practicing for this course can be done by literally copying examples word for word. Don't use the *copy-paste* function though, because that way you won't make any mistakes and you probably wouldn't learn much. Type out all examples you see and fix your mistakes if you get an error message!
+> Practicing for this course can be done by literally copying examples word for word. Don't use the *copy-paste* function though, because that way you won't make any mistakes and you probably wouldn't learn as much. Type out all examples you see and fix your mistakes if you get an error message!
 
 Now start the program you've just carefully copied, word for word:
 

@@ -47,12 +47,10 @@ There are multiple ways to read a file's contents. None of the methods that are 
 
 To read an entire file's contents at once, call `f.read()`.
 
->>> f.read()
-'This is the first line of the file.\n Second line of the file.\n'
->>> f.read()
-''
-
-<!-- TODO Is het de bedoeling dat regel 50 tm 53 zo printen? Gr. Nina -->
+    >>> f.read()
+    'This is the first line of the file.\n Second line of the file.\n'
+    >>> f.read()
+    ''
 
 > `f.read()` has an optional argument named `size` that can be used to read specific quantities of data from the file. When it is omitted, or negative, the entire contents of the file will be returned. This is not advisable for large files, as it will try to allocate memory for the entire file at once, which may not be available. The method is, however, very useful when you want to read a specific amount of data from a file. If the end of the file is reached, `f.read()` returns an empty string: `''`.
 
@@ -92,11 +90,11 @@ Writing to files is fairly simple:
     >>> f.write(some_string)
     10
 
- Use `f.write(some_string)` to write the content of `some_string` to the file. The method returns the number of characters that were written to a file. Keep in mind that `f.write()` only accepts strings, so you might need to convert your variables to strings before writing them:
+ Use `f.write(some_string)` to write the content of `some_string` to the file. The method returns the _number of characters_ that were written to a file. Keep in mind that `f.write()` only accepts strings, so you might need to convert your variables to strings before writing them:
 
     >>> some_number = 42
     >>> f.write(str(some_number))
-    42
+    2
 
 ## The `with` keyword
 
@@ -120,6 +118,6 @@ The Comma Separated Values (CSV) format and variations of it are some of the mos
     This, is, an, example!
     It, really, is.
 
-Here `row` is a list that contains every element that was originally separated by commas, essentially functioning the same as `string.split()`.
+Here, `row` is a list that contains every element that was originally separated by commas, essentially functioning the same as `string.split()`.
 
 The `csv`-module has more functionalities than just this simple reader, but for now it is everything you will need.
