@@ -1,6 +1,6 @@
 # Big Data
 
-An often encountered application of computer programs is reading, processing and analyzing large data files. Big data! We will learn how to read data in this module, and we'll apply our knowledge to classify data and create graphs out of our results.
+An often encountered application of computer programs is reading, processing and analyzing large data files. Big data! We will learn how to read data from a file in this module, and we will apply our knowledge to classify data and create graphs out of our results.
 
 # Reading files and processing data
 

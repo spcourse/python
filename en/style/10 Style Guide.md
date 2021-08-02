@@ -40,7 +40,15 @@ Also pay attention to your writing style: do not use capital letters or interpun
     solution = 12 + partial_solution # not here
     # or here
 
-<!-- TODO Misschien kun je eraan toevoegen dat er altijd een witregel boven een comment moet staan. Ook zou er misschien nog een uitleg kunnen worden toegevoegd over functie-comments (die met """ comment """). Wat je daar in zet en hoeveel witregels erboven en onder en hoeveel spaties ervoor en erna moeten komen. Groetjes, Nina -->
+Comments should always have an extra whitespace above them, such that they separate different codeblocks:
+
+    # first block of code
+    example = 12 * 3
+    result = example / 3
+
+    # second block of code
+    final = example + result
+
 
 ### Example 2
 
