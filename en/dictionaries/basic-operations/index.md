@@ -1,11 +1,4 @@
-# Dictionaries
-
-Dictionaries are one of the fundamental data structures of Python, and
-just like lists, they can be used to store several elements together in
-one variable. Unlike lists, dictionaries store *mappings* from a key to a
-value.
-
-![embed](https://api.eu.kaltura.com/p/120/sp/12000/embedIframeJs/uiconf_id/23449960/partner_id/120?iframeembed=true&playerId=kaltura_player&entry_id=0_80k74cvx&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en_US&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[hotspots.plugin]=1&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=0_zmx8rsom)
+# Dictionaries: basic operations
 
 The difference between dictionaries and lists is that instead of using an index
 to access elements, we use a key. Searching for things by their keys is the
@@ -36,6 +29,8 @@ translation), which we might want to look up. This is generally how
 dictionaries are used in Python. Let's take a closer look at the syntax in
 Python and some more cases where we might want to use dictionaries.
 
+### creating a dictionary
+
 So, dictionaries are an efficient way to store pairs of variables together. As
 another example, we could make a fruit basket and store the quantity we have of the different types of fruit. In our previous example we stored Spanish
 translations for English words in our dictionary, and here we are going to
@@ -46,7 +41,11 @@ mapping from elements to some count (or a score), is another very common way to 
     >>> basket
     {'apple': 4, 'orange': 2, 'banana': 7}
 
-Note that the order of these elements has changed! Dictionaries are unordered collections of pairs, which means we can easily find back each pair, but cannot make any assumptions about the order in which they are stored. If we want to know how many apples there are in the fruit basket, we can write
+Note that the order of these elements has changed! Dictionaries are unordered collections of pairs, which means we can easily find back each pair, but cannot make any assumptions about the order in which they are stored.
+
+### accessing elements
+
+If we want to know how many apples there are in the fruit basket, we can write
 
     >>> basket['apple']
     4
@@ -57,6 +56,8 @@ syntax is very similar to using square brackets to get elements from a *list*,
 but instead of using the **index** to retrieve the element stored at that
 place in the list, we use the **key** to retrieve the corresponding **value**
 from the dictionary.
+
+### adding items
 
 Using this same syntax, we can add a new *key-value pair*
 
@@ -79,6 +80,8 @@ pair
     >>> basket['apple'] = 6
     >>> basket
     {'apple': 6, 'orange': 2, 'strawberry': 10, 'banana': 6}
+
+### pitfalls
 
 Note that values **do not** have to be unique, as dictionaries are only a
 one-way mapping, so you can only use the *keys* to retrieve the corresponding
@@ -104,15 +107,31 @@ we also get a *KeyError*
       File "<stdin>", line 1, in <module>
     KeyError: 'mango'
 
-We can also use the `get()` function instead of the square brackets, and as the
-second argument tell the dictionary what value we want if the key is not
-present in the dictionary
+### get
+
+Sometimes when we use a key that's not in the dictionary we do not want it to throw an error. But instead return a default value (for example `0`). For this, we can use the `get()` function instead of the square brackets, and as the second argument tell the dictionary what value we want if the key is not present in the dictionary:
 
     >>> basket.get('mango', 0)
     0
 
 So, now we know that our fruit basket unfortunately contains zero mangoes, but in
 many situations this result is much more useful than producing an error.
+
+Note that when an item *is* present in the dictionary `get()` will behave just the same as the square brackets:
+
+    >>> basket.get('apple', 0)
+    6
+    >>> basket['apple']
+    6
+
+It is also important to realize that `get()` **does not add items to the dictionary**. After using `get()` to lookup `'mango'`, it is not added to the dictionary.
+
+    >>> basket.get('mango', 0)
+    0
+    >>> basket
+    {'apple': 6, 'orange': 2, 'strawberry': 10, 'banana': 6}
+
+### in
 
 We can also explicitly ask if a key is present in the dictionary using `in`
 
@@ -121,30 +140,12 @@ We can also explicitly ask if a key is present in the dictionary using `in`
     ...
     We've got bananas!
 
-This works exactly the same way as it does for lists, *with 1 important
-difference.* Using `in` on a list will search through the entire list, and so
-this will actually take longer to complete as more elements are added to the
-list, because it is actually an $$O(N)$$ operation. As stated in the
-introduction, dictionaries are not just convenient to use, but also very
-efficient. In fact, they are so efficient that searching in a dictionary in
-practice almost always is an $$O(1)$$ operation (in very improbable cases,
-the big $O$ might be $O(N)$). This means the search will take approximately the
-same time if the dictionary contains 1 or **1 million** elements!
+This works exactly the same way as it does for lists. But it only looks at the *keys* of the dictionary. It will not check the *values* of a dictionary. There is one important difference between using `in` with dictionaries and using `in` with lists: With dictionaries `in` is much (!) faster. More about that later.
 
-Learn more about the speed of dictionaries in this video:
+### looping
 
-![embed](https://api.eu.kaltura.com/p/120/sp/12000/embedIframeJs/uiconf_id/23449960/partner_id/120?iframeembed=true&playerId=kaltura_player&entry_id=0_mjatxx9k&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en_US&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[hotspots.plugin]=1&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=0_t24tqi37)
-
-
-The fact that look-up times for dictionaries are an $$O(1)$$ operation is a *strange and counter-intuitive* fact, and why this is true is well
-beyond the scope of this text, but it should give you an idea of the power of
-dictionaries and why they are used so often. Checking if a key is present in a
-dictionary or retrieving the value stored with that key are both **constant
-time** $$O(1)$$ operations, irrespective of the number of elements
-stored in that dictionary.
-
-As a result, dictionaries are mostly used for these look-up operations, but
-sometimes you'll also want to loop over the elements in your dictionary.
+Dictionaries are mostly used for look-up operations, but
+sometime you'll also want to loop over the elements in your dictionary.
 Dictionaries support many of the same operations that lists do. For instance,
 you can use `len` to ask how many pairs there are in the dictionary
 
@@ -181,7 +182,3 @@ We can even use the `items` function to easily loop over both
     orange 2
     strawberry 10
     banana 6
-
-This concludes this introduction to dictionaries.
-
-Next up, we'll cover another data structure called *tuples*.
