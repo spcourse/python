@@ -18,7 +18,7 @@ This package can be downloaded at their [website](https://www.anaconda.com/downl
 
 As soon as the download is finished, you have to execute the downloaded file (double click?). Follow the installation instructions and choose "Install for me only" where you can; if everything is okay you don't need to alter anything else.
 
-**Note: for Windows always choose the "advanced" installation and tick the following box! If you did not, you have to reinstall anaconda!**
+**For Windows always choose the "advanced" installation and tick the following box! If you did not, you have to reinstall anaconda!**
 
 ![Tick the box: "Add to PATH" when installing Anaconda](anaconda_vinkje.gif)
 
@@ -76,7 +76,9 @@ Is everything colored green and do you only see happy smileys? That means you've
 
 During the course, we will use some other Python libraries. We will download and install all these libraries through conda and place them in their own "environment". This makes sure that everything will work for all the exercises in the coming courses.
 
-First, open a terminal and run the following command:
+**At this point, it is very important to know what type of shell your computer uses. If you are using Windows, you will have installed `bash`. If you are using a Mac, you use either `bash`, or `zsh`. You can check by running `echo $0` in your terminal; if your computer uses `zsh`, replace any future mention of `bash` with `zsh`.**
+
+First, open a terminal and run the following command (and replace `bash` with `zsh` if needed):
 
     conda init bash
 
@@ -88,7 +90,6 @@ Now, with your new terminal, run the following commands:
 	conda env create -f environment.yml
 	rm environment.yml
 
-
 This downloads a formatted description of what libraries to download and install, then installs the libraries, and then removes the description (as we no longer need it).
 
 From here on out when you open a terminal we can use the following command to enter the environment, and enable the use of all the libraries we installed:
@@ -99,11 +100,24 @@ If everything worked, you will now see that your terminal shows `(progLab)`.
 
 **Important:** If you want to use all of the libraries you've just installed and `import` them in your own code, you will have to have *this* environment active. We recommend you *always* have this environment active when working on assignments for the minor.
 
-<!-- TODO dit moet even geverifieerd worden voor non-windows users.. -->
-To make sure that this environment is activated every time that we start a terminal, we can run the following command:
+To make sure that the environment we just installed is started _every time_ we start a new terminal, we can run some commands. Follow the instructions for your operating system below.
+
+##### Windows users
+
+To make sure that the `progLab` environment is activated every time that we start a terminal, we can run the following command:
 
     echo 'conda activate progLab' >> ~/.bash_profile
 
-**Windows users** now need to perform one more command, that will ensure that Python functions as intended:
+We now need to perform one more command, that will ensure that Python functions as intended on Windows:
 
      echo "alias python='winpty python'" >> ~/.bash_profile
+
+Now restart your terminal, and check whether it starts into the `progLab` environment. If not, please contact one of the TA's or teachers of this course.
+
+##### Mac users
+
+To make sure that the `progLab` environment is activated every time that we start a terminal, we can run the following command (replace `bash` with `zsh` if needed):
+
+    echo 'conda activate progLab' >> ~/.bashrc
+
+Now restart your terminal, and check whether it starts into the `progLab` environment. If not, please contact one of the TA's or teachers of this course.
