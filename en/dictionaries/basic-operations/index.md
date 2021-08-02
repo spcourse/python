@@ -4,11 +4,10 @@ The difference between dictionaries and lists is that instead of using an index
 to access elements, we use a key. Searching for things by their keys is the
 main reason dictionaries are used so often and why they are such an efficient
 data structure. In a list, if we don't know at what index something is stored
-exactly, we'd have to loop over the list until we found the matching element.
-Whereas in a dictionary, we can just search by key. More on why this is
-efficient later, for now lets just see a simple example.
+exactly, we'd have to loop over the list until we found the matching element, whereas in a dictionary, we can just search by key. More on why this is
+efficient later, for now let's just see a simple example.
 
-One way we could use a dictionary, is to store the mappings in an actual
+One way we could use a dictionary is to store the mappings in an actual
 English-Spanish translation dictionary. We might have the string "Yes" and we
 want to store its Spanish translation:
 
@@ -27,7 +26,7 @@ translation in the dictionary.
 
 The mapping here is from one element to another associated element (its
 translation), which we might want to look up. This is generally how
-dictionaries are used in Python. Lets take a closer look at at the syntax in
+dictionaries are used in Python. Let's take a closer look at the syntax in
 Python and some more cases where we might want to use dictionaries.
 
 ### creating a dictionary
@@ -36,7 +35,7 @@ So, dictionaries are an efficient way to store pairs of variables together. As
 another example, we could make a fruit basket and store the quantity we have of the different types of fruit. In our previous example we stored Spanish
 translations for English words in our dictionary, and here we are going to
 store counts for each type of fruit. Using dictionaries in this way, as a
-mapping from elements to some count (or a score) is another very common way to use dictionaries
+mapping from elements to some count (or a score), is another very common way to use dictionaries
 
     >>> basket = {'apple': 4, 'banana': 7, 'orange': 2}
     >>> basket
@@ -66,16 +65,16 @@ Using this same syntax, we can add a new *key-value pair*
     >>> basket
     {'apple': 4, 'orange': 2, 'strawberry': 10, 'banana': 7}
 
-Or we could use this syntax to modify an existing pair. Lets say we ate one of
+Or we could use this syntax to modify an existing pair. Let's say we ate one of
 the bananas, then we could update the dictionary by writing
 
     >>> basket['banana'] -= 1
     >>> basket
     {'apple': 4, 'orange': 2, 'strawberry': 10, 'banana': 6}
 
-Each *key* in a dictionary **must** be unique, so if we try to adding a *key*
+Each *key* in a dictionary **must** be unique, so if we try to add a *key*
 that already exists, we'll end up overwriting the corresponding *value*. So,
-if we try to add another key for apples, will just end up replacing the old
+if we try to add another key for apples, we'll just end up replacing the old
 pair
 
     >>> basket['apple'] = 6
@@ -100,7 +99,7 @@ course occur in our basket, stored under the key `'orange'`
     >>> basket['orange']
     2
 
-If we try to retrieve the number of *mango*, which aren't in the basket at all,
+If we try to retrieve the number of *mangoes*, which aren't in the basket at all,
 we also get a *KeyError*
 
     >>> basket['mango']
@@ -115,8 +114,8 @@ Sometimes when we use a key that's not in the dictionary we do not want it to th
     >>> basket.get('mango', 0)
     0
 
-So now we know that our fruit basket unfortunately contains zero mangoes, but in
-many situations this result is much more useful then producing an error.
+So, now we know that our fruit basket unfortunately contains zero mangoes, but in
+many situations this result is much more useful than producing an error.
 
 Note that when an item *is* present in the dictionary `get()` will behave just the same as the square brackets:
 

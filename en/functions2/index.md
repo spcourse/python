@@ -1,6 +1,6 @@
 # Functions as arguments
 
-It can be useful to provide a functions as an argument to another function. This can be a little confusing
+It can be useful to provide a function as an argument to another function. This can be a little confusing
 at first. Take a look at the following example code:
 
 	def add(a, b):
@@ -30,7 +30,7 @@ Here the function `repeat()` is used for two different purposes. In the first ca
 
 The difference of behavior in the two cases is accomplished by having the parameter `my_function` which is applied twice in the `repeat`. When calling `repeat` we specify what we want `my_function` to be. In the first case that is the function `add`, in the second case this is the function `mult`.
 
-The provided example functions only uses the functions `add` and `mult`, but
+The provided example function only uses the functions `add` and `mult`, but
 **any** Python function you would define to combine two numbers would work
 together with this `repeat()`. Test out the example above and observe
 the two different printed results. Try to define your own

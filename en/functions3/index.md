@@ -1,6 +1,6 @@
 # Functions with multiple return values
 
-Until now you've only seen functions that print and functions that return one value. In Python, it is possible to return any number of values by separating the values with commas. This is named _packing_; the return values do not need to be of the same type, and are grouped as if they are one output. It is possible to immediately _unpack_ the values that are returned by the function. This is done in much the same way as the return value was created, with comma-separated variable names:
+Until now you've only seen functions that print and functions that return one value. In Python, it is possible to return any number of values by separating the values with commas. This is named _packing_; the return values do not need to be of the same type, and are grouped as if they are one output. It is possible to immediately _unpack_ the values that are returned by the function. This is done in nearly the same way as the return value was created, with comma-separated variable names:
 
     def test():
       return 'abc', 100, ['a', 'b', 123]
@@ -39,4 +39,4 @@ Would give the following output:
     5
     3
 
-The round brackets indicating that the values are packed together in a tuple. A tuple is a special type of "collection" in Python, but for now, it suffices to know that it behaves similar to a list.
+The round brackets indicate that the values are packed together in a tuple. A tuple is a special type of "collection" in Python, but for now, it suffices to know that it behaves similarly to a list.

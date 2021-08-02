@@ -4,12 +4,12 @@ Python is a high level programming language. That means that it contains a lot o
 tools that can solve very specific problems. Not all languages have all those tools,
 and you don't need them.
 
-This page gives an overview of all the most universal (basic) tools in python.
+This page gives an overview of all the most universal (basic) tools in Python.
 Those are the (low-level) programming concepts that, in some form or another, exist
-in almost *any* programming language, not just python.
+in almost *any* programming language, not just Python.
 
-With combining the concepts below in the right way you can in theory write *any* program.
-In fact you even don't need all of them. In theory only a small subset would suffice.
+With combining the concepts below in the right way you can, in theory, write *any* program.
+In fact, you don't even need all of them. In theory, only a small subset would suffice.
 
 #### Operators
 

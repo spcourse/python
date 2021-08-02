@@ -1,7 +1,7 @@
 # Example: Improving count_occurrence()
 
 Writing efficient code can be tricky and will take practice, but here we will
-try and walk you through the process step-by-step. If at any point you think
+try and walk you through the process step by step. If at any point you think
 you have an idea for a more efficient version of `count_occurrence`, feel free
 to stop reading and try to write it out first, so you can get a head start on
 practicing.
@@ -16,8 +16,8 @@ some questions:
      include everything in the count correctly.
 
 From this we can conclude that we will definitely need the *outer* loop and it cannot be
-reduced, as it will be necessary to visit every element once. So then we should try
-and reduce the *inner* loop, where we try to make the count for each number.
+reduced, as it will be necessary to visit every element once. So, we should try
+to reduce the *inner* loop, where we try to make the count for each number.
 
 	def count_occurrence(inputs):
 		counts = []
@@ -51,23 +51,23 @@ and add 1 mark next to it. The next time you encounter that same number, just
 add another mark. This way, after going through the list *once*, the number of
 marks next to each number should be equal to their count. Great, but then the
 problem just becomes: How do we know if we've already seen a number? If we have
-already see it, how do we know at what place to add the mark? And we have to of
-course do all this **without looping through the list again**, as that would
+already seen it, how do we know at what place to add the mark? And we have to, of
+course, do all this **without looping through the list again**, as that would
 basically give us the same $$O(N^2)$$ solution as before.
 
 As a general tip, any time you are trying to make some code more efficient,
 changing the structure of the data to something that would make the individual
-operations faster is very often a good idea. So here, what we would need to do
-often is see if an element is *contained* in the collection and if so, *find*
+operations faster is very often a good idea. So, what we would often need to do
+is see if an element is *contained* in the collection and if so, *find*
 some value associated with it. What data structure have we seen that makes
 exactly those 2 operations efficient?
 
 If you answered *dictionary*, then you were correct! We could use the `in`
 operation to see if we have already added an element as a *key* to the
-dictionary. Then the associated *value* of that key could keep track of the
+dictionary. Then, the associated *value* of that key could keep track of the
 count for that element and we could use the square brackets to efficiently
-retrieve it. So in a dictionary both of these operations would actually be
-$$O(1)$$ complexity! Lets take a look at the code for this new
+retrieve it. So, in a dictionary both of these operations would actually have
+$$O(1)$$ complexity! Let's take a look at the code for this new
 version
 
 	def count_occurrence_v2(inputs):

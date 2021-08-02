@@ -4,15 +4,15 @@ You should be able to predict what a specific piece of code does before running 
 
 - It can help with your general understanding of the programming concepts.
 - It can help you in the creative process of designing an algorithm.
-- It can help you with finding bugs in your code.
+- It can help you to find bugs in your code.
 
-Sometimes it is easy to see what a piece of code does. For instance, what will the following piece of code do?
+Sometimes, it is easy to see what a piece of code does. For instance, what will the following piece of code do?
 
     x = 42
     if x > 5:
         print(f'The answer is {x}')
 
-But with more complex pieces of code it can be hard to intuitively see what is doing. In those cases it can be useful to trace the code. You essentially step through the code as if you were the computer yourself.
+But with more complex pieces of code it can be hard to intuitively see what it's doing. In those cases it can be useful to trace the code. You essentially step through the code as if you were the computer yourself.
 
 Learn how to trace code in this video:
 

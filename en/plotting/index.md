@@ -3,12 +3,12 @@
 It is useful to visualize your results in a graph or even a video. Not only is it important for making the results of a project understandable, but also to better comprehend your data while writing your code. There is a standard library to visualize data in Python: `matplotlib`. It is a very expansive library of which we only need to utilize a tiny fraction.
 
 
-> To effectively convey your message and conclusions it is important to spend some thought into presenting your information so your audience understands it all. There is an enormous variation in ways to visualize data and results. Always think carefully how best to present your data so that the "user" comes to the right conclusions. Subsequently comb through the `matplotlib` documentation to find out how to implement the visualization that you envisioned.
+> To effectively convey your message and conclusions it is important to spend some thought into presenting your information so your audience understands it all. There is an enormous variation in ways to visualize data and results. Always think carefully about how best to present your data so that the "user" comes to the right conclusions. Subsequently comb through the `matplotlib` documentation to find out how to implement the visualization that you envisioned.
 
 
 ## A list with datapoints
 
-Let's start by plotting some points with the following x-values $$(0,1,2,3,4,5)$$ and y-values $$(0,1,4,9,16,25)$$. In this case, we plot exactly the function $$x^2$$, but that is not necessarily true. To make a graph we need the following code:
+Let's start by plotting some points with the following x-values $$(0,1,2,3,4,5)$$ and y-values $$(0,1,4,9,16,25)$$. In this case, we plot the function $$x^2$$ exactly, but that is not necessarily true. To make a graph we need the following code:
 
     import matplotlib.pyplot
 
@@ -41,7 +41,7 @@ You can rename a module as you import it, so it has a more functional shorter na
 
 ## Multiple graphs and annotations
 
-We expand the plot a little now: another function is added $$x^3$$, for which we use a line graph. We'll also add some axes labels and a separate text-annotation:
+We'll expand the plot a little now: another function is added $$x^3$$, for which we use a line graph. We'll also add some axes labels and a separate text-annotation:
 
     import matplotlib.pyplot as plt
 
@@ -70,7 +70,7 @@ We expand the plot a little now: another function is added $$x^3$$, for which we
 
 ## Higher resolution
 
-Earlier we chose a small number of points where the values had to be filled in by hand. The graph is consequently a bit crude. To get a more fine grained graph we can have the computer calculate a lot more y-values. If, for instance, we'd like to plot the function $$sin(x)$$ in steps of $$0.01$$ between $$0$$ and $$2\pi$$ then we can combine the different elements we've used before, like so:
+Earlier we chose a small number of points where the values had to be filled in by hand. The graph is consequently a bit crude. To get a more fine-grained graph we can have the computer calculate a lot more y-values. If, for instance, we'd like to plot the function $$sin(x)$$ in steps of $$0.01$$ between $$0$$ and $$2\pi$$ then we can combine the different elements we've used before, like so:
 
     import numpy as np
     import math
@@ -99,11 +99,11 @@ Earlier we chose a small number of points where the values had to be filled in b
 
 ## Graphs side by side
 
-Finally we'll look at how to plot two graphs side by side. You can use this example when asked to plot both the speed and the position of an object _as a function of time_. Each has a particular scale, which makes it clearer when plotted separately instead of in one and the same graph.
+Finally, we'll look at how to plot two graphs side by side. You can use this example when asked to plot both the speed and the position of an object _as a function of time_. Each has a particular scale, which makes it clearer when plotted separately instead of in one and the same graph.
 
 > Note: When one says plotting "A as a function of B", you can read it as plotting A on the vertical axis, and B as the horizontal axis.
 
-By way of example we'll plot both sine and cosine and in a graph beside it we'll plot both $$x$$ and $$x^2$$.
+By way of example we'll plot both the sine and the cosine, and in a graph beside it, we'll plot both $$x$$ and $$x^2$$.
 
 ![](plotje4.png)
 

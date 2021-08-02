@@ -1,6 +1,6 @@
 # Big Data
 
-An often encountered application of computer programs is reading, processing and analyzing large data files. Big data! We will learn how to read data in this module, and we apply our knowledge to classify data and create graphs out of our results.
+An often encountered application of computer programs is reading, processing and analyzing large data files. Big data! We will learn how to read data in this module, and we'll apply our knowledge to classify data and create graphs out of our results.
 
 # Reading files and processing data
 
@@ -8,7 +8,7 @@ An often encountered application of computer programs is reading, processing and
 
 Just like with numbers that can be expressed in the decimal, hexadecimal or binary format, data too can be represented in various formats within databases. Here we'll take a look at some data that is stored in the so-called CSV format (comma separated values): 'flat text', where each line has variables that are separated by a single comma. This happens to be the format you receive when you download your bank transactions or when you save an Excel file.
 
-We'll learn how to read and process data with an example case: the statistics of the footballer Marco van Basten. Someone has been keeping track how many matches he played and how many goals he scored in a [text file](http://www.nikhef.nl/~ivov/Python/Voetbal/VanBasten.txt). This is the text of the file:
+We'll learn how to read and process data with an example case: the statistics of the footballer Marco van Basten. Someone has been keeping track of how many matches he played and how many goals he scored in a [text file](http://www.nikhef.nl/~ivov/Python/Voetbal/VanBasten.txt). This is the text of the file:
 
     198182, Ajax, 1, 1
     198283, Ajax, 20, 9
@@ -29,8 +29,8 @@ We'll learn how to read and process data with an example case: the statistics of
 
 In the following sections we'll answer some questions using the data from the data file:
 
-* What are the seasons in which Van Basten score more than 20 times?
-* What is the total number of goals that Van Basten score for all clubs he played for?
+* What are the seasons in which Van Basten scored more than 20 times?
+* What is the total number of goals that Van Basten scored for all clubs he played for?
 
 ## Step 1: opening the file, reading the lines
 
@@ -47,7 +47,7 @@ The `'r'` argument in the `open()` function means 'read'. When you run this prog
 
 ## Step 2: splitting of a line and save it in a list
 
-Every line consists out of different elements, or, columns. You can retrieve these elements by splitting them. You do this with the command `split()`. The parameter in this command determines where to split. We want to split at every comma (`,`), so we excute the following command: `line.split(',')`. By doing so, we get a list with the elements from that line. Subsequently, we can analyze these elements (plotting, statistics etc.).
+Every line consists of different elements, or, columns. You can retrieve these elements by splitting them. You do this with the command `split()`. The parameter in this command determines where to split. We want to split at every comma (`,`), so we execute the following command: `line.split(',')`. By doing so, we get a list with the elements from that line. Subsequently, we can analyze these elements (plotting, statistics etc.).
 
     input_file = open('VanBasten.txt', 'r')
     for line in input_file:
@@ -56,11 +56,11 @@ Every line consists out of different elements, or, columns. You can retrieve the
         print(splitted_data)
     input_file.close()
 
-The line with 1988 is now splitted and turned into a list: 
+The line with 1988 is now splitted and turned into a list:
 
     ['198889', ' AC Milan', ' 33', ' 19\t\n']
 
-The characters `"\t"` (tab) and `"\n"` (newline) are also visible, we don't really need to use those though.
+The characters `"\t"` (tab) and `"\n"` (newline) are also visible; we don't really need to use those though.
 
 
 ## Step 3: save the information in variables
@@ -74,9 +74,9 @@ We can save this information in a variable:
 
 ### Problem 1: unpacking the variables
 
-As you might have observed, the creators of the file name the season 1988-1889 as one number: 198889. Smart of them, but we are only interested in the year of the start of the season (1988). 
+As you might have observed, the creators of the file named the season 1988-1889 as one number: 198889. Smart of them, but we are only interested in the starting year of the season (1988).
 
-Note that the data is still stored in the list as a `string`. Although `198889` can be cosidered to be a number, we treat it as a piece of text. The year we are looking for is stored in the first 4 characters of that string. To only save this part of the string, we need the first 4 characters.
+Note that the data is still stored in the list as a `string`. Although `198889` can be considered a number, we treat it as a piece of text. The year we are looking for is stored in the first 4 characters of that string. To only save this part of the string, we need the first 4 characters.
 
     season = splitted_data[0][0:4]
     goals = splitted_data[2]
@@ -88,12 +88,12 @@ From now on it is easier to treat the data as a number, because only then we can
     season = int(splitted_data[0][0:4])
     goals = int(splitted_data[2])
 
-You now have all the information available in a variable. Now you can use everything you learned about Python to perform an analaysis.
+You now have all the information available in a variable. Now you can use everything you learned about Python to perform an analysis.
 
 
 ## Step 4: analyzing the data
 
-We wanted to calculate the total number of goals van Basten has made for his club. In addition, we would like to now in which seasons he made more than 20 goals.
+We wanted to calculate the total number of goals van Basten has made for his club. In addition, we would like to know in which seasons he made more than 20 goals.
 
 
     input_file = open('VanBasten.txt', 'r')
@@ -113,8 +113,8 @@ We wanted to calculate the total number of goals van Basten has made for his clu
     print(f"TOTAAL: In total Van Basten scored {total_goals} clubgoals")
     input_file.close()
 
-Always use `close()` to close the file you worked with after use. 
+Always use `close()` to close the file you worked with after use.
 
 ## Exercise
 
-Download the file with the goals statistics of van Basten and try to reproduce the results above. 
+Download the file with the goals statistics of van Basten and try to reproduce the results above.

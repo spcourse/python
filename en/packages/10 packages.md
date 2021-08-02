@@ -1,6 +1,6 @@
 # Packages
 
-A big part of the challenge of becoming a good programmer is create code that not only works that one time all the stars were aligned just right, but that works reliably, that is easy to read, to extend and to improve. Especially with bigger projects it can be vital to organize your code into separate modules/packages and to document them correctly. Here you will learn how to do this in a couple of steps:
+A big part of the challenge of becoming a good programmer is creating code that not only works that one time all the stars were aligned just right, but that works reliably. Code that is easy to read, to extend and to improve. Especially with bigger projects it can be vital to organize your code into separate modules/packages and to document them correctly. Here you will learn how to do this in a couple of steps:
 
 1. Create a new package
 2. Adding documentation to the package
@@ -8,9 +8,9 @@ A big part of the challenge of becoming a good programmer is create code that no
 
 ## Create a new package
 
-Managing big projects can quickly become quite a challenge. A good way to keep bigger projects manageable is by making it more modular: split your program up in distinct modules that can be tested individually. Lets have a look at how we can do this.
+Managing big projects can quickly become quite a challenge. A good way to keep bigger projects manageable is by making it more modular: split your program up in distinct modules that can be tested individually. Let's have a look at how we can do this.
 
-We start with a folder called `my_project` containing one python file called `my_program.py`. So we have the following project structure:
+We'll start with a folder called `my_project` containing one Python file called `my_program.py`. So we have the following project structure:
 
     my_project
     |_> my_program.py
@@ -83,9 +83,9 @@ We can now remove those functions from `my_program.py`, but we have to tell the 
 
 ### Bundle modules into package
 
-When modules contain a lot of functions it might want to go one step further in our organizational efforts: we could create a package folder.
+When modules contain a lot of functions, we might want to go one step further in our organizational efforts: we could create a package folder.
 
-Let's split `my_string_module.py` into two parts: `conversions.py` (containing `convert_to_ints()`) and `manipulations.py` (containing the other two functions). We put those file in a new directory called `my_string_package`.
+Let's split `my_string_module.py` into two parts: `conversions.py` (containing `convert_to_ints()`) and `manipulations.py` (containing the other two functions). We'll put those files in a new directory called `my_string_package`.
 
 Project structure:
 
@@ -124,7 +124,7 @@ We need to change the import statement in `my_program.py` such that it knows to 
     my_number_list = convert_to_ints(my_string3)
     print(my_number_list)
 
-The label `my_string_package.manipulations` in the import statement tells python to look in the folder `my_string_package` at the file `manipulations.py`.
+The label `my_string_package.manipulations` in the import statement tells Python to look in the folder `my_string_package` at the file `manipulations.py`.
 
 ### Add init
 
@@ -162,7 +162,7 @@ Now we can simplify the import statement in `my_program.py`:
     my_number_list = convert_to_ints(my_string3)
     print(my_number_list)
 
-When python comes across the statement `from my_string_package import ...` it knows to look for a file `__init__.py` in the `my_string_package` folder. The other files can remain unchanged.
+When Python comes across the statement `from my_string_package import ...` it knows to look for a file `__init__.py` in the `my_string_package` folder. The other files can remain unchanged.
 
 Code `conversions.py`:
 
@@ -179,7 +179,7 @@ Code `manipulations.py`:
 
 ## Add documentation
 
-Once created a package you need to document it. So that the next person using the package (most likely your future self), can find out how to use it without having to read all the code. The tool `pydoc` can automatically extract information from python packages.
+Once you've created a package, you need to document it so that the next person using the package (most likely your future self), can find out how to use it without having to read all the code. The tool `pydoc` can automatically extract information from Python packages.
 
 Run `$ pydoc my_string_package` (from the `my project` directory):
 
@@ -195,7 +195,7 @@ Run `$ pydoc my_string_package` (from the `my project` directory):
     FILE
         [some path]\my_string_package\__init__.py
 
-As you can see it `pydoc` automatically generated some information about our package. We get the name of the package, the sub-modules ( `conversions` and `manipulations`), and the location of the package. Type `q` to exit `pydoc`.
+As you can see, `pydoc` automatically generated some information about our package. We get the name of the package, the sub-modules ( `conversions` and `manipulations`), and the location of the package. Type `q` to exit `pydoc`.
 
 We can even inspect the sub-modules themselves.
 
@@ -245,7 +245,7 @@ You see `pydoc` added the short description to the name and added the rest to th
 
 ### Add more docstrings
 
-Similarly we can add docstrings to the top of the sub-packages.
+Similarly, we can add docstrings to the top of the sub-packages.
 
 Code `manipulations.py`:
 
@@ -313,7 +313,7 @@ We should still add documentation to `conversions.py` and, of course, normally y
 
 ## README and LICENSE
 
-We only documented the `my_string_package` package above. It is good practice to always document every function you write and every python file you create, even if it is not part of a package.
+We only documented the `my_string_package` package above. It is good practice to always document every function you write and every Python file you create, even if it is not part of a package.
 
 When you publish your project you also typically add at least a LICENSE and a README file to the root of your project. The LICENSE file is a text file called `LICENSE`. It is best to stick to existing LICENSE texts (you can find an overview [here](https://choosealicense.com/)).
 
