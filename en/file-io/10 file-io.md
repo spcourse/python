@@ -1,4 +1,4 @@
-# Reading, writing, and finding files; file I/O
+# Reading, writing, and finding files; file Input/Output (I/O)
 
 The following code will open a file and print every line:
 
@@ -25,7 +25,7 @@ Let's start with the basics:
 
     f = open('some_file.txt', 'r')
 
-`open()` returns a file object, and is most commonly used with two arguments: `open(filename, mode)`. The first argument is a string containing the path to the file (including the filename). The second argument, `mode`, is another string containing a few characters describing what you will do with the file. `mode` can be `'r'` when the file will only be read, `'w'` for only writing (an existing file with the same name will be overwritten). It is also possible to open a file for both reading and writing with `'rw'`.
+`open()` returns a file object (in this case, we name it `f`), and is most commonly used with two arguments: `open(filename, mode)`. The first argument is a string containing the path to the file (including the filename). The second argument, `mode`, is another string containing a few characters describing what you will do with the file. `mode` can be `'r'` when the file will only be read, `'w'` for only writing (an existing file with the same name will be overwritten). It is also possible to open a file for both reading and writing with `'rw'`.
 
 > Normally, files are opened in text mode, that means, you read and write strings from and to the file. Adding `'b'` to the `mode` opens the file in binary mode: now the data is read and written in the form of bytes objects. This mode should be used for all files that don’t contain text. It is also possible to open the file for appending (writing) at the end of the file: `'a'`.
 
@@ -98,25 +98,46 @@ Writing to files is fairly simple:
 
 ## The `with` keyword
 
+It’s important to remember that it’s your responsibility to close the file. _In most cases_, upon termination of an application or script, a file will be closed eventually. However, there is no guarantee when exactly that will happen, and until the file is closed it will keep using your computers resources.
+
 It is good practice to use the `with` keyword when dealing with file objects:
 
     with open('some_file.txt', 'r') as f:
         data = f.read()
 
-The advantage of using `with` is that the file is automatically properly closed, even if an exception is raised or an error occurs at some point. If you're not using the `with` keyword, then you should call `f.close()` to close the file. After a file object is closed, either by `with` or by `f.close()`, attempts to use the file object will automatically fail.
+The advantage of using `with` is that the file is **automatically** properly closed, even if an exception is raised or an error occurs at some point.
+
+If you're not using the `with` keyword, then you should call `f.close()` to close the file:
+
+    f.close()
+
+It’s important to remember that it’s your responsibility to close files. _In most cases_, upon termination of your program, files will be closed. However, there is no guarantee when exactly that will happen, and until the file is closed it will keep using your computers resources. After a file object is closed, either by `with` or by `f.close()`, attempts to use the file object will automatically fail.
 
 ## CSV files
 
-The Comma Separated Values (CSV) format and variations of it are some of the most common formats for scientific data. There is no standard method of generating files in this format, and as such it can be quite annoying to process CSV files. Python's `csv`-module implements functions that are able to read and write most variations of data that is in CSV format. CSV files can be opened as any normal file, and then processed through `csv.reader()` as follows:
+The Comma Separated Values (CSV) format and variations of it are some of the most common formats for scientific data. There is no standard method of generating files in this format, and as such it can be quite annoying to process CSV files. Let's say we have `example.csv` containing some names, identifiers, and age of a group of people:
+
+    Name, Identifier, Age
+    Pete, 1234, 34
+    Magnus, 5232, 32
+    Sharma, 0923, 48
+
+CSV files typically start with a header naming each of the columns, but they don't have to. Sometimes there is extra information above the header, which you will have to skip over before starting to read the file.
+
+Python's `csv`-module implements functions that are able to read and write most variations of data that is in CSV format. CSV files can be opened as any normal file, and then processed through `csv.reader()` as follows:
 
     >>> import csv
     >>> with open('example.csv', 'r') as csvfile:
     ...     rdr = csv.reader(csvfile)
+    ...
+    ...     # Every row is a list of strings, loop over each row
     ...     for row in rdr:
-    ...         # Create one string from the entire row and print it
+    ...         # Join all strings from the entire row into one big string, and print it
     ...         print(', '.join(row))
-    This, is, an, example!
-    It, really, is.
+    Name, Identifier, Age
+    Pete, 1234, 34
+    Magnus, 5232, 32
+    Carl, 0923, 24
 
 Here, `row` is a list that contains every element that was originally separated by commas, essentially functioning the same as `string.split()`.
 

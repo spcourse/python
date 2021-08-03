@@ -86,7 +86,7 @@ This will instruct your terminal to list the current Conda environment it is in.
 
 Now, with your new terminal, run the following commands:
 
-	curl https://pdp.mprog.nl/course/python/en/installing/computer/environment.env > environment.yml
+	curl https://raw.githubusercontent.com/spcourse/sp1-python/main/en/installing/computer/environment.env > environment.yml
 	conda env create -f environment.yml
 	rm environment.yml
 

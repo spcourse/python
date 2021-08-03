@@ -1,7 +1,3 @@
-# Big Data
-
-An often encountered application of computer programs is reading, processing and analyzing large data files. Big data! We will learn how to read data from a file in this module, and we will apply our knowledge to classify data and create graphs out of our results.
-
 # Reading files and processing data
 
 ![](VanBastenKlein.jpg){:.inline}
@@ -25,12 +21,14 @@ We'll learn how to read and process data with an example case: the statistics of
     199394, AC Milan, 0, 0
     199495, AC Milan, 0, 0
 
-> Note: when you open the file with Windows Notepad, then all data will be shown in a single line. That does not affect your program in any way.
+> Note: when you open the file with Windows Notepad, all data will be shown in a single line. That does not affect your program in any way.
 
 In the following sections we'll answer some questions using the data from the data file:
 
 * What are the seasons in which Van Basten scored more than 20 times?
 * What is the total number of goals that Van Basten scored for all clubs he played for?
+
+We will be showing you how to read this file _without_ using Python's `csv`-module.
 
 ## Step 1: opening the file, reading the lines
 
@@ -41,9 +39,11 @@ Because traversing files in computer language is a standard procedure, there are
         print(line)
     input_file.close()
 
-The `'r'` argument in the `open()` function means 'read'. When you run this program you'll see that the line of 1988 shows up on your screen as follows:
+The `'r'` argument in the `open()` function means 'read'. When you run this program you'll see that for example the line with the season of 1988-89 shows up on your screen as follows:
 
     198889, AC Milan, 33, 19
+
+The whole line is stored as one string in the variable `line`, after which it is printed.
 
 ## Step 2: splitting of a line and save it in a list
 
@@ -52,16 +52,15 @@ Every line consists of different elements, or, columns. You can retrieve these e
     input_file = open('VanBasten.txt', 'r')
     for line in input_file:
         print(line)
-        splitted_data = line.split(',')
-        print(splitted_data)
+        split_data = line.split(',')
+        print(split_data)
     input_file.close()
 
-The line with 1988 is now splitted and turned into a list:
+The line with the season of 1988-89 is now split and turned into a list:
 
     ['198889', ' AC Milan', ' 33', ' 19\t\n']
 
-The characters `"\t"` (tab) and `"\n"` (newline) are also visible; we don't really need to use those though.
-
+The characters `"\t"` (tab) and `"\n"` (newline) are also visible; we don't really need to use those though. Note that even though we have split each of the elements in the line and now have a list, each of the elements is still of the type `string`. If we want to use the numbers as numbers we would need to convert the variables to `float`s or `int`s.
 
 ## Step 3: save the information in variables
 
@@ -69,24 +68,24 @@ In this exercise we are only interested in the season and the number of goals of
 
 We can save this information in a variable:
 
-    season = splitted_data[0]
-    goals = splitted_data[2]
+    season = split_data[0]
+    goals = split_data[2]
 
 ### Problem 1: unpacking the variables
 
 As you might have observed, the creators of the file named the season 1988-1889 as one number: 198889. Smart of them, but we are only interested in the starting year of the season (1988).
 
-Note that the data is still stored in the list as a `string`. Although `198889` can be considered a number, we treat it as a piece of text. The year we are looking for is stored in the first 4 characters of that string. To only save this part of the string, we need the first 4 characters.
+The data is still stored in the list as a `string`. Although `198889` can be considered a number, the program still treats it as a piece of text. The year we are looking for is stored in the first 4 characters of that string. To only save this part of the string, we need the first 4 characters. We can use so-called "slicing for that:
 
-    season = splitted_data[0][0:4]
-    goals = splitted_data[2]
+    season = split_data[0][0:4]
+    goals = split_data[2]
 
 ### Problem 2: numbers versus text
 
 From now on it is easier to treat the data as a number, because only then we can calculate stuff with it. To ensure the data becomes numerical, we have to explicitly convert it.
 
-    season = int(splitted_data[0][0:4])
-    goals = int(splitted_data[2])
+    season = int(split_data[0][0:4])
+    goals = int(split_data[2])
 
 You now have all the information available in a variable. Now you can use everything you learned about Python to perform an analysis.
 
@@ -100,10 +99,10 @@ We wanted to calculate the total number of goals van Basten has made for his clu
     total_goals = 0
 
     for line in input_file:
-        splitted_data = line.split(',')
+        split_data = line.split(',')
 
-        season = int(splitted_data[0][0:4])
-        goals = int(splitted_data[2])
+        season = int(split_data[0][0:4])
+        goals = int(split_data[2])
 
         total_goals = total_goals + goals   
 
