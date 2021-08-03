@@ -73,7 +73,7 @@ We can save this information in a variable:
 
 ### Problem 1: unpacking the variables
 
-As you might have observed, the creators of the file named the season 1988-1889 as one number: 198889. Smart of them, but we are only interested in the starting year of the season (1988).
+As you might have observed, the creators of the file named the season of 1988-1889 as one number: 198889. Smart of them, but we are only interested in the starting year of the season (1988).
 
 The data is still stored in the list as a `string`. Although `198889` can be considered a number, the program still treats it as a piece of text. The year we are looking for is stored in the first 4 characters of that string. To only save this part of the string, we need the first 4 characters. We can use so-called "slicing for that:
 
@@ -82,7 +82,7 @@ The data is still stored in the list as a `string`. Although `198889` can be con
 
 ### Problem 2: numbers versus text
 
-From now on it is easier to treat the data as a number, because only then we can calculate stuff with it. To ensure the data becomes numerical, we have to explicitly convert it.
+From now on it is easier to treat the data as a number, because only then we can calculate stuff with it. To ensure the data becomes numerical, an integer, we have to explicitly convert it.
 
     season = int(split_data[0][0:4])
     goals = int(split_data[2])
@@ -92,7 +92,7 @@ You now have all the information available in a variable. Now you can use everyt
 
 ## Step 4: analyzing the data
 
-We wanted to calculate the total number of goals van Basten has made for his club. In addition, we would like to know in which seasons he made more than 20 goals.
+We wanted to calculate the total number of goals van Basten has made for his club. In addition, we would like to know in which seasons he scored more than 20 goals.
 
 
     input_file = open('VanBasten.txt', 'r')
@@ -116,4 +116,6 @@ Always use `close()` to close the file you worked with after use.
 
 ## Exercise
 
-Download the file with the goals statistics of van Basten and try to reproduce the results above.
+Download the file with the goals statistics of van Basten, create a file named `football_analysis.py` and try to reproduce the results above.
+
+As a second exercise, try to think of ways to improve this program. Separate reading the file from analysing it, and try to answer the two questions one by one. Code design is very difficult to learn, and requires thinking and rewriting code, so try to find another student to discuss with!

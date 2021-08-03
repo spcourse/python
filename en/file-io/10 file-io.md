@@ -111,7 +111,7 @@ If you're not using the `with` keyword, then you should call `f.close()` to clos
 
     f.close()
 
-It’s important to remember that it’s your responsibility to close files. _In most cases_, upon termination of your program, files will be closed. However, there is no guarantee when exactly that will happen, and until the file is closed it will keep using your computers resources. After a file object is closed, either by `with` or by `f.close()`, attempts to use the file object will automatically fail.
+It’s important to remember that it’s your responsibility to close files. _In most cases_, upon termination of your program, files will be closed. However, there is no guarantee when exactly that will happen, and until the file is closed it will keep using your computers resources. After you are done reading from the file, try to close the file as soon as possible. After a file object is closed, preferably by `with`, and otherwise by `f.close()`, attempts to use the file object will automatically fail.
 
 ## CSV files
 
