@@ -38,7 +38,7 @@ Also pay attention to your writing style: do not use capital letters or interpun
 
     # comments go here
     solution = 12 + partial_solution # not here
-    # or here
+    # not here
 
 Comments should always have an extra whitespace above them, such that they separate different codeblocks:
 
@@ -60,11 +60,27 @@ Usually, at the top of programs some general information is provided. This part 
     # This program calculates the average values of a series
     # of numbers input by the user.
 
+### Example 3
+
+Documentation strings, or docstrings, are strings enclosed in double (""") or single (\'\'\') quotation marks that appear on the first line of any function, class, method, or module. You can use them to explain and document a specific block of code.
+
+
+    def my_complex_function(some_value):
+        """
+        This complex function takes some_value and does some complicated calculations 
+        with it. After those calculations, the resulting value is returned.
+        """
+        result = some_value + 1
+        
+        return result
+        
+
+
 #### Writing style
 
 Note the writing style in this example. The summary in the comment above is too long for one line. If that is the case, the comment should be divided over multiple lines explicitly. Just add another line with a `#` in front of it.
 
-We have chosen to truncate after 60 characters. Lines should have a length of approximately 45-90 characters, as is the case in books. This makes your code and comments easy to read.
+We have chosen to truncate after 80 characters. Lines should have a length of approximately 45-90 characters, as is the case in books. This makes your code and comments easy to read.
 
 ## Indentation
 
@@ -121,6 +137,7 @@ There are exceptions. When your program is about topics where abbreviations are 
 
     # v is for "velocity"
     v_rabbit = 0.002
+    
     # x is for "displacement"
     x_rabbit = 23.11
 
@@ -158,6 +175,8 @@ Operators such as `+`, `==`, `%` and `**` are often used in formulas and equatio
     x = x * 2 - 1
     hypotenuse_squared = x * x + y * y
     c = (a + b) * (a - b)
+
+> Note: When `=` is used to assign a default value to a function argument, do not surround it with spaces; `def function(default_parameter=5):`.
 
 ## Pure functions
 
