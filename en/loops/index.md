@@ -23,6 +23,8 @@ This program has as output:
 
 The loop starts by setting the value of `x` to `1` and then executing *all* instructions in the loop one by one. This is called an _iteration_. After that, `x` is assigned the value `2` and again all instructions are executed. In this simple program there is only a single instruction: `print` the value of `x`, but we can of course expand the number of instructions. *The most important notion is that the program changes the variable `x` _after_ each cycle.*
 
+Looping over lists with for:
+![embed](https://api.eu.kaltura.com/p/120/sp/12000/embedIframeJs/uiconf_id/23449960/partner_id/120?iframeembed=true&playerId=kaltura_player&entry_id=0_kwirg85k&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en_US&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[hotspots.plugin]=1&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=0_emta411f)
 
 ![](Loopsexplanation.png){: style="max-width:500px;"}
 
@@ -40,6 +42,11 @@ There are a few important things to note:
     Please try this yourself to make sure you understand what values `x` takes in this program.
 
 ## Types of loops
+
+![embed](https://api.eu.kaltura.com/p/120/sp/12000/embedIframeJs/uiconf_id/23449960/partner_id/120?iframeembed=true&playerId=kaltura_player&entry_id=0_vs6hg6ie&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en_US&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[hotspots.plugin]=1&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=0_rstxzo8h)
+
+When to use while:
+![embed](https://api.eu.kaltura.com/p/120/sp/12000/embedIframeJs/uiconf_id/23449960/partner_id/120?iframeembed=true&playerId=kaltura_player&entry_id=0_rzad8nlz&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en_US&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[hotspots.plugin]=1&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=0_ku8x9gud)
 
 In Python, just like in almost every other programming language, there are two different constructions to loop over a variable: the **for-loop** and the **while-loop**.
 
@@ -59,15 +66,10 @@ is equal to the following `while-loop`:
 
 The reason that the `for`-loop is more often used is that it is a bit more compact and also more easily readable. However, this can only be done if you know beforehand how often the code needs to be executed. In other cases, like with user input, the only way to do it is to use a `while`-loop.
 
-<!-- TODO vervangen -->
-<!-- ![embed](https://player.vimeo.com/video/287247106) -->
 
 ## Computing things using loops
 
 In the first example we only had a single instruction in the loop itself, 'print the value of `x` on the screen', but you could have multiple instructions for every value that `x` takes.
-
-<!-- TODO vervangen -->
-<!-- ![embed](https://player.vimeo.com/video/287247088) -->
 
 In the next example we add the value of `x` to another variable that we have set to zero at the beginning of the program. At the end of the program this variable contains the sum of the values from 1 to 10. Once we have that, it is easy to get the sum of numbers from 1 to 712643 by changing just one line.
 
@@ -101,8 +103,11 @@ As soon as all instructions have been executed for the highest value the variabl
 
 ## Filtering using loops
 
-<!-- TODO vervangen -->
-<!-- ![embed](https://player.vimeo.com/video/287247135) -->
+Filtering with range:
+![embed](https://api.eu.kaltura.com/p/120/sp/12000/embedIframeJs/uiconf_id/23449960/partner_id/120?iframeembed=true&playerId=kaltura_player&entry_id=0_75nvzt1x&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en_US&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[hotspots.plugin]=1&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=0_sku134bf)
+
+Filtering with lists:
+![embed](https://api.eu.kaltura.com/p/120/sp/12000/embedIframeJs/uiconf_id/23449960/partner_id/120?iframeembed=true&playerId=kaltura_player&entry_id=0_kczpbtsy&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en_US&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[hotspots.plugin]=1&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=0_ewvj552h)
 
 Within the set of instructions you can also use conditionals. For example, if you want the loop to go from 1 to 20, but only want to print the numbers that are larger than 15 or divisible by three, you could use the following code:
 
@@ -120,6 +125,8 @@ We have already mentioned that you can decide on the name of the variable. And a
 
 
 ## Loops in loops
+
+![embed](https://api.eu.kaltura.com/p/120/sp/12000/embedIframeJs/uiconf_id/23449960/partner_id/120?iframeembed=true&playerId=kaltura_player&entry_id=0_p676hj49&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en_US&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[hotspots.plugin]=1&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=0_laz26qqc)
 
 In the examples we have looked at up to now we have only printed things and saved some variables. Nothing too complex. This is not always the case and loops are often used in more complex constructions.
 
@@ -176,3 +183,8 @@ Could you get the same result by changing the range in the for-loop of `x`?
 ## Practice and  debugging
 
 If you meet a for-loop somewhere in this course that you don't understand very well, either in the examples we give or in your own code, please come back to this page and read it again. Last tip: you can always use print-statements to verify if the loops are really doing what you think they do.
+
+
+In this final video you can see some common mistakes when using while loops
+
+![embed](https://api.eu.kaltura.com/p/120/sp/12000/embedIframeJs/uiconf_id/23449960/partner_id/120?iframeembed=true&playerId=kaltura_player&entry_id=0_m54o3nlw&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en_US&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[hotspots.plugin]=1&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=0_8kxrifk5)
