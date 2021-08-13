@@ -9,7 +9,7 @@
 ## Debugging logical errors
 ![embed](https://api.eu.kaltura.com/p/120/sp/12000/embedIframeJs/uiconf_id/23449960/partner_id/120?iframeembed=true&playerId=kaltura_player&entry_id=0_2s1gcaht&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en_US&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[hotspots.plugin]=1&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=0_0c9irdya)
 
-
+## Reference
 A simulation is used to obtain an image/idea of real scenarios, such that the outcomes of the simulations can be used in the 'real world'. It's effectively a *model*.
 
 It is often hard to know whether a simulation is performed correctly simply by looking at the outcome. Often, you can analytically calculate the outcome, but this quickly becomes cumbersome. In addition, for many applications analytical solutions do not exist.
