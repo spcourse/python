@@ -70,7 +70,7 @@ To test whether your installation of `checkpy` was successful, you can test `hel
 
 	checkpy hello
 
-Is everything colored green and do you only see happy smileys? That means you've done a-okay, and that you've met our requirements for the assignment! Should there still be some red smileys, no worries! Carefully examine your code and verify it with each of the specifications. And don't forget you can always send us an email if you're stuck.
+Is everything okay and do you only see happy smileys? That means you've done a-okay, and that you've met our requirements for the assignment! Should there still be some sad smileys, no worries! Carefully examine your code and verify it with each of the specifications. And don't forget you can always send us an email if you're stuck.
 
 ### Install other Python libraries
 
