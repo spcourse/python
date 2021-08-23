@@ -1,7 +1,7 @@
 # Practice with dictionaries
-> You don't have to hand in these exercises. They are only to test your own understanding.
+> You don't have to hand in these exercises. These are practice exercises that you can use to test if you fully understood the material you just studied.
 
-Test your understanding with the following practice exercises. Use your usual code editor and create a file called `dictionaries.py`. You can check (some of) your answers here: [answers](/python/en/dictionaries/answers)
+Test your understanding with the following practice exercises. Use your usual code editor and create a file called `dictionaries.py`.
 
 **Exercise 1** Similar to the video, create a dictionary called `my_class` with students and grades. Use the names Ralph, Diana, Jordi, and Michele with their respective grades: 4, 8, 7, and 5.
 
@@ -30,11 +30,12 @@ Write a loop that looks up each student from the lists in `my_class` and prints 
 Use `get()` for this. Do not use `in` and do not use an `if`-statement.
 
 ## Answers
+Below you can find answers to *some* of the exrecises.
 
 Disclaimer: There are always many ways to solve a problem. The solutions here are not said to be the best solutions.
 **Having a different solution, does not necessarily mean it is wrong**.
 
-You should not have to rely on the answers to the practice exercise too much. If you cannot make the practice exercises at all without relying on these answers, you should discuss this with your teacher.
+You should not have to rely on the answers to the practice exercise. If you cannot make the practice exercises at all without looking at these answers, you should discuss this with your teacher.
 
 <details markdown="1"><summary  markdown="span">Answers.</summary>
 
