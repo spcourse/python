@@ -1,11 +1,11 @@
 # Practice with the basics
-> You don't have to hand in these exercises. These are practice exercises that you can use to test if you fully understood the material you just studied. 
+> You don't have to hand in these exercises. These are practice exercises that you can use to test if you fully understood the material you just studied.
 
 Test your understanding with the following practice exercises. Create a file called `basics.py` for your solutions.
 
 **Exercise 1** Write a piece of code that prints the text "I'm learning Python!"
 
-**Exercise 2** Give the code below, write a progam tha prints "I'm not learning [X]", where X is filled by whaterver the contents of the variable programming_language is. So if programming_language = "Java", the code should print "I'm not learning Java"
+**Exercise 2** Give the code below, write a program that prints "I'm not learning [X]", where X is filled by whatever the contents of the variable programming_language is. So if programming_language = "Java", the code should print "I'm not learning Java".
 
     programming_language = 'Java'
     # your code here
@@ -47,14 +47,14 @@ Test your understanding with the following practice exercises. Create a file cal
     print(f"The first number plus the second number is {z}")
 
 ## Answers
-Below you can find answers to *some* of the exrecises.
+Below you can find answers to *some* of the exercises.
 
 Disclaimer: There are always many ways to solve a problem. The solutions here are not said to be the best solutions.
 **Having a different solution, does not necessarily mean it is wrong**.
 
 You should not have to rely on the answers to the practice exercise. If you cannot make the practice exercises at all without looking at these answers, you should discuss this with your teacher.
 
-<details markdown="1"><summary  markdown="span">Answers.</summary>
+<details markdown="1"><summary  markdown="span">Answers</summary>
 
 **Exercise 1**
 
