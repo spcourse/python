@@ -6,6 +6,7 @@ In the video below the algorithm has to find the correct solution if there are 0
 
 ![embed](https://www.youtube.com/embed/6hfOvs8pY1k)
 
+## Previously
 In the chapter [basics](/python/basics) you've learned a number of **instructions** that can be used in Python:
 
 - the `print`-instruction, to display messages to the user

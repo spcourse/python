@@ -14,7 +14,7 @@ Test your understanding with the following practice exercises. Create a file cal
     y = 10
     # your code here
 
-print(y)
+    print(y)
 
 **Exercise 3** The height of a fine for speeding with a car in The Netherlands depends on how much faster than the limit you're going. On the highway the fines are given in the table below.
 
