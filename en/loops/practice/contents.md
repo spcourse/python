@@ -45,26 +45,39 @@ Consider the following code:
         print(f"x now has the value {x}")
         total = total + x
 
-    print(f"The sum of all numbers from 1 to 10 = {total}")
+    print(f"The sum of all numbers from 1 to 4 = {total}")
 
-Please change this program by including another print statement: `print(f"The sum of all numbers from 1 to {x} = {total}")`. Include this line beneath `total = total + x`, in such a way that it starts at the same position (the same level of indentation). Run the program and try to understand what happens. Problems with indentation are a very common mistake when using loops, so it is important to see these types of 'mistakes' so you can recognize them later.
+Please change this program by including another print statement: `print(f"The sum of all numbers from 1 to {x} = {total}")`. Include this line beneath `total = total + x`. (Make sure that you get the indentation right: the new print statement should still be part of the loop.) This should have the following output:
 
-**Exercise 9** At this moment we use the numbers from 1 to 10. Please try to adapt the program in such a way that you define a new variable once at the beginning of the program (so not in the range() function) that holds the maximum number. Use this maximum number as the maximum value for the for-loop: `for x in range(1, maximum)`.
+    x now has the value 1
+    The sum of all numbers from 1 to 1 = 1
+    x now has the value 2
+    The sum of all numbers from 1 to 2 = 3
+    x now has the value 3
+    The sum of all numbers from 1 to 3 = 6
+    x now has the value 4
+    The sum of all numbers from 1 to 4 = 10
+    The sum of all numbers from 1 to 4 = 10
+
+**Exercise 9** At this moment we use the numbers from 1 to 4. Let's make this more flexible. Add the variable `maximum` to the beginning of you program and assign it the value `10`. Use this maximum number as the maximum value for the for-loop: `for x in range(1, maximum)`.
 
 **Exercise 10** Make a program that has the same functionality as the example, but now use a while-loop instead of a for-loop.
 
-**Exercise 11** Replace the while-loop condition to ensure that it will stop if the sum of all numbers up to that point is bigger than 123. To help you, the expected output is provided:
+**Exercise 11** Replace the while-loop condition to ensure that it will stop if the sum of all numbers up to that point is bigger than 20. To help you, the expected output is provided:
 
-	Value of sum_x: 0, value of x: 10
-	Value of sum_x: 10, value of x: 11
-	Value of sum_x: 21, value of x: 12
-	Value of sum_x: 33, value of x: 13
-	Value of sum_x: 46, value of x: 14
-	Value of sum_x: 60, value of x: 15
-	Value of sum_x: 75, value of x: 16
-	Value of sum_x: 91, value of x: 17
-	Value of sum_x: 108, value of x: 18
-	End value of sum_x: 126, end value of x: 19
+    x now has the value 1
+    The sum of all numbers from 1 to 1 = 1
+    x now has the value 2
+    The sum of all numbers from 1 to 2 = 3
+    x now has the value 3
+    The sum of all numbers from 1 to 3 = 6
+    x now has the value 4
+    The sum of all numbers from 1 to 4 = 10
+    x now has the value 5
+    The sum of all numbers from 1 to 5 = 15
+    x now has the value 6
+    The sum of all numbers from 1 to 6 = 21
+    The sum of all numbers from 1 to 10 = 21
 
 ## Filtering with loops
 **Exercise 12**
@@ -72,9 +85,9 @@ Consider the following code:
 
     for number in range(1, 20):
         if number > 15:
-           print(f"This number is bigger than 15: {number}")
+            print(f"This number is bigger than 15: {number}")
         if number % 3 == 0:
-           print(f"This number is exactly divisible by 3: {number}")
+            print(f"This number is exactly divisible by 3: {number}")
 
 Try to adapt the example above in such a way that, at the end of the loop, the program prints to the screen how many numbers were exactly divisible by 3. To do this you will have to define a so-called 'counter', a variable that is set to zero at the start of the program and that is incremented by 1 every time you encounter a number that is exactly divisible by 3. Also take some time to format the output to the screen and have your program print:
 
@@ -88,9 +101,7 @@ Try to adapt the example above in such a way that, at the end of the loop, the p
        for y in range(1, 4):
            print(f"x = {x}, y = {y}")
 
-Adapt the program in such a way that the print-statement is only executed *if* the sum of `x` and `y` is more than 6.
-
-**Exercise 14** Adapt the program in such a way that at the moment just before a new value is assigned to `x` (i.e. just after the loop over y is finished), the program prints: `The value of x is now ... and we have just finished the loop over y`.
+Adapt the program in such a way that at the moment just before a new value is assigned to `x` (i.e. just after the loop over y is finished), the program prints: `The value of x is now ... and we have just finished the loop over y`.
 
 The output should look as follows:
 
@@ -105,31 +116,136 @@ The output should look as follows:
 	...
 	The value of x is now 5, we have just finished the loop over y.
 
-**Exercise 15** Adapt the program in such a way that `y` does not run from 1 to 4, but from 1 to the value of `x`.
-
-**Exercise 16** Adapt the program of exercise 8 to use a while-loop for the value of `y`. The for-loop for `x` stays the same.
-
-**Exercise 17** Adapt the original program in such a way that the loop over `y` is only executed *if* `x` is larger than 3. *Keep* the range(1,6) in the for-loop of `x` the same, using a conditional (an if-statement) as a solution.
-
-Here's an example of what the output should be:
-
-	x = 4, y = 1
-	x = 4, y = 2
-	x = 4, y = 3
-	x = 5, y = 1
-	x = 5, y = 2
-	x = 5, y = 3
-
-Could you get the same result by changing the range in the for-loop of `x`?
+**Exercise 14** Adapt the program in such a way that `y` does not run from 1 to 4, but from 1 to the value of `x`.
 
 ## Solutions
 Below you can find some solutions.
 
 > Disclaimer: There are always many ways to solve a problem. The solutions here are not said to be the best solutions.
 **Having a different solution, does not necessarily mean it is wrong**.
-> 
+>
 > You should not have to rely on these solutions. If you cannot make the practice exercises at all without looking at these solutions, you should discuss this with your teacher.
 
 <details markdown="1"><summary  markdown="span">Answers</summary>
+
+**Exercise 1**
+
+    for i in range(1, 51):
+        print(i)
+
+**Exercise 2**
+
+    for i in range(1, 51, 2):
+        print(i)
+
+**Exercise 3**
+
+    total = 0
+    for i in range(4, 101, 4):
+        total += i
+    print(total)
+
+**Exercise 4**
+
+    s = 128
+    while s > 1:
+        s /= 2
+        print(s)
+
+**Exercise 5**
+
+    s = 128
+    i = 0
+    while s > 1:
+        s /= 2
+        i += 1
+        print(s)
+    print(i)
+
+**Exercise 6**
+
+    i = 1
+    while i < 5:
+        print(i)
+        i += 2
+
+**Exercise 7**
+
+    for x in range(2, 12, 3):
+        print(x)
+
+**Exercise 8**
+
+    total = 0
+    for x in range(1, 5):
+        print(f"x now has the value {x}")
+        total = total + x
+        print(f"The sum of all numbers from 1 to {x} = {total}")
+
+    print(f"The sum of all numbers from 1 to 4 = {total}")
+
+**Exercise 9**
+
+    total = 0
+    maximum = 10
+    for x in range(1, maximum):
+        print(f"x now has the value {x}")
+        total = total + x
+        print(f"The sum of all numbers from 1 to {x} = {total}")
+
+    print(f"The sum of all numbers from 1 to {maximum} = {total}")
+
+
+**Exercise 10**
+
+    total = 0
+    maximum = 10
+    x = 1
+    while x < maximum:
+        print(f"x now has the value {x}")
+        total = total + x
+        print(f"The sum of all numbers from 1 to {x} = {total}")
+        x += 1
+
+    print(f"The sum of all numbers from 1 to {maximum} = {total}")
+
+**Exercise 11**
+
+    total = 0
+    maximum = 10
+    x = 1
+    while total <= 20:
+        print(f"x now has the value {x}")
+        total = total + x
+        print(f"The sum of all numbers from 1 to {x} = {total}")
+        x += 1
+
+    print(f"The sum of all numbers from 1 to {maximum} = {total}")
+
+
+**Exercise 12**
+
+    count = 0
+    for number in range(1, 20):
+        if number > 15:
+            print(f"This number is bigger than 15: {number}")
+        if number % 3 == 0:
+            count += 1
+            print(f"This number is exactly divisible by 3: {number}")
+    print(f"From the numbers 1 to 20 there are {count} numbers that are exactly divisible by 3.")
+
+**Exercise 13**
+
+    for x in range(1, 6):
+        for y in range(1, 4):
+            print(f"x = {x}, y = {y}")
+        print(f"The value of x is now {x} and we have just finished the loop over y")
+
+**Exercise 14**
+
+    for x in range(1, 6):
+        for y in range(1, x):
+            print(f"x = {x}, y = {y}")
+        print(f"The value of x is now {x} and we have just finished the loop over y")
 
 </details>
