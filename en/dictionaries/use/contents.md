@@ -1,5 +1,17 @@
-# Dictionaries: basic operations
+# Dictionaries
+Dictionaries are one of the fundamental data structures of Python, and
+just like lists, they can be used to store several elements together in
+one variable. Unlike lists, dictionaries store *mappings* from a key to a
+value.
 
+## 1. Basic operations
+
+### Video
+Watch this video to learn about dictionaries:
+
+![embed](https://api.eu.kaltura.com/p/120/sp/12000/embedIframeJs/uiconf_id/23449960/partner_id/120?iframeembed=true&playerId=kaltura_player&entry_id=0_80k74cvx&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en_US&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[hotspots.plugin]=1&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=0_zmx8rsom)
+
+### Reading
 The difference between dictionaries and lists is that instead of using an index
 to access elements, we use a key. Searching for things by their keys is the
 main reason dictionaries are used so often and why they are such an efficient
