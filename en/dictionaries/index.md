@@ -54,7 +54,9 @@ Learn more about the speed of dictionaries in this video:
 ![embed](https://api.eu.kaltura.com/p/120/sp/12000/embedIframeJs/uiconf_id/23449960/partner_id/120?iframeembed=true&playerId=kaltura_player&entry_id=0_mjatxx9k&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en_US&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[hotspots.plugin]=1&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=0_t24tqi37)
 
 ### Reading
+<details markdown="1"><summary  markdown="span">Read more about computational complexity with dictionaries.</summary>
 And read more about the computational complexity dictionaries: [complexity](/python/en/dictionaries/complexity/)
+</details>
 
 ### Practice
 
@@ -72,12 +74,7 @@ You can use the code below to get started
 	from time import time
 	from random import randint
 
-    # create a list and dictionary containing both n items
-	n = 10
-	my_list = list(range(n))
-	my_dict = {}
-	for i in my_list:
-	    my_dict[i] = randint(0, 10)
+    # create a list or dictionary containing n items
 
 	# test speed
 	iterations = 100000
