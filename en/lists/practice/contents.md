@@ -1,4 +1,4 @@
-# Practice with time complexity of dictionaries
+# Practice with lists
 > **You don't have to hand in these practice exercises.** They're here for you to test yourself. Did you fully understood the theory you just learned?
 >
 > If there is an exercise that you don't know how to make, review the theory again. If that doesn't help, discuss the exercise with another student and/or the teacher.
