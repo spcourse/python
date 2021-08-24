@@ -1,4 +1,4 @@
-# Practice with time complexity of dictionaries
+# Practice with functions
 > **You don't have to hand in these practice exercises.** They're here for you to test yourself. Did you fully understood the theory you just learned?
 >
 > If there is an exercise that you don't know how to make, review the theory again. If that doesn't help, discuss the exercise with another student and/or the teacher.
@@ -60,15 +60,16 @@ should print
     10
 
 
-## Answers
-Below you can find answers to *some* of the exrecises.
+## Solutions
+Below you can find some solutions.
 
-Disclaimer: There are always many ways to solve a problem. The solutions here are not said to be the best solutions.
+> Disclaimer: There are always many ways to solve a problem. The solutions here are not said to be the best solutions.
 **Having a different solution, does not necessarily mean it is wrong**.
+>
+> You should not have to rely on these solutions. If you cannot make the practice exercises at all without looking at these solutions, you should discuss this with your teacher.
 
-You should not have to rely on the answers to the practice exercise. If you cannot make the practice exercises at all without looking at these answers, you should discuss this with your teacher.
+<details markdown="1"><summary  markdown="span">Answers</summary>
 
-<details markdown="1"><summary  markdown="span">Answers.</summary>
 **Exercise 1**
 
     def half(val):
