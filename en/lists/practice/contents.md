@@ -60,14 +60,81 @@ Create a piece of code that creates a list of all numbers between `0` and `n` th
     # your code here
 
 
-## Answers
-Below you can find answers to *some* of the exrecises.
+## Solutions
+Below you can find some solutions.
 
-Disclaimer: There are always many ways to solve a problem. The solutions here are not said to be the best solutions.
+> Disclaimer: There are always many ways to solve a problem. The solutions here are not said to be the best solutions.
 **Having a different solution, does not necessarily mean it is wrong**.
+>
+> You should not have to rely on these solutions. If you cannot make the practice exercises at all without looking at these solutions, you should discuss this with your teacher.
 
-You should not have to rely on the answers to the practice exercise. If you cannot make the practice exercises at all without looking at these answers, you should discuss this with your teacher.
+<details markdown="1"><summary  markdown="span">Answers</summary>
 
-<details markdown="1"><summary  markdown="span">Answers.</summary>
+**Exercise 1**
+
+    list = ["banana", 10.9, 2, "fruit", 42]
+    print(list[0])
+    print(list[4]) # or print(list[-1])
+    # your code here
+
+**Exercise 2**
+
+    list[1] = "hello"
+    print(list)
+
+**Exercise 3**
+
+    list = ["1kg apples", "100g sugar", "1 tsp cinnamon", "1 lemon", "300g flour", "1 tsp baking powder"]
+    for e in list:
+        print(e)
+
+**Exercise 4**
+
+    l = []
+    for i in range(1, 31):
+        l.append(i)
+    print(l)
+
+**Exercise 5**
+
+    list = [9, 10, 11, 12]
+    sum = 0
+
+    for e in list:
+        sum += e
+
+    print(sum)
+
+**Exercise 6**
+
+    numbers = [8, 2, 3, 15, 7, 19]
+
+    numbers2 = []
+    for number in numbers:
+        if number > 5 and number < 16:
+            numbers2.append(number)
+
+    print(numbers2)
+
+**Exercise 7**
+
+    numbers = [8, 2, 3, 15, 7, 19]
+
+    count = 0
+    for number in numbers:
+        if number > 5 and number < 16:
+            count += 1
+
+    print(count)
+
+**Exercise 8**
+
+    n = 123
+    list = []
+    for i in range(n):
+        if i % 3 == 0 and i % 5 == 0:
+            list.append(i)
+    print(list)
+
 
 </details>

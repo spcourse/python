@@ -52,10 +52,10 @@ Now, the museum changed it's policy: Children below 12 can enter the museum for 
 ## Solutions
 Below you can find some solutions.
 
-Disclaimer: There are always many ways to solve a problem. The solutions here are not said to be the best solutions.
+> Disclaimer: There are always many ways to solve a problem. The solutions here are not said to be the best solutions.
 **Having a different solution, does not necessarily mean it is wrong**.
-
-You should not have to rely on these solutions. If you cannot make the practice exercises at all without looking at these solutions, you should discuss this with your teacher.
+>
+> You should not have to rely on these solutions. If you cannot make the practice exercises at all without looking at these solutions, you should discuss this with your teacher.
 
 <details markdown="1"><summary  markdown="span">Answers</summary>
 

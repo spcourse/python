@@ -48,13 +48,13 @@ Test your understanding with the following practice exercises. Create a file cal
     z = x + y
     print(f"The first number plus the second number is {z}")
 
-## Answers
-Below you can find answers to *some* of the exercises.
+## Solutions
+Below you can find some solutions.
 
-Disclaimer: There are always many ways to solve a problem. The solutions here are not said to be the best solutions.
+> Disclaimer: There are always many ways to solve a problem. The solutions here are not said to be the best solutions.
 **Having a different solution, does not necessarily mean it is wrong**.
-
-You should not have to rely on the answers to the practice exercise. If you cannot make the practice exercises at all without looking at these answers, you should discuss this with your teacher.
+>
+> You should not have to rely on these solutions. If you cannot make the practice exercises at all without looking at these solutions, you should discuss this with your teacher.
 
 <details markdown="1"><summary  markdown="span">Answers</summary>
 
