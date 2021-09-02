@@ -1,6 +1,6 @@
 # While-loops
 
-While-loops work slightly different from for loops. On this pages we will show how while-loops work, how they differ from for-loops and when to use which type of loop.
+While-loops work slightly differently from for loops. On this page we will show how while-loops work, how they differ from for-loops and when to use which type of loop.
 
 ## How to use while-loops.
 

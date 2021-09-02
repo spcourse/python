@@ -1,5 +1,5 @@
 # Practice with for-loops
-> **You don't have to hand in these practice exercises.** They're here for you to test yourself. Did you fully understood the theory you just learned?
+> **You don't have to hand in these practice exercises.** They're here for you to test yourself. Did you fully understand the theory you just learned?
 >
 > If there is an exercise that you don't know how to make, review the theory again. If that doesn't help, discuss the exercise with another student and/or the teacher.
 
@@ -7,9 +7,9 @@ Test your understanding with the following practice exercises. Create a file cal
 
 ## Exercises
 
-**Exercise 1** Write a for-loop that prints the numbers 1 to 50
+**Exercise 1** Write a for-loop that prints the numbers 1 to 50.
 
-**Exercise 2** Write a for-loop that prints the between 1 and 50 with steps of 2
+**Exercise 2** Write a for-loop that prints the numbers between 1 and 50 with steps of 2.
 
 **Exercise 3** Write a for-loop that loops over the numbers 0 to 100 with steps of 4 and adds them all together. Print the result.
 

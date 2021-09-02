@@ -157,7 +157,7 @@ This works exactly the same way as it does for lists. But it only looks at the *
 ### looping
 
 Dictionaries are mostly used for look-up operations, but
-sometime you'll also want to loop over the elements in your dictionary.
+sometimes you'll also want to loop over the elements in your dictionary.
 Dictionaries support many of the same operations that lists do. For instance,
 you can use `len` to ask how many pairs there are in the dictionary
 

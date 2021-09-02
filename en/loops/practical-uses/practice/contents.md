@@ -1,5 +1,5 @@
 # Practice with loops
-> **You don't have to hand in these practice exercises.** They're here for you to test yourself. Did you fully understood the theory you just learned?
+> **You don't have to hand in these practice exercises.** They're here for you to test yourself. Did you fully understand the theory you just learned?
 >
 > If there is an exercise that you don't know how to make, review the theory again. If that doesn't help, discuss the exercise with another student and/or the teacher.
 
@@ -28,7 +28,7 @@ Please change this program by including another print statement: `print(f"The su
     The sum of all numbers from 1 to 4 = 10
     The sum of all numbers from 1 to 4 = 10
 
-**Exercise 2** At this moment we use the numbers from 1 to 4. Let's make this more flexible. Add the variable `maximum` to the beginning of you program and assign it the value `10`. Use this maximum number as the maximum value for the for-loop: `for x in range(1, maximum)`.
+**Exercise 2** At this moment we use the numbers from 1 to 4. Let's make this more flexible. Add the variable `maximum` to the beginning of your program and assign it the value `10`. Use this maximum number as the maximum value for the for-loop: `for x in range(1, maximum)`.
 
 **Exercise 3** Make a program that has the same functionality as the example, but now use a while-loop instead of a for-loop.
 
@@ -58,7 +58,7 @@ Consider the following code:
         if number % 3 == 0:
             print(f"This number is exactly divisible by 3: {number}")
 
-Try to adapt the example above in such a way that, at the end of the loop, the program prints to the screen how many numbers were exactly divisible by 3. To do this you will have to define a so-called 'counter', a variable that is set to zero at the start of the program and that is incremented by 1 every time you encounter a number that is exactly divisible by 3. Also take some time to format the output to the screen and have your program print:
+Try to adapt the example above in such a way that, at the end of the loop, the program prints to the screen how many numbers were exactly divisible by 3. To do this, you will have to define a so-called 'counter', a variable that is set to zero at the start of the program and that is incremented by 1 every time you encounter a number that is exactly divisible by 3. Also take some time to format the output to the screen and have your program print:
 
     From the numbers 1 to 20 there are ... numbers that are exactly divisible by 3.
 

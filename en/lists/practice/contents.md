@@ -1,5 +1,5 @@
 # Practice with lists
-> **You don't have to hand in these practice exercises.** They're here for you to test yourself. Did you fully understood the theory you just learned?
+> **You don't have to hand in these practice exercises.** They're here for you to test yourself. Did you fully understand the theory you just learned?
 >
 > If there is an exercise that you don't know how to make, review the theory again. If that doesn't help, discuss the exercise with another student and/or the teacher.
 
@@ -13,7 +13,7 @@ Print the first and last element of the list below:
     # your code here
 
 **Exercise 2**
-Change the second element (`10.9`) of the list from the previous exercise, by the value `"hello"`
+Change the second element (`10.9`) of the list from the previous exercise to the value `"hello"`
 
 **Exercise 3**
 Write a loop that prints each of the elements of the list below on a new line:
@@ -35,7 +35,7 @@ Write a loop that determines the sum of the elements of the list below:
     print(sum)
 
 **Exercise 6**
-The code below goes over each element from `numbers`, if it is bigger than 5, it is stored in `numbers2`:
+The code below goes over each element from `numbers`. If it is bigger than 5, it is stored in `numbers2`:
 
     numbers = [8, 2, 3, 15, 7, 19]
 
@@ -51,7 +51,7 @@ Change this code, such that it selects all numbers that are above 5 *and* below 
 
 **Exercise 7**
 Change the code from the exercise above, such that it does *not* create the new list `numbers2`.
-Instead it maintains a variable `count` that counts the *number of elements* that are above 5 *and* below 16.
+Instead, it maintains a variable `count` that counts the *number of elements* that are above 5 *and* below 16.
 
 **Exercise 8**
 Create a piece of code that creates a list of all numbers between `0` and `n` that are divisible by 3 and 5. (You might want to use `range()` here).

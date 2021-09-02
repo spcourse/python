@@ -1,12 +1,12 @@
 # Practice with functions
-> **You don't have to hand in these practice exercises.** They're here for you to test yourself. Did you fully understood the theory you just learned?
+> **You don't have to hand in these practice exercises.** They're here for you to test yourself. Did you fully understand the theory you just learned?
 >
 > If there is an exercise that you don't know how to make, review the theory again. If that doesn't help, discuss the exercise with another student and/or the teacher.
 
 
 Create a file called `functions.py` to work in.
 
-**Exercise 1** Create a function `half` that accepts one number and returns that number divided by 2. So
+**Exercise 1** Create a function `half` that accepts one number and returns that number divided by 2. So,
 
     # your code here
 
@@ -21,7 +21,7 @@ should print
 
     2.0 1.5
 
-**Exercise 2** Create a function `mean` that returns the mean between two numbers. So
+**Exercise 2** Create a function `mean` that returns the mean between two numbers. So,
 
     # your code here
 
@@ -32,7 +32,7 @@ should print
 
     5.0
 
-**Exercise 3** Create a function `max` that takes two numbers and returns the maximum of the two. So
+**Exercise 3** Create a function `max` that takes two numbers and returns the maximum of the two. So,
 
     # your code here
 
@@ -49,7 +49,7 @@ should print
 
 **Exercise 4** Create a function `maxx` that takes three numbers and returns the maximum. (If you're clever, you can do this by calling the function `max` from the previous exercise twice inside the function `maxx`)
 
-**Exercise 5** Create a function `my_sum` that takes a list and computes the sum of its elements. So
+**Exercise 5** Create a function `my_sum` that takes a list and computes the sum of its elements. So,
 
     my_list = [1,2,3,4]
     s = my_sum(my_list)
