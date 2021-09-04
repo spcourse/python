@@ -15,7 +15,7 @@ A function is a way to dramatically improve the design of your code. A function 
  - The input `some_list` is given between the parentheses: `len(some_list)`
  - The output of the function is assigned to `x` by the equals (`=`) operator: `x = len(some_list)`
 
-The function `len()` is built in to Python, so we don't have to worry about how it works internally, as long as we know how to use it. Let's however pretend that such a function does not exist, how would we define `len` ourselves? Let's call this function `length`:
+The function `len()` is built into Python, so we don't have to worry about how it works internally, as long as we know how to use it. Let's, however, pretend that such a function does not exist, how would we define `len` ourselves? Let's call this function `length`:
 
     def length(lst):
         count = 0
@@ -42,7 +42,7 @@ Keep in mind that the function stops running as soon as `return` is encountered,
 ## Functions with multiple parameters
 ![embed](https://api.eu.kaltura.com/p/120/sp/12000/embedIframeJs/uiconf_id/23449960/partner_id/120?iframeembed=true&playerId=kaltura_player&entry_id=0_03dms4u5&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en_US&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[hotspots.plugin]=1&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=0_uhohnubo)
 
-A function can have more than one parameter. For example if I want a function that computes the value ($y = a^2 + b$), I can define a function like this:
+A function can have more than one parameter. For example, if I want a function that computes the value ($y = a^2 + b$), I can define a function like this:
 
     def my_fun(a, b):
         y = a**2 + b
@@ -53,7 +53,7 @@ A function can have more than one parameter. For example if I want a function th
 
 We've defined a function similar to the way we did above. The main novelty here is that the function `my_fun` accepts two parameters, `a` and `b`.
 
-Note that the *order of the values* 3 and 2 provided when we call the function (`my_val = my_fun(3, 2)`) should correspond to the *order of the input parameters* in the definition of the function (`def my_fun(a, b):`). The call `my_val = my_fun(2, 3)` would give a different output.
+Note that the *order of the values* 3 and 2, provided when we call the function (`my_val = my_fun(3, 2)`), should correspond to the *order of the input parameters* in the definition of the function (`def my_fun(a, b):`). The call `my_val = my_fun(2, 3)` would give a different output.
 
 ## Details
 

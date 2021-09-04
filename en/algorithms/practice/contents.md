@@ -1,5 +1,5 @@
 # Practice with algorithms
-> **You don't have to hand in these practice exercises.** They're here for you to test yourself. Did you fully understood the theory you just learned?
+> **You don't have to hand in these practice exercises.** They're here for you to test yourself. Did you fully understand the theory you just learned?
 >
 > If there is an exercise that you don't know how to make, review the theory again. If that doesn't help, discuss the exercise with another student and/or the teacher.
 
@@ -10,7 +10,7 @@ Test your understanding with the following practice exercises. Create a file cal
     x = 12
     # your code here
 
-**Exercise 2** Write an if-statement that checks if the value of variable `x` is lower than the value of variable `y`. If this is the case add the value `5` to `y`, else set `y` to `0`
+**Exercise 2** Write an if-statement that checks if the value of variable `x` is lower than the value of variable `y`. If this is the case, add the value `5` to `y`, else set `y` to `0`
 
     x = 9
     y = 10
@@ -35,9 +35,9 @@ Write a program that prints how high the fine is given the value of the variable
     limit = 100
     # your code here
 
-**Exercise 4** The code below is repeated from the video. It asks the user to enter its age. If the age is below 18 or the age is 65 or above, the user gets a discount to the museum.
+**Exercise 4** The code below is repeated from the video. It asks the user to enter their age. If the age is below 18 or the age is 65 or above, the user gets a discount to the museum.
 
-Now, the museum changed it's policy: Children below 12 can enter the museum for free. Adapt the code such that if the age is below 12 it will print the text "Free entrance!" in stead of "You receive a discount at the museum."
+Now, the museum changed its policy: children below 12 can enter the museum for free. Adapt the code such that if the age is below 12, it will print the text "Free entrance!" instead of "You receive a discount at the museum."
 
     user_input = input('What is your age? ')
     age = int(user_input)
@@ -47,7 +47,7 @@ Now, the museum changed it's policy: Children below 12 can enter the museum for 
     else:
         print("No discount.")
 
-**Exercise 5** We continue with the code from 1.1. Students will also receive a discount. Ask the user for a second input with the question: "Are you a student (y/[n])?". If the student answers "y" or "yes", make sure the message "You receive a discount at the museum." is printed in stead of "No discount.", regardless of the age.
+**Exercise 5** We continue with the code from 1.1. Students will also receive a discount. Ask the user for a second input with the question: "Are you a student (y/[n])?". If the student answers "y" or "yes", make sure the message "You receive a discount at the museum." is printed instead of "No discount.", regardless of the age.
 
 ## Solutions
 Below you can find some solutions.

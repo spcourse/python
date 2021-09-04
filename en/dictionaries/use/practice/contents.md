@@ -1,5 +1,5 @@
 # Practice with dictionaries
-> **You don't have to hand in these practice exercises.** They're here for you to test yourself. Did you fully understood the theory you just learned?
+> **You don't have to hand in these practice exercises.** They're here for you to test yourself. Did you fully understand the theory you just learned?
 >
 > If there is an exercise that you don't know how to make, review the theory again. If that doesn't help, discuss the exercise with another student and/or the teacher.
 
@@ -9,7 +9,7 @@ Test your understanding with the following practice exercises. Use your usual co
 
 **Exercise 2** Add a student Gretel to the above dictionary with a grade of 9. Print the dictionary `my_class` to check if Gretel is indeed added to the dictionary.
 
-**Exercise 3** Write a piece of code that asks the user to input a name and looks in the dictionary `my_class` if the student exists. Print the message "[name] is a student in this class, and has the grade: [grade]." or "[name] is not a student in this class.", depending on whether or not the student is in the dictionary `my_class`. Example usage
+**Exercise 3** Write a piece of code that asks the user to input a name and looks in the dictionary `my_class` if the student exists. Print the message "[name] is a student in this class, and has the grade: [grade]." or "[name] is not a student in this class.", depending on whether or not the student is in the dictionary `my_class`. Example usage:
 
 	python dictionaries.py
 	Enter a name: Jordi
@@ -21,7 +21,7 @@ Use the `in` operator for this exercise. Do not use `get()`.
 
 	students = ["Michele", "Diana", "Maria", "Ralph", "Jacobus"]
 
-Write a loop that looks up each student from the lists in `my_class` and prints "[name]: [grade]" on a new line for each student. If the student doesn't exists in `my_class` it should print the text "n/a" for the grade. Expected output:
+Write a loop that looks up each student from the lists in `my_class` and prints "[name]: [grade]" on a new line for each student. If the student doesn't exist in `my_class` it should print the text "n/a" for the grade. Expected output:
 
 	Michele: 5
 	Diana: 8

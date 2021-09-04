@@ -1,5 +1,5 @@
 # Practice with while-loops
-> **You don't have to hand in these practice exercises.** They're here for you to test yourself. Did you fully understood the theory you just learned?
+> **You don't have to hand in these practice exercises.** They're here for you to test yourself. Did you fully understand the theory you just learned?
 >
 > If there is an exercise that you don't know how to make, review the theory again. If that doesn't help, discuss the exercise with another student and/or the teacher.
 
@@ -11,7 +11,7 @@ Test your understanding with the following practice exercises. Create a file cal
     s = 128
     # your code here
 
-**Exercise 2** Based on the code of the previous exercise. Introduce a second variable called `i`, that counts how many iterations the while-loop runs. Print the resulting value of `i` after the loop is done.
+**Exercise 2** Based on the code of the previous exercise. Introduce a second variable called `i` that counts how many iterations the while-loop runs. Print the resulting value of `i` after the loop is done.
 
 ## For/while exercises
 **Exercise 3** Consider the following piece of code:

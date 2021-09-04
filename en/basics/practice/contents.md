@@ -1,5 +1,5 @@
 # Practice with the basics
-> **You don't have to hand in these practice exercises.** They're here for you to test yourself. Did you fully understood the theory you just learned?
+> **You don't have to hand in these practice exercises.** They're here for you to test yourself. Did you fully understand the theory you just learned?
 >
 > If there is an exercise that you don't know how to make, review the theory again. If that doesn't help, discuss the exercise with another student and/or the teacher.
 
@@ -7,7 +7,7 @@ Test your understanding with the following practice exercises. Create a file cal
 
 **Exercise 1** Write a piece of code that prints the text "I'm learning Python!"
 
-**Exercise 2** Give the code below, write a program that prints "I'm not learning [X]", where X is filled by whatever the contents of the variable programming_language is. So if programming_language = "Java", the code should print "I'm not learning Java".
+**Exercise 2** Given the code below, write a program that prints "I'm not learning [X]", where X is filled by whatever the contents of the variable programming_language is. So if programming_language = "Java", the code should print "I'm not learning Java".
 
     programming_language = 'Java'
     # your code here

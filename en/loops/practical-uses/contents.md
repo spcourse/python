@@ -37,7 +37,7 @@ We have already mentioned that you can decide on the name of the variable. And a
 
 ![embed](https://api.eu.kaltura.com/p/120/sp/12000/embedIframeJs/uiconf_id/23449960/partner_id/120?iframeembed=true&playerId=kaltura_player&entry_id=0_p676hj49&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en_US&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[hotspots.plugin]=1&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=0_laz26qqc)
 
-In the examples we have looked at up to now we have only printed things and saved some variables. Nothing too complex. This is not always the case and loops are often used in more complex constructions.
+In the examples we have looked at so far, we have only printed things and saved some variables. Nothing too complex. This is not always the case and loops are often used in more complex constructions.
 
 It is also possible to make loops within loops, so-called 'nested loops'. If you, for example, want to vary a specific variable `y` from 1 to 3 for every value the variable `x` takes on (for example, when `x` is the student number and `y` is the mark for three different assignments during an exam) you can use the following construction:
 
@@ -57,6 +57,6 @@ This program has as output:
 
 ## Common mistakes
 
-In this final video you can see some common mistakes when using while loops
+In this final video you can see some common mistakes when using while loops:
 
 ![embed](https://api.eu.kaltura.com/p/120/sp/12000/embedIframeJs/uiconf_id/23449960/partner_id/120?iframeembed=true&playerId=kaltura_player&entry_id=0_m54o3nlw&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en_US&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[hotspots.plugin]=1&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=0_8kxrifk5)
