@@ -29,7 +29,7 @@ Test your understanding with the following practice exercises. Create a file cal
 
     oranges = 9
     baskets = 4
-    oranges_per_basket = x // y
+    oranges_per_basket = oranges // baskets
     oranges_left = 0 # todo: compute the correct value
     print(f"When I divide {oranges} oranges over {baskets} baskets...")
     print(f"I have {oranges_per_basket} oranges per basket...")
