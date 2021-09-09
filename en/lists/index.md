@@ -40,26 +40,25 @@ You can add an element to the end of the list (i.e, extending it):
 You could loop over lists with indices, using `range()` and `len()`, like this:
 
     measurements_science_park = [12.7, 18.8, 24.9, 14.5, 19.0]
-    measurements_science_park.append(20.5)
     print("In total, we have {len(measurements_science_park)} measurements:")
     for i in range(len(measurements_science_park)):
-        print(f"Measurement #{i} was {measurements_science_park[i]} degrees.")
+        print(f"The measurement was {measurements_science_park[i]} degrees.")
 
 However this is not the most convenient way to do this in Python. A more "Pythonic" way of looping over lists is like this:
 
     measurements_science_park = [12.7, 18.8, 24.9, 14.5, 19.0]
-    measurements_science_park.append(20.5)
+    print("In total, we have {len(measurements_science_park)} measurements:")
     for measurement in measurements_science_park:
         print(f"The measurement was {measurement} degrees.")
 
 Both examples will print the following:
 
     In total, we have 5 measurements:
-    Measurement #0 was 12.7 degrees.
-    Measurement #1 was 18.8 degrees.
-    Measurement #2 was 24.9 degrees.
-    Measurement #3 was 14.5 degrees.
-    Measurement #4 was 19.0 degrees.
+    Measurement was 12.7 degrees.
+    Measurement was 18.8 degrees.
+    Measurement was 24.9 degrees.
+    Measurement was 14.5 degrees.
+    Measurement was 19.0 degrees.
 
 
 ## Use-case: filtering elements out of a list
