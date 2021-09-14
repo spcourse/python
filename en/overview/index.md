@@ -31,7 +31,7 @@ In fact, you don't even need all of them. In theory, only a small subset would s
 #### Algorithmic
 
 - `if`, `elif`, `else`: [more](/python/en/algorithms#conditional-instructions)
-- `for`, `while`: [more](/python/en/loops#types-of-loops)
+- `for`, `while`: [more](/python/en/loops/for) and [more](/python/en/loops/while)
 
 #### Functions
-- `def`, `return`: [more](python/en/functions)
+- `def`, `return`: [more](/python/en/functions)
