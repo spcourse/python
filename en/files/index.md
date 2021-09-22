@@ -118,4 +118,4 @@ Always use `close()` to close the file you worked with after use.
 
 Download the file with the goals statistics of van Basten, create a file named `football_analysis.py` and try to reproduce the results above.
 
-As a second exercise, try to think of ways to improve this program. Separate reading the file from analysing it, and try to answer the two questions one by one. Code design is very difficult to learn, and requires thinking and rewriting code, so try to find another student to discuss with!
+As a second exercise, try to think of ways to improve the design of this program. The current code does everything in one loop, while it would be better to separate reading the file from doing calculations on the data. This can be done, for example, by introducing functions, or using multiple loops. Code design is very difficult to learn, and requires thinking and rewriting code, so try to find another student to discuss with!
