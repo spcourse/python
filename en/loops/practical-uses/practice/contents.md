@@ -10,7 +10,7 @@ Test your understanding with the following practice exercises. Create a file cal
 Consider the following code:
 
     total = 0
-    for x in range(1, 11):
+    for x in range(1, 4):
         print(f"x now has the value {x}")
         total = total + x
 
