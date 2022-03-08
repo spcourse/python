@@ -41,7 +41,7 @@ translation), which we might want to look up. This is generally how
 dictionaries are used in Python. Let's take a closer look at the syntax in
 Python and some more cases where we might want to use dictionaries.
 
-### creating a dictionary
+### Creating a dictionary
 
 So, dictionaries are an efficient way to store pairs of variables together. As
 another example, we could make a fruit basket and store the quantity we have of the different types of fruit. In our previous example we stored Spanish
@@ -143,7 +143,7 @@ It is also important to realize that `get()` **does not add items to the diction
     >>> basket
     {'apple': 6, 'orange': 2, 'strawberry': 10, 'banana': 6}
 
-### in
+### `in`
 
 We can also explicitly ask if a key is present in the dictionary using `in`
 
