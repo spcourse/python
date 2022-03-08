@@ -29,7 +29,7 @@ Write a loop that looks up each student from the lists in `my_class` and prints 
 	Ralph: 4
 	Jacobus: n/a
 
-Use `get()` for this. Do not use `in` and do not use an `if`-statement.
+Use `get()` for this. Do not use an `if`-statement.
 
 ## Solutions
 Below you can find some solutions.
@@ -62,9 +62,18 @@ Below you can find some solutions.
     name = input("Please enter a name: ")
 
     if name in my_dict:
-    grade = my_dict[name]
-    print(f"{name} is a student in this class, and has the grade: {grade}.")
+        grade = my_dict[name]
+        print(f"{name} is a student in this class, and has the grade: {grade}.")
     else:
-    print(f"{name} is not a student in this class.")
+        print(f"{name} is not a student in this class.")
+
+**Exercise 4**
+
+    my_dict = {"Ralph": 4, "Diana": 8, "Jordi": 7, "Michele": 5}
+    students = ["Michele", "Diana", "Maria", "Ralph", "Jacobus"]
+    
+    for student in student:
+        grade = my_dict.get(student, "n/a")
+	print(f"{student}: {grade}")
 
 </details>
