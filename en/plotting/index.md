@@ -72,7 +72,6 @@ We'll expand the plot a little now: another function is added $$x^3$$, for which
 
 Earlier we chose a small number of points where the values had to be filled in by hand. The graph is consequently a bit crude. To get a more fine-grained graph we can have the computer calculate a lot more y-values. If, for instance, we'd like to plot the function $$sin(x)$$ in steps of $$0.01$$ between $$0$$ and $$2\pi$$ then we can combine the different elements we've used before, like so:
 
-    import numpy as np
     import math
     import matplotlib.pyplot as plt
 
@@ -80,12 +79,17 @@ Earlier we chose a small number of points where the values had to be filled in b
     y_values = []
 
     # x goes from 0 to 2pi in steps of 0.01
-    for x in np.arange(0, 2 * math.pi, 0.01):
-        # calculate the corresponding y-value for each x
+    x = 0
+    while x < 2 * math.pi:
+        # store the x value
+        x_values.append(x)
+        x += 0.01
+
+    # calculate the corresponding y-value for each x
+    for x in x_values:
         y = math.sin(x)
 
-        # store the data in a list
-        x_values.append(x)
+        # store the y value
         y_values.append(y)
 
     # plot the whole graph
@@ -94,6 +98,7 @@ Earlier we chose a small number of points where the values had to be filled in b
     plt.ylabel('sin(x)', fontsize = 20)
     plt.text(4.00, 0.50, "f(x) = sin(x)", color = 'black', fontsize = 20)
     plt.show()
+
 
 ![](plotje3.png)
 
@@ -110,7 +115,6 @@ By way of example we'll plot both the sine and the cosine, and in a graph beside
 This is the corresponding code:
 
     import math
-    import numpy as np
     import matplotlib.pyplot as plt
 
     l_x    = []
@@ -118,8 +122,12 @@ This is the corresponding code:
     l_sinx = []
     l_cosx = []
 
-    for x in np.arange(0., 2 * math.pi, 0.01):
+    x = 0
+    while x < 2 * math.pi:
         l_x.append(x)
+        x += 0.01
+
+    for x in l_x:
         l_x2.append(x*x)
         l_sinx.append(math.sin(x))
         l_cosx.append(math.cos(x))

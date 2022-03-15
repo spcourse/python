@@ -59,6 +59,16 @@ should print
 
     10
 
+**Exercise 6** Create a function `arange` that takes three arguments: `start`, `stop`, and `step`. The function should return a list of values from `start` up to (but excluding) `stop` with steps of size `step`. Such that,
+
+    x_values = arange(-1, 3, 0.5)
+    print(x_values)
+
+should print
+
+    [-1, -0.5, 0.0, 0.5, 1.0, 1.5, 2.0, 2.5]
+
+_Note: This function or some variation of it should be especially handy in the coming exercises. Don't forget to use it there!_
 
 ## Solutions
 Below you can find some solutions.
@@ -128,5 +138,17 @@ Below you can find some solutions.
     my_list = [1,2,3,4]
     s = my_sum(my_list)
     print(s)
+
+**Exercise 6**
+
+    def arange(start, stop, step):
+        my_list = []
+
+        while start < stop:
+            my_list.append(start)
+            start += step
+
+        return my_list
+
 
 </details>

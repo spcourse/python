@@ -30,24 +30,3 @@ If you want to use the `sin()` function you should indicate in which library Pyt
   <https://docs.python.org/3/library/>
 
 - For many areas of expertise and applications, libraries can be found. If you work on larger programs in the future, it might even be handy to write and store your own standard code in a library. This benefits the readability and structure of your code and it is then easy to share your code with others.
-
-## Numpy and arange
-
-An example of a more extensive math library is the `numpy`-library. An overview, documentation and some examples can be found at <http://www.numpy.org>. A handy function that we'll use several times in this course is the `arange` function.
-
-For `for` loops you used the `range` command. This is also a function, namely one that generates a sequence of serial numbers. These two blocks of code are equivalent:
-
-    # version 1
-    for i in range(1,10):
-        print(i)
-
-    # version 2
-    for i in [1,2,3,4,5,6,7,8,9]:
-        print(i)
-
-The `range` function only works with integers. In math applications we often would like to use smaller steps. Think about calculating an integral, where we use small intervals to calculate, for example, an area. By using `numpy.arange()` we can easily do this:
-
-    import numpy
-
-    for x in numpy.arange(2.0, 9.0, 0.1):
-        print(x)
