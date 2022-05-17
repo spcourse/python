@@ -43,6 +43,7 @@ Test your understanding with the following practice exercises. Create a file cal
     print(f"x plus y is {z}")
 
 **Exercise 7** The code below doesn't give the expected result. Fix it.
+
     x = input("Enter the first number: ")
     y = input("Enter the second number: ")
     z = x + y
