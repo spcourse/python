@@ -1,6 +1,6 @@
 # Functions from Modules
 
-In previous exercises you've already worked with several built-in Python commands (or, *functions*): `raw_input` and `print` are two examples. The Python interpreter has several functions built into it that are always available. There are many more functions which are not available by default.
+In previous exercises you've already worked with several built-in Python commands (or, *functions*): `input` and `print` are two examples. The Python interpreter has several functions built into it that are always available. There are many more functions which are not available by default.
 
 To calculate the sine of a number, the function `sin` is available. But if you try to calculate this in Python with `sin(1.0)`, an error will appear:
 
