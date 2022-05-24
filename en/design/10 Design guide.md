@@ -4,13 +4,13 @@ So far, we’ve only really cared about two aspects of code: whether the program
 
       L = [3,1,4,1,5,2,9]
       for pos in range(len(L)):
-          print L[pos]
+          print(L[pos])
 
 Here is another version:
 
       L = [3,1,4,1,5,2,9]
       for number in L:
-          print number
+          print(number)
 
 The first program uses a variable `pos` that takes on the values 0 through 6 in order to print all numbers from the list. The second program prints the same output, but instead, _directly_ uses the numbers from the list for the loop. This makes the formulas less complicated and makes the program faster to read in one go.
 
