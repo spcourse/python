@@ -56,22 +56,6 @@ Using your terminal, navigate to the folder containing the file `hello.py`. Reme
 
 If everything was done correctly, your command line will now show the text `Hello, world!`. Congratulations on your first program!
 
-### Install `checkpy`
-
-To help you verify whether a program functions in compliance with the specifications of an assignment, we have written a program of our own called **checkpy**. This program can be installed from a terminal using the following command (make sure to have Python and PiP installed):
-
-	pip install checkpy
-
-This can take a while and you will see some text move over your screen. Afterwards `checkpy` is installed. In addition to `checkpy` we also need the tests that correspond to the assignments that you'll have to make. These tests can be downloaded by executing the following command in the terminal:
-
-	checkpy -d uva-sp/sp1
-
-To test whether your installation of `checkpy` was successful, you can test `hello.py`. If you haven't written that program yet, check out the introductory video above. Then execute the following command:
-
-	checkpy hello
-
-Is everything okay and do you only see happy smileys? That means you've done a-okay, and that you've met our requirements for the assignment! Should there still be some sad smileys, no worries! Carefully examine your code and verify it with each of the specifications. And don't forget you can always send us an email if you're stuck.
-
 ### Install other Python libraries
 
 During the course, we will use some other Python libraries. We will download and install all these libraries through conda and place them in their own "environment". This makes sure that everything will work for all the exercises in the coming courses.
@@ -121,3 +105,15 @@ To make sure that the `progLab` environment is activated every time that we star
     echo 'conda activate progLab' >> ~/.bashrc
 
 Now restart your terminal, and check whether it starts into the `progLab` environment. If not, please contact one of the TA's or teachers of this course.
+
+### Checking `checkpy` and downloading tests
+
+To help you verify whether a program functions in compliance with the specifications of an assignment, we have written a program of our own called **checkpy**. This program was installed in our environment in the previous steps. In addition to `checkpy` we also need the tests that correspond to the assignments that you'll have to make. These tests can be downloaded by executing the following command in the terminal:
+
+	checkpy -d uva-sp/sp1
+
+To test whether your installation of `checkpy` was successful, you can test `hello.py`. If you haven't written that program yet, check out the introductory video above. Then execute the following command:
+
+	checkpy hello
+
+Is everything okay and do you only see happy smileys? That means you've done a-okay, and that you've met our requirements for the assignment! Should there still be some sad smileys, no worries! Carefully examine your code and verify it with each of the specifications. And don't forget you can always send us an email if you're stuck.
