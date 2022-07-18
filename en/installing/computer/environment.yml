@@ -1,0 +1,24 @@
+name: progLab_test
+channels:
+  - defaults
+dependencies:
+  - python=3.9
+  - numpy
+  - scipy
+  - pandas
+  - scikit-learn
+  - scikit-image
+  - nltk
+  - matplotlib
+  - seaborn
+  - bokeh
+  - ipywidgets
+  - beautifulsoup4
+  - requests
+  - opencv
+  - tensorflow
+  - keras
+  - pip
+  - pip:
+    - checkpy
+    - notebook-checker
