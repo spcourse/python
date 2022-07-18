@@ -47,7 +47,7 @@ While it is possible to do this specific task using iteration by element (as sho
 
 This loop will go over each possible name and check whether it is Dirk. When it is, the corresponding date is saved in the variable `last_date`. If `last_date` contained a value it is overwritten, and as such only the last date on which Dirk has done the dishes is saved.
 
-> You might notice that this code can be made more compact by replacing `name` and `date` with `names[i]` and `dates[i]``. We have opted not to do this as we might need the date and name multiple times in the loop. While the code is a bit longer than necessary, it is also easy to understand.
+> You might notice that this code can be made more compact by replacing `name` and `date` with `names[i]` and `dates[i]` and removing the two lines at the top of the loop. We have opted not to do this as we might need the date and name multiple times in the loop. While the code is a bit longer than necessary, it is also easy to understand.
 
 Ultimately, the choice between iterating by element or by index depends on the problem you are trying to solve. A simple rule of thumb is to always use the iteration by index, unless you are absolutely sure that you do not need _the index_ of each of the elements.
 
