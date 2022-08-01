@@ -31,7 +31,7 @@ As a programmer, you will be using a command line interface (also often called t
 
 On Mac, the terminal is included in the Operating System, and comes pre-installed. You will be able to open a terminal by clicking on Spotlight (the small magnifying glass) in the upper right corner of your screen or pressing `cmd + space`, and typing "Terminal" then pressing enter. No further actions are required for this step
 
-Navigating through your computer using the command line will be a vital skill. Watch the video below to get more familiar with command line commands (_ignore any mentions of nano, as we will be using the much more user-friendly Atom to edit our files_):
+Navigating through your computer using the command line will be a vital skill. Watch the video below to get more familiar with command line commands. _You should ignore or skip any mentions of `nano`, as we will be using the much more user-friendly Atom to edit our files._
 
 ![embed](https://www.youtube.com/embed/aKRYQsKR46I)
 

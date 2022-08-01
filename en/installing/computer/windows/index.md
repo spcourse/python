@@ -34,9 +34,11 @@ As a programmer, you will be using a command line interface (also often called t
 
 To get the right environment you will want to download and install Git Bash using the [instructions from this website](https://www.stanleyulili.com/git/how-to-install-git-bash-on-windows/). After installation, you will be able to open a terminal by clicking the windows button in the lower left corner, and typing "bash" then pressing enter.
 
-Navigating through your computer using the command line will be a vital skill. Watch the video below to get more familiar with command line commands (_ignore any mentions of nano, as we will be using the much more user-friendly Atom to edit our files_):
+Navigating through your computer using the command line will be a vital skill. Watch the video below to get more familiar with command line commands. The video is a guide to the Mac OS terminal, but Git Bash is able to use almost all the same commands and always shows you the complete path to your current directory. _You should ignore or skip any mentions of `nano`, as we will be using the much more user-friendly Atom to edit our files._
 
 ![embed](https://www.youtube.com/embed/aKRYQsKR46I)
+
+> `open "<PATH>"` is not a valid command in Windows. You can instead use `explorer "<PATH>"` as a command. This will open the file path with Windows default associated programs.
 
 ### Quick installation test
 
