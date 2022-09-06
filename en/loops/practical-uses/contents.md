@@ -52,8 +52,8 @@ This program has as output:
     x = 1,  y = 3
     x = 2,  y = 1
     ...
-    x = 6,  y = 2
-    x = 6,  y = 3
+    x = 5,  y = 2
+    x = 5,  y = 3
 
 ## Common mistakes
 
