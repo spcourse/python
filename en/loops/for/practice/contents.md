@@ -11,7 +11,7 @@ Test your understanding with the following practice exercises. Create a file cal
 
 **Exercise 2** Write a for-loop that prints the numbers between 1 and 50 with steps of 2.
 
-**Exercise 3** Write a for-loop that loops over the numbers 0 to 100 with steps of 4 and adds them all together. Print the result.
+**Exercise 3** Write a for-loop that loops over the numbers 0 up to and including 100 with steps of 4 and adds them all together. Print the result.
 
 ## Solutions
 Below you can find some solutions.
