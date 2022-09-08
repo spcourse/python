@@ -222,7 +222,7 @@ Bad implementation:
 
     number_list = [1, 2, 3, 4]
 
-    def sum(list):
+    def sum(numbers):
         sum_agg = 0
         for i in number_list:
             sum_agg = sum_agg + i
@@ -234,9 +234,9 @@ Good implementation:
 
     number_list = [1, 2, 3, 4]
 
-    def sum(list):
+    def sum(numbers):
         sum_agg = 0
-        for i in list:
+        for i in numbers:
             sum_agg = sum_agg + i
         return sum_agg
 
