@@ -12,7 +12,7 @@ To start, some terminology:
 
 ## Choice of Language
 
-In this course, we work in English. Make sure you work in one language only: variable names and comments should both be in English.
+Make sure you work in one language only: variable names and comments should both be in the same language.
 
 ## Comments
 
