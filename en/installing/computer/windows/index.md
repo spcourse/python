@@ -88,9 +88,10 @@ To make sure that the `progLab` environment is activated every time that we star
 
     echo 'conda activate progLab' >> ~/.bash_profile
 
-We now need to perform one more command, that will ensure that Python functions as intended on Windows:
+We now need to perform two more commands, that will ensure that Python and sqlite function as intended on Windows:
 
      echo "alias python='winpty python'" >> ~/.bash_profile
+     echo "alias sqlite3='winpty sqlite3'" >> ~/.bash_profile
 
 Now restart your terminal, and check whether it starts into the `progLab` environment. If not, please contact one of the TA's or teachers of this course.
 
