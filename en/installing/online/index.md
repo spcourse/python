@@ -10,7 +10,7 @@ To gain access to the development environment you can do the following:
 
 1. Register for a GitHub account at <https://github.com/join>. GitHub is an online service where developers from all over the world share (open source) software. Many scientists use it, too! In your case, you'll only use their login facility to get into the online development environment.
 
-2. Log on to <https://ide.cs50.io/>. It will redirect you to GitHub, asking permission to transfer your basic details to CS50. Don't worry though! CS50 is a Harvard course and they will not spam you. After logging in, it will create your online IDE.
+2. Log on to <https://code.cs50.io/>. It will redirect you to GitHub, asking permission to transfer your basic details to CS50. Don't worry though! CS50 is a Harvard course and they will not spam you. After logging in, it will create your online IDE.
 
 > At the time of writing, the CS50 IDE only works in Chrome or Firefox browsers and not in Safari. So you may need to switch browsers if all you get is a blank screen!
 
