@@ -26,7 +26,7 @@ The installation might take a while.
 
 ### Step 2: Atom
 
-This package can be downloaded from the [Atom website](https://atom.io/). Once again you have to execute the downloaded file. This time though, you do not have to alter any settings during the installation process.
+This package can be downloaded from the [Atom website](https://sourceforge.net/projects/atom.mirror/). Once again you have to execute the downloaded file. This time though, you do not have to alter any settings during the installation process.
 
 ### Step 3: Command Line Interface
 

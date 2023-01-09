@@ -23,7 +23,7 @@ The installation might take a while.
 
 ### Step 2: Atom
 
-This package can be downloaded from the [Atom website](https://atom.io/). Just move the file to your applications folder. From there you can simply run it.
+This package can be downloaded from the [Atom website](https://sourceforge.net/projects/atom.mirror/). Just move the file to your applications folder. From there you can simply run it.
 
 ### Step 3: Command Line Interface
 
