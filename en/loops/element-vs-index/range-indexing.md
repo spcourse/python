@@ -10,8 +10,8 @@ l = ['a', 'b', 'c', 'd', 'e']
 
 We can print every element in the list using either of the following two design patterns:
 
-    for i in l:
-        print(i)
+    for elem in l:
+        print(elem)
 
     for i in range(len(l)):
         print(l[i])
