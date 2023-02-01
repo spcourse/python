@@ -11,9 +11,7 @@ dependencies:
   - nltk
   - matplotlib
   - seaborn
-  - bokeh
   - ipywidgets
-  - beautifulsoup4
   - requests
   - opencv
   - tensorflow
