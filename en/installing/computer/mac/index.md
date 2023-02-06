@@ -23,7 +23,7 @@ The installation might take a while.
 
 ### Step 2: Atom
 
-This package can be downloaded from the [Atom website](https://sourceforge.net/projects/atom.mirror/). Just move the file to your applications folder. From there you can simply run it.
+This package can be downloaded from the [Atom website](https://github.com/atom/atom/releases/tag/v1.60.0). Download the file named `atom-mac.zip`. After downloading you should be able to run it.
 
 ### Step 3: Command Line Interface
 
@@ -66,7 +66,8 @@ To verify that the installation has worked, you can check whether your terminal 
 Now, with your new terminal, run the following commands:
 
     curl https://raw.githubusercontent.com/spcourse/sp1-python/main/en/installing/computer/environment.env > environment.yml
-    conda env create -f environment.yml
+    conda install -n base conda-libmamba-solver
+    conda env create -f environment.yml --solver libmamba
     rm environment.yml
 
 This downloads a formatted description of what libraries to download and install, then installs the libraries, and subsequently removes the description (as we no longer need it).

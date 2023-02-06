@@ -68,9 +68,10 @@ To verify that the installation has worked, you can check whether your terminal 
 
 Now, with your new terminal, run the following commands:
 
-    curl https://raw.githubusercontent.com/spcourse/sp1-python/main/en/installing/computer/environment.env > environment.yml
-    conda env create -f environment.yml
-    rm environment.yml
+		curl https://raw.githubusercontent.com/spcourse/sp1-python/main/en/installing/computer/environment.env > environment.yml
+		conda install -n base conda-libmamba-solver
+		conda env create -f environment.yml --solver libmamba
+		rm environment.yml
 
 This downloads a formatted description of what libraries to download and install, then installs the libraries, and subsequently removes the description (as we no longer need it).
 
