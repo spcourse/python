@@ -69,7 +69,7 @@ To verify that the installation has worked, you can check whether your terminal 
 Now, with your new terminal, run the following commands:
 
     curl https://raw.githubusercontent.com/spcourse/sp1-python/main/en/installing/computer/environment.env > environment.yml
-    conda install -n base conda-libmamba-solver
+    conda install -c conda-forge -n base conda-libmamba-solver
     conda env create -f environment.yml --solver libmamba
     rm environment.yml
 
@@ -91,8 +91,8 @@ To make sure that the `progLab` environment is activated every time that we star
 
 We now need to perform two more commands, that will ensure that Python and sqlite function as intended on Windows:
 
-     echo "alias python='winpty python'" >> ~/.bash_profile
-     echo "alias sqlite3='winpty sqlite3'" >> ~/.bash_profile
+    echo "alias python='winpty python'" >> ~/.bash_profile
+    echo "alias sqlite3='winpty sqlite3'" >> ~/.bash_profile
 
 Now restart your terminal, and check whether it starts into the `progLab` environment. If not, please contact one of the TA's or teachers of this course.
 
