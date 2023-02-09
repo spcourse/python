@@ -66,7 +66,7 @@ This will instruct your terminal to prepare your terminal for running `conda` co
 
 To verify that the installation has worked, you can check whether your terminal shows something like `(base)` in front of every line in the terminal.
 
-Now, with your new terminal, run the following commands:
+Now, with your new terminal, run the commands below. (*Don't copy all four lines at once into your terminal, but enter them one line at a time.*)
 
     curl https://raw.githubusercontent.com/spcourse/sp1-python/main/en/installing/computer/environment.env > environment.yml
     conda install -c conda-forge -n base conda-libmamba-solver
