@@ -26,7 +26,7 @@ In most cases, you will want to return two or three values. More is possible, bu
 One could also save the result of the function as a single variable, and specific elements of the result can be indexed as in a list:
 
     def hours_to_days(hours):
-      days = floor(hours / 24)
+      days = int(hours / 24)
       remainder = hours % 24
 
       return days, remainder
