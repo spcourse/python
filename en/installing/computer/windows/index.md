@@ -66,7 +66,7 @@ This will instruct your terminal to prepare your terminal for running `conda` co
 
 To verify that the installation has worked, you can check whether your terminal shows something like `(base)` in front of every line in the terminal.
 
-Now, with your new terminal, run the commands below. (*Don't copy all four lines at once into your terminal, but enter them one line at a time.*)
+Now, with your new terminal, run the commands below. (**Don't copy all four lines at once into your terminal, but enter them one line at a time.**)
 
     curl https://raw.githubusercontent.com/spcourse/sp1-python/main/en/installing/computer/environment.env > environment.yml
     conda install -c conda-forge -n base conda-libmamba-solver
@@ -93,6 +93,8 @@ We now need to perform two more commands, that will ensure that Python and sqlit
 
     echo "alias python='winpty python'" >> ~/.bash_profile
     echo "alias sqlite3='winpty sqlite3'" >> ~/.bash_profile
+		echo "alias checkpy='winpty checkpy'" >> ~/.bash_profile
+
 
 Now restart your terminal, and check whether it starts into the `progLab` environment. If not, please contact one of the TA's or teachers of this course.
 
