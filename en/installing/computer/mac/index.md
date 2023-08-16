@@ -59,15 +59,16 @@ First, open a terminal and run the following command (and replace `zsh` with `ba
 
     conda init zsh
 
-This will instruct your terminal to prepare your terminal for running `conda` commands. Close the terminal, and open a new one. This will restart your terminal and makes sure that everything is initiated correctly.
+This will instruct your terminal to prepare your terminal for running `conda` commands. **Close the terminal, and open a new one.** This will restart your terminal and makes sure that everything is initiated correctly.
 
 To verify that the installation has worked, you can check whether your terminal shows something like `(base)` in front of every line in the terminal.
 
-Now, with your new terminal, run the commands below. (*Don't copy all four lines at once into your terminal, but enter them one line at a time.*)
+Now, with your new terminal, run the commands below. (**Don't copy all four lines at once into your terminal, but enter them one line at a time.**)
 
     curl https://raw.githubusercontent.com/spcourse/sp1-python/main/en/installing/computer/environment.env > environment.yml
-    conda install -c conda-forge -n base conda-libmamba-solver
-    conda env create -f environment.yml --solver libmamba
+    conda install -n base conda-libmamba-solver
+    conda config --set solver libmamba
+    conda env create -f environment.yml
     rm environment.yml
 
 This downloads a formatted description of what libraries to download and install, then installs the libraries, and subsequently removes the description (as we no longer need it).
