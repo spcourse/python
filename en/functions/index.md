@@ -42,7 +42,7 @@ Keep in mind that the function stops running as soon as `return` is encountered,
 ## Functions with multiple parameters
 ![embed](https://api.eu.kaltura.com/p/120/sp/12000/embedIframeJs/uiconf_id/23449960/partner_id/120?iframeembed=true&playerId=kaltura_player&entry_id=0_03dms4u5&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en_US&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[hotspots.plugin]=1&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=0_uhohnubo)
 
-A function can have more than one parameter. For example, if I want a function that computes the value ($y = a^2 + b$), I can define a function like this:
+A function can have more than one parameter. For example, if I want a function that computes the value ($$y = a^2 + b$$), I can define a function like this:
 
     def my_fun(a, b):
         y = a**2 + b
@@ -64,4 +64,3 @@ Read more about functions here: [Think Python](http://greenteapress.com/thinkpyt
 Using functions improves the readability of your code. With a well-chosen name for each function you can easily improve the readability of your code. If a program is well designed you can often get an overview of what it does by simply looking at the function names.
 
 Functions can also be expedient when you repeatedly have to use a more or less identical piece of code. Oftentimes when you catch yourself copy-pasting parts of your own code, you'd better spend this time trying to define a function!
-
