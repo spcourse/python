@@ -47,3 +47,5 @@ However, if we use keyword arguments, the following is also possible:
     print(calculate_volume(depth=3))
 
 By not providing values for the `height` and `width` arguments, they assume their default values of `1`, while the value for `depth` is specifically set to `3`.
+
+> Keyword arguments are often used when writing code that makes use of big libraries like Pandas or Numpy. These type of libraries have functions that have a lot of parameters, of which you often only want to use a few. By using keyword arguments, we do not have to manually assign a value to all different parameters of the function.

@@ -2,13 +2,16 @@
 
 In addition to positional and keyword arguments, Python also allows us to use the so-called `**kwargs` notation to pass a number of keyword arguments to a function as a dictionary.
 
+    def print_info(name, age, city):
+        print(f'{name} is {age} years old and lives in {city}.')
+
     info_kwargs = {
-        'name': 'Alice',
-        'age': 30,
-        'city': 'New York',
+      'name': 'Alice',
+      'age': 30,
+      'city': 'New York',
     }
 
-The `print_info` function that we defined in an earlier example has three arguments: `name`, `age`, and `city`. The dictionary `info_kwargs` we defined above contains the names of these three arguments, and the values we would like to assign to them. We can call the `print_info` function and pass the `info_kwargs` dictionary using the `**` operator:
+The `print_info` function that we defined above has three arguments: `name`, `age`, and `city`. We have also defined the dictionary `info_kwargs`, that contains the names of these three arguments and the values we would like to assign to them. We can call the `print_info` function and pass the `info_kwargs` dictionary using the `**` operator:
 
     print_info(**info_kwargs)
 
@@ -35,16 +38,16 @@ Another useful feature in Python is positional argument unpacking. This allows y
         print(arg2)
         print(arg3)
 
-    lst = [1, 2, 3]
-    fun(*lst)
+    args = [1, 2, 3]
+    fun(*args)
 
-In the example above, the `lst` variable is a list of three elements. When `fun()` is called with `*lst`, our list is unpacked and its elements are passed as separate positional arguments to the function. This is equivalent to calling `fun(1, 2, 3)`.
+In the example above, the `args` variable is a list of three elements. When `fun()` is called with `*args`, our list is unpacked and its elements are passed as separate positional arguments to the function. This is equivalent to calling `fun(1, 2, 3)`.
 
 You can also use positional argument unpacking with a mix of regular arguments and iterable arguments:
 
-    lst = [2, 3]
-    my_function(1, *lst)
+    args = [2, 3]
+    my_function(1, *args)
 
-`fun()` still takes three arguments, but we only pass one argument directly, and then use `*lst` to unpack the remaining arguments from our list.
+`fun()` still takes three arguments, but we only pass one argument directly, and then use `*args` to unpack the remaining arguments from our list.
 
 > Note that the total number of values passed to the function must still be the same as the number of positional arguments in the function definition!
