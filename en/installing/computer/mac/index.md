@@ -93,7 +93,7 @@ Now restart your terminal, and check whether it starts into the `progLab` enviro
 
 To help you verify whether a program functions in compliance with the specifications of an assignment, we have written a program of our own called **checkpy**. This program was installed in our environment in the previous steps. In addition to `checkpy` we also need the tests that correspond to the assignments that you'll have to make. These tests can be downloaded by executing the following command in the terminal:
 
-    checkpy -d uva-sp/sp1
+    checkpy -d spcourse/tests
 
 To test whether your installation of `checkpy` was successful you can test `hello.py`, which we have written earlier in these installation instructions. Navigate to the folder that holds `hello.py` and execute the following command:
 
