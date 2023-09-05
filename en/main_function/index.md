@@ -24,7 +24,7 @@ You see that in this case **all** the code is neatly wrapped in functions. The c
 
 The condition, `if __name__ == '__main__':`, might look somewhat mysterious. For now, you don't have to fully understand it. This condition becomes more relevant once you start creating bigger python projects that are spread out over multiple files.
 
-If you already know how to create multi-file python projects, you can have a look here: [if name is main](../name_is_main)
+If you already know how to create multi-file python projects, you can have a look here: [if name is main](python/en/name_is_main)
 
 <!-- ## If name is main?
 
