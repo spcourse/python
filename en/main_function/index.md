@@ -1,6 +1,6 @@
 # Main function
 
-In python it is considered good practice to define a `main()` function as a starting point for executing you code. For example:
+In python it is considered good practice to define a `main()` function as a starting point for executing your code. For example:
 
     def main():
         text = "For sale: baby shoes, never worn."
