@@ -99,7 +99,7 @@ To be able to use results (values) from one calculation in another calculation w
 
 ![embed](https://api.eu.kaltura.com/p/120/sp/12000/embedIframeJs/uiconf_id/23449960/partner_id/120?iframeembed=true&playerId=kaltura_player&entry_id=0_vpz6gvdt&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en_US&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[hotspots.plugin]=1&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=0_49u695ji)
 
-Additional reading: [variables and values](http://greenteapress.com/thinkpython/html/thinkpython003.html) at Think Python.
+Additional reading: [variables and values](http://greenteapress.com/thinkpython/html/thinkpython003.html) at Think Python. Note that Think Python gives some examples in Python 2, while *we use Python 3*. The most important thing to note is that the examples in the book do not have brackets surrounding the content of the `print` statement. If you want to replicate the examples, add these brackets: `print x` should become `print(x)`.
 
 ## Types
 

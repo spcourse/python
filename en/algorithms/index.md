@@ -38,7 +38,7 @@ A **condition** (like `expense < balance`) ultimately only has two possible outc
 
 The `:` on the same line as the `if` signals that there's a **code block** that accompanies the `if`-statement. That's the particular part of code that is only executed if the condition is met. Such a block of code consists of multiple lines of code which are **indented** a set amount. Indenting code means you precede the lines with a certain amount of spaces or tabs. In the code above a number of 4 spaces is used to indicate which lines of code are associated with the `if`-statement. Since the second `print`-statement is not indented, it is no longer part of the previous code block and is therefore not dependent on the condition of the `if`-statement. It is executed *unconditionally*.
 
-Read a bit more about [conditionals](http://greenteapress.com/thinkpython/html/thinkpython006.html) at Think Python.
+Read a bit more about [conditionals](http://greenteapress.com/thinkpython/html/thinkpython006.html) at Think Python. Note that Think Python gives some examples in Python 2, while *we use Python 3*. The most important thing to note is that the examples in the book do not have brackets surrounding the content of the `print` statement. If you want to replicate the examples, add these brackets: `print x` should become `print(x)`.
 
 ## More operators
 
