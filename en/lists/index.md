@@ -15,12 +15,12 @@ The following code creates a new list called `staff` filled with strings (names)
 You can request a single element of a list with `[`, `]`. The following code prints "Jelle"
 
     my_name = staff[2]
-	print(my_name)
+    print(my_name)
 
 Beware that you start counting at `0` with indexing lists. So, the following code prints "Martijn":
 
     my_name = staff[0]
-	print(my_name)
+    print(my_name)
 
 You can also manipulate the contents of a list. The following code changes the 4th element of the list, which is at index `3`, because we start with counting at `0`.
 
@@ -40,14 +40,14 @@ You can add an element to the end of the list (i.e, extending it):
 You could loop over lists with indices, using `range()` and `len()`, like this:
 
     measurements_science_park = [12.7, 18.8, 24.9, 14.5, 19.0]
-    print("In total, we have {len(measurements_science_park)} measurements:")
+    print(f"In total, we have {len(measurements_science_park)} measurements:")
     for i in range(len(measurements_science_park)):
         print(f"The measurement was {measurements_science_park[i]} degrees.")
 
 However this is not the most convenient way to do this in Python. A more "Pythonic" way of looping over lists is like this:
 
     measurements_science_park = [12.7, 18.8, 24.9, 14.5, 19.0]
-    print("In total, we have {len(measurements_science_park)} measurements:")
+    print(f"In total, we have {len(measurements_science_park)} measurements:")
     for measurement in measurements_science_park:
         print(f"The measurement was {measurement} degrees.")
 
