@@ -106,12 +106,12 @@ It's a subtle difference, but the detailed information below actually gives us a
     -     # #              <---- expected first line
     +      # #             <---- actual first line
     ? +                    <---- the actual first line has an additional character (a space)
-    -   # # #              <---- expected first line
-    +    # # #             <---- actual first line
-    ? +                    <---- the actual first line has an additional character (a space)
-    - # # # #              <---- expected first line
-    +  # # # #             <---- actual first line
-    ? +       +            <---- the actual first line has an additional character (a space)
+    -   # # #              <---- expected second line
+    +    # # #             <---- actual second line
+    ? +                    <---- the actual second line has an additional character (a space)
+    - # # # #              <---- expected third line
+    +  # # # #             <---- actual third line
+    ? +       +            <---- the actual third line has an additional character (a space)
 
 So all lines of the output of your code have an additional leading space.
 
