@@ -88,7 +88,7 @@ When your code is supposed to produce multiple lines of output the output of `ch
          ? +       +
 
 
-Here the expected output was `    # #\n  # # #\n# # # #` but the actual value was `     # #\n  ...#\n # # # #\n`. The `\n` means that everything following it should be on a new line. So the expected output was:
+Here the expected output was `'    # #\n  # # #\n# # # #'` but the actual value was `'     # #\n  ...#\n # # # #\n'`. The `\n` means that everything following it should be on a new line. So the expected output was:
 
         # #
       # # #
@@ -100,7 +100,7 @@ But the actual output:
        # # #
      # # # #
 
-It's a subtle difference. But the detailed information below actually gives us all the info we need:
+It's a subtle difference, but the detailed information below actually gives us all the info we need:
 
 
     -     # #              <---- expected first line
@@ -148,7 +148,7 @@ When you use functions `checkpy` also often checks if you defined the function e
        assert ['text'] == ['tekst']
          At index 0 diff: 'text' != 'tekst'
 
-Also the order of arguments should meet the spec. So in `reformatting` you should define `text_to_lines(text, max_length)`, but if you switch around the arguments (`text_to_lines(max_length, text)`), you get this error:
+Also the order of arguments should meet the spec. For example, in `reformatting` you should define `text_to_lines(text, max_length)`, but if you switch around the arguments (`text_to_lines(max_length, text)`), you get this error:
 
     $ checkpy reformatting
     Testing: reformatting.py
