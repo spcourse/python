@@ -27,7 +27,7 @@ An overview of all programming concepts as discussed in this course.
 ### Algorithmic
 
 - `if`, `elif`, `else`: [theory](/python/en/algorithms#conditional-instructions)/[practice](/python/en/algorithms/practice)
-- `for`, `while`: [theory for](/python/en/loops/for)/[practice for](/python/en/loops/for/practice), [theory for](/python/en/loops/while)[practice while](/python/en/loops/while/practice), and [theory practical uses](/python/en/loops/practical-uses)/[practice practical uses](/python/en/loops/practical-uses/practice)
+- `for`, `while`: [theory for](/python/en/loops/for)/[practice for](/python/en/loops/for/practice), [theory while](/python/en/loops/while)/[practice while](/python/en/loops/while/practice), and [theory practical uses](/python/en/loops/practical-uses)/[practice practical uses](/python/en/loops/practical-uses/practice)
 
 ### Other
 
