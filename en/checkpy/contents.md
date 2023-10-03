@@ -1,22 +1,22 @@
 # Using checkpy
 
-Once you feel you're done with the assignment, it's time run it through `checkpy`. Of course, you get frowny faces indicating there is something wrong. But what?!?
+Once you believe you've completed the assignment, it's time to run it through `checkpy`. Unfortunately, you might encounter unhappy faces indicating something is amiss. But what exactly is the problem? The feedback from `checkpy` can be a bit overwhelming at times, making it challenging to pinpoint the issue. Below, we'll discuss some common problems and how to interpret them.
 
-The output you get from `checkpy` can sometimes be a bit overwhelming. So it might be hard to figure out what is wrong. Below we will discuss some common issues.
+Reading this document might help in understanding why `checkpy` doesn't accept your code. However, please note that there are many issues that we do not address here. Even when you identify what's wrong, the solution might still not be immediately apparent. If you have questions after reading this document, feel free to ask questions to seek further assistance during the tutorials!
 
-### All ok
+### Everything is fine
 
-Ideally all went well and you get only smiley faces. Hello.py was supposed to print the text "Hello, world!" and it did so correctly:
+Ideally, if everything went well, you'll only see smiling faces. For instance, in the case of `hello.py`, where the expected output is "Hello, world!" and it's correct:
 
   	$ checkpy hello
     Testing: hello.py
     :) prints "Hello, world!"
 
-So the description of the test is `prints "Hello, world!"` and `:)` shows that all was good.
+So, the test description is "prints 'Hello, world!'" and `:)` indicates that everything is good.
 
-### Small mistakes in the output:
+### Minor discrepancies in the output:
 
-But when your output doesn't match **exactly** what `checkpy` expects, you will get a frowny face. This can be frustrating but `checkpy` often give you very specific feedback about what went wrong. And once you understand how to interpret the test output, these mistakes are often easy to fix.
+However, if your output doesn't exactly match what `checkpy` expects, you'll see a frowning face. This can be frustrating, but `checkpy` often provides specific feedback on what went wrong. Once you understand how to interpret the test output, these issues are usually easy to resolve.
 
     $ checkpy hello
     :( prints "Hello, world!"
@@ -26,15 +26,15 @@ But when your output doesn't match **exactly** what `checkpy` expects, you will 
          + Hello, zorld!!!
          ?        ^     ++
 
-So the description of the test is still `prints "Hello, world!"`, but now the `:(` shows that something went wrong.
+Here, the test description is still "prints 'Hello, world!'," but now `:(` indicates that something went wrong.
 
-In the above case your program didn't print "Hello, world!", "Hello, zorld!!!" (so with a `z` instead of `w` and with three exclamation marks).
+In this case, your program didn't print "Hello, world!" but instead printed "Hello, zorld!!!" (with a 'z' instead of 'w' and three exclamation marks).
 
-The first line shows the actual test that was run: `assert 'Hello, world!\n' == 'Hello, zorld!!!\n'`. This essentially asserts that `checkpy` expects to see `Hello, world!`, but instead it gets `'Hello, zorld!!!\n'`. When you run checkpy and something went wrong you often see this type of `assert` error. They almost always have the form:
+The first line shows the actual test that was run: `assert 'Hello, world!\n' == 'Hello, zorld!!!\n'`. This means `checkpy` expected to see 'Hello, world!', but it got 'Hello, zorld!!!'. When something goes wrong, you often see this type of `assert` error, which typically follows the format:
 
     assert expected_value == actual_value
 
-On the lines below you see that `checkpy` gives more detail about the `assert` error.
+Below that, `checkpy` provides more details about the `assert` error.
 
     - Hello, world!             <---- expected output
     ?        ^                  <---- the ^ symbol shows where the expected output differs from your output
@@ -42,9 +42,9 @@ On the lines below you see that `checkpy` gives more detail about the `assert` e
     ?        ^     ++           <---- the + symbol shows where you added more text than expected
 
 
-### Paused output
+### Interrupted output
 
-Running checkpy for `pyramid` as shown below exposes some error with the output.
+Running `checkpy` for `pyramid` as shown below reveals an error in the output.
 
     $ checkpy pyramid
     :) the program does not use break or import statements
@@ -59,21 +59,22 @@ Running checkpy for `pyramid` as shown below exposes some error with the output.
     :| prints a well-formed pyramid of height 23
        can't check until another check passes
 
-Here we see that your code passed the first three tests. But the test with description `prints a well-formed pyramid of height 1` failed. Can you guess what went wrong?
+ Here, your code passed the first three tests, but the test with the description "prints a well-formed pyramid of height 1" failed. Can you guess what went wrong?
 
-The output of the test is:
+ The test's output is:
 
     assert '# #\n' == '* *\n'
       - # #
       + * *
 
-So the `assert` expected `# #\n` but instead your code produced `* *\n`. on the lines below you see more detailed feedback, although in this case that doesn't provide much more info. (Note that the `\n` means a new line.)
+So, the `assert` expected '# #' but your code produced '* *'. The lines below provide more detailed feedback, although in this case, they don't offer much more information. (Note that '\n' represents a new line.)
 
-The last two tests are not run at all. The `:|` indicates that a test cannot be run. In this case that is because these last two test will only run if the tests before it succeeded.
+The last two tests are not run at all. The `:|` indicates that a test cannot be run because these last two tests will only run if the previous tests have succeeded.
 
-### Multi line output
+### Multi-line output
 
-When your code is supposed to produce multiple lines of output the output of `checkpy` can get more confusing. For example:
+When your code is supposed to produce multiple lines of output, `checkpy`'s output can become more confusing. For example:
+
 
     :( prints a well-formed pyramid of height 3
        assert '    # #\n  # # #\n# # # #' == '     # #\n  ...#\n # # # #\n'
@@ -88,7 +89,7 @@ When your code is supposed to produce multiple lines of output the output of `ch
          ? +       +
 
 
-Here the expected output was `'    # #\n  # # #\n# # # #'` but the actual value was `'     # #\n  ...#\n # # # #\n'`. The `\n` means that everything following it should be on a new line. So the expected output was:
+ Here, the expected output was `'    # #\n  # # #\n# # # #'`, but the actual value was `'     # #\n  ...#\n # # # #\n'`. The '\n' indicates that everything following it should be on a new line. So, the expected output was:
 
         # #
       # # #
@@ -100,8 +101,7 @@ But the actual output:
        # # #
      # # # #
 
-It's a subtle difference, but the detailed information below actually gives us all the info we need:
-
+It's a subtle difference, but the detailed information below provides all the necessary information:
 
     -     # #              <---- expected first line
     +      # #             <---- actual first line
@@ -113,11 +113,11 @@ It's a subtle difference, but the detailed information below actually gives us a
     +  # # # #             <---- actual third line
     ? +       +            <---- the actual third line has an additional character (a space)
 
-So all lines of the output of your code have an additional leading space.
+So, all lines of the output from your code have an additional leading space.
 
-### An actual Python error
+### Actual Python error
 
-Sometimes you get something like this:
+Sometimes, you might encounter something like this:
 
     $ checkpy greedy
     Testing: greedy.py
@@ -125,7 +125,7 @@ Sometimes you get something like this:
     :( rejects negative input, then accepts an input of 0.41
        "ZeroDivisionError('division by zero')" occured while trying to import the code
 
-Anytime you get something of the form "[Some error] occured while trying to import the code", that checkpy got an error while importing your code. So this has nothing to do with the test `rejects negative input, then accepts an input of 0.41`, but if we would run your code normally using `python greedy.py` we would also get an error:
+When you see something like "[Some error] occurred while trying to import the code," it means `checkpy` encountered an error while importing your code. This issue is unrelated to the test "rejects negative input, then accepts an input of 0.41." If you were to run your code normally using `python greedy.py`, you would also encounter an error:
 
     $ python greedy.py
     How much change is owed? 0.41
@@ -137,7 +137,7 @@ Anytime you get something of the form "[Some error] occured while trying to impo
 
 ### Function arguments
 
-When you use functions `checkpy` also often checks if you defined the function exactly according to specification. For example for `list_words.py` you're supposed to define a function `text_to_unique_words(text)`. If instead of the argument `text` you name the argument of the function `tekst`, you get this error:
+When using functions, `checkpy` often checks whether you defined the function exactly as specified. For example, in `list_words.py`, you are supposed to define a function `text_to_unique_words(text)`. If you name the function argument `tekst` instead of `text`, you'll get this error:
 
     $ checkpy list_words
     Testing: list_words.py
@@ -158,10 +158,9 @@ Also the order of arguments should meet the spec. For example, in `reformatting`
        assert ['text', 'max_length'] == ['max_length', 'text']
          At index 0 diff: 'text' != 'max_length'
 
-
 ### Return None
 
-A common mistake is to forget to put a `return` statement at the end of the function or to put a `print` statement in a return `return print(something)`. In both cases the function will return the value `None`. This is often gives an assert error in the form of `assert None is of type ...`, like so:
+A common mistake is to forget to include a `return` statement at the end of the function. Another common mistake is to include a `print` statement within a `return` statement, like this: `return print(something)`. In both cases the function will return the value `None`. This often results in an assert error in the form of `assert None is of type ...`:
 
     Testing: list_words.py
     :) the program does not use break or import statements
