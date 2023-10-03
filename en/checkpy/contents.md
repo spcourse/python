@@ -1,6 +1,6 @@
 # Using checkpy
 
-Once you believe you've completed the assignment, it's time to run it through `checkpy`. Unfortunately, you might encounter unhappy faces indicating something is amiss. But what exactly is the problem? The feedback from `checkpy` can be a bit overwhelming at times, making it challenging to pinpoint the issue. Below, we'll discuss some common problems and how to interpret them.
+Once you believe you've completed an assignment, it's time to test it through `checkpy`. Unfortunately, you might encounter unhappy faces indicating something is amiss. But what exactly is the problem? The feedback from `checkpy` can be a bit overwhelming at times, making it challenging to pinpoint the issue. Below, we'll discuss some common problems and how to interpret them.
 
 Reading this document might help in understanding why `checkpy` doesn't accept your code. However, please note that there are many issues that we do not address here. Even when you identify what's wrong, the solution might still not be immediately apparent. If you have questions after reading this document, feel free to ask questions to seek further assistance during the tutorials!
 
@@ -67,7 +67,7 @@ Running `checkpy` for `pyramid` as shown below reveals an error in the output.
       - # #
       + * *
 
-So, the `assert` expected '# #' but your code produced '* *'. The lines below provide more detailed feedback, although in this case, they don't offer much more information. (Note that '\n' represents a new line.)
+So, the `assert` expected `'# #'` but your code produced `'* *'`. The lines below provide more detailed feedback, although in this case, they don't offer much more information. (Note that '\n' represents a new line.)
 
 The last two tests are not run at all. The `:|` indicates that a test cannot be run because these last two tests will only run if the previous tests have succeeded.
 
