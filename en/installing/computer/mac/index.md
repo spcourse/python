@@ -4,7 +4,7 @@ To be able to program on your own computer you will need a couple different prog
 
 1. **Miniconda**, a version of Python that is easy to install.
 
-2. **Atom**, an *editor* to write code in. This is, in a way, just a text writing program, but specifically meant for programming code. For example, it highlights particular parts of your code in specific colors, so you can more easily distinguish which part of your code does what.
+2. **Pulsar**, an *editor* to write code in. This is, in a way, just a text writing program, but specifically meant for programming code. For example, it highlights particular parts of your code in specific colors, so you can more easily distinguish which part of your code does what.
 
 3. A *command line interface* from which we will provide you with methods to start and interact with your programs. macOS comes with one!
 
@@ -21,9 +21,9 @@ The installation might take a while.
 
 ![](../wait2.gif){:style="max-width:25%"}
 
-### Step 2: Atom
+### Step 2: Pulsar
 
-This package can be downloaded from the [Atom website](https://github.com/atom/atom/releases/tag/v1.60.0). Download the file named `atom-mac.zip`. After downloading you should be able to run it.
+This program can be downloaded from the [Pulsar website](https://pulsar-edit.dev/download.html#regular-releases). Select your operating system and download the installer. Once again you will have to execute the downloaded file. This time though, you do not have to alter any settings during the installation process.
 
 ### Step 3: Command Line Interface
 
@@ -31,13 +31,13 @@ As a programmer, you will be using a command line interface (also often called t
 
 On Mac, the terminal is included in the Operating System, and comes pre-installed. You will be able to open a terminal by clicking on Spotlight (the small magnifying glass) in the upper right corner of your screen or pressing `cmd + space`, and typing "Terminal" then pressing enter. No further actions are required for this step
 
-Navigating through your computer using the command line will be a vital skill. Watch the video below to get more familiar with command line commands. _You should ignore or skip any mentions of `nano`, as we will be using the much more user-friendly Atom to edit our files._
+Navigating through your computer using the command line will be a vital skill. Watch the video below to get more familiar with command line commands. _You should ignore or skip any mentions of `nano`, as we will be using the much more user-friendly Pulsar to edit our files._
 
 ![embed](https://www.youtube.com/embed/aKRYQsKR46I)
 
 ### Quick installation test
 
-To test whether each of our steps has been done correctly, we will write a small program named "hello". Open Atom and create a new file named `hello.py`. In this program, place the following code:
+To test whether each of our steps has been done correctly, we will write a small program named "hello". Open Pulsar and create a new file named `hello.py`. In this program, place the following code:
 
     print('Hello, world!')
 

@@ -4,7 +4,7 @@ To be able to program on your own computer you will need a couple different prog
 
 1. **Miniconda**, a version of Python that is easy to install.
 
-2. **Atom**, an *editor* to write code in. This is, in a way, just a text writing program, but specifically meant for programming code. For example, it highlights particular parts of your code in specific colors, so you can more easily distinguish which part of your code does what.
+2. **Pulsar**, an *editor* to write code in. This is, in a way, just a text writing program, but specifically meant for programming code. For example, it highlights particular parts of your code in specific colors, so you can more easily distinguish which part of your code does what.
 
 3. A *command line interface* from which we will provide you with methods to start and interact with your programs. macOS comes with one!
 
@@ -18,15 +18,15 @@ As soon as the download is finished execute the downloaded file. Follow the inst
 
 **Tick all four boxes in the "advanced installation options"! Especially the "Add Miniconda3 to my PATH environment variable" is important. If you did not tick this box, you have to reinstall Miniconda!** Keep in mind that this menu can look slightly different for everyone.
 
-![Tick the box: "Add to PATH" when installing Minicinda](../anaconda_vinkje.gif)
+![Tick the box: "Add to PATH" when installing Miniconda](../anaconda_vinkje.gif)
 
 The installation might take a while.
 
 ![](../wait2.gif){:style="max-width:25%"}
 
-### Step 2: Atom
+### Step 2: Pulsar
 
-This package can be downloaded from the [Atom website](https://sourceforge.net/projects/atom.mirror/). Once again you have to execute the downloaded file. This time though, you do not have to alter any settings during the installation process.
+This program can be downloaded from the [Pulsar website](https://pulsar-edit.dev/download.html#regular-releases). Select your operating system and download the installer. Once again you will have to execute the downloaded file. This time though, you do not have to alter any settings during the installation process.
 
 ### Step 3: Command Line Interface
 
@@ -34,7 +34,7 @@ As a programmer, you will be using a command line interface (also often called t
 
 To get the right environment you will want to download and install Git Bash using the [instructions from this website](https://www.stanleyulili.com/git/how-to-install-git-bash-on-windows/). **After installation, you will be able to open a terminal by clicking the windows button in the lower left corner, and typing "bash" then pressing enter.**
 
-Navigating through your computer using the command line will be a vital skill. Watch the video below to get more familiar with command line commands. The video is a guide to the Mac OS terminal, but Git Bash is able to use almost all the same commands and always shows you the complete path to your current directory. _You should ignore or skip any mentions of `nano`, as we will be using the much more user-friendly Atom to edit our files._
+Navigating through your computer using the command line will be a vital skill. Watch the video below to get more familiar with command line commands. The video is a guide to the Mac OS terminal, but Git Bash is able to use almost all the same commands and always shows you the complete path to your current directory. _You should ignore or skip any mentions of `nano`, as we will be using the much more user-friendly Pulsar to edit our files._
 
 ![embed](https://www.youtube.com/embed/aKRYQsKR46I)
 
@@ -42,7 +42,7 @@ Navigating through your computer using the command line will be a vital skill. W
 
 ### Quick installation test
 
-To test whether each of our steps has been done correctly, we will write a small program named "hello". Open Atom and create a new file named `hello.py`. In this program, place the following code:
+To test whether each of our steps has been done correctly, we will write a small program named "hello". Open Pulsar and create a new file named `hello.py`. In this program, place the following code:
 
     print('Hello, world!')
 
