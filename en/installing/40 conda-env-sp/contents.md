@@ -2,7 +2,7 @@
 
 Now, with your new terminal, run the commands below. (**Don't copy all four lines at once into your terminal, but enter them one line at a time.**)
 
-    curl https://raw.githubusercontent.com/spcourse/sp1-python/main/en/installing/computer/environment-sp.env > environment-sp.yml
+    curl https://raw.githubusercontent.com/spcourse/sp1-python/main/en/installing/computer/environment-sp.env > environment.yml
     conda env create -f environment.yml
     rm environment.yml
 
