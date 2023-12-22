@@ -7,4 +7,4 @@ As soon as the download is finished execute the downloaded file. Follow the inst
 
 The installation might take a while.
 
-![](../wait2.gif){:style="max-width:25%"}
+![](wait2.gif){:style="max-width:25%"}

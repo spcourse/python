@@ -6,8 +6,8 @@ As soon as the download is finished execute the downloaded file. Follow the inst
 
 **Tick all four boxes in the "advanced installation options"! Especially the "Add Miniconda3 to my PATH environment variable" is important. If you did not tick this box, you have to reinstall Miniconda!** Keep in mind that this menu can look slightly different for everyone.
 
-![Tick the box: "Add to PATH" when installing Miniconda](../anaconda_vinkje.gif)
+![Tick the box: "Add to PATH" when installing Miniconda](anaconda_vinkje.gif)
 
 The installation might take a while.
 
-![](../wait2.gif){:style="max-width:25%"}
+![](wait2.gif){:style="max-width:25%"}
