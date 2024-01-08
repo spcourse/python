@@ -12,15 +12,15 @@ From here on out when you open a terminal we can use the following command to en
 
     conda activate SP  
 
-If everything worked correctly, you will now see that your terminal shows `(progLab)`.
+If everything worked correctly, you will now see that your terminal shows `(SP)`.
 
 **Important:** If you want to use all of the libraries you've just installed and `import` them in your own code, you will have to have *this* environment active. We recommend you *always* have this environment active when working on assignments.
 
 To make sure that the environment we just installed is started _every time_ we start a new terminal, we can run some commands.
 
-To make sure that the `progLab` environment is activated every time that we start a terminal, we can run the following command:
+To make sure that the `SP` environment is activated every time that we start a terminal, we can run the following command:
 
-    echo 'conda activate progLab' >> ~/.bash_profile
+    echo 'conda activate SP' >> ~/.bash_profile
 
 We now need to perform two more commands, that will ensure that Python and sqlite function as intended on Windows:
 
@@ -29,4 +29,4 @@ We now need to perform two more commands, that will ensure that Python and sqlit
     echo "alias checkpy='winpty checkpy'" >> ~/.bash_profile
 
 
-Now restart your terminal, and check whether it starts into the `progLab` environment. If not, please contact one of the TA's or teachers of this course.
+Now restart your terminal, and check whether it starts into the `SP` environment. If not, please contact one of the TA's or teachers of this course.
