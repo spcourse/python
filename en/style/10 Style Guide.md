@@ -67,13 +67,13 @@ Documentation strings, or docstrings, are strings enclosed in double (""") or si
 
     def my_complex_function(some_value):
         """
-        This complex function takes some_value and does some complicated calculations 
+        This complex function takes some_value and does some complicated calculations
         with it. After those calculations, the resulting value is returned.
         """
         result = some_value + 1
-        
+
         return result
-        
+
 
 
 #### Writing style
@@ -102,9 +102,9 @@ The `return` is shown slightly more to the right, although only one tab is used.
 
 Oh, and as mentioned before, if a line ends with a colon (`:`), all lines below should be indented if they belong to the rule with the colon.  
 
-    def sum(arrayOfNumbers):
+    def sum(array_of_numbers):
         result = 0
-        for number in arrayOfNumbers:
+        for number in array_of_numbers:
             result = result + number
         return result
 
@@ -137,7 +137,7 @@ There are exceptions. When your program is about topics where abbreviations are 
 
     # v is for "velocity"
     v_rabbit = 0.002
-    
+
     # x is for "displacement"
     x_rabbit = 23.11
 
