@@ -1,6 +1,6 @@
 # Step 4: Install other Python libraries
 
-Now, with your new terminal, run the commands below. (**Don't copy all four lines at once into your terminal, but enter them one line at a time.**)
+Now, with your new terminal, run the commands below. (**Don't copy all lines at once into your terminal, but enter them one line at a time.**)
 
     curl https://raw.githubusercontent.com/spcourse/sp1-python/main/en/installing/computer/environment.env > environment.yml
     conda install -n base conda-libmamba-solver
