@@ -1,4 +1,4 @@
-### Step 3: Command Line Interface
+# Step 3: Command Line Interface
 
 As a programmer, you will be using a command line interface (also often called terminal or shell) frequently. Through your terminal, you will be able to start and interact with programs, view outcomes of code you've written, and otherwise interact with your computer.
 
