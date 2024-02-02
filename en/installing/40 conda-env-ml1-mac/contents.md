@@ -20,6 +20,6 @@ If everything worked correctly, you will now see that your terminal shows `(ml1)
 
 To make sure that the environment we just installed is started _every time_ we start a new terminal, we should run the following command (replace `zsh` with `bash` if needed):
 
-    echo 'conda activate progLab' >> ~/.zshrc
+    echo 'conda activate ml1' >> ~/.zshrc
 
-Now restart your terminal, and check whether it starts into the `progLab` environment. If not, please contact one of the TA's or teachers of this course.
+Now restart your terminal, and check whether it starts into the `ml1` environment. If not, please contact one of the TA's or teachers of this course.
