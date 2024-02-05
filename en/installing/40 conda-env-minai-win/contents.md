@@ -25,5 +25,6 @@ To make sure that the environment we just installed is started _every time_ we s
 We now need to perform two more commands, that will ensure that Python functions as intended on Windows:
 
     echo "alias python='winpty python'" >> ~/.bash_profile
+    echo "alias checkpy='winpty checkpy'" >>~/.bash_profile
 
 Now restart your terminal, and check whether it starts into the `minai` environment. If not, please contact one of the TA's or teachers of this course.
