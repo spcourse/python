@@ -34,3 +34,21 @@ There are a few important things to note:
          for x in range (1, 100, 10):
 
     Please try this yourself to make sure you understand what values `x` takes in this program.
+
+-   You can also loop backwards by defining the range the other way around and provide a negative stepsize:
+
+        for i in range(10, 0, -1):
+            print(i)
+
+    This prints:
+
+        10
+        9
+        8
+        7
+        6
+        5
+        4
+        3
+        2
+        1

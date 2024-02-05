@@ -13,6 +13,14 @@ Test your understanding with the following practice exercises. Create a file cal
 
 **Exercise 3** Write a for-loop that loops over the numbers 0 up to and including 100 with steps of 4 and adds them all together. Print the result.
 
+**Exercise 4** Write a for-loop that prints the following:
+
+    10
+    8
+    6
+    4
+    2
+
 ## Solutions
 Below you can find some solutions.
 
@@ -40,4 +48,8 @@ Below you can find some solutions.
         total += i
     print(total)
 
+**Exercise 3**
+
+    for i in range(10, 0, -2):
+        print(i)
 </details>
