@@ -20,6 +20,6 @@ To make sure that the environment we just installed is started _every time_ we s
 
 To make sure that the `SP` environment is activated every time that we start a terminal, we can run the following command:
 
-    echo 'conda activate minai' >> ~/.zshrc
+    echo 'conda activate SP' >> ~/.zshrc
 
 Now restart your terminal, and check whether it starts into the `SP` environment. If not, please contact one of the TA's or teachers of this course.
