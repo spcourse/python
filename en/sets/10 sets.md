@@ -92,6 +92,10 @@ by using the `|` operator between the two sets. Note that the order of the opera
 doesn't matter as taking the union between `a` and `b` is the same as taking the
 union between `b` and `a`.
 
+The union is a linear operation ($$O(N)$$ where $$N$$
+corresponds to the sum of the sizes of the input sets). Which is efficient, considering
+that implementing the same functionality with lists would give $$O(N^2)$$ operation.
+
 Next up, we'll try intersection, which you also already saw in the introduction.
 It constructs a new set with the unique elements contained in *both* sets.
 
@@ -107,6 +111,8 @@ using the `&` operator. As with union, the order between the operands doesn't
 matter, as the intersection between `a` and `b` is the same as the intersection
 between `b` and `a`.
 
+Intersection has also got a linear time complexity ($$O(N)$$).
+
 Finally, let's take a look at set difference:
 
 	>>> a.difference(b)
@@ -119,6 +125,8 @@ Finally, let's take a look at set difference:
 So the set difference between `a` and `b` creates a new set with all the
 elements from `a` that are **not** present in `b`. Note that the order of the
 operands here *does* matter.
+
+This is also an $$O(N)$$ operation.
 
 We can also check if sets are subsets or supersets of each other, meaning one
 contains *all* the elements of the other.
@@ -141,4 +149,4 @@ This can be done with the `.subset()` and `.superset()` functions or the `<=`
 and `>=` operators. There are also the `<` and `>` operators for *strict*
 subsets, meaning the two sets cannot be equal.
 
-This concludes this introduction to sets.
+This is also an $$O(N)$$ operation.
