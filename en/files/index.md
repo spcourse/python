@@ -64,28 +64,28 @@ The characters `"\t"` (tab) and `"\n"` (newline) are also visible; we don't real
 
 ## Step 3: save the information in variables
 
-In this exercise we are only interested in the season and the number of goals of that season. As you can see, this information is stored in element 0 and 2 of the list.
+In this exercise we are only interested in the season and the number of goals of that season. As you can see, this information is stored in element 0 and 3 of the list.
 
 We can save this information in a variable:
 
     season = split_data[0]
-    goals = split_data[2]
+    goals = split_data[3]
 
 ### Problem 1: unpacking the variables
 
-As you might have observed, the creators of the file named the season of 1988-1889 as one number: 198889. Smart of them, but we are only interested in the starting year of the season (1988).
+As you might have observed, the creators of the file named the season of 1988-1989 as one number: 198889. Smart of them, but we are only interested in the starting year of the season (1988).
 
 The data is still stored in the list as a `string`. Although `198889` can be considered a number, the program still treats it as a piece of text. The year we are looking for is stored in the first 4 characters of that string. To only save this part of the string, we need the first 4 characters. We can use so-called "slicing for that:
 
     season = split_data[0][0:4]
-    goals = split_data[2]
+    goals = split_data[3]
 
 ### Problem 2: numbers versus text
 
 From now on it is easier to treat the data as a number, because only then we can calculate stuff with it. To ensure the data becomes numerical, an integer, we have to explicitly convert it.
 
     season = int(split_data[0][0:4])
-    goals = int(split_data[2])
+    goals = int(split_data[3])
 
 You now have all the information available in a variable. Now you can use everything you learned about Python to perform an analysis.
 
@@ -102,7 +102,7 @@ We wanted to calculate the total number of goals van Basten has made for his clu
         split_data = line.split(',')
 
         season = int(split_data[0][0:4])
-        goals = int(split_data[2])
+        goals = int(split_data[3])
 
         total_goals = total_goals + goals   
 
