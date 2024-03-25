@@ -70,7 +70,7 @@ operations, as described by set theory (a branch of mathematical
 logic), concerns which elements are shared between 2 sets. Let's start by making
 two sets.
 
-	>>> b = {3, 5, 7, 8, 12, 16, 21}
+	>>> a = {3, 5, 7, 8, 12, 16, 21}
 	>>> b = {16, 24, 21, 8, 9, 1, 2}
 	>>> a
 	{3, 5, 7, 8, 12, 16, 21}
