@@ -4,6 +4,8 @@ To help you verify whether a program functions in compliance with the specificat
 
     checkpy -d spcourse/tests
 
+> If the `checkpy` command is not recognized, make sure that you are in the `(minai)` environment. If this is the case, and the command is still not working, you can run `pip install checkpy` to install checkpy manually.
+
 To test whether your installation of `checkpy` was successful you can test `hello.py`, which we have written earlier in these installation instructions. Navigate to the folder that holds `hello.py` and execute the following command:
 
     checkpy hello
