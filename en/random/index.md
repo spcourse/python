@@ -25,7 +25,7 @@ Example: ten random numbers between 0 and 3
     for i in range(10):
         random_number = random.random()
         transformed_number = 3 * random_number
-        print(y)
+        print(transformed_number)
 
 ## Your own function
 
