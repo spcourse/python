@@ -11,21 +11,11 @@ Some examples of structured data are:
 
 _Note on notation:_ There are many different ways to refer to the columns and rows in a table. This notebook will refer to the vertically orientated axis as 'columns' (but elsewhere this might be called a 'field', 'feature' or 'property') and the horizontal axis as 'rows' (also called 'entries', 'samples' or 'observations').
 
-`Pandas` (often imported as `pd`) is the most popular library to use when dealing with structured data in Python. In this exercise notebook, we will explore some of the basics of working with Pandas. This notebook will not be able to cover everything you will ever need, but will hopefully give you an idea of what it can do for you. 
+`Pandas` (often imported as `pd`) is the most popular library to use when dealing with structured data in Python. In this exercise notebook, we will explore some of the basics of working with Pandas. This notebook will not be able to cover everything you will ever need, but will hopefully give you an idea of what it can do for you.
 
 Some sections will end with a note on *Further Reading*; this will not be necessary for completing the exercises, but references relevant information that might help you in the future.
 
 
-```python
-import pandas as pd
-
-from tests import *
-
-# This line indicates that any floating point number should only have 2 digits
-# past the decimal point. This prevents numbers like 5.00000003 to be printed,
-# and instead will just print 5.00.
-pd.set_option("display.precision", 2)
-```
 
 ## DataFrames
 
@@ -33,16 +23,17 @@ Structured data is nothing more than a table consisting of rows and columns. In 
 
 You can have any number of rows, but it is important that each row has the same number of elements (i.e. columns), otherwise you will get an error. The example below uses Jupyter's `display` function to get a nice looking output (although `print` also works).
 
+---
 
-```python
-data = [[1, 2, 3], # The first row has values 1, 2, 3
-        [4, 5, 6]] # The second row has values 4, 5, 6
+    import pandas as pd
+    data = [[1, 2, 3], # The first row has values 1, 2, 3
+            [4, 5, 6]] # The second row has values 4, 5, 6
 
-df = pd.DataFrame(data)
+    df = pd.DataFrame(data)
 
-display(df)
-```
+    display(df)
 
+---
 
 <div>
 <style scoped>
@@ -387,7 +378,7 @@ print("\nThe second column is:", df.columns[1])
     Index(['Category', 'Price', 'Unit', 'Stock'], dtype='object')
 
 
-    
+
     The second column is: Price
 
 
@@ -549,7 +540,7 @@ display(pd.Series([ "2023 aug 02", "2021 8 23", "1970/01/01"], dtype="datetime64
     dtype: object
 
 
-    
+
     If you provide a mix of integers and floats, it will convert all elements to floats:
 
 
@@ -560,7 +551,7 @@ display(pd.Series([ "2023 aug 02", "2021 8 23", "1970/01/01"], dtype="datetime64
     dtype: float64
 
 
-    
+
     But you can also force it to be a specific type:
 
 
@@ -571,7 +562,7 @@ display(pd.Series([ "2023 aug 02", "2021 8 23", "1970/01/01"], dtype="datetime64
     dtype: int64
 
 
-    
+
     If you provide a mix of strings and other types, then everything becomes 'object's:
 
 
@@ -582,7 +573,7 @@ display(pd.Series([ "2023 aug 02", "2021 8 23", "1970/01/01"], dtype="datetime64
     dtype: object
 
 
-    
+
     As a very useful extra, Pandas can even convert your date to a consistent type:
 
 
@@ -601,7 +592,7 @@ At the end of the day, the following sales come in:
 |------------|---|
 | Lettuce    | 1 |
 | Carrot     | 3 |
-| Spaghetti  | 1 | 
+| Spaghetti  | 1 |
 | Coffee     | 2 |
 | Apple      | 1 |
 | Strawberry | 1 |
@@ -824,7 +815,7 @@ display(df)
     Name: Stock, dtype: int64
 
 
-    
+
     Replacing the stock column in the DataFrame:
 
 
@@ -1380,7 +1371,7 @@ print("\nThis row is of the type:", type(row))
     Name: Banana, dtype: object
 
 
-    
+
     This row is of the type: <class 'pandas.core.series.Series'>
 
 
@@ -1413,7 +1404,7 @@ print("\nThis row is of the type:", type(row))
     Name: Apple, dtype: object
 
 
-    
+
     This row is of the type: <class 'pandas.core.series.Series'>
 
 
@@ -1606,7 +1597,7 @@ display(rows4)
 </div>
 
 
-    
+
     The rows with index 'Carrot', 'Juice' and 'Rice':
 
 
@@ -1662,7 +1653,7 @@ display(rows4)
 </div>
 
 
-    
+
     The row with index 'Carrot', as a DataFrame:
 
 
@@ -1704,7 +1695,7 @@ display(rows4)
 </div>
 
 
-    
+
     First, third and fifth row, using a list of indices for iloc:
 
 
@@ -1760,7 +1751,7 @@ display(rows4)
 </div>
 
 
-    
+
     Selecting only the Category and Price columns
 
 
@@ -2034,8 +2025,8 @@ display(df.iloc[1:10:2])
 </div>
 
 
-    
-    
+
+
     Starting at the tenth row:
 
 
@@ -2091,8 +2082,8 @@ display(df.iloc[1:10:2])
 </div>
 
 
-    
-    
+
+
     First five rows:
 
 
@@ -2162,8 +2153,8 @@ display(df.iloc[1:10:2])
 </div>
 
 
-    
-    
+
+
     Starting at the second-to-last row:
 
 
@@ -2212,8 +2203,8 @@ display(df.iloc[1:10:2])
 </div>
 
 
-    
-    
+
+
     Every second row up to the tenth row:
 
 
@@ -2330,7 +2321,7 @@ res3 = df[['Category', 'Price']].iloc[3:10:3]
 display(res3)
 ```
 
-    
+
     Selecting columns first, then indexing the resulting rows using loc:
 
 
@@ -2378,7 +2369,7 @@ display(res3)
 </div>
 
 
-    
+
     Indexing the rows using their position with iloc, then selecting the columns:
 
 
@@ -2426,7 +2417,7 @@ display(res3)
 </div>
 
 
-    
+
     Selecting columns first, then slices on iloc, executed on the same line:
 
 
@@ -2496,7 +2487,7 @@ display(df.iloc[0, [0, 3]])
 
 ```
 
-    
+
     Selecting the rows with index Apple and Broccoli, and the columns Category and Stock
 
 
@@ -2539,7 +2530,7 @@ display(df.iloc[0, [0, 3]])
 </div>
 
 
-    
+
     Selecting the first and second row, and the second and fourth column:
 
 
@@ -2582,7 +2573,7 @@ display(df.iloc[0, [0, 3]])
 </div>
 
 
-    
+
     Selecting the Penne row and the Price column (which is just an element):
 
 
@@ -2590,7 +2581,7 @@ display(df.iloc[0, [0, 3]])
     0.99
 
 
-    
+
     Selecting only the first row, and the first and fourth column (which is a Series):
 
 
@@ -2623,7 +2614,7 @@ display(example3)
 
 ```
 
-    
+
     Example 1:
 
 
@@ -2631,7 +2622,7 @@ display(example3)
     2.39
 
 
-    
+
     Example 2:
 
 
@@ -2680,7 +2671,7 @@ display(example3)
 </div>
 
 
-    
+
     Example 3:
 
 
@@ -2766,7 +2757,7 @@ print("\nUsing the mask on the DataFrame gives:")
 display(df[mask])
 ```
 
-    
+
     Mask where Stock is less than 4:
 
 
@@ -2787,7 +2778,7 @@ display(df[mask])
     Name: Stock, dtype: bool
 
 
-    
+
     Using the mask on the DataFrame gives:
 
 
@@ -2888,7 +2879,7 @@ print("\n\nThe result of applying this mask on the DataFrame:")
 display(df[mask])
 ```
 
-    
+
     The mask where the category is either Fruits or Vegetables:
 
 
@@ -2909,8 +2900,8 @@ display(df[mask])
     Name: Category, dtype: bool
 
 
-    
-    
+
+
     The result of applying this mask on the DataFrame:
 
 
@@ -3010,7 +3001,7 @@ print("\nSelecting out the rows where the combined mask is True:")
 display(df[combined_mask])
 ```
 
-    
+
     The combined mask for items that are both expensive and low in stock:
 
 
@@ -3031,7 +3022,7 @@ display(df[combined_mask])
     dtype: bool
 
 
-    
+
     Selecting out the rows where the combined mask is True:
 
 
@@ -3147,8 +3138,8 @@ display(a + b)
     dtype: int64
 
 
-    
-    
+
+
     Series b:
 
 
@@ -3159,8 +3150,8 @@ display(a + b)
     dtype: int64
 
 
-    
-    
+
+
     a+b gives:
 
 
@@ -3224,8 +3215,8 @@ display( stock.sub(sales, fill_value=0) )
     Name: Stock, dtype: int64
 
 
-    
-    
+
+
     Sales:
 
 
@@ -3239,8 +3230,8 @@ display( stock.sub(sales, fill_value=0) )
     Name: Sales, dtype: int64
 
 
-    
-    
+
+
     Stock after sales:
 
 
@@ -3330,8 +3321,8 @@ display(series_out)
     dtype: object
 
 
-    
-    
+
+
     Output Series:
 
 
@@ -3377,8 +3368,8 @@ display(series_out)
     dtype: object
 
 
-    
-    
+
+
     Output Series:
 
 
@@ -3437,7 +3428,7 @@ print("\nThe Category column replaced by the lowercase version:")
 display(df)
 ```
 
-    
+
     The Category column replaced by the lowercase version:
 
 
@@ -3577,7 +3568,7 @@ print("\nThe Category column replaced by the lowercase version:")
 display(df)
 ```
 
-    
+
     The Category column replaced by the lowercase version:
 
 
@@ -3703,7 +3694,7 @@ display(df)
 </div>
 
 
-*Further Reading:* More about [lambda statements](https://www.dataquest.io/blog/tutorial-lambda-functions-in-python/), including examples with and without the use of Pandas. 
+*Further Reading:* More about [lambda statements](https://www.dataquest.io/blog/tutorial-lambda-functions-in-python/), including examples with and without the use of Pandas.
 
 ## Sorting values
 
@@ -4407,7 +4398,7 @@ print("\nComputing the maximum per group for each column:")
 display(category_max)
 ```
 
-    
+
     Intermediate groupby object, which isn't a real DataFrame:
 
 
@@ -4415,9 +4406,9 @@ display(category_max)
     <pandas.core.groupby.generic.DataFrameGroupBy object at 0x15a4bf350>
 
 
-    
+
     However, we can access each group separately, which are DataFrames:
-    
+
     Breakfast:
 
 
@@ -4466,7 +4457,7 @@ display(category_max)
 </div>
 
 
-    
+
     Fruits:
 
 
@@ -4522,7 +4513,7 @@ display(category_max)
 </div>
 
 
-    
+
     International:
 
 
@@ -4564,7 +4555,7 @@ display(category_max)
 </div>
 
 
-    
+
     Pastas:
 
 
@@ -4620,7 +4611,7 @@ display(category_max)
 </div>
 
 
-    
+
     Vegetables:
 
 
@@ -4683,9 +4674,9 @@ display(category_max)
 </div>
 
 
-    
-    
-    
+
+
+
     Computing the mean per group for each column:
 
 
@@ -4748,7 +4739,7 @@ display(category_max)
 </div>
 
 
-    
+
     Computing the maximum per group for each column:
 
 
@@ -4836,7 +4827,7 @@ display(df.groupby('Category').head(2))
 
 ```
 
-    
+
     The number of unique values in each group:
 
 
@@ -4906,7 +4897,7 @@ display(df.groupby('Category').head(2))
 </div>
 
 
-    
+
     The first value in each group:
 
 
@@ -4976,7 +4967,7 @@ display(df.groupby('Category').head(2))
 </div>
 
 
-    
+
     Keeping (up to) the first 2 rows per group:
 
 
@@ -5098,7 +5089,7 @@ display(unique_price_unit)
 
 ```
 
-    
+
     The minimum values in the Stock column, per Category:
 
 
@@ -5112,7 +5103,7 @@ display(unique_price_unit)
     Name: Stock, dtype: int64
 
 
-    
+
     The number of unique values in the 'Price' and 'Unit' column, per category:
 
 
