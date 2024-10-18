@@ -23,8 +23,6 @@ Structured data is nothing more than a table consisting of rows and columns. In 
 
 You can have any number of rows, but it is important that each row has the same number of elements (i.e. columns), otherwise you will get an error. The example below uses Jupyter's `display` function to get a nice looking output (although `print` also works).
 
----
-
     import pandas as pd
     data = [[1, 2, 3], # The first row has values 1, 2, 3
             [4, 5, 6]] # The second row has values 4, 5, 6
@@ -80,16 +78,14 @@ Now this is not a very descriptive table, since the columns are just called `0`,
 
 Let's create another dataframe; the first column has values `'a'` and `'b'` and we call it `'Some letter'`, another column with values `2` and `5` we call `'Int'` and finally a column with `3.5` and `6.5` we call `'A float'`.
 
+    data = [['a', 2, 3.5],
+            ['b', 5, 6.2]]
 
-```python
-data = [['a', 2, 3.5],
-        ['b', 5, 6.2]]
+    df = pd.DataFrame(data, columns=['Some letter', 'Int', 'A float'])
 
-df = pd.DataFrame(data, columns=['Some letter', 'Int', 'A float'])
+    display(df)
 
-display(df)
-```
-
+---
 
 <div>
 <style scoped>
@@ -136,19 +132,17 @@ You might have already noticed that each of the _rows_ also gets its own index o
 
 Again, make sure you provide as many names in the `index` argument as there are rows (in this case 2 rows, and therefore 2 names); otherwise you will get an error.
 
+    data = [['a', 2, 3.5],
+            ['b', 5, 6.2]]
 
-```python
-data = [['a', 2, 3.5],
-        ['b', 5, 6.2]]
+    df = pd.DataFrame(data,
+        index=['First Row', 'Row 2'],
+        columns=['Some letter', 'Int', 'A float']
+    )
 
-df = pd.DataFrame(data,
-    index=['First Row', 'Row 2'],
-    columns=['Some letter', 'Int', 'A float']
-)
+    display(df)
 
-display(df)
-```
-
+---
 
 <div>
 <style scoped>
@@ -192,48 +186,16 @@ display(df)
 
 
 
-```python
-print("The index column of the dataframe:")
-display(df.index)
-```
-
-### Exercise 1
-Create a DataFrame called `df` that contains the data in the following table:
-
-|       | **A** | **B** |
-|-------|-------|-------|
-| **X** | 5.3   | foo   |
-| **Y** | 2.0   | bar   |
-| **Z** | 0.2   | baz   |
-
-
-```python
-df = None
-
-# YOUR CODE HERE
-
-display(df)
-```
-
-
-```python
-test_1(df)
-```
-
-*Further Reading:* You can find the full documentation on creating a DataFrame [here](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame) (which lists the technical description of all the options) or use the Pandas User Guide [on DataFrames](https://pandas.pydata.org/pandas-docs/stable/user_guide/dsintro.html#basics-dataframe) (which includes more examples).
-
 Now that we know how to create a DataFrame, let's see what we can do with them!
 
 This notebook will follow a narrative where you are hired as the new head of (and only member of) the Data Processing department of your local grocery store. This grocery store has kept a record of their products, and it is now up to you to process this data. This record consists of products, to what category they belong, their price, the size (i.e. 'unit') of the product and the current stock.
 
 We have provided you with a function `get_df()` which gets you the data as a `DataFrame` for you to use. As you can see, it is _indexed_ on the 'Product' and has the _columns_ 'Category', 'Price', 'Unit' and 'Stock'. The example `DataFrame` is displayed below.
 
+    df = get_df()
+    display(df)
 
-```python
-df = get_df()
-display(df)
-```
-
+---
 
 <div>
 <style scoped>
@@ -363,35 +325,28 @@ A table consists of columns with values for each row; and similarly, a `DataFram
 To see what columns are in your DataFrame, you can use the `df.columns` property:
 
 
-```python
-print("The columns of `df`:")
-display(df.columns)
+    print("The columns of `df`:")
+    display(df.columns)
 
-# Indexing works the same way as a list:
-print("\nThe second column is:", df.columns[1])
-```
+---
+
+    # Indexing works the same way as a list:
+    print("\nThe second column is:", df.columns[1])
 
     The columns of `df`:
-
-
-
     Index(['Category', 'Price', 'Unit', 'Stock'], dtype='object')
 
-
-
     The second column is: Price
-
 
 To get a column from your DataFrame, you can index it in the same way you do with a dictionary: by using `df['ColumnName']`, where `df` is your DataFrame and `ColumnName` is the name of your column. The code below retrieves the 'Price' column from our DataFrame:
 
 
-```python
-# Retrieve the 'Price' column from the DataFrame as a Series
-prices = df['Price']
+    # Retrieve the 'Price' column from the DataFrame as a Series
+    prices = df['Price']
 
-display(prices)
-```
+    display(prices)
 
+---
 
     Apple          2.39
     Banana         1.49
@@ -408,15 +363,15 @@ display(prices)
     Tagliatelle    1.89
     Name: Price, dtype: float64
 
+---
 
+    # Here you can see that this is indeed a 'Series' object:
+    print("The variable 'prices' is of type:", type(prices))
 
-```python
-# Here you can see that this is indeed a 'Series' object:
-print("The variable 'prices' is of type:", type(prices))
+    # You can always check the dtype of your Series by using .dtype:
+    print("This Series has dtype:", prices.dtype)
 
-# You can always check the dtype of your Series by using .dtype:
-print("This Series has dtype:", prices.dtype)
-```
+---
 
     The variable 'prices' is of type: <class 'pandas.core.series.Series'>
     This Series has dtype: float64
@@ -427,32 +382,17 @@ In the example above you can see that this Series doesn't just contain the _valu
 Accessing the data in that `Series` then also works in the same way as for dictionaries: you can just use the index as the key. For example, the price of Broccoli can be found by first retrieving the 'Price' column from the `DataFrame`, and then indexing the resulting `Series` on 'Broccoli':
 
 
-```python
-# Retrieve the 'Price' column from the DataFrame as a Series
-prices = df['Price']
+    # Retrieve the 'Price' column from the DataFrame as a Series
+    prices = df['Price']
 
-# Get the 'Broccoli' value from that Series
-price_broccoli = prices['Broccoli']
+    # Get the 'Broccoli' value from that Series
+    price_broccoli = prices['Broccoli']
 
-print("The price of Broccoli is:", price_broccoli)
-```
+    print("The price of Broccoli is:", price_broccoli)
+
+---
 
     The price of Broccoli is: 1.29
-
-
-### Exercise 2
-
-In the 'Stock' column, how many 'Penne' are left? Use `df` to find the value and save the result in `stock_penne`.
-
-
-```python
-df = get_df()
-stock_penne = None
-
-# YOUR CODE HERE
-
-print("There are", stock_penne, "penne in stock.")
-```
 
 ## Series
 
@@ -463,20 +403,19 @@ Note that all the values in a `Series`, must be of the same type, like with *Num
 If we want to create a `Series`, we can just define it using a list of indices and list of values. Note that order here matters; position 0 in the index list will become the index for position 0 in the value list, and this will become the first element in the `Series`. Below is an example to create a `pd.Series` called `discount` with products as its indices and a discounted price as its values.
 
 
-```python
-discount_products = ['Strawberry', 'Apple', 'Coffee', 'Juice', 'Broccoli']
-discount_prices = [2.99, 2.15, 4.99, 1.89, 0.99]
+    discount_products = ['Strawberry', 'Apple', 'Coffee', 'Juice', 'Broccoli']
+    discount_prices = [2.99, 2.15, 4.99, 1.89, 0.99]
 
-discount = pd.Series(
-    data=discount_prices,      # Use discount_prices as the values
-    index=discount_products,   # Use discount_products as the index
-    dtype=float,               # Set the type for the `data` argument to floating point numbers
-    name="Discount",           # Set the name for the Series to Discount
-)
+    discount = pd.Series(
+        data=discount_prices,      # Use discount_prices as the values
+        index=discount_products,   # Use discount_products as the index
+        dtype=float,               # Set the type for the `data` argument to floating point numbers
+        name="Discount",           # Set the name for the Series to Discount
+    )
 
-display(discount)
-```
+    display(discount)
 
+---
 
     Strawberry    2.99
     Apple         2.15
@@ -493,12 +432,12 @@ However, much of the power of Pandas is the use of this index to easily retrieve
 Below is an example of the basic way you can create a Series, by just providing a `list` of values:
 
 
-```python
-basicSeries = pd.Series([6.4, 2.3, 1.0])
 
-display(basicSeries)
-```
+    basicSeries = pd.Series([6.4, 2.3, 1.0])
 
+    display(basicSeries)
+
+---
 
     0    6.4
     1    2.3
