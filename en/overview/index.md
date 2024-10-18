@@ -5,17 +5,17 @@ An overview of all programming concepts as discussed in this course.
 
 ### Level 1 (SP1) concepts
 
-| **Datatypes**                                             | **Operators**              |
-|-----------------------------------------------------------|----------------------------|
-|`string`: [theory](/python/en/basics#printing), [theory](/python/en/basics#types) | `+`, `-`, `*`, `/`, `//`, `%`, `**`: [theory](/python/en/basics#operators), `=`: [theory](/python/en/basics#variables)|
-|`int`, `float`: [theory](/python/en/basics#types)          | `==`, `!=`, `<`, `>`, `<=`, `>=`: [theory](/python/en/algorithms#more-operators)|
-| **Input/Output**                                          | `not`, `and`, `or`: [theory](/python/en/algorithms#combining-conditions) |
-|`print`: [theory](/python/en/basics#printing)              | **Algorithmic** |
-|`input`: [theory](/python/en/basics#user-input)            | `if`, `elif`, `else`: [theory](/python/en/algorithms#conditional-instructions)  |
-|`plotting`: [theory](/python/en/plotting)                  | `for`: [theory](/python/en/loops/for) |
-| **Other**                                                 | `while`: [theory](/python/en/loops/while) |
-|`import`: [theory](https://sp.proglab.nl/python/en/modules)| `for` + `while`:[examples loops](/python/en/loops/practical-uses) |
-|-----------------------------------------------------------|----------------------------|
+| **Datatypes**                                             || **Operators**              |
+|-----------------------------------------------------------||----------------------------|
+|`string`: [theory](/python/en/basics#printing), [theory](/python/en/basics#types) || `+`, `-`, `*`, `/`, `//`, `%`, `**`: [theory](/python/en/basics#operators), `=`: [theory](/python/en/basics#variables)|
+|`int`, `float`: [theory](/python/en/basics#types)          || `==`, `!=`, `<`, `>`, `<=`, `>=`: [theory](/python/en/algorithms#more-operators)|
+| **Input/Output**                                          || `not`, `and`, `or`: [theory](/python/en/algorithms#combining-conditions) |
+|`print`: [theory](/python/en/basics#printing)              || **Algorithmic** |
+|`input`: [theory](/python/en/basics#user-input)            || `if`, `elif`, `else`: [theory](/python/en/algorithms#conditional-instructions)  |
+|`plotting`: [theory](/python/en/plotting)                  || `for`: [theory](/python/en/loops/for) |
+| **Other**                                                 || `while`: [theory](/python/en/loops/while) |
+|`import`: [theory](https://sp.proglab.nl/python/en/modules)|| `for` + `while`:[examples loops](/python/en/loops/practical-uses) |
+|-----------------------------------------------------------||----------------------------|
 
 
 
