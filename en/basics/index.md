@@ -133,7 +133,7 @@ In Python, you can convert a floating-point number (a decimal) to a whole number
 
 If you want to round a number to the nearest whole number, you can use the `round()` function. This will round to the nearest integer, with .5 values rounding towards the nearest even number for consistency. For instance, `round(3.5)` returns `4` and `round(2.5)` returns `2`.
 
-You can also use `round()` to round a floating-point number to a specified number of decimal places by using round()'s optional second argument. For example, `round(3.14159265359, 2)` will round the number to two decimal places: `3.14`.
+You can also use `round()` to round a floating-point number to a specified number of decimal places by using `round()`'s optional second argument. For example, `round(3.14159265359, 2)` will round the number to two decimal places: `3.14`.
 
 ## User input
 
