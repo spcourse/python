@@ -451,101 +451,58 @@ Pandas tries its best to find the right type for your Series, and falls back on 
 
 What you can do with a column largely depends on the `dtype` of that `Series`, so always try to pick the type that works for your data!
 
+    print("A Series with strings gets dtype 'object':")
+    display(pd.Series(['a', 'b', 'c']))
 
-```python
-print("A Series with strings gets dtype 'object':")
-display(pd.Series(['a', 'b', 'c']))
+    print("\nIf you provide a mix of integers and floats, it will convert all elements to floats:")
+    display(pd.Series([1, 2, 3.0]))
 
-print("\nIf you provide a mix of integers and floats, it will convert all elements to floats:")
-display(pd.Series([1, 2, 3.0]))
+    print("\nBut you can also force it to be a specific type:")
+    display(pd.Series([1, 2, 3.0], dtype=int))
 
-print("\nBut you can also force it to be a specific type:")
-display(pd.Series([1, 2, 3.0], dtype=int))
+    print("\nIf you provide a mix of strings and other types, then everything becomes 'object's:")
+    display(pd.Series(['hello', 2, 3.0]))
 
-print("\nIf you provide a mix of strings and other types, then everything becomes 'object's:")
-display(pd.Series(['hello', 2, 3.0]))
+    print("\nAs a very useful extra, Pandas can even convert your date to a consistent type:")
+    display(pd.Series([ "2023 aug 02", "2021 8 23", "1970/01/01"], dtype="datetime64[ns]"))
 
-print("\nAs a very useful extra, Pandas can even convert your date to a consistent type:")
-display(pd.Series([ "2023 aug 02", "2021 8 23", "1970/01/01"], dtype="datetime64[ns]"))
-```
+---
 
     A Series with strings gets dtype 'object':
-
-
 
     0    a
     1    b
     2    c
     dtype: object
 
-
-
     If you provide a mix of integers and floats, it will convert all elements to floats:
-
-
 
     0    1.0
     1    2.0
     2    3.0
     dtype: float64
 
-
-
     But you can also force it to be a specific type:
-
-
 
     0    1
     1    2
     2    3
     dtype: int64
 
-
-
     If you provide a mix of strings and other types, then everything becomes 'object's:
-
-
 
     0    hello
     1        2
     2      3.0
     dtype: object
 
-
-
     As a very useful extra, Pandas can even convert your date to a consistent type:
-
-
 
     0   2023-08-02
     1   2021-08-23
     2   1970-01-01
     dtype: datetime64[ns]
 
-
-### Exercise 3
-
-At the end of the day, the following sales come in:
-
-|            |   |
-|------------|---|
-| Lettuce    | 1 |
-| Carrot     | 3 |
-| Spaghetti  | 1 |
-| Coffee     | 2 |
-| Apple      | 1 |
-| Strawberry | 1 |
-
-Create a `Series` called `sales` containing the data in the table above.
-
-
-```python
-sales = None
-
-# YOUR CODE HERE
-
-display(sales)
-```
 
 ### Adding and modifying data
 
@@ -554,17 +511,17 @@ You can *add* a column to your `DataFrame` in the same way we retrieved a column
 Let's use the `discount` Series from before and add it to the Dataframe. This will match all the indices in the Series with the DataFrame indices, and add the values in the right place. When there is no discount for a specific product, the value automatically gets set to `NaN`. We will come back to the different ways you can deal with the `NaN`s later, in the section on [Handling missing values](#Handling-missing-values).
 
 
-```python
-df = get_df()
+    df = get_df()
 
-print("The discount Series")
-discount = pd.Series(discount_prices, index=discount_products)
-display(discount)
+    print("The discount Series")
+    discount = pd.Series(discount_prices, index=discount_products)
+    display(discount)
 
-print("Added to the DataFrame:")
-df['Discount'] = discount
-display(df)
-```
+    print("Added to the DataFrame:")
+    df['Discount'] = discount
+    display(df)
+
+---
 
     The discount Series
 
@@ -579,7 +536,6 @@ display(df)
 
 
     Added to the DataFrame:
-
 
 
 <div>
@@ -723,20 +679,17 @@ Below is a simple example where we get a new inventory shipment with 10 items fo
 
 It is important to remember that any arithmetic operation always creates a **new** `Series`, and so doesn't modify the existing DataFrame! If we want to update the values in the DataFrame, we need to re-assign the new Series to the corresponding collumn.
 
+    print("Adding 10 to the stock of every product:")
+    increased_stock = df['Stock'] + 10
+    display(increased_stock)
 
-```python
-print("Adding 10 to the stock of every product:")
-increased_stock = df['Stock'] + 10
-display(increased_stock)
+    print("\nReplacing the stock column in the DataFrame:")
+    df['Stock'] = increased_stock
+    display(df)
 
-print("\nReplacing the stock column in the DataFrame:")
-df['Stock'] = increased_stock
-display(df)
-```
+---
 
     Adding 10 to the stock of every product:
-
-
 
     Apple          16
     Banana         12
@@ -753,10 +706,7 @@ display(df)
     Tagliatelle    12
     Name: Stock, dtype: int64
 
-
-
     Replacing the stock column in the DataFrame:
-
 
 
 <div>
@@ -898,17 +848,15 @@ An important difference with *Numpy* is that element-wise operations are always 
 
 Let say you want to now compute the percentage of discount for each of the discounted prices, so you can use those to advertise your sale. First we'll need to compute ratio of the discounted prices compared to the original price and store the result in a new `Series`. We can just do this by dividing the Discount column by the Price column:
 
+    discount_ratio = df['Discount'] / df['Price']
 
-```python
-discount_ratio = df['Discount'] / df['Price']
+    print("The ratio of the discounted price compared to the original price:")
+    display(discount_ratio)
 
-print("The ratio of the discounted price compared to the original price:")
-display(discount_ratio)
-```
 
     The ratio of the discounted price compared to the original price:
 
-
+---
 
     Apple          0.90
     Banana          NaN
@@ -931,13 +879,14 @@ Note that this division was indeed performed element by element and matched on t
 Next, we can just multiply this by $100$ to get a percentage, and subtract that value from $100$ to get the percentage that was discounted. Lastly, we can then add this new `Series` back into the `DataFrame` as a new column:
 
 
-```python
-discount_percentage = 100 - discount_ratio * 100
-df['Percentage'] = discount_percentage
 
-print('Discount percentage added to the DataFrame:')
-display(df)
-```
+    discount_percentage = 100 - discount_ratio * 100
+    df['Percentage'] = discount_percentage
+
+    print('Discount percentage added to the DataFrame:')
+    display(df)
+
+---
 
     Discount percentage added to the DataFrame:
 
@@ -1096,57 +1045,21 @@ In the `DataFrame` we can now see the apples have $10\%$ discount when sold for 
 
 With a couple of discounts this is easy to spot, but for a larger `DataFrame` you would use built-in *aggregate* functions instead. Aggregate functions combine data in a column in some way, so for example using a `.sum()` to compute the total for a column. Here we'll need to use the `.max()` function to find the largest discount percentage and `.idxmax()` to find the product that largest discount belongs to. Note that `NaN` values in the Percentage column will just be ignored here, as this is the default behaviour for all aggregation functions.
 
+    largest_discount_percentage = df['Percentage'].max()
+    largest_discount_product = df['Percentage'].idxmax()
 
-```python
-largest_discount_percentage = df['Percentage'].max()
-largest_discount_product = df['Percentage'].idxmax()
+    original_price = df['Price'][largest_discount_product]
+    discount_price = df['Discount'][largest_discount_product]
+    product_unit =  df['Unit'][largest_discount_product]
 
-original_price = df['Price'][largest_discount_product]
-discount_price = df['Discount'][largest_discount_product]
-product_unit =  df['Unit'][largest_discount_product]
+    print(f'Our best deal is a {int(largest_discount_percentage)}% discount on {largest_discount_product}:')
+    print(f'Usually {original_price} per {product_unit}, but now on sale for {discount_price}!')
 
-print(f'Our best deal is a {int(largest_discount_percentage)}% discount on {largest_discount_product}:')
-print(f'Usually {original_price} per {product_unit}, but now on sale for {discount_price}!')
-```
+---
 
     Our best deal is a 33% discount on Coffee:
     Usually 7.49 per 1 kg, but now on sale for 4.99!
 
-
-### Exercise 4
-
-In exercise 3 we created a `sales` Series with the amount sold, and the prices of each product are listed in the product DataFrame, so we can now see how much revenue we made from these products!
-
-Create a new Series called `revenue`, which combines the number of items sold from `sales` Series with prices from the product DataFrame `df`. The resulting Series should indicate the revenue per product and be added to the DataFrame as a column called Revenue. Finally, compute the total revenue by aggregating all the values in the `revenue` Series and store this as `total_revenue`.
-
-
-```python
-print("As a quick reminder, this is the data in the sales Series:")
-display(sales)
-```
-
-
-```python
-# Reset the DataFrame
-df = get_df()
-
-revenue = None
-total_revenue = None
-
-# YOUR CODE HERE
-
-print("Revenue per item, added as new column in the DataFrame:")
-display(df)
-
-print(f"\n\nIn total, the market had a revenue of: ${total_revenue:.2f}")
-```
-
-
-```python
-test_4(revenue, total_revenue)
-```
-
-*Further Reading:* The official documentation has more about [creating a Series](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html#pandas.Series). Pandas User Guide also has a [section on Series](https://pandas.pydata.org/pandas-docs/stable/user_guide/dsintro.html#basics-series) and the [Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/03.01-introducing-pandas-objects.html) introduces Pandas using Series.
 
 ## Indexing, Selection and Masking
 
@@ -1155,12 +1068,11 @@ In the previous section we covered the most basic ways to retrieve data from a `
 The first thing we need to answer is: What is a 'row' in *Pandas*? Turns out: it's also a `Series`! That's great, because we just learned how to work with those. Let's start by taking another look at our example `DataFrame`:
 
 
-```python
-df = get_df()
 
-display(df)
-```
+    df = get_df()
+    display(df)
 
+---
 
 <div>
 <style scoped>
@@ -1289,15 +1201,14 @@ There are several ways to access the rows in a `DataFrame`, but the most common 
 
 The `.loc` property retrieves rows by making use of the *index* we defined for our dataframe. This works similarly to a dictionary, where you can use the key (i.e. index) to get the row you want: `df.loc['Banana']` will get you the row where the index is equal to 'Banana'.
 
+    df = get_df()
+    row = df.loc['Banana']
 
-```python
-df = get_df()
-row = df.loc['Banana']
+    print("The row with index 'Banana' is:")
+    display(row)
+    print("\nThis row is of the type:", type(row))
 
-print("The row with index 'Banana' is:")
-display(row)
-print("\nThis row is of the type:", type(row))
-```
+---
 
     The row with index 'Banana' is:
 
@@ -1323,26 +1234,23 @@ The `.iloc` property retrieves rows by the order in which the rows are stored in
 It is important to note that if you re-order your dataframe (such as with sorting), the order of the rows will change and therefore also their "Integer location"! After some operations, using `df.iloc[0]` might give a different result than before. This is different then with `df.loc`, where you just get the row matching the index regardless of the exact position in the `DataFrame`.
 
 
-```python
-df = get_df()
-row = df.iloc[0]
 
-print("The first row of the DataFrame is:")
-display(row)
-print("\nThis row is of the type:", type(row))
-```
+    df = get_df()
+    row = df.iloc[0]
+
+    print("The first row of the DataFrame is:")
+    display(row)
+    print("\nThis row is of the type:", type(row))
+
+---
 
     The first row of the DataFrame is:
-
-
 
     Category    Fruits
     Price         2.39
     Unit          1 kg
     Stock            6
     Name: Apple, dtype: object
-
-
 
     This row is of the type: <class 'pandas.core.series.Series'>
 
@@ -1361,58 +1269,35 @@ As a result, the best option is usually to work with columns directly. Looping o
 
 Note that is still possible to loop through the rows of a `DataFrame` using functions like [`.iterrows()`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.iterrows.html). This function will create a new `Series` for each row and return them one by one, which can sometimes be very useful. However, if you do find yourself using this, ask yourself first if there isn't a better way to solve your problem, as this type of approach should always be one of the last options you try.
 
-### Exercise 5
-
-Select the fifth row from `df` using the `.iloc[...]` property and store it it in the variable `fifth`.
-
-Next, select the row about Lettuce from `df` and save it in the variable `lettuce` using the `.loc[..]` property.
-
-
-```python
-df = get_df()
-fifth = None
-lettuce = None
-
-# YOUR CODE HERE
-
-print("Fifth row:")
-display(fifth)
-
-print("Lettuce:")
-display(lettuce)
-```
-
 ### Selecting multiple rows or columns
 
 In addition to using `.loc['Banana']` or `.iloc[8]` to obtain a single row, you can also pass a `list` of values to obtain multiple rows from your DataFrame in one go! This actually also works for *columns*, by passing a list of column names when indexing the DataFrame. Note that all these operations will *always* return a `DataFrame`, and not a `Series` like before - even if it is a `DataFrame` with only a single row or column!
 
 Below are some examples using lists to index a DataFrame:
 
+    df = get_df()
+    print("The full dataframe:")
+    display(df)
 
-```python
-df = get_df()
-print("The full dataframe:")
-display(df)
+    rows1 = df.loc[ ['Carrot', 'Juice', 'Rice'] ]
+    print("\nThe rows with index 'Carrot', 'Juice' and 'Rice':")
+    display(rows1)
 
-rows1 = df.loc[ ['Carrot', 'Juice', 'Rice'] ]
-print("\nThe rows with index 'Carrot', 'Juice' and 'Rice':")
-display(rows1)
+    rows2 = df.loc[ ['Carrot'] ]
+    print("\nThe row with index 'Carrot', as a DataFrame:")
+    display(rows2)
 
-rows2 = df.loc[ ['Carrot'] ]
-print("\nThe row with index 'Carrot', as a DataFrame:")
-display(rows2)
+    rows3 = df.iloc[ [0, 2, 4] ]
+    print("\nFirst, third and fifth row, using a list of indices for iloc:")
+    display(rows3)
 
-rows3 = df.iloc[ [0, 2, 4] ]
-print("\nFirst, third and fifth row, using a list of indices for iloc:")
-display(rows3)
+    rows4 = df[ ['Category', 'Price'] ]
+    print("\nSelecting only the Category and Price columns")
+    display(rows4)
 
-rows4 = df[ ['Category', 'Price'] ]
-print("\nSelecting only the Category and Price columns")
-display(rows4)
-```
+---
 
     The full dataframe:
-
 
 
 <div>
@@ -1535,11 +1420,7 @@ display(rows4)
 </table>
 </div>
 
-
-
     The rows with index 'Carrot', 'Juice' and 'Rice':
-
-
 
 <div>
 <style scoped>
@@ -1591,11 +1472,7 @@ display(rows4)
 </table>
 </div>
 
-
-
     The row with index 'Carrot', as a DataFrame:
-
-
 
 <div>
 <style scoped>
@@ -1633,11 +1510,7 @@ display(rows4)
 </table>
 </div>
 
-
-
     First, third and fifth row, using a list of indices for iloc:
-
-
 
 <div>
 <style scoped>
@@ -1689,11 +1562,7 @@ display(rows4)
 </table>
 </div>
 
-
-
     Selecting only the Category and Price columns
-
-
 
 <div>
 <style scoped>
