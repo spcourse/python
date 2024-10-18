@@ -33,17 +33,15 @@ An overview of all programming concepts as discussed in this course.
 
 #### Level 4, 5, and 6 (SP2) concepts
 
-| **Functions**                                                       |||| **Input/Output** |
-|---------------------------------------------------------------------||||----------------------------|
-| default arguments: [theory](/python/en/default-arguments)           |||| animation: [theory](https://sp.proglab.nl/animation/en/explanation) |
-| keyword arguments: [theory](/python/en/keyword-arguments/kwargs)    ||||                           |
-| `main`: [theory](/python/en/main_function)                          |||| **Datatypes** |
-|                                                                     |||| `Dictionary`: [theory 1](/python/en/dictionaries/use), [theory 2](/python/en/dictionaries/complexity) |
-| **Complexity**                                                      |||| `Tuple`: [theory](/python/en/tuples) |
-| complexity: [theory](/python/en/efficiency)                         |||| `Sets`: [theory](/python/en/sets) |
-| apply complexity: [theory](/python/en/big-o)/[example](/python/en/big-o-example) |||| 'lists` (slicing): [theory](/python/en/slicing) |
-|                                                                     ||||  |
-| **Pandas**                                                          ||||  |
+| **Functions**                                                       |||| **Datatypes** |
+| default arguments: [theory](/python/en/default-arguments)           |||| `Dictionary`: [theory 1](/python/en/dictionaries/use), [theory 2](/python/en/dictionaries/complexity) |
+| keyword arguments: [theory](/python/en/keyword-arguments/kwargs)    |||| `Tuple`: [theory](/python/en/tuples) |
+| `main`: [theory](/python/en/main_function)                          |||| `Sets`: [theory](/python/en/sets) |
+|                                                                     |||| 'lists` (slicing): [theory](/python/en/slicing) |
+| **Input/Output**                                                    ||||  |
+| animation: [theory](https://sp.proglab.nl/animation/en/explanation) |||| **Complexity** |
+|                                                                     |||| complexity: [theory](/python/en/efficiency) |
+| **Pandas**                                                          |||| apply complexity: [theory](/python/en/big-o)/[example](/python/en/big-o-example) |
 | Pandas: [theory](/python/en/pandas)                                 ||||  |
 
 #### Level 7 (DP)
