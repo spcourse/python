@@ -5,28 +5,20 @@ An overview of all programming concepts as discussed in this course.
 
 ### Level 1 (SP1) concepts
 
-| **Datatypes**              | **Operators**              |
-|----------------------------|----------------------------|
-|`string`: [theory](/python/en/basics#printing) and [theory](/python/en/basics#types) | `+`, `-`, `*`, `/`, `//`, `%`, `**`: [theory](/python/en/basics#operators) |
-|`int`, `float`: [theory](/python/en/basics#types) and [practice](/python/en/basics/practice) | `=`: [theory](/python/en/basics#variables) |
-||`==`, `!=`, `<`, `>`, `<=`, `>=`: [theory](/python/en/algorithms#more-operators) |
-||`not`, `and`, `or`: [theory](/python/en/algorithms#combining-conditions) and [practice](/python/en/algorithms/practice) |
-|----------------------------|----------------------------|
+| **Datatypes**                                             | **Operators**              |
+|-----------------------------------------------------------|----------------------------|
+|`string`: [theory](/python/en/basics#printing) and [theory](/python/en/basics#types) | `+`, `-`, `*`, `/`, `//`, `%`, `**`: [theory](/python/en/basics#operators)|
+|`int`, `float`: [theory](/python/en/basics#types) and [practice](/python/en/basics/practice) | `=`: [theory](/python/en/basics#variables)|
+| **Input/Output**                                          |`==`, `!=`, `<`, `>`, `<=`, `>=`: [theory](/python/en/algorithms#more-operators) |
+|`print`: [theory](/python/en/basics#printing)              |`not`, `and`, `or`: [theory](/python/en/algorithms#combining-conditions) and [practice](/python/en/algorithms/practice) |
+|`input`: [theory](/python/en/basics#user-input)            | **Algorithmic**        |
+|`plotting`: [theory](/python/en/plotting)                  | `if`, `elif`, `else`: [theory](/python/en/algorithms#conditional-instructions)/[practice](/python/en/algorithms/practice)|
+|`import`: [theory](https://sp.proglab.nl/python/en/modules)| `for`, `while`: [theory for](/python/en/loops/for)/[practice for](/python/en/loops/for/practice), [theory while](/python/en/loops/while)/[practice while](/python/en/loops/while/practice), and [theory practical uses](/python/en/loops/practical-uses)/[practice practical uses](/python/en/loops/practical-uses/practice) |
+|-----------------------------------------------------------|----------------------------|
 
-### input/output:
 
-- `print`: [theory](/python/en/basics#printing)
-- `input`: [theory](/python/en/basics#user-input)
-- `plotting`: [theory](/python/en/plotting)
 
-### Algorithmic
-
-- `if`, `elif`, `else`: [theory](/python/en/algorithms#conditional-instructions)/[practice](/python/en/algorithms/practice)
-- `for`, `while`: [theory for](/python/en/loops/for)/[practice for](/python/en/loops/for/practice), [theory while](/python/en/loops/while)/[practice while](/python/en/loops/while/practice), and [theory practical uses](/python/en/loops/practical-uses)/[practice practical uses](/python/en/loops/practical-uses/practice)
-
-### Other
-
-- `import`: [theory](https://sp.proglab.nl/python/en/modules)
+-
 
 ## Level 2 (SP1) concepts
 
