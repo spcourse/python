@@ -13,26 +13,40 @@
             'Age': [28, 24, 35, 32, 28],
             'City': ['New York', 'Paris', 'Berlin', 'London', 'New York']}
 
-    df = pd.DataFrame(data)
+    df = pd.DataFrame(data, index = ["a9", "b5", "d2", "r1", "x6"])
     print(df)
 
-### 3. Accessing Rows and Columns (Indexing and Slicing)
+
+### 3. Reading and Writing to CSV
+
+- **Reading/writing CSV**:
+
+      df = pd.read_csv('data.csv')
+
+      df.to_csv('output.csv', index=False)
+
+### 4. Accessing Rows and Columns (Indexing and Slicing)
 
 - **Accessing rows**:
 
-      df.iloc[0]  # Access by position
-      df.loc[0]   # Access by index label
+      df.iloc[3]           # Access by position
+      df.loc['b5']         # Access by index label
+
+- **Multiple indices**:
+
+      df.loc[["b5", "d2"]]  
+      df.iloc[[2, 3]]
 
 - **Slicing rows**:
 
-      df.iloc[1:4:2]  # Slicing from row 1 to 4, with steps of 2
+      df.iloc[1:4:2]       # Slicing from row 1 to 4, with steps of 2
 
 - **Accessing columns**:
 
       df['Name']           # Single column -> Series
       df[['Name', 'Age']]  # Multiple columns -> DF
 
-### 4. statistics
+### 5. statistics
 
 - **Statistical info of columns**:
 
@@ -45,7 +59,7 @@
       df['Age'].std()
       df['Age'].count()  # Count non-null values
 
-### 5. Filtering Data
+### 6. Filtering Data
 
 - **Single condition**: Filter rows based on a single condition.
 
@@ -60,7 +74,7 @@
       filtered_df = df[(df['Age'] < 30) | (df['City'] == 'Paris')]
 
 
-### 6. Grouping and Looping Over Groups
+### 7. Grouping and Looping Over Groups
 
 - **Grouping by 'City' and Looping Over Groups**:
 
@@ -70,7 +84,7 @@
           print(f"\nCity: {city}")
           print(group)
 
-### 7. Common Aggregation Functions
+### 8. Common Aggregation Functions
 
 - **Aggregation after `groupby`**:
 
@@ -81,15 +95,7 @@
       grouped['Age'].min()       
       grouped['Age'].median()    
       grouped['Age'].std()       
-      grouped['Age'].var()       
-
-### 8. Reading and Writing to CSV
-
-- **Reading/writing CSV**:
-
-      df = pd.read_csv('data.csv')
-
-      df.to_csv('output.csv', index=False)
+      grouped['Age'].var()      
 
 
 ### 9. Column Operations: Adding, Multiplying, etc.
@@ -103,7 +109,7 @@
       # Adding, subtracting, multiplying columns
       df['Total Compensation'] = df['Salary'] + df['Bonus']
       df['Years Until Retirement'] = 65 - df['Age']  
-      
+
 
 ### 10. Sorting Data
 
