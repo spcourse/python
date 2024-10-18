@@ -1665,38 +1665,36 @@ The `df.iloc` property works with the position index, and also supports 'slices'
 
 And these can also be combined as `df.iloc[a:b:c]` which says: from the `a`th to the `b`th row, give every `c`th row starting with the `a`th.
 
-*Further Reading:* You can find more examples on slices [here](https://www.geeksforgeeks.org/python-list-slicing/).
+> Further Reading: You can find more examples on slices [here](https://www.geeksforgeeks.org/python-list-slicing/).
 
 Below are some examples. Feel free to try out some different values in a new cell, and predict what you'll see before running the code.
 
 
-```python
-df = get_df()
-print("Full DataFrame, with a new default range as index:")
-# If you reset the index, it will use indices 0,1,... instead
-# This will help see what integer indexes are for each row!
-display(df.reset_index())
+    df = get_df()
+    print("Full DataFrame, with a new default range as index:")
+    # If you reset the index, it will use indices 0,1,... instead
+    # This will help see what integer indexes are for each row!
+    display(df.reset_index())
 
-print("\n\nStarting at the tenth row:")
-display(df.iloc[10:])
+    print("\n\nStarting at the tenth row:")
+    display(df.iloc[10:])
 
-print("\n\nFirst five rows:")
-display(df.iloc[:5])
+    print("\n\nFirst five rows:")
+    display(df.iloc[:5])
 
-# A negative index means: count backwards from the end
-print("\n\nStarting at the second-to-last row:")
-display(df.iloc[-2:])
+    # A negative index means: count backwards from the end
+    print("\n\nStarting at the second-to-last row:")
+    display(df.iloc[-2:])
 
-# A bit of an advanced example:
-# 1:10 says "Take the second to tenth rows (indices 1,2,3,4,5,6,7,8,9)"
-#   :2 says "And then skip every other row (indices 1,3,5,7,9)"
-print("\n\nEvery second row up to the tenth row:")
-display(df.iloc[1:10:2])
-```
+    # A bit of an advanced example:
+    # 1:10 says "Take the second to tenth rows (indices 1,2,3,4,5,6,7,8,9)"
+    #   :2 says "And then skip every other row (indices 1,3,5,7,9)"
+    print("\n\nEvery second row up to the tenth row:")
+    display(df.iloc[1:10:2])
+
+---
 
     Full DataFrame, with a new default range as index:
-
-
 
 <div>
 <style scoped>
@@ -1832,12 +1830,7 @@ display(df.iloc[1:10:2])
 </table>
 </div>
 
-
-
-
     Starting at the tenth row:
-
-
 
 <div>
 <style scoped>
@@ -1889,12 +1882,7 @@ display(df.iloc[1:10:2])
 </table>
 </div>
 
-
-
-
     First five rows:
-
-
 
 <div>
 <style scoped>
@@ -1960,12 +1948,7 @@ display(df.iloc[1:10:2])
 </table>
 </div>
 
-
-
-
     Starting at the second-to-last row:
-
-
 
 <div>
 <style scoped>
@@ -2010,12 +1993,7 @@ display(df.iloc[1:10:2])
 </table>
 </div>
 
-
-
-
     Every second row up to the tenth row:
-
-
 
 <div>
 <style scoped>
@@ -2081,59 +2059,34 @@ display(df.iloc[1:10:2])
 </table>
 </div>
 
-
-### Exercise 6
-Create a variable `groceries` which contains all the information in `df` for Broccoli, Coffee and Rice using the `.loc` property.
-
-Create a variable `odds` which contains all the odd rows (first, third, fifth, et cetera) using `.iloc` and slices.
-
-
-```python
-df = get_df()
-groceries = None
-odds = None
-
-# YOUR CODE HERE
-
-print("Groceries:")
-display(groceries)
-
-print("\n\nOdd rows:")
-display(odds)
-```
-
 ### Combining row and column selection
 
 If you want to select specific rows *and* columns from a `DataFrame`, there are many ways you can do this in *Pandas*. First off, you can just combine the methods for selecting rows and columns you saw earlier, as these always return a `DataFrame` which you can just index again.
 
 Some examples:
 
+    df = get_df()
 
-```python
-df = get_df()
-
-print("\nSelecting columns first, then indexing the resulting rows using loc:")
-cols = df[['Category', 'Price']]
-res1 = cols.loc[['Carrot', 'Juice', 'Rice']]
-display(res1)
+    print("\nSelecting columns first, then indexing the resulting rows using loc:")
+    cols = df[['Category', 'Price']]
+    res1 = cols.loc[['Carrot', 'Juice', 'Rice']]
+    display(res1)
 
 
-print("\nIndexing the rows using their position with iloc, then selecting the columns:")
-rows = df.iloc[[3, 6, 9]]
-res2 = rows[['Category', 'Price']]
-display(res2)
+    print("\nIndexing the rows using their position with iloc, then selecting the columns:")
+    rows = df.iloc[[3, 6, 9]]
+    res2 = rows[['Category', 'Price']]
+    display(res2)
 
 
-print("\nSelecting columns first, then slices on iloc, executed on the same line:")
-res3 = df[['Category', 'Price']].iloc[3:10:3]
-display(res3)
-```
+    print("\nSelecting columns first, then slices on iloc, executed on the same line:")
+    res3 = df[['Category', 'Price']].iloc[3:10:3]
+    display(res3)
 
+---
 
     Selecting columns first, then indexing the resulting rows using loc:
 
-
-
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -2175,13 +2128,9 @@ display(res3)
   </tbody>
 </table>
 </div>
-
-
 
     Indexing the rows using their position with iloc, then selecting the columns:
 
-
-
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -2224,11 +2173,7 @@ display(res3)
 </table>
 </div>
 
-
-
     Selecting columns first, then slices on iloc, executed on the same line:
-
-
 
 <div>
 <style scoped>
@@ -2277,28 +2222,23 @@ Note that all these different methods end up with the same DataFrame! Actually a
 
 In addition, `loc` and `iloc` also support the option to index rows and columns together in the same operation, which is a little more efficient than first creating new Series for the full rows and then selecting from them. With these methods the row indices must always come first (as `loc` and `iloc` are row-based operations), and then optionally you can add a column index too, separated by a comma. This combined indexing also works for single indices, where you only give one index for the rows or columns position, instead of a list. Note in those cases the row or column is reduced, and the result will no longer be a DataFrame. A few examples:
 
+    df = get_df()
 
-```python
-df = get_df()
+    print("\nSelecting the rows with index Apple and Broccoli, and the columns Category and Stock")
+    display(df.loc[ ['Apple', 'Broccoli'], ['Category', 'Stock'] ])
 
-print("\nSelecting the rows with index Apple and Broccoli, and the columns Category and Stock")
-display(df.loc[ ['Apple', 'Broccoli'], ['Category', 'Stock'] ])
+    print("\nSelecting the first and second row, and the second and fourth column:")
+    display(df.iloc[ [0, 1], [1, 3] ])
 
-print("\nSelecting the first and second row, and the second and fourth column:")
-display(df.iloc[ [0, 1], [1, 3] ])
+    print("\nSelecting the Penne row and the Price column (which is just an element):")
+    display(df.loc['Penne', 'Price'])
 
-print("\nSelecting the Penne row and the Price column (which is just an element):")
-display(df.loc['Penne', 'Price'])
+    print("\nSelecting only the first row, and the first and fourth column (which is a Series):")
+    display(df.iloc[0, [0, 3]])
 
-print("\nSelecting only the first row, and the first and fourth column (which is a Series):")
-display(df.iloc[0, [0, 3]])
-
-```
-
+---
 
     Selecting the rows with index Apple and Broccoli, and the columns Category and Stock
-
-
 
 <div>
 <style scoped>
@@ -2337,11 +2277,7 @@ display(df.iloc[0, [0, 3]])
 </table>
 </div>
 
-
-
     Selecting the first and second row, and the second and fourth column:
-
-
 
 <div>
 <style scoped>
@@ -2380,19 +2316,11 @@ display(df.iloc[0, [0, 3]])
 </table>
 </div>
 
-
-
     Selecting the Penne row and the Price column (which is just an element):
-
-
 
     0.99
 
-
-
     Selecting only the first row, and the first and fourth column (which is a Series):
-
-
 
     Category    Fruits
     Stock            6
@@ -2403,37 +2331,28 @@ All these different indexing methods can make *Pandas* especially confusing to n
 
 Below are 3 examples all using `loc` that look very similar, but do completely different things. Read the code fo the examples and try to predict what each of these will do, before actually running the cell:
 
+    example1 = df.loc['Apple', 'Price']
 
-```python
-example1 = df.loc['Apple', 'Price']
+    print("\nExample 1:")
+    display(example1)
 
-print("\nExample 1:")
-display(example1)
+    example2 = df.loc[['Apple', 'Broccoli']]
 
-example2 = df.loc[['Apple', 'Broccoli']]
+    print("\nExample 2:")
+    display(example2)
 
-print("\nExample 2:")
-display(example2)
+    example3 = df.loc[['Apple'], ['Price']]
 
-example3 = df.loc[['Apple'], ['Price']]
+    print("\nExample 3:")
+    display(example3)
 
-print("\nExample 3:")
-display(example3)
-
-```
-
+---
 
     Example 1:
 
-
-
     2.39
 
-
-
     Example 2:
-
-
 
 <div>
 <style scoped>
@@ -2478,11 +2397,7 @@ display(example3)
 </table>
 </div>
 
-
-
     Example 3:
-
-
 
 <div>
 <style scoped>
@@ -2514,36 +2429,6 @@ display(example3)
 </table>
 </div>
 
-
-### Exercise 7
-
-Below are 3 exercises to test your understanding with:
-
-a) Select the Broccoli, Coffee and Rice rows from the DataFrame, while also only selecting the Category and Price columns. Save the results in `ex_7a`.
-
-b) Select the last 3 rows from the DataFrame, while also only selecting the Price and Unit columns. Save the results in `ex_7b`.
-
-c) Select the Unit and Stock for Juice. The results should be Series indexed with Unit and Stock. Save the results in `ex_7c`.
-
-
-```python
-df = get_df()
-ex_7a = None
-ex_7b = None
-ex_7c = None
-
-# YOUR CODE HERE
-
-print("\n7a:")
-display(ex_7a)
-
-print("\n7b:")
-display(ex_7b)
-
-print("\n7c:")
-display(ex_7c)
-```
-
 ### Masking
 
 The last, and very useful, method we'll cover to select data from you DataFrame is masking. Masking is another concept borrowed directly from *Numpy*, as so works almost exactly the same way in *Pandas*.
@@ -2552,23 +2437,19 @@ Masks are used to select parts of a DataFrame where some condition is `True`. Yo
 
 The code below uses the Stock column to create a mask called `mask` where the Stock column is less than four, then uses it to show what items in the DataFrame are low in stock. Note that the `dtype` of the mask becomes `bool`ean and it indeed contains only `True` for the rows that have a Stock less than 4.
 
+    df = get_df()
 
-```python
-df = get_df()
+    mask = df['Stock'] < 4
 
-mask = df['Stock'] < 4
+    print("\nMask where Stock is less than 4:")
+    display(mask)
 
-print("\nMask where Stock is less than 4:")
-display(mask)
+    print("\nUsing the mask on the DataFrame gives:")
+    display(df[mask])
 
-print("\nUsing the mask on the DataFrame gives:")
-display(df[mask])
-```
-
+---
 
     Mask where Stock is less than 4:
-
-
 
     Apple          False
     Banana          True
@@ -2585,11 +2466,7 @@ display(df[mask])
     Tagliatelle     True
     Name: Stock, dtype: bool
 
-
-
     Using the mask on the DataFrame gives:
-
-
 
 <div>
 <style scoped>
@@ -2669,28 +2546,23 @@ display(df[mask])
 </table>
 </div>
 
-
 Pandas also has built-in functions to create masks. One such example is the `pd.Series.isin(values)` method. This mask is `True` whenever a element in a Series is equal to one of the elements you provided as the *list* of `values`.
 
 As an example, the code below creates a mask where the values in the 'Category' column are either 'Vegetables' or 'Fruits'.
 
+    df = get_df()
 
-```python
-df = get_df()
+    mask = df['Category'].isin(['Vegetables', 'Fruits'])
 
-mask = df['Category'].isin(['Vegetables', 'Fruits'])
+    print("\nThe mask where the category is either Fruits or Vegetables:")
+    display(mask)
 
-print("\nThe mask where the category is either Fruits or Vegetables:")
-display(mask)
+    print("\n\nThe result of applying this mask on the DataFrame:")
+    display(df[mask])
 
-print("\n\nThe result of applying this mask on the DataFrame:")
-display(df[mask])
-```
-
+---
 
     The mask where the category is either Fruits or Vegetables:
-
-
 
     Apple           True
     Banana          True
@@ -2707,12 +2579,7 @@ display(df[mask])
     Tagliatelle    False
     Name: Category, dtype: bool
 
-
-
-
     The result of applying this mask on the DataFrame:
-
-
 
 <div>
 <style scoped>
@@ -2795,24 +2662,20 @@ display(df[mask])
 
 You can also use logical operations, like *logical or* `|` and the *logical and* `&`, to combine two masks element-wise. The first creates a new mask where each element is `True` if one of the masks was `True` for that element, and the second creates a new mask where each element is `True` if both the masks were `True` for that element.
 
+    expensive = df['Price'] > 1
+    low_stock = df['Stock'] < 4
 
-```python
-expensive = df['Price'] > 1
-low_stock = df['Stock'] < 4
+    combined_mask = expensive & low_stock
 
-combined_mask = expensive & low_stock
+    print("\nThe combined mask for items that are both expensive and low in stock:")
+    display(combined_mask)
 
-print("\nThe combined mask for items that are both expensive and low in stock:")
-display(combined_mask)
+    print("\nSelecting out the rows where the combined mask is True:")
+    display(df[combined_mask])
 
-print("\nSelecting out the rows where the combined mask is True:")
-display(df[combined_mask])
-```
-
+---
 
     The combined mask for items that are both expensive and low in stock:
-
-
 
     Apple          False
     Banana          True
@@ -2829,11 +2692,7 @@ display(df[combined_mask])
     Tagliatelle     True
     dtype: bool
 
-
-
     Selecting out the rows where the combined mask is True:
-
-
 
 <div>
 <style scoped>
@@ -2893,21 +2752,8 @@ display(df[combined_mask])
 </div>
 
 
-### Exercise 8
 
-Select the rows from the DataFrame where the Category is either Pastas or Fruits, and the Price is either below 1 or above 3. Store the result as `ex_8`.
-
-
-```python
-df = get_df()
-ex_8 = None
-
-# YOUR CODE HERE
-
-display(ex_8)
-```
-
-*Further Reading:* The Python Data Science Handbook has a section on [data indexing and selection](https://jakevdp.github.io/PythonDataScienceHandbook/03.02-data-indexing-and-selection.html) and using [masks](https://jakevdp.github.io/PythonDataScienceHandbook/02.06-boolean-arrays-and-masks.html). The documentation on [`.iloc`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.iloc.html) and [`.loc`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.loc.html) also contains more examples.
+> Further Reading: The Python Data Science Handbook has a section on [data indexing and selection](https://jakevdp.github.io/PythonDataScienceHandbook/03.02-data-indexing-and-selection.html) and using [masks](https://jakevdp.github.io/PythonDataScienceHandbook/02.06-boolean-arrays-and-masks.html). The documentation on [`.iloc`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.iloc.html) and [`.loc`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.loc.html) also contains more examples.
 
 ## Operating on DataFrames
 
@@ -2915,54 +2761,41 @@ In the section on [`Adding and modifying data`](#Adding-and-modifying-data) you 
 
 With all of these operations, it is important to keep track of the `index` of the Series you are using. For example, if you have a Series `a` with index `0,1,2` and a Series `b` with index `1,2,3`, the operation `c = a + b` will have index `0,1,2,3` (the union of the index of `a` and `b`). Only on indices `1` and `2` will it be able to compute a result, and on indices `0` and `3` it will automatically fill in `NaN` ("Not a Number").
 
+    a = pd.Series(
+        data=[5, 2, 3],
+        index=[0, 1, 2]
+    )
+    b = pd.Series(
+        data=[7, 3, 1],
+        index=[1, 2, 3]
+    )
 
-```python
-a = pd.Series(
-    data=[5, 2, 3],
-    index=[0, 1, 2]
-)
-b = pd.Series(
-    data=[7, 3, 1],
-    index=[1, 2, 3]
-)
+    print("Series a:")
+    display(a)
 
-print("Series a:")
-display(a)
+    print("\n\nSeries b:")
+    display(b)
 
-print("\n\nSeries b:")
-display(b)
+    print("\n\na+b gives:")
+    display(a + b)
 
-print("\n\na+b gives:")
-display(a + b)
-```
+---
 
     Series a:
-
-
 
     0    5
     1    2
     2    3
     dtype: int64
 
-
-
-
     Series b:
-
-
 
     1    7
     2    3
     3    1
     dtype: int64
 
-
-
-
     a+b gives:
-
-
 
     0    NaN
     1    9.0
@@ -2970,42 +2803,38 @@ display(a + b)
     3    NaN
     dtype: float64
 
-
 As you can see, the indices `1` and `2` have been added element-wise, as they occur in *both* Series, while for indices `0` and `3` no valid result could be computed, so they become `NaN`. If you want a different result for the indices that only occur once, you'll need to specify how to handle those cases with the `pd.Series.add(...)` method. Using `a.add( b )` is completely equivalent to `a + b`, but using `.add` allows you to specify a `fill_value`, which it will use whenever one of the Series is missing a value for some index.
 
 For example, we can set up a Series called `sales` with the daily sales for some products. If you want to subtract these from the 'Stock' Series in `df`, you need to specify what to do with the missing indices. In this case, we can fill these with zeros using the `sub` function and `fill_value=0`.
 
+    df = get_df()
 
-```python
-df = get_df()
+    # Extract the 'Stock' column
+    stock = df['Stock']
 
-# Extract the 'Stock' column
-stock = df['Stock']
+    print("Stock before sales:")
+    display(stock)
 
-print("Stock before sales:")
-display(stock)
+    # Set up a 'sales' Series
+    sales = pd.Series(
+        data=[1, 3, 1, 2, 1, 2],
+        index=['Lettuce', 'Carrot', 'Tagliatelle', 'Coffee', 'Apple', 'Strawberry'],
+        dtype=int,
+        name='Sales'
+    )
 
-# Set up a 'sales' Series
-sales = pd.Series(
-    data=[1, 3, 1, 2, 1, 2],
-    index=['Lettuce', 'Carrot', 'Tagliatelle', 'Coffee', 'Apple', 'Strawberry'],
-    dtype=int,
-    name='Sales'
-)
+    print("\n\nSales:")
+    display(sales)
 
-print("\n\nSales:")
-display(sales)
+    print("\n\nStock after sales:")
+    display( stock.sub(sales, fill_value=0) )
 
-print("\n\nStock after sales:")
-display( stock.sub(sales, fill_value=0) )
+    # See what happens if you do not specify a `fill_value` by uncommenting the following line:
+    # display( stock.sub(sales) )
 
-# See what happens if you do not specify a `fill_value` by uncommenting the following line:
-# display( stock.sub(sales) )
-```
+---
 
     Stock before sales:
-
-
 
     Apple           6
     Banana          2
@@ -3022,12 +2851,7 @@ display( stock.sub(sales, fill_value=0) )
     Tagliatelle     2
     Name: Stock, dtype: int64
 
-
-
-
     Sales:
-
-
 
     Lettuce        1
     Carrot         3
@@ -3037,12 +2861,7 @@ display( stock.sub(sales, fill_value=0) )
     Strawberry     2
     Name: Sales, dtype: int64
 
-
-
-
     Stock after sales:
-
-
 
     Apple           5.0
     Banana          2.0
@@ -3059,81 +2878,49 @@ display( stock.sub(sales, fill_value=0) )
     Tagliatelle     1.0
     dtype: float64
 
-
-### Exercise 9
-
-The government has decided to stimulate eating health by removing VAT (Value Added Tax) from all fresh fruits and vegetables. As result, you'll need to lower the prices of some of your products according. You already got a list of the VAT charges per product from the owner of the store, and now just need to update the prices in the DataFrame. Make sure the prices of the other products are not affected!
-
-
-
-```python
-df = get_df()
-
-fruit_veg_tax = pd.Series([0.22, 0.13, 0.12, 0.04, 0.06, 0.07, 0.31],
-    index=['Apple', 'Banana', 'Broccoli', 'Carrot', 'Eggplant', 'Lettuce', 'Strawberry']
-)
-
-print("\nThe VAT charge added per fruit/vegetable:")
-display(fruit_veg_tax)
-
-# YOUR CODE HERE
-
-print("\nThe DataFrame with updated prices")
-display(df)
-```
-
-*Further Reading:* The python data science handbook on [operations in pandas](https://jakevdp.github.io/PythonDataScienceHandbook/03.03-operations-in-pandas.html).
+> Further Reading: The python data science handbook on [operations in pandas](https://jakevdp.github.io/PythonDataScienceHandbook/03.03-operations-in-pandas.html).
 
 ## Map
 
 Next to these built-in operations, you can also apply your own function to each value in a Series. Below is a very simple example function, that just returns the length of a string. Say you want to apply `myFunc` to each value in `series_in` and save the results in `series_out`, then you might write something like this:
 
-
-```python
-
-# A very simple example function
-def myFunc(value):
-    newValue = len(value)
-    return newValue
+    # A very simple example function
+    def myFunc(value):
+        newValue = len(value)
+        return newValue
 
 
-# Get some Series
-series_in = pd.Series(["Hello", "world!"])
+    # Get some Series
+    series_in = pd.Series(["Hello", "world!"])
 
-print("Input series:")
-display(series_in)
-
-
-# Save the new results in a list for now
-series_out = []
-
-# Go through each value in the input Series
-for value in series_in:
-    # Apply your function to the value, save in output list
-    series_out.append( myFunc(value) )
-
-# Create a new series with new values
-series_out = pd.Series(series_out)
+    print("Input series:")
+    display(series_in)
 
 
-print("\n\nOutput Series:")
-display(series_out)
-```
+    # Save the new results in a list for now
+    series_out = []
+
+    # Go through each value in the input Series
+    for value in series_in:
+        # Apply your function to the value, save in output list
+        series_out.append( myFunc(value) )
+
+    # Create a new series with new values
+    series_out = pd.Series(series_out)
+
+
+    print("\n\nOutput Series:")
+    display(series_out)
+
+---
 
     Input series:
-
-
 
     0     Hello
     1    world!
     dtype: object
 
-
-
-
     Output Series:
-
-
 
     0    5
     1    6
@@ -3142,78 +2929,41 @@ display(series_out)
 
 But looping through values, appending them and then creating a new Series is quite inefficient. All of this can be replaced by using the `pd.Series.map` method. You provide the name of your function (`myFunc` in this case), and Pandas will *map* each value in your Series using your function:
 
-
-```python
-
-# A very simple example function
-def myFunc(value):
-    # Do some operations here...
-    newValue = len(value)
-    return newValue
+    # A very simple example function
+    def myFunc(value):
+        # Do some operations here...
+        newValue = len(value)
+        return newValue
 
 
-# Get some Series
-series_in = pd.Series(["Hello", "world!"])
+    # Get some Series
+    series_in = pd.Series(["Hello", "world!"])
 
-print("Input series:")
-display(series_in)
-
-
-# Apply myFunc to each value in series_in, save the result in series_out
-series_out = series_in.map(myFunc)
+    print("Input series:")
+    display(series_in)
 
 
-print("\n\nOutput Series:")
-display(series_out)
-```
+    # Apply myFunc to each value in series_in, save the result in series_out
+    series_out = series_in.map(myFunc)
+
+
+    print("\n\nOutput Series:")
+    display(series_out)
+
+---
 
     Input series:
-
-
 
     0     Hello
     1    world!
     dtype: object
 
-
-
-
     Output Series:
-
-
 
     0    5
     1    6
     dtype: int64
 
-
-### Exercise 10
-Your boss wants to create some advertisements, and needs to replace each 'kg', 'pc' and 'gr' in the 'Unit' column with the full name. You have already written a function called `rename_units` - which replaces each occurance of 'kg', 'pc', 'gr' and 'L' with the full name - and now want to apply it efficiently to the 'Unit' column.
-
-Use the `rename_units` function defined below to `map` all the values in the series `units`. Save the results in your `df` as column 'Units - Long'
-
-
-```python
-
-def rename_units(units_str):
-    """
-    Rename shorthands for units to their full name
-    such as 'gr' to 'Gram', 'pc' to 'Stucks'
-
-    Input: units_str - a string to replace units in
-    Output: A string with unit shorthands replaced with full name
-    """
-    units_str = units_str.replace("gr", "Gram")
-    units_str = units_str.replace("kg", "Kilogram")
-    units_str = units_str.replace("pc", "Stuks")
-    units_str = units_str.replace("L", "Liter")
-    return units_str
-
-
-# YOUR CODE HERE
-
-display(df)
-```
 
 ### Lambda functions
 
@@ -3222,24 +2972,20 @@ One thing you'll see very commonly in combination with `map` are `lambda` functi
 For example, let's say you want convert all the Categories to lowercase. Defining a function for this and using `map` would be a good solution:
 
 
-
-```python
-def lowercase(x):
-    return x.lower()
+    def lowercase(x):
+        return x.lower()
 
 
-df = get_df()
+    df = get_df()
 
-df['Category'] = df['Category'].map(lowercase)
+    df['Category'] = df['Category'].map(lowercase)
 
-print("\nThe Category column replaced by the lowercase version:")
-display(df)
-```
+    print("\nThe Category column replaced by the lowercase version:")
+    display(df)
 
+---
 
     The Category column replaced by the lowercase version:
-
-
 
 <div>
 <style scoped>
@@ -3366,20 +3112,16 @@ An even more compact solution would be to use a `lambda` function here. A lambda
 
 This is just a shorter way to write a function, where you don't need give it a name, don't need to write `return` and can define it on the same line. The example above can be replaced by the following using a `lamdba` function:
 
+    df = get_df()
 
-```python
-df = get_df()
+    df['Category'] = df['Category'].map(lambda x: x.lower())
 
-df['Category'] = df['Category'].map(lambda x: x.lower())
+    print("\nThe Category column replaced by the lowercase version:")
+    display(df)
 
-print("\nThe Category column replaced by the lowercase version:")
-display(df)
-```
-
+---
 
     The Category column replaced by the lowercase version:
-
-
 
 <div>
 <style scoped>
@@ -3502,7 +3244,7 @@ display(df)
 </div>
 
 
-*Further Reading:* More about [lambda statements](https://www.dataquest.io/blog/tutorial-lambda-functions-in-python/), including examples with and without the use of Pandas.
+> Further Reading: More about [lambda statements](https://www.dataquest.io/blog/tutorial-lambda-functions-in-python/), including examples with and without the use of Pandas.
 
 ## Sorting values
 
@@ -3510,15 +3252,13 @@ Sorting your DataFrame or Series is also a useful and common operation. This is 
 
 The code below will sort the DataFrame by the 'Category' column in ascending order:
 
+    df = get_df()
 
-```python
-df = get_df()
+    sorted_categories = df.sort_values(by='Category')
 
-sorted_categories = df.sort_values(by='Category')
+    display(sorted_categories)
 
-display(sorted_categories)
-```
-
+---
 
 <div>
 <style scoped>
@@ -3640,50 +3380,13 @@ display(sorted_categories)
 </table>
 </div>
 
-
-### Exercise 11
-
-Sort the `df` by 'Price' in descending order and store the result in `df_sorted`
-
-
-```python
-df = get_df()
-df_sorted = None
-
-# YOUR CODE HERE
-
-display(df_sorted)
-```
-
-
-```python
-test_11(df_sorted)
-```
-
 Another useful method is sorting by multiple columns: simply replace the `by=...` argument with a list of column names (`by=['col1', 'col2', ...]`). Similarly, you can replace the `ascending=...` argument with a list with `True` or `False` values (`ascending=[True, False, ...]`) of the same length, which indictates for each of the corresponding columns whether they should be sorted in ascending order or not.
 
 Note that order of the columns in the `by` list matter, as the DataFrame will be sorted by the first column first, and so on. The code below first sorts by the 'Category' column (in ascending order). If multiple rows have the same category, it will then sort these by the 'Stock' column (in descending order):
 
+    df = get_df()
 
-```python
-df = get_df()
-
-display(df.sort_values(by=['Category', 'Stock'], ascending=[True, False]))
-```
-
-### Exercise 12
-
-Sort the `df` by category, then price, both in descending order, store the result in `df_sorted2`
-
-
-```python
-df = get_df()
-df_sorted2 = None
-
-# YOUR CODE HERE
-
-display(df_sorted2)
-```
+    display(df.sort_values(by=['Category', 'Stock'], ascending=[True, False]))
 
 ## Handling missing values
 
@@ -3694,12 +3397,10 @@ For this exercise we will use a different dataset: For the most popular products
 Unfortunately, some values were illegible and are replaced with `NaN` values. In this section you will see some tools that can help you deal with this.
 
 
-```python
-stock_df = get_stocks()
+    stock_df = get_stocks()
+    display(stock_df)
 
-display(stock_df)
-```
-
+---
 
 <div>
 <style scoped>
@@ -3812,20 +3513,18 @@ The most simple method of dealing with `NaN` values is by removing them. This ca
 
 Below is a code example that uses `dropna` with `axis=0` and `how=any` (which are also the default options) to remove the rows containing `NaN`. You can make a new cell where you copy this example and can play around with different combinations of argument. With each combination of arguments you test, try to predict how many rows and columns you expect to see before running the cell.
 
+    stock_df = get_stocks()
 
-```python
-stock_df = get_stocks()
+    # Drop rows/columns that contain NaN values
+    # axis=0 -> drop rows (default)
+    #      1 -> drop columns
+    # how='any' -> if that row/column contains at least one NaN value (default)
+    #     'all' -> if that row/column contains only NaN values
+    cleaned_df = stock_df.dropna(axis=0, how='any')
 
-# Drop rows/columns that contain NaN values
-# axis=0 -> drop rows (default)
-#      1 -> drop columns
-# how='any' -> if that row/column contains at least one NaN value (default)
-#     'all' -> if that row/column contains only NaN values
-cleaned_df = stock_df.dropna(axis=0, how='any')
+    display(cleaned_df)
 
-display(cleaned_df)
-```
-
+---
 
 <div>
 <style scoped>
@@ -3905,13 +3604,10 @@ Instead, you can try to replace these missing values with some _approximation_ o
 
 Filling values can be done using the `pd.DataFrame.fillna(...)` method. For example, you can specify some `value` you want to fill with:
 
+    stock_df = get_stocks()
+    display(stock_df.fillna(value=0))
 
-```python
-stock_df = get_stocks()
-
-display(stock_df.fillna(value=0))
-```
-
+---
 
 <div>
 <style scoped>
@@ -4019,25 +3715,22 @@ display(stock_df.fillna(value=0))
 </table>
 </div>
 
-
 Using the same constant value for each column might not be the best approach: there seem to be many more Carrots in stock than Coffee. It would be better if you use some constant value for one column, and another value for another column.
 
 You can do this by passing a 'mapping' in the `value` argument, which gives a value to use for each column in the dataframe. A `dict`ionary is a type of mapping, which maps the keys of that dictionary to the corresponding values. The example below uses Carrot, Apple and Coffee as a key, each with their own value.
 
+    stock_df = get_stocks()
 
-```python
-stock_df = get_stocks()
+    # Create a dictionary (a type of mapping)
+    mapping = {
+        'Carrot': 15,
+        'Apple': 10,
+        'Coffee': 2
+    }
 
-# Create a dictionary (a type of mapping)
-mapping = {
-    'Carrot': 15,
-    'Apple': 10,
-    'Coffee': 2
-}
+    display(stock_df.fillna(value=mapping))
 
-display(stock_df.fillna(value=mapping))
-```
-
+---
 
 <div>
 <style scoped>
@@ -4146,29 +3839,7 @@ display(stock_df.fillna(value=mapping))
 </div>
 
 
-### Exercise 13
-
-A Series is another example of a mapping, where the indices are mapped to the values of the Series. Use the [pd.DataFrame.mean()](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.mean.html) function to compute the average stock for every product. The result should be a Series and stored in `product_means`.
-
-Next, use this mapping to replace the missing values in `stock_df` for each column with the mean of that column. Store the result in `cleaned_stocks`.
-
-
-```python
-stock_df = get_stocks()
-
-product_means = None
-cleaned_stocks = None
-
-# YOUR CODE HERE
-
-print("The average stock of per product:")
-display(product_means)
-
-print("\n\nUsing this as constant fill for each column gives:")
-display(cleaned_stocks)
-```
-
-*Further Reading:* in the python data science handbook on [handling missing data](https://jakevdp.github.io/PythonDataScienceHandbook/03.04-missing-values.html).
+> Further Reading: in the python data science handbook on [handling missing data](https://jakevdp.github.io/PythonDataScienceHandbook/03.04-missing-values.html).
 
 ## Grouping
 
@@ -4178,48 +3849,40 @@ First, you can group a DataFrame using the `pd.DataFrame.groupby` method and spe
 
 You've already seen some of the possible aggregate functions for numerical values throughout this notebook. These are functions like `.sum()`, `.max()`, `.min()`, `.mean()` and `.median()`, which combine values by computing, for example, the maximum value in each column. With a `groupby`, these functions are applied to *all the remaining columns*, so the columns that were not selected as the column to group on. Applying an aggregate function to a `DataFrameGroupBy` results in a new DataFrame with just one row for each separate group, containing all the combined values of that group. Note that is not possible to apply these functions on *nonnumerical* columns (like the Units column), so trying this will result in an error. You can pass the optional `numeric_only=True` argument to the aggregate functions to tell *Pandas* explicitly to just drop those columns.
 
+    df = get_df()
 
-```python
-df = get_df()
+    grouped_df = df.groupby('Category')
 
-grouped_df = df.groupby('Category')
+    print("\nIntermediate groupby object, which isn't a real DataFrame:")
+    display(grouped_df)
 
-print("\nIntermediate groupby object, which isn't a real DataFrame:")
-display(grouped_df)
-
-print("\nHowever, we can access each group separately, which are DataFrames:")
-for (group_name, group_df) in grouped_df:
-    print('\n'+ group_name +':')
-    display(group_df)
+    print("\nHowever, we can access each group separately, which are DataFrames:")
+    for (group_name, group_df) in grouped_df:
+        print('\n'+ group_name +':')
+        display(group_df)
 
 
-category_means = grouped_df.mean(numeric_only=True)
+    category_means = grouped_df.mean(numeric_only=True)
 
-print("\n\n\nComputing the mean per group for each column:")
-display(category_means)
+    print("\n\n\nComputing the mean per group for each column:")
+    display(category_means)
 
-# Note this is usually how this is used, with both function calls on the same line
-# so without storing the intermediate groupby object seperately
-category_max = df.groupby('Category').max(numeric_only=True)
+    # Note this is usually how this is used, with both function calls on the same line
+    # so without storing the intermediate groupby object seperately
+    category_max = df.groupby('Category').max(numeric_only=True)
 
-print("\nComputing the maximum per group for each column:")
-display(category_max)
-```
+    print("\nComputing the maximum per group for each column:")
+    display(category_max)
 
+---
 
     Intermediate groupby object, which isn't a real DataFrame:
 
-
-
     <pandas.core.groupby.generic.DataFrameGroupBy object at 0x15a4bf350>
-
-
 
     However, we can access each group separately, which are DataFrames:
 
     Breakfast:
-
-
 
 <div>
 <style scoped>
@@ -4264,11 +3927,7 @@ display(category_max)
 </table>
 </div>
 
-
-
     Fruits:
-
-
 
 <div>
 <style scoped>
@@ -4320,11 +3979,7 @@ display(category_max)
 </table>
 </div>
 
-
-
     International:
-
-
 
 <div>
 <style scoped>
@@ -4362,11 +4017,7 @@ display(category_max)
 </table>
 </div>
 
-
-
     Pastas:
-
-
 
 <div>
 <style scoped>
@@ -4418,11 +4069,7 @@ display(category_max)
 </table>
 </div>
 
-
-
     Vegetables:
-
-
 
 <div>
 <style scoped>
@@ -4481,13 +4128,7 @@ display(category_max)
 </table>
 </div>
 
-
-
-
-
     Computing the mean per group for each column:
-
-
 
 <div>
 <style scoped>
@@ -4546,11 +4187,7 @@ display(category_max)
 </table>
 </div>
 
-
-
     Computing the maximum per group for each column:
-
-
 
 <div>
 <style scoped>
@@ -4609,7 +4246,6 @@ display(category_max)
 </table>
 </div>
 
-
 As you can see, the result of these groupby and aggregates is a new DataFrame containing the combined data. In the mean DataFrame you can, for example, see that average Stock of all the Breakfast items is $6.5$. And, in the max DataFrame you can see that the Fruit with the highest Price costs $3.49$.
 
 There are also some aggregate functions that work on both numerical and categorical columns:
@@ -4619,26 +4255,22 @@ There are also some aggregate functions that work on both numerical and categori
 - `grouped_df.first()` gives the elements of the first of the grouped rows. Similarly, `.last()` gives the last.
 - `grouped_df.head(n)` will include (up to) the first `n` rows in that group. Similarly, `.tail(n)` gives the last `n` rows.
 
+---
 
+    df = get_df()
 
-```python
-df = get_df()
+    print("\nThe number of unique values in each group:")
+    display(df.groupby('Category').nunique())
 
-print("\nThe number of unique values in each group:")
-display(df.groupby('Category').nunique())
+    print("\nThe first value in each group:")
+    display(df.groupby('Category').first())
 
-print("\nThe first value in each group:")
-display(df.groupby('Category').first())
+    print("\nKeeping (up to) the first 2 rows per group:")
+    display(df.groupby('Category').head(2))
 
-print("\nKeeping (up to) the first 2 rows per group:")
-display(df.groupby('Category').head(2))
-
-```
-
+---
 
     The number of unique values in each group:
-
-
 
 <div>
 <style scoped>
@@ -4704,11 +4336,7 @@ display(df.groupby('Category').head(2))
 </table>
 </div>
 
-
-
     The first value in each group:
-
-
 
 <div>
 <style scoped>
@@ -4774,11 +4402,7 @@ display(df.groupby('Category').head(2))
 </table>
 </div>
 
-
-
     Keeping (up to) the first 2 rows per group:
-
-
 
 <div>
 <style scoped>
@@ -4872,35 +4496,29 @@ display(df.groupby('Category').head(2))
 </table>
 </div>
 
-
 Like regular `DataFrames`, you can select one or more columns from a `DataFrameGroupBy` using the column names. Remember that, as when indexing columns, a single column will always return a Series, and a list of columns (even a list of 1 column) returns a DataFrame!
 
 The examples below compute the minimum Stock per Category, and number of unique values in Price and Unit per Category.
 
+    df = get_df()
 
-```python
-df = get_df()
+    grouped_df = df.groupby('Category')
 
-grouped_df = df.groupby('Category')
+    minimum_stock = grouped_df['Stock'].min()
 
-minimum_stock = grouped_df['Stock'].min()
+    print("\nThe minimum values in the Stock column, per Category:")
+    # Passing just 'Stock' gives a Series, from which we compute the min
+    display(minimum_stock)
 
-print("\nThe minimum values in the Stock column, per Category:")
-# Passing just 'Stock' gives a Series, from which we compute the min
-display(minimum_stock)
+    unique_price_unit = grouped_df[['Price', 'Unit']].nunique()
 
-unique_price_unit = grouped_df[['Price', 'Unit']].nunique()
+    print("\nThe number of unique values in the 'Price' and 'Unit' column, per category:")
+    # Passing multiple columns gives a DataFrame; from which we compute the n-unique
+    display(unique_price_unit)
 
-print("\nThe number of unique values in the 'Price' and 'Unit' column, per category:")
-# Passing multiple columns gives a DataFrame; from which we compute the n-unique
-display(unique_price_unit)
-
-```
-
+---
 
     The minimum values in the Stock column, per Category:
-
-
 
     Category
     Breakfast        3
@@ -4910,11 +4528,7 @@ display(unique_price_unit)
     Vegetables       1
     Name: Stock, dtype: int64
 
-
-
     The number of unique values in the 'Price' and 'Unit' column, per category:
-
-
 
 <div>
 <style scoped>
@@ -4974,58 +4588,14 @@ display(unique_price_unit)
 </div>
 
 
-### Exercise 14
-
-Use the groupby indexing to compute the mean for the Price and Stock columns per Category. Your result should be the same as the earlier mean example, but you cannot use `numeric_only=True` here.
-
-
-
-```python
-df = get_df()
-mean_per_cat = None
-
-# YOUR CODE HERE
-
-display(mean_per_cat)
-```
-
-
-```python
-test_14(mean_per_cat)
-```
-
 Pandas supports many more methods of aggregating data, which you can use through the `grouped_df.agg()` method. Rather than 'just' computing the mean, you can give a list of methods to aggregate the groups in your DataFrame:
 
+    df = get_df()
+    grouped_df = df.groupby('Category')
 
-```python
-df = get_df()
-grouped_df = df.groupby('Category')
+    # For each column, compute the number of unique values and the number of rows per category
+    display(
+        grouped_df.agg(['nunique', 'count'])
+    )
 
-# For each column, compute the number of unique values and the number of rows per category
-display(
-    grouped_df.agg(['nunique', 'count'])
-)
-```
-
-### Exercise 15
-
-For this last assignment you will need to compute some statistics on the Prices for each Category.
-
-Create a new DataFrame called `price_stats` that contains the number of items in each category, together with the maximum, minimum and mean Price in each category.
-
-
-```python
-df = get_df()
-price_stats = None
-
-# YOUR CODE HERE
-
-display(price_stats)
-```
-
-
-```python
-test_15(price_stats)
-```
-
-*Further Reading:* On [grouping data](https://jakevdp.github.io/PythonDataScienceHandbook/03.08-aggregation-and-grouping.html).
+> Further Reading: On [grouping data](https://jakevdp.github.io/PythonDataScienceHandbook/03.08-aggregation-and-grouping.html).
