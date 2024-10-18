@@ -5,14 +5,14 @@ An overview of all programming concepts as discussed in this course.
 
 | Level 1 (SP1) concepts     |
 | ---------------------------|
-| **Datatypes** <br/>
-`string`: [theory](/python/en/basics#printing) and [theory](/python/en/basics#types) <br/>
-`int`, `float`: [theory](/python/en/basics#types) and [practice](/python/en/basics/practice) |
-| **Operators** <br/>
-`+`, `-`, `*`, `/`, `//`, `%`, `**`: [theory](/python/en/basics#operators)<br/>
-`=`: [theory](/python/en/basics#variables) <br/>
-`==`, `!=`, `<`, `>`, `<=`, `>=`: [theory](/python/en/algorithms#more-operators) <br/>
-`not`, `and`, `or`: [theory](/python/en/algorithms#combining-conditions) <br/> [practice](/python/en/algorithms/practice) |
+| **Datatypes**              |
+|`string`: [theory](/python/en/basics#printing) and [theory](/python/en/basics#types) |
+|`int`, `float`: [theory](/python/en/basics#types) and [practice](/python/en/basics/practice) |
+| **Operators**              |
+|`+`, `-`, `*`, `/`, `//`, `%`, `**`: [theory](/python/en/basics#operators) |
+|`=`: [theory](/python/en/basics#variables) |
+|`==`, `!=`, `<`, `>`, `<=`, `>=`: [theory](/python/en/algorithms#more-operators) |
+|`not`, `and`, `or`: [theory](/python/en/algorithms#combining-conditions) and [practice](/python/en/algorithms/practice) |
 |----------------------------|
 
 ### input/output:
