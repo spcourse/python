@@ -1,9 +1,9 @@
 # Overview of basic tools
-||
+
 An overview of all programming concepts as discussed in this course.
 
 
-### Level 1 (SP1) concepts
+#### Level 1 (SP1) concepts
 
 | **Datatypes**                                             |||| **Operators**              |
 |-----------------------------------------------------------||||----------------------------|
@@ -18,81 +18,34 @@ An overview of all programming concepts as discussed in this course.
 |-----------------------------------------------------------||||----------------------------|
 
 
+#### Level 2 and 3 (SP1) concepts
 
--
+| **Datatypes**                                                 |||| **Functions**              |
+|---------------------------------------------------------------||||----------------------------|
+| `string`: [theory](/python/en/strings)                        |||| `def`, `return`: [theory](/python/en/functions) |
+| **Input/Output** |||| functions as arguments: [theory](/python/en/functions2) |
+| `file`, `open`, `read`, `write`: [theory](/python/en/file-io) |||| multiple return values: [theory](/python/en/functions3) |
+| process datasets: [theory](/python/en/files)                  |||| **Random**  |
+| |||| `random.random()`: [theory](/python/en/random) |
 
-## Level 2 (SP1) concepts
+## Level 4, 5, and 6 (SP2) concepts
 
-### Datatypes
-
-- `string`: [theory](/python/en/strings)
-
-### Functions
-
-- `def`, `return`: [theory](/python/en/functions)/[practice](/python/en/functions-book)
-- functions as arguments: [theory](/python/en/functions2)
-
-### Input/Output
-
-- `file`, `open`, `read`, `write`: [theory](/python/en/file-io)
-- process datasets: [theory](/python/en/files)
-
-### Random
-
-- `random.random()`: [theory](/python/en/random)
-
-## Level 3 (SP1) concepts
-
-### Functions
-
-- multiple return values: [theory](/python/en/functions3)
-
-## Level 4 (SP2) concepts
-
-### Input/Output
-
-- animation: [theory](https://sp.proglab.nl/animation/en/explanation)
-
-### Functions
-
-- default arguments: [theory](/python/en/default-arguments)
-- `main`: [theory](/python/en/main_function)
-
-## Level 5 (SP2) concepts
-
-### Complexity
-
-- Computational complexity: [theory](/python/en/efficiency)
-- Apply big-O in code: [theory](/python/en/big-o)/[example](/python/en/big-o-example)
-
-
-### Datatypes
-
-- `Dictionary`: [theory 1](/python/en/dictionaries/use)/[practice 1](/python/en/dictionaries/use/practice), [theory 2](/python/en/dictionaries/complexity)/[practice 2](/python/en/dictionaries/complexity/practice)
-- `Tuple`: [theory](/python/en/tuples)
-- `Sets`: [theory](/python/en/sets)/[practice](/python/en/sets/practice)
-- `lists` (slicing): [theory](/python/en/slicing)
-
-## Level 6 (SP2) concepts
-
-### Pandas
-
-Pandas: [theory](/python/en/pandas)
-
-### Functions
-
-- keyword arguments: [theory](/python/en/keyword-arguments/kwargs)
+| **Functions**                                                       |||| **Input/Output** |
+|---------------------------------------------------------------------||||----------------------------|
+| default arguments: [theory](/python/en/default-arguments)           |||| animation: [theory](https://sp.proglab.nl/animation/en/explanation) |
+| keyword arguments: [theory](/python/en/keyword-arguments/kwargs)    |||| **Datatypes** |
+| `main`: [theory](/python/en/main_function)                          |||| `Dictionary`: [theory 1](/python/en/dictionaries/use), [theory 2](/python/en/dictionaries/complexity) |
+| **Complexity**                                                      |||| `Tuple`: [theory](/python/en/tuples) |
+| Complexity: [theory](/python/en/efficiency)                         |||| `Sets`: [theory](/python/en/sets) |
+| Apply complexity: [theory](/python/en/big-o)/[example](/python/en/big-o-example) |||| 'lists` (slicing): [theory](/python/en/slicing) |
+| **Pandas** ||||  |
+| Pandas: [theory](/python/en/pandas) |||| |
 
 ## Level 7 (DP)
 
-### Functions
 
-`*args` and `**kwargs`: [theory](/python/en/keyword-arguments/starstar)
-
-### Classes
-
-- `class`: [theory](/python/en/classes)
-
-### Complex systems:
-
-- sampling: [theory](/populations-oo/sampling)
+| **Functions**                                                           |||| **Classes** |
+|-------------------------------------------------------------------------||||----------------------------|
+| `*args` and `**kwargs`: [theory](/python/en/keyword-arguments/starstar) |||| `class`: [theory](/python/en/classes) |
+| **Other**                                                               |||| |
+| sampling: [theory](/populations-oo/sampling)                            |||| |
