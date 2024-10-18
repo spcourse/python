@@ -42,7 +42,7 @@ An overview of all programming concepts as discussed in this course.
 | animation: [theory](https://sp.proglab.nl/animation/en/explanation) |||| **Complexity** |
 |                                                                     |||| complexity: [theory](/python/en/efficiency) |
 | **Pandas**                                                          |||| apply complexity: [theory](/python/en/big-o)/[example](/python/en/big-o-example) |
-| Pandas: [theory](/python/en/pandas)                                 ||||  |
+| Pandas: [CHEATSHEET](/python/en/pandas-cheatsheet), [notebook](/python/en/pandas)                                 ||||  |
 
 #### Level 7 (DP)
 
