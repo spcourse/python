@@ -1,5 +1,7 @@
 # Pandas
 
+This document is an extract of the Pandas notebook from Level 6. Although this is not an interactive webpage, it is written as if it were. This document assumes that you already made the Pandas notebook and only use this as a quick reference.
+
 ## Introduction
 
 When processing data, you will most often work with _structured data_. This is the kind of data where you have a table with some number of named columns, each corresponding to a different feature, and a sequence of rows, each corresponding to a different sample. Examples of structured data can be found everywhere and occur any time you are making a series of observations and write down some properties for each observation you make.
