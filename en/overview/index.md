@@ -28,7 +28,7 @@ An overview of all programming concepts as discussed in this course.
 | process datasets: [theory](/python/en/files)                  |||| **Random**  |
 | |||| `random.random()`: [theory](/python/en/random) |
 
-## Level 4, 5, and 6 (SP2) concepts
+#### Level 4, 5, and 6 (SP2) concepts
 
 | **Functions**                                                       |||| **Input/Output** |
 |---------------------------------------------------------------------||||----------------------------|
@@ -41,7 +41,7 @@ An overview of all programming concepts as discussed in this course.
 | **Pandas** ||||  |
 | Pandas: [theory](/python/en/pandas) |||| |
 
-## Level 7 (DP)
+#### Level 7 (DP)
 
 
 | **Functions**                                                           |||| **Classes** |
