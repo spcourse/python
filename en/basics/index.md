@@ -127,6 +127,14 @@ You can also **convert** types from one into the other. For instance you could u
 
 Did you notice that decimals are denoted in the American Style (with a point instead of a comma)? This is the case for most programming languages.
 
+## Whole numbers and rounding
+
+In Python, you can convert a floating-point number (a decimal) to a whole number using the `int()` function. This function simply removes the decimal part, effectively truncating the float rather than rounding it. For example, `int(3.9)` will return `3`.
+
+If you want to round a number to the nearest whole number, you can use the `round()` function. This will round to the nearest integer, with .5 values rounding towards the nearest even number for consistency. For instance, `round(3.5)` returns `4` and `round(2.5)` returns `2`.
+
+You can also use `round()` to round a floating-point number to a specified number of decimal places. For example, `round(3.14159265359, 2)` will round the number to two decimal places: `3.14`.
+
 ## User input
 
 Besides having your program printing to the user, you can also ask for input from the user. This way you can write **interactive programs** that can perform calculations based on user provided values. Python comes with a variety of different functions to prompt for input. One of which is `input()`, which can be used as shown below:
