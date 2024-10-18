@@ -2,21 +2,18 @@
 
 An overview of all programming concepts as discussed in this course.
 
-## Level 1 (SP1) concepts
 
-### Datatypes
-
-- `string`: [theory](/python/en/basics#printing) and [theory](/python/en/basics#types)
-- `int`, `float`: [theory](/python/en/basics#types)
-- [practice](/python/en/basics/practice)
-
-### Operators
-
-- `+`, `-`, `*`, `/`, `//`, `%`, `**`: [theory](/python/en/basics#operators)
-- `=`: [theory](/python/en/basics#variables)
-- `==`, `!=`, `<`, `>`, `<=`, `>=`: [theory](/python/en/algorithms#more-operators)
-- `not`, `and`, `or`: [theory](/python/en/algorithms#combining-conditions)
-- [practice](/python/en/algorithms/practice)
+| Level 1 (SP1) concepts     |
+| ---------------------------|
+| **Datatypes** <br/>
+`string`: [theory](/python/en/basics#printing) and [theory](/python/en/basics#types) <br/>
+`int`, `float`: [theory](/python/en/basics#types) and [practice](/python/en/basics/practice) |
+| **Operators** <br/>
+`+`, `-`, `*`, `/`, `//`, `%`, `**`: [theory](/python/en/basics#operators)<br/>
+`=`: [theory](/python/en/basics#variables) <br/>
+`==`, `!=`, `<`, `>`, `<=`, `>=`: [theory](/python/en/algorithms#more-operators) <br/>
+`not`, `and`, `or`: [theory](/python/en/algorithms#combining-conditions) <br/> [practice](/python/en/algorithms/practice) |
+|----------------------------|
 
 ### input/output:
 
@@ -86,6 +83,10 @@ An overview of all programming concepts as discussed in this course.
 - `lists` (slicing): [theory](/python/en/slicing)
 
 ## Level 6 (SP2) concepts
+
+### Pandas
+
+Pandas: [theory](/python/en/pandas)
 
 ### Functions
 
