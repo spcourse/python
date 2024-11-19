@@ -23,7 +23,7 @@ The `try` statement works as follows:
 - If the exception matches a specific `except` block, the code within that block is executed, and the program continues after the `try`/`except`.
 - **Note:** only the first matching except clause is triggered.
 
-# Generic exceptions
+## Generic exceptions
 
 If you don't specify the type of error after `except`, it will catch any error. This ensures that even unexpected issues are handled gracefully. However, this should be done sparingly as it can make debugging harder.
 
@@ -49,7 +49,7 @@ It's often better to use a combination of specific exceptions and a generic exce
 
 In this case, any unexpected errors will print the `Exception` object `e` that contains details about what went wrong.
 
-# Finally
+## Finally
 
 Sometimes, you need to perform some code no matter what happens in the `try` block. Use a `finally` block for this:
 
