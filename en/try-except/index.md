@@ -23,6 +23,18 @@ The `try` statement works as follows:
 - If the exception matches a specific `except` block, the code within that block is executed, and the program continues after the `try`/`except`.
 - **Note:** only the first matching except clause is triggered.
 
+If the user enters `0`:
+
+    Error: You cannot divide by zero!
+
+User enters invalid input, like the string `'number'`:
+
+    Error: Please enter a valid number.
+
+And if the user enters `10`:
+
+    The result is: 1
+
 ## Generic exceptions
 
 If you don't specify the type of error after `except`, it will catch any error. This ensures that even unexpected issues are handled gracefully. However, this should be done sparingly as it can make debugging harder.
