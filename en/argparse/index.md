@@ -1,4 +1,4 @@
-# Introduction to `argparse`
+# `argparse`
 
 `argparse` is a module that is included with Python by default. It allows you to write scripts that accept inputs from the command line, making your programs more flexible and user-friendly.
 
