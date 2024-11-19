@@ -1,4 +1,4 @@
-#  `try`/`except` Statements
+#  try/except Statements
 
 Errors are sometimes inevitable when writing Python programs. Files might be missing, user input might be invalid, or unexpected issues could occur. Instead of letting your program crash, you can use `try`/`except` statements to *"gracefully"* handle errors.
 
