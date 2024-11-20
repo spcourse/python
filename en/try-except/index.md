@@ -48,16 +48,16 @@ If you don't specify the type of error after `except`, it will catch any error. 
 
 It's often better to use a combination of specific exceptions and a generic exception that saves the `Exception` that occurred as a variable:
 
-  try:
-      num = int(input("Enter a number: "))
-      result = 10 / num
-      print(f"The result is: {result}")
-  except ZeroDivisionError:
-      print("Error: Cannot divide by zero!")
-  except ValueError:
-      print("Error: Invalid input. Please enter a valid number.")
-  except Exception as e:
-      print(f"An unexpected error occurred: {e}")
+    try:
+        num = int(input("Enter a number: "))
+        result = 10 / num
+        print(f"The result is: {result}")
+    except ZeroDivisionError:
+        print("Error: Cannot divide by zero!")
+    except ValueError:
+        print("Error: Invalid input. Please enter a valid number.")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
 
 In this case, any unexpected errors will print the `Exception` object `e` that contains details about what went wrong.
 
