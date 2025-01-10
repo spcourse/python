@@ -83,7 +83,8 @@ The second method of reading a file line by line is looping over the file object
 Output:
 
     This is the first line of the file.
-    Second line of the file
+
+    Second line of the file.
 
 Functionally, this is the same as calling `f.readline()` until an empty string is returned, but it results in slightly cleaner code.
 
