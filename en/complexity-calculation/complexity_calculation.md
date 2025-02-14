@@ -156,7 +156,7 @@ By Rule 1, we can calculate the time complexity to be $$O(n^2) + O(n) + O(1)$$. 
 
 ### Rule 5. If-else statements; take worst case
 
-When we test our code for efficiency, we want to be sure that we have a good idea what the worst-case efficiency of the code is. If a piece of code runs in $$17$$ minutes in testing, but occasionally takes $$32$$ years instead, we want to know that before we publish it! Consider the following example:
+When we test our code for efficiency, we want to be sure that we have a good idea what the worst-case efficiency of the code is. If a piece of code runs in 17 minutes in testing, but occasionally takes 32 years instead, we want to know that before we publish it! Consider the following example:
 
 
     # get a random number between 0 and 1
