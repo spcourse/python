@@ -14,7 +14,7 @@ Let's say we have a piece of code, and we want to know how fast it is. The obvio
 
 1. The time your code takes might depend on the machine you are using to run the code. If you are working on MIT's supercomputer, your code will probably take less time than it would on your parents' old laptop. Ideally, we want to measure efficiency in a way that does not depend on the machine, a **machine-independent** method.
 
-2. The time your code takes will depend on the **input size** of your problem. When we write code, we often want it to do different things when we change the input. A piece of code that sums all numbers from $1$ to $10$ is obviously going to take less time than summing all numbers from $1$ to $10^9$. So, we want to express efficiency **in terms of input size**.
+2. The time your code takes will depend on the **input size** of your problem. When we write code, we often want it to do different things when we change the input. A piece of code that sums all numbers from $$1$$ to $$10$$ is obviously going to take less time than summing all numbers from $$1$$ to $$10^9$$. So, we want to express efficiency **in terms of input size**.
 
 3. You might have just gotten lucky. Imagine you want to solve a sudoku, and you write a piece of code that just keeps guessing numbers until the sudoku is solved. In general, this would be a very slow and inefficient way to solve sudokus. But in principle, you could just get lucky, and enter all the correct numbers in one try. Then the result from our stopwatch is not a good indication of the efficiency of the code. Ideally, we want a way to measure efficiency that **takes into account the worst possible case**.
 
@@ -41,23 +41,23 @@ Usually when we write a piece of code, we want it to do different things dependi
     o_n_func(n)
 
 
-This piece of code calculates the value of $$i+5$$ for every number $i$ between $0$ and $n$. If $n$ is very small, this code has to do very few calculations. But if $n$ is big, the number of calculations increases as well. One way to study this, is to make a graph. Along the x-axis we will put $n$, the input size. And along the y-axis we will measure the time taken to run the code. Since computers are very fast, and small times are very hard to measure, we will re-run the code 100000 times for each value on $n$. That way we can be sure that we get accurate results. See the graph below:
+This piece of code calculates the value of $$i+5$$ for every number $$i$$ between $$0$$ and $$n$$. If $$n$$ is very small, this code has to do very few calculations. But if $$n$$ is big, the number of calculations increases as well. One way to study this, is to make a graph. Along the x-axis we will put $$n$$, the input size. And along the y-axis we will measure the time taken to run the code. Since computers are very fast, and small times are very hard to measure, we will re-run the code 100000 times for each value on $$n$$. That way we can be sure that we get accurate results. See the graph below:
 
-<img src="o_n_example.png" alt="O(n) example image" width="400"/>
+![O(n) example image]{: width="400px"}
 
 The little peaks in the graph are from noise. While in theory computers are deterministic, in practice they are not! Little things like the temperature, energy supply, and processes running in the background can all have an effect on the time it takes to do a calculation. For our purposes this is not a huge issue; if we just run the code often enough, these will average out, and we can get a graph that is close to a smooth curve.
 
-We see that as $n$ becomes larger, so does the time taken to run the code! This is because the function contains a for-loop up to $n$. As $n$ grows, the for-loop becomes longer, and we do more calculations. Since the graph is a linear function (a slanted line), we say that this code has a linear time complexity. We write this in big-O notation as: the code has time complexity $O(n)$ (pronounced 'big oh of en'). When the input size $n$ becomes twice as big, so does the time taken by the code.
+We see that as $$n$$ becomes larger, so does the time taken to run the code! This is because the function contains a for-loop up to $$n$$. As $$n$$ grows, the for-loop becomes longer, and we do more calculations. Since the graph is a linear function (a slanted line), we say that this code has a linear time complexity. We write this in big-O notation as: the code has time complexity $$O(n)$$ (pronounced 'big oh of en'). When the input size $$n$$ becomes twice as big, so does the time taken by the code.
 
-The code for the example above is of course a bit silly; it doesn't really accomplish anything. But a lot of the algorithms you have seen in the course so far fall under the category of $O(n)$. Here are some example of algorithms with time complexity $O(n)$:
+The code for the example above is of course a bit silly; it doesn't really accomplish anything. But a lot of the algorithms you have seen in the course so far fall under the category of $$O(n)$$. Here are some example of algorithms with time complexity $$O(n)$$:
 
-1. Summing all numbers from $0$ to $n$.
-2. Finding the maximum/minimum in a list of length $n$.
-3. Checking whether a given element is contained in a list of length $n$.
-4. Creating a list with numbers from $a$ to $b$ with step-size $\frac{b-a}{n}$.
-5. Approximating an integral with a Riemann sum, using $n$ terms.
+1. Summing all numbers from $$0$$ to $$n$$.
+2. Finding the maximum/minimum in a list of length $$n$$.
+3. Checking whether a given element is contained in a list of length $$n$$.
+4. Creating a list with numbers from $$a$$ to $$b$$ with step-size $$\frac{b-a}{n}$$.
+5. Approximating an integral with a Riemann sum, using $$n$$ terms.
 
-<details markdown="1"><summary  markdown="span">Code examples of $O(n)$ algorithms</summary>
+<details markdown="1"><summary  markdown="span">Code examples of $$O(n)$$ algorithms</summary>
 
     # sum all numbers between 0 and n
     def sum_from_zero_to(n):
@@ -122,11 +122,11 @@ The code for the example above is of course a bit silly; it doesn't really accom
 
 </details>
 
-What most of these examples have in common is that they contain a single for-loop of length $n$. Usually, this is a good indicator that the algorithm is $O(n)$.
+What most of these examples have in common is that they contain a single for-loop of length $$n$$. Usually, this is a good indicator that the algorithm is $$O(n)$$.
 
 ## $$O(n^2)$$, quadratic time
 
-Let's do another example. Again, we will plot the runtime of the code against the input size $n$. Can you guess what the complexity will be of the following piece of code?
+Let's do another example. Again, we will plot the runtime of the code against the input size $$n$$. Can you guess what the complexity will be of the following piece of code?
 
     def o_n2_func(n):
         for i in range(n):
@@ -136,13 +136,13 @@ Let's do another example. Again, we will plot the runtime of the code against th
     n = 100
     o_n2_func(n)
 
-<img src="o_n2_example.png" alt="O(n^2) example image" width="400"/>
+![O(n^2) example image](o_n2_example.png){: width="400px"}
 
-As you can see in the graph, the execution time of the code looks like a quadratic function. Every time we double the input size $n$, the time taken to run the code goes up by a factor 4. This is because of the nested loop in the code. Every time the inner loop happens, we calculate $n$ different values. And every time the outer loop happens, it runs the inner loop $n$ times. This means the calculation of $x$ happens $n * n = n^2$ times. We say that this code has quadratic time complexity. We write this in big-O notation as: the code has time complexity $O(n^2)$.
+As you can see in the graph, the execution time of the code looks like a quadratic function. Every time we double the input size $$n$$, the time taken to run the code goes up by a factor 4. This is because of the nested loop in the code. Every time the inner loop happens, we calculate $$n$$ different values. And every time the outer loop happens, it runs the inner loop $$n$$ times. This means the calculation of $$x$$ happens $$n * n = n^2$$ times. We say that this code has quadratic time complexity. We write this in big-O notation as: the code has time complexity $$O(n^2)$$.
 
 ## $$O(1)$$, constant time
 
-In the previous sections we saw examples where the run-time depended on the input size $n$. But for some code, this is not the case! Consider the following piece of code.
+In the previous sections we saw examples where the run-time depended on the input size $$n$$. But for some code, this is not the case! Consider the following piece of code.
 
     def o_1_func(n):
         x = n + math.sqrt(27) + math.sqrt(31)
@@ -150,15 +150,15 @@ In the previous sections we saw examples where the run-time depended on the inpu
     n = 100
     o_1_func(n)
 
-![O(1) example image](o_1_example.png)
+![O(1) example image](o_1_example.png){: width="400px"}
 
-We see that the code roughly takes the same amount of time whenever we run it. Therefore, the time it takes is "constant"; it doesn't change depending on $n$. In this case we say this code has a "constant" time complexity. We write this in big-O notation as: the code has time complexity $O(1)$.
+We see that the code roughly takes the same amount of time whenever we run it. Therefore, the time it takes is "constant"; it doesn't change depending on $$n$$. In this case we say this code has a "constant" time complexity. We write this in big-O notation as: the code has time complexity $$O(1)$$.
 
-There are other time complexities as well, like $O(log(n))$, or $O(n^3)$, or even $O(n!)$. For right now, you don't need to know about these yet, though it is good to be aware more types of time complexity exist.
+There are other time complexities as well, like $$O(log(n))$$, or $$O(n^3)$$, or even $$O(n!)$$. For right now, you don't need to know about these yet, though it is good to be aware more types of time complexity exist.
 
 ## Calculation example
 
-Knowing the time complexity depending on $n$ is very important. In many real-world applications, computers and code are used to solve very big problems. It isn't rare to see cases where $n$ is as big as one billion! If $n$ is that large, the execution time might also become very long. To give you some intuition, consider the case that $n = 10^6$, one million. Then a piece of code with constant time complexity might take $10^{-3}$ seconds to run, one millisecond. But a piece of code with linear time complexity could take $10^6 * 10^{-3} = 10^3$ seconds to run, which is about 17 minutes. And a piece of code with quadratic time complexity could take a whole $(10^6)^2 * 10^{-3} = 10^9$ seconds, which is almost 32 years!
+Knowing the time complexity depending on $$n$$ is very important. In many real-world applications, computers and code are used to solve very big problems. It isn't rare to see cases where $$n$$ is as big as one billion! If $$n$$ is that large, the execution time might also become very long. To give you some intuition, consider the case that $$n = 10^6$$, one million. Then a piece of code with constant time complexity might take $$10^{-3}$$ seconds to run, one millisecond. But a piece of code with linear time complexity could take $$10^6 * 10^{-3} = 10^3$$ seconds to run, which is about 17 minutes. And a piece of code with quadratic time complexity could take a whole $$(10^6)^2 * 10^{-3} = 10^9$$ seconds, which is almost 32 years!
 
     n = 10**6
 
@@ -180,6 +180,6 @@ Knowing the time complexity depending on $n$ is very important. In many real-wor
 
 # Key take-aways so far
 
-Okay, so what have we learned so far? We know that measuring the time-efficiency of your code is important. Small coding choices can make the difference between an algorithm that takes a few minutes to run, and one that takes many years to run. We learned about the stopwatch method of measuring efficiency of code, and that it's not always good enough by itself. And we learned about a different method of measuring efficiency, called time complexity. It uses a type of notation called big-O notation. And it separates code into different classes based on its behaviour. So far you've seen three: $O(1)$, $O(n)$, and $O(n^2)$. Of these, $O(1)$ usually means your code has great performance, and $O(n)$ means it has okay performance. But if your code has time complexity $O(n^2)$, it will quickly take huge amounts of time to run, especially as $n$ gets bigger! And finally; one important thing to pay attention to is the number of nested loops in your code. If there are a lot of nested loops, your code can quickly become very slow!
+Okay, so what have we learned so far? We know that measuring the time-efficiency of your code is important. Small coding choices can make the difference between an algorithm that takes a few minutes to run, and one that takes many years to run. We learned about the stopwatch method of measuring efficiency of code, and that it's not always good enough by itself. And we learned about a different method of measuring efficiency, called time complexity. It uses a type of notation called big-O notation. And it separates code into different classes based on its behaviour. So far you've seen three: $$O(1)$$, $$O(n)$$, and $$O(n^2)$$. Of these, $$O(1)$$ usually means your code has great performance, and $$O(n)$$ means it has okay performance. But if your code has time complexity $$O(n^2)$$, it will quickly take huge amounts of time to run, especially as $$n$$ gets bigger! And finally; one important thing to pay attention to is the number of nested loops in your code. If there are a lot of nested loops, your code can quickly become very slow!
 
 If all of that sounds like it makes sense to you, you're doing great so far! Next, we will discuss how to determine the time complexity of more realistic and complicated code.
