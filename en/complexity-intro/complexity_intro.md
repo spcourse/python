@@ -33,14 +33,13 @@ In order to understand time complexity, we're going to start with the stopwatch 
 
 Usually when we write a piece of code, we want it to do different things depending on the input. If the input changes, the execution time may also change. For this reason, when we measure the efficiency of a piece of code, we want to do so *as a function of the input size*. Consider the following example.
 
-```
-def o_n_func(n):
-    for i in range(n):
-        x = i + 5
+    def o_n_func(n):
+        for i in range(n):
+            x = i + 5
 
-n = 100
-o_n_func(n)
-```
+    n = 100
+    o_n_func(n)
+
 
 This piece of code calculates the value of $i+5$ for every number $i$ between $0$ and $n$. If $n$ is very small, this code has to do very few calculations. But if $n$ is big, the number of calculations increases as well. One way to study this, is to make a graph. Along the x-axis we will put $n$, the input size. And along the y-axis we will measure the time taken to run the code. Since computers are very fast, and small times are very hard to measure, we will re-run the code 100000 times for each value on $n$. That way we can be sure that we get accurate results. See the graph below:
 
@@ -129,15 +128,14 @@ What most of these examples have in common is that they contain a single for-loo
 
 Let's do another example. Again, we will plot the runtime of the code against the input size $n$. Can you guess what the complexity will be of the following piece of code?
 
-```
-def o_n2_func(n):
-    for i in range(n):
-        for j in range(n):
-            x = i + j
+    def o_n2_func(n):
+        for i in range(n):
+            for j in range(n):
+                x = i + j
 
-n = 100
-o_n2_func(n)
-```
+    n = 100
+    o_n2_func(n)
+
 <img src="o_n2_example.png" alt="O(n^2) example image" width="400"/>
 
 As you can see in the graph, the execution time of the code looks like a quadratic function. Every time we double the input size $n$, the time taken to run the code goes up by a factor 4. This is because of the nested loop in the code. Every time the inner loop happens, we calculate $n$ different values. And every time the outer loop happens, it runs the inner loop $n$ times. This means the calculation of $x$ happens $n * n = n^2$ times. We say that this code has quadratic time complexity. We write this in big-O notation as: the code has time complexity $O(n^2)$.
@@ -146,13 +144,12 @@ As you can see in the graph, the execution time of the code looks like a quadrat
 
 In the previous sections we saw examples where the run-time depended on the input size $n$. But for some code, this is not the case! Consider the following piece of code.
 
-```
-def o_1_func(n):
-    x = n + math.sqrt(27) + math.sqrt(31)
+    def o_1_func(n):
+        x = n + math.sqrt(27) + math.sqrt(31)
 
-n = 100
-o_1_func(n)
-```
+    n = 100
+    o_1_func(n)
+
 <img src="o_1_example.png" alt="O(1) example image" width="400"/>
 
 We see that the code roughly takes the same amount of time whenever we run it. Therefore, the time it takes is "constant"; it doesn't change depending on $n$. In this case we say this code has a "constant" time complexity. We write this in big-O notation as: the code has time complexity $O(1)$.
@@ -163,24 +160,23 @@ There are other time complexities as well, like $O(log(n))$, or $O(n^3)$, or eve
 
 Knowing the time complexity depending on $n$ is very important. In many real-world applications, computers and code are used to solve very big problems. It isn't rare to see cases where $n$ is as big as one billion! If $n$ is that large, the execution time might also become very long. To give you some intuition, consider the case that $n = 10^6$, one million. Then a piece of code with constant time complexity might take $10^{-3}$ seconds to run, one millisecond. But a piece of code with linear time complexity could take $10^6 * 10^{-3} = 10^3$ seconds to run, which is about 17 minutes. And a piece of code with quadratic time complexity could take a whole $(10^6)^2 * 10^{-3} = 10^9$ seconds, which is almost 32 years!
 
-```
-n = 10**6
+    n = 10**6
 
-def calculation():
-    # do some calculation that takes 1 millisecond
+    def calculation():
+        # do some calculation that takes 1 millisecond
 
-# this code takes 1 millisecond
-calculation()
-
-# this code takes 17 minutes
-for i in range(n):
+    # this code takes 1 millisecond
     calculation()
 
-# this code takes 32 years
-for i in range(n):
-    for j in range(n):
+    # this code takes 17 minutes
+    for i in range(n):
         calculation()
-```
+
+    # this code takes 32 years
+    for i in range(n):
+        for j in range(n):
+            calculation()
+
 
 # Key take-aways so far
 
