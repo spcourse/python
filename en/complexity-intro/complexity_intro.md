@@ -29,7 +29,7 @@ Lucky for us, there is a way of measuring efficiency that does all of these thin
 
 In order to understand time complexity, we're going to start with the stopwatch method, and slowly build up our intuition through a few examples.
 
-## $O(n)$, linear time
+## $$O(n)$$, linear time
 
 Usually when we write a piece of code, we want it to do different things depending on the input. If the input changes, the execution time may also change. For this reason, when we measure the efficiency of a piece of code, we want to do so *as a function of the input size*. Consider the following example.
 
@@ -41,7 +41,7 @@ Usually when we write a piece of code, we want it to do different things dependi
     o_n_func(n)
 
 
-This piece of code calculates the value of $i+5$ for every number $i$ between $0$ and $n$. If $n$ is very small, this code has to do very few calculations. But if $n$ is big, the number of calculations increases as well. One way to study this, is to make a graph. Along the x-axis we will put $n$, the input size. And along the y-axis we will measure the time taken to run the code. Since computers are very fast, and small times are very hard to measure, we will re-run the code 100000 times for each value on $n$. That way we can be sure that we get accurate results. See the graph below:
+This piece of code calculates the value of $$i+5$$ for every number $i$ between $0$ and $n$. If $n$ is very small, this code has to do very few calculations. But if $n$ is big, the number of calculations increases as well. One way to study this, is to make a graph. Along the x-axis we will put $n$, the input size. And along the y-axis we will measure the time taken to run the code. Since computers are very fast, and small times are very hard to measure, we will re-run the code 100000 times for each value on $n$. That way we can be sure that we get accurate results. See the graph below:
 
 <img src="o_n_example.png" alt="O(n) example image" width="400"/>
 
@@ -124,7 +124,7 @@ The code for the example above is of course a bit silly; it doesn't really accom
 
 What most of these examples have in common is that they contain a single for-loop of length $n$. Usually, this is a good indicator that the algorithm is $O(n)$.
 
-## $O(n^2)$, quadratic time
+## $$O(n^2)$$, quadratic time
 
 Let's do another example. Again, we will plot the runtime of the code against the input size $n$. Can you guess what the complexity will be of the following piece of code?
 
@@ -140,7 +140,7 @@ Let's do another example. Again, we will plot the runtime of the code against th
 
 As you can see in the graph, the execution time of the code looks like a quadratic function. Every time we double the input size $n$, the time taken to run the code goes up by a factor 4. This is because of the nested loop in the code. Every time the inner loop happens, we calculate $n$ different values. And every time the outer loop happens, it runs the inner loop $n$ times. This means the calculation of $x$ happens $n * n = n^2$ times. We say that this code has quadratic time complexity. We write this in big-O notation as: the code has time complexity $O(n^2)$.
 
-## O(1), constant time
+## $$O(1)$$, constant time
 
 In the previous sections we saw examples where the run-time depended on the input size $n$. But for some code, this is not the case! Consider the following piece of code.
 
@@ -150,7 +150,7 @@ In the previous sections we saw examples where the run-time depended on the inpu
     n = 100
     o_1_func(n)
 
-<img src="o_1_example.png" alt="O(1) example image" width="400"/>
+![O(1) example image](o_1_example.png)
 
 We see that the code roughly takes the same amount of time whenever we run it. Therefore, the time it takes is "constant"; it doesn't change depending on $n$. In this case we say this code has a "constant" time complexity. We write this in big-O notation as: the code has time complexity $O(1)$.
 
