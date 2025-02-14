@@ -43,7 +43,7 @@ Usually when we write a piece of code, we want it to do different things dependi
 
 This piece of code calculates the value of $$i+5$$ for every number $$i$$ between $$0$$ and $$n$$. If $$n$$ is very small, this code has to do very few calculations. But if $$n$$ is big, the number of calculations increases as well. One way to study this, is to make a graph. Along the x-axis we will put $$n$$, the input size. And along the y-axis we will measure the time taken to run the code. Since computers are very fast, and small times are very hard to measure, we will re-run the code 100000 times for each value on $$n$$. That way we can be sure that we get accurate results. See the graph below:
 
-![O(n) example image]{: width="400px"}
+![O(n) example image](o_1_example.png){: width="400px"}
 
 The little peaks in the graph are from noise. While in theory computers are deterministic, in practice they are not! Little things like the temperature, energy supply, and processes running in the background can all have an effect on the time it takes to do a calculation. For our purposes this is not a huge issue; if we just run the code often enough, these will average out, and we can get a graph that is close to a smooth curve.
 
@@ -136,7 +136,7 @@ Let's do another example. Again, we will plot the runtime of the code against th
     n = 100
     o_n2_func(n)
 
-![O(n^2) example image](o_n2_example.png){: width="400px"}
+![O(n2) example image](o_n2_example.png){: width="400px"}
 
 As you can see in the graph, the execution time of the code looks like a quadratic function. Every time we double the input size $$n$$, the time taken to run the code goes up by a factor 4. This is because of the nested loop in the code. Every time the inner loop happens, we calculate $$n$$ different values. And every time the outer loop happens, it runs the inner loop $$n$$ times. This means the calculation of $$x$$ happens $$n * n = n^2$$ times. We say that this code has quadratic time complexity. We write this in big-O notation as: the code has time complexity $$O(n^2)$$.
 

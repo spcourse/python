@@ -42,7 +42,7 @@ Now we know the time complexity for each function individually. But what is the 
 
 In order to figure out these questions and more, it seems that we need some rules that will allow us to calculate time complexity. We will explore these rules in the next section. When you learn how to calculate time complexity of complicated code, you can quickly tell how efficient your code is, without even running it! In the meantime, we can still fall back on the familiar stopwatch method. Below, there is a graph of how long it takes to `replace_zeroes` and `find_duplicates` as a function of $$n$$. Do you recognize the shape of the graph?
 
-![Replace then find duplicates image](replace_then_find_duplicates.png){: "width=400px"}
+![Replace then find duplicates image](replace_then_find_duplicates.png){: width="400px"}
 
 That's right! It looks just like the graph we saw for the $$O(n^2)$$ example. The time increases quadratically as a function of $$n$$.
 
