@@ -129,6 +129,8 @@ In Rule 2, we saw that we can drop constants factors in front of our big-O expre
     for i in range(n):
         o_n_func(n)
 
+---
+
     def o_n2_func(n):
         for i in range(n):
             for j in range(n):
