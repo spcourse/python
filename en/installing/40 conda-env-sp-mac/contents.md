@@ -22,9 +22,9 @@ To make sure that the `SP` environment is activated every time that we start a t
 
     echo 'conda activate SP' >> ~/.zshrc
 
-Did you get a `permission denied` error? Follow these instructions: <details markdown="1"><summary  markdown="span">show</summary>
+<details markdown="1"><summary  markdown="span">Did you get a `permission denied` error?</summary>
 
-You can change the file permissions of `.zshrc` using this command:
+If you got a `permission denied` error, you can change the file permissions of `.zshrc` using this command:
 
     sudo chmod g+w .zshrc
 
