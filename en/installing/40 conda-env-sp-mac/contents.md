@@ -26,7 +26,7 @@ To make sure that the `SP` environment is activated every time that we start a t
 
 If you got a `permission denied` error, you can change the file permissions of `.zshrc` using this command:
 
-    sudo chmod g+w .zshrc
+    sudo chmod g+w ~/.zshrc
 
 You will need to enter your MacOS password after this. (It doesn't show anything when you type your password, that's normal.) Then, try this again:
 
@@ -34,7 +34,7 @@ You will need to enter your MacOS password after this. (It doesn't show anything
 
 After which you can change the permissions back:
 
-    sudo chmod g-w .zshrc
+    sudo chmod g-w ~/.zshrc
 
 </details>
 
