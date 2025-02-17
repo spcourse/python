@@ -22,4 +22,24 @@ To make sure that the `SP` environment is activated every time that we start a t
 
     echo 'conda activate SP' >> ~/.zshrc
 
+Did you get a `permission denied` error? Follow these instructions: <details markdown="1"><summary  markdown="span">show</summary>
+
+You can change the file permissions of `.zshrc` using this command:
+
+    sudo chmod g+w .zshrc
+
+You will need to enter your MacOS password after this. (It doesn't show anything when you type your password, that's normal.) Then, try this again:
+
+    echo 'conda activate SP' >> ~/.zshrc
+
+After which you can change the permissions back:
+
+    sudo chmod g-w .zshrc
+
+</details>
+
+
+
+
+
 Now restart your terminal, and check whether it starts into the `SP` environment. If not, please contact one of the TA's or teachers of this course.
