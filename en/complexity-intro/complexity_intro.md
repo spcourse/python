@@ -45,7 +45,7 @@ This piece of code calculates the value of $$i+5$$ for every number $$i$$ betwee
 
 ![O(n) example image](o_n_example.png){: width="400px"}
 
-The little peaks in the graph are from noise. While in theory computers are deterministic, in practice they are not! Little things like the temperature, energy supply, and processes running in the background can all have an effect on the time it takes to do a calculation. For our purposes this is not a huge issue; if we just run the code often enough, these will average out, and we can get a graph that is close to a smooth curve.
+> The little peaks in the graph are from noise. While in theory computers are deterministic, in practice they are not! Little things like the temperature, energy supply, and processes running in the background can all have an effect on the time it takes to do a calculation. For our purposes this is not a huge issue; if we just run the code often enough, these will average out, and we can get a graph that is close to a smooth curve.
 
 We see that as $$n$$ becomes larger, so does the time taken to run the code! This is because the function contains a for-loop up to $$n$$. As $$n$$ grows, the for-loop becomes longer, and we do more calculations. Since the graph is a linear function (a slanted line), we say that this code has a linear time complexity. We write this in big-O notation as: the code has time complexity $$O(n)$$ (pronounced 'big oh of en'). When the input size $$n$$ becomes twice as big, so does the time taken by the code.
 
