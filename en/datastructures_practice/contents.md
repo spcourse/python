@@ -171,4 +171,4 @@ Expected output:
 
 You can verify your results with:
 
-checkpy datastructures
+    checkpy datastructures
