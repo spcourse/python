@@ -151,9 +151,11 @@ As is the case in other media where text plays an important role, blank lines an
 
 As described in the "comments" section, you can divide your program in logical code blocks. This way, it is possible to describe the different steps of an algorithm. Here, a program is split in three major parts:
 
-    number = input("Please enter a number: ")
+    user_input = input("Please enter a number: ")
+    number = int(user_input)
     while number < 0:
-        number = input("Please enter a *positive* number: ")
+        user_input = input("Please enter a *positive* number: ")
+        number = int(user_input)
 
     # calculations: uses a complex loop to handle special cases
     while(number > 0):
@@ -162,7 +164,7 @@ As described in the "comments" section, you can divide your program in logical c
         number += 1
 
     # output: might not print zero (e.g., if user put in a float)
-    print(user_input)
+    print(number)
 
 The three components are the user's input, the calculation and the output, respectively. You will encounter these components very often in programs. Also, pay attention to the instructions in the comments: first an explanation of the algorithm, and then a warning that that part of the code might not always work (and more important: when this happens!).
 

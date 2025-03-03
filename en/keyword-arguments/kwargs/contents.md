@@ -1,6 +1,6 @@
 ## Keyword arguments
 
-In Python, keyword arguments can be used to pass arguments to a function using their parameter names. This can make functions with many input paramaters a lot easier to use when only few of these parameters are changed. It also makes your code more readable, and helps avoid errors, since it also allows you to change the order of the parameters.
+In Python, keyword arguments can be used to pass arguments to a function using their parameter names. This can make functions with many input parameters a lot easier to use when only few of these parameters are changed. It also makes your code more readable, and helps avoid errors, since it also allows you to change the order of the parameters.
 
 Here's an example:
 

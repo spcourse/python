@@ -22,7 +22,7 @@ For most people, the first letter of `'banana'` is b, not a. But for computer sc
 	>>> print(letter)
 	b
 
-So **b** is the 0th letter ("zero-eth”) of `'banana'`, **a** is the 1th letter ("one-eth”), and **n** is the 2th ("two-eth”) letter.
+So **b** is the 0th letter of `'banana'`, **a** is the 1st letter, and **n** is the 2nd letter.
 
 You can use any expression, including variables and operators, as an index, but the value of the index has to be an integer. Otherwise you get:
 

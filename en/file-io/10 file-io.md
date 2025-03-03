@@ -47,10 +47,13 @@ There are multiple ways to read a file's contents. None of the methods that are 
 
 To read an entire file's contents at once, call `f.read()`.
 
-    >>> f.read()
-    'This is the first line of the file.\n Second line of the file.\n'
-    >>> f.read()
-    ''
+    text = f.read()
+    print(text)
+
+  Output:
+
+    This is the first line of the file.
+    Second line of the file.
 
 > `f.read()` has an optional argument named `size` that can be used to read specific quantities of data from the file. When it is omitted, or negative, the entire contents of the file will be returned. This is not advisable for large files, as it will try to allocate memory for the entire file at once, which may not be available. The method is, however, very useful when you want to read a specific amount of data from a file. If the end of the file is reached, `f.read()` returns an empty string: `''`.
 
@@ -58,23 +61,30 @@ To read an entire file's contents at once, call `f.read()`.
 
 There are two methods of reading a file line by line. The first is `f.readline()`, which reads a single line from a file:
 
-    >>> f.readline()
-    'This is the first line of the file.\n'
-    >>> f.readline()
-    'Second line of the file.\n'
-    >>> f.readline()
-    ''
+    line1 = f.readline()
+    print(line1)
+    line2 = f.readline()
+    print(line2)
 
-`f.readline()` stops when it finds a newline character `'\n'`, which is included at the end of the string it returns. An empty string is returned when the end of the file has been reached, while blank lines are represented by a string containing a newline: `'\n'`.
+Output:
+
+    This is the first line of the file.
+
+    Second line of the file.
+
+
+`f.readline()` stops when it finds a newline character `'\n'`, _which is included at the end of the string it returns_. An empty string is returned when the end of the file has been reached, while blank lines are represented by a string containing a newline: `'\n'`.
 
 The second method of reading a file line by line is looping over the file object:
 
-    >>> for line in f:
-    ...     print(line)
-    ...
+    for line in f:
+        print(line)
+
+Output:
+
     This is the first line of the file.
 
-    Second line of the file
+    Second line of the file.
 
 Functionally, this is the same as calling `f.readline()` until an empty string is returned, but it results in slightly cleaner code.
 
@@ -84,36 +94,42 @@ Functionally, this is the same as calling `f.readline()` until an empty string i
 
 Writing to files is fairly simple:
 
-    >>> some_string = 'something!'
-    >>> len(some_string)
-    10
-    >>> f.write(some_string)
-    10
+    some_string = 'something!'
+    f.write(some_string)
 
- Use `f.write(some_string)` to write the content of `some_string` to the file. The method returns the _number of characters_ that were written to a file. Keep in mind that `f.write()` only accepts strings, so you might need to convert your variables to strings before writing them:
+ Use `f.write(some_string)` to write the content of `some_string` to the file. The method returns the _number of characters_ that were written to a file. Keep in mind that `f.write()` only accepts strings, so you might need to convert your variables to strings before writing them.
 
-    >>> some_number = 42
-    >>> f.write(str(some_number))
-    2
-
-## The `with` keyword
+## Closing files
 
 It’s important to remember that it’s your responsibility to close the file. _In most cases_, upon termination of an application or script, a file will be closed eventually. However, there is no guarantee when exactly that will happen, and until the file is closed it will keep using your computers resources.
 
-It is good practice to use the `with` keyword when dealing with file objects:
+You can use the `close()` method for this:
+
+    f.close()
+
+Keep in mind that once you close a file, you cannot interact with it anymore. So do this after all the reading and writing is doen. You'll typically wind up with a structure like this when reading files:
+
+
+    # open file
+    f = open('some_file.txt', 'r', encoding='utf-8', errors='replace')
+
+    # do something with the content of the file
+    for line in f:
+        ...
+
+    # close file
+    f.close()
+
+## The `with` keyword
+
+The problem with the above construction is that if your program suddenly crashes before you reach the `f.close()` line, your file will not be properly closed. This can be avoided using the `with` keyword in stead of using `open()` and `close()` as described above:
 
     with open('some_file.txt', 'r') as f:
         data = f.read()
 
 The advantage of using `with` is that the file is **automatically** properly closed, even if an exception is raised or an error occurs at some point.
 
-If you're not using the `with` keyword, then you should call `f.close()` to close the file:
-
-    f.close()
-
-It’s important to remember that it’s your responsibility to close files. _In most cases_, upon termination of your program, files will be closed. However, there is no guarantee when exactly that will happen, and until the file is closed it will keep using your computers resources. After you are done reading from the file, try to close the file as soon as possible. After a file object is closed, preferably by `with`, and otherwise by `f.close()`, attempts to use the file object will automatically fail.
-
-## CSV files
+<!-- ## CSV files
 
 The Comma Separated Values (CSV) format and variations of it are some of the most common formats for scientific data. There is no standard method of generating files in this format, and as such it can be quite annoying to process CSV files. Let's say we have `example.csv` containing some names, identifiers, and age of a group of people:
 
@@ -141,4 +157,4 @@ Python's `csv`-module implements functions that are able to read and write most 
 
 Here, `row` is a list that contains every element that was originally separated by commas, essentially functioning the same as `string.split()`.
 
-The `csv`-module has more functionalities than just this simple reader, but for now it is everything you will need.
+The `csv`-module has more functionalities than just this simple reader, but for now it is everything you will need. -->
