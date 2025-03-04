@@ -1,6 +1,6 @@
 # Data structures
 
-The goal of this part is to get more familiar with the Python `dictionary`.
+The goal of this assignment is to get more familiar with the Python `dictionary`.
 
 Create a file called `datastructures_minai1.py` and implement the functions below.
 
