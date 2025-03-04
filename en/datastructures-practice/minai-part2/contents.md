@@ -2,9 +2,9 @@
 
 The goal of this practice page is to get even more familiar with the Python datastructures `dictionary` and `set`.
 
-Create a file called `datastructures_minai1.py` and implement the functions below.
+Create a file called `datastructures_minai2.py` and implement the functions below.
 
-### 4. Unify
+### 1. Unify
 
 The first function is `unify(dict1, dict2)`. It combines two dictionaries. It should return a dictionary that contain all items (key-value pairs) from both dictionaries. If a key occurs in both input dictionaries, unify the corresponding lists. The value lists of the output should remain sorted and not contain any duplicates.
 
@@ -18,7 +18,7 @@ Expected output:
 
     {'d': [6], 'a': [1, 2, 3, 4], 'c': [2, 4, 5, 6], 'b': [9]}
 
-### 5. Melt
+### 2. Melt
 
 Implement the function `melt(dict)`. It should return a list of tuples by unpacking the lists of values. There should be a tuple for each for each combination of key and value as they appear in the value lists of the input dictionary.
 
@@ -31,7 +31,7 @@ Expected output:
 
     [('a', 1), ('a', 2), ('a', 3), ('c', 4), ('c', 5), ('c', 6), ('d', 6)]
 
-### 6. N-intersection
+### 3. N-intersection
 
 With sets it's relatively easy to compute the intersection between two sets (i.e., create a set with the items that are in both input sets). But it can be useful to compute the intersection between not just two, but an arbitrary number of input sets. Write a function called `n_intersection(sets)`, that takes as input a list of sets (`sets`) and returns the intersection of all of those sets.
 
@@ -56,7 +56,7 @@ This should give the following output:
 
 > Tip: `set()`, just means an empty set. This cannot be written as `{}` because that's already used in python for an empty dictionary.
 
-### 7. Sentiment
+### 4. Sentiment
 
 Write a Python function called `sentiment_of_text(text, sentiment_of_word)` that takes a text string and a dictionary of word sentiments as input and returns the overall sentiment score of the text. The sentiment score is calculated as the sum of sentiment scores for individual words in the text using the provided `sentiment_of_word` dictionary. You may assume that words that cannot be found in the dictionary have a sentiment score of 0. You can use the `tokenize()` function of the first assignment.
 
