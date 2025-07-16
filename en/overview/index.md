@@ -1,7 +1,11 @@
-# Overview of basic tools
+# Reference
 
-An overview of all programming concepts as discussed in this course.
+## Cheatsheets
 
+* Cheatsheet basic Python operations: [download](cheatsheet.pdf)
+* Cheatsheet Pandas operations (Scientific Programming 2 only): [download](cheatsheet-pandas.pdf)
+
+## Overview of all Python concepts
 
 #### Level 1 (SP1) concepts
 
