@@ -334,6 +334,35 @@ implementation is nested four levels deep whereas the good implementation has on
 two levels. It is not always this straight forward, but it is rarely necessary to
 have very deeply nested code.
 
+#### Example 4
+
+Always write all your functions first, followed by the code that uses them at the bottom of the file. This approach enhances readability and allows readers to easily locate and understand the functional components of your code.
+
+Bad implementation:
+
+    number = int(input('Enter a number: '))
+
+    def add_ten(n):
+        return n + 10
+
+    print(add_ten(number))
+
+    number = int(input('Enter another number: '))
+    print(add_ten(number))
+
+Good implementation:
+
+    def add_ten(n):
+        return n + 10
+
+    number = int(input('Enter a number: '))
+    print(add_ten(number))
+
+    number = int(input('Enter another number: '))
+    print(add_ten(number))
+
+This practice is particularly crucial for larger files with multiple functions. By defining all functions at the top, your script remains logically organized, making it easier to understand each function's purpose and functionality. The execution code goes at the bottom, ensuring a clear separation between function definitions and their usage.
+
 #### Rule of thumb
 
 This is by no means an exhaustive list of examples, and it would be impossible to
