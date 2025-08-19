@@ -137,6 +137,8 @@ You can also use `round()` to round a floating-point number to a specified numbe
 
 ## User input
 
+<iframe id="kaltura_player" src='https://api.eu.kaltura.com/p/120/embedPlaykitJs/uiconf_id/23460460?iframeembed=true&amp;entry_id=0_w85od58x&amp;config%5Bprovider%5D=%7B%22widgetId%22%3A%220_yagku3wg%22%7D&amp;config%5Bplayback%5D=%7B%22startTime%22%3A0%7D'  style="width: 400px;height: 225px;border: 0;" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" title="SP1 User Input"></iframe>
+
 Besides having your program printing to the user, you can also ask for input from the user. This way you can write **interactive programs** that can perform calculations based on user provided values. Python comes with a variety of different functions to prompt for input. One of which is `input()`, which can be used as shown below:
 
     name = input("Please enter your first name: ")
