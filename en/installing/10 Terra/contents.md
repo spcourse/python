@@ -10,11 +10,11 @@ The Terra IDE is based on components from the CS50 IDE. To use the IDE in our co
 
 Each project on GitHub gets its own repository. You’ll create one for this course. Choose **New Repository** in the menu:
 
-![](scr1.png)
+![](scr1.gif)
 
 You can choose your own nam, but I will name it 'terra'. Make sure to mark the repository as *private*, so other people can not see your code and leave the other options as they are:
 
-![](scr2.png)
+![](scr2.gif)
 
 ## Creating Access
 
@@ -28,7 +28,7 @@ To link GitHub to the IDE, you need to create a token.
 * Expand **Repository permissions** and set **Contents** to "Read and write"
 * Now click on **Generate Token**. Be careful! The long string of letters and numbers will only be shown once. **So keep the tab open!**
 
-![](scr3.png)
+![](scr3.gif)
 
 ## Linking to Terra
 
@@ -41,4 +41,4 @@ To link GitHub to the IDE, you need to create a token.
 * Fill in your information there, without the `<>`.
 
 
-![](scr4.png)
+![](scr4.gif)
