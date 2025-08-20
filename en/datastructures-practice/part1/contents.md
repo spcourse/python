@@ -83,4 +83,4 @@ Expected output:
 
 You can verify your results with:
 
-    checkpy datastructures_minai1
+    checkpy datastructures1

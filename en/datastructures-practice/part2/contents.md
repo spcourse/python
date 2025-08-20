@@ -1,4 +1,4 @@
-# OPTIONAL: more data structures
+# More data structures
 
 The goal of this practice page is to get even more familiar with the Python datastructures `dictionary` and `set`.
 
@@ -94,4 +94,4 @@ Expected output:
 
 You can verify your results with:
 
-    checkpy datastructures_minai2
+    checkpy datastructures2
