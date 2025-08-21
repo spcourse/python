@@ -3,8 +3,6 @@
 Now, with your new terminal, run the commands below. (**Don't copy all lines at once into your terminal, but enter them one line at a time.**)
 
     curl https://raw.githubusercontent.com/spcourse/sp1-python/main/en/installing/computer/environment-minai.env > environment.yml
-    conda install -n base conda-libmamba-solver
-    conda config --set solver libmamba
     conda env create -f environment.yml
     rm environment.yml
 
