@@ -19,9 +19,9 @@ Let's start by plotting some points with the following x-values $$(0,1,2,3,4,5)$
     # plot points (y to x) with green circles
     matplotlib.pyplot.plot(x_coords, y_coords, 'go')
     matplotlib.pyplot.show()
-    matplotlib.pyplot.savefig('plot.png')
+    matplotlib.pyplot.savefig('plot1.png')
 
-We choose green circles as 'markers', with which each point in the graph is represented: that is what `'go'` means (`g` green `o` circles). The final command saves the plot to a file called `plot.png`. This file is found as a separate file next to your code.
+We choose green circles as 'markers', with which each point in the graph is represented: that is what `'go'` means (`g` green `o` circles). The final command saves the plot to a file called `plot1.png`. This file is found as a separate file next to your code.
 
 ![](plotje1.png)
 
@@ -38,6 +38,7 @@ You can rename a module as you import it, so it has a more functional shorter na
 
     plt.plot(x_coords, y_coords, 'go')
     plt.show()
+    plt.savefig('plot2.png')
 
 ## Multiple graphs and annotations
 
@@ -63,6 +64,7 @@ We'll expand the plot a little now: another function is added $$x^3$$, for which
     plt.text(4.00, 100., "$x^3$", color = 'red', fontsize = 20)
 
     plt.show()
+    plt.savefig('plot3.png')
 
 ![](plotje2.png)
 
@@ -98,6 +100,7 @@ Earlier we chose a small number of points where the values had to be filled in b
     plt.ylabel('sin(x)', fontsize = 20)
     plt.text(4.00, 0.50, "f(x) = sin(x)", color = 'black', fontsize = 20)
     plt.show()
+    plt.savefig('plot4.png')
 
 
 ![](plotje3.png)
@@ -143,3 +146,4 @@ This is the corresponding code:
 
     # show both graphs on the screen
     plt.show()
+    plt.savefig('plot5.png')
