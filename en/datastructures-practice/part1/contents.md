@@ -2,7 +2,7 @@
 
 The goal of this assignment is to get more familiar with the Python `dictionary`.
 
-Create a file called `datastructures_minai1.py` and implement the functions below.
+Create a file called `datastructures1.py` and implement the functions below.
 
 ### 1. Lemmas
 

@@ -2,7 +2,7 @@
 
 The goal of this practice page is to get even more familiar with the Python datastructures `dictionary` and `set`.
 
-Create a file called `datastructures_minai2.py` and implement the functions below.
+Create a file called `datastructures2.py` and implement the functions below.
 
 ### 1. Unify
 
