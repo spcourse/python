@@ -18,7 +18,7 @@ The loop continues running as long as the condition is true. For example:
         print(i)
         i += 1
 
-This loop continues running the code `print(i)` and `i += 1` as long as the condition `i < 6` is true. So this piece of code prints the numbers `1`, `2`, `3`, `4` and `5`.
+This loop continues running the code `print(i)` and `i += 1` as long as the condition `i < 6` is true. So this piece of code prints the numbers `0`, `1`, `2`, `3`, `4` and `5`.
 
 In this case we could also use a for-loop to achieve the same. But this is not always the case:
 
