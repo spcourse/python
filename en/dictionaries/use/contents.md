@@ -90,8 +90,61 @@ pair
     >>> basket['apple'] = 6
     >>> basket
     {'apple': 6, 'banana': 6, 'orange': 2, 'strawberry': 10}
-    
+
 Note the order of the elements! Dictionaries remember the order in which items are inserted.
+
+### updating existing values
+
+When we update a value in a dictionary using `+=` or `-=`, Python retrieves the current value, modifies it, and stores the result back in the dictionary.
+
+For example:
+
+    basket['banana'] -= 1
+
+This is equivalent to writing:
+
+    current = basket['banana']
+    current = current - 1
+    basket['banana'] = current
+
+The `-=` and `+=` operators are simply shorter ways of writing this update.
+
+
+### updating lists in a dictionary
+
+The values in a dictionary do not have to be numbers. They can also be lists.
+
+For example:
+
+    books_by_genre = {
+        'Fantasy': ['Circe']
+    }
+
+If we want to add another book to the list, we write:
+
+    books_by_genre['Fantasy'].append('The Hobbit')
+
+The `append()` function modifies the existing list. It does not return a new list.
+
+So this works:
+
+    books_by_genre['Fantasy'].append('The Hobbit')
+
+But this does not:
+
+    books_by_genre['Fantasy'] = books_by_genre['Fantasy'].append('The Hobbit')
+
+Since `append()` returns `None`, the second example would replace the list with `None`.
+
+
+### updating values in general
+
+Whenever you change a value in a dictionary, you either:
+
+- assign a completely new value to a key, or  
+- retrieve the existing value and modify it.
+
+Both cases follow the same basic idea: a key always maps to exactly one value, and updating that value replaces what was stored before.
 
 ### pitfalls
 
