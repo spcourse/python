@@ -37,7 +37,7 @@ Expected output:
 
 ### 2. Grammatical categories
 
-Create a function called `count_category(lemma_counts, category)`. This function counts the occurances of lemmas of a specific grammatical category (for example verbs or nouns). The input is `lemma_counts`, a dictionary of lemma counts like you created in the last assignment, and `category` a set of words representing a grammatical category.
+Create a function called `count_category(lemma_counts, category)`. This function counts the occurrences of lemmas of a specific grammatical category (for example verbs or nouns). The input is `lemma_counts`, a dictionary of lemma counts like you created in the last assignment, and `category` a set of words representing a grammatical category.
 
 (If you didn't finish the previous assignment, no worries, the correct `lemma_counts` dictionary is provided below.)
 
@@ -58,7 +58,26 @@ Expected output:
     7
     3
 
-### 3. Library
+### 3. Incrementing values
+
+Create a function called `increment_counts(counts, words)`. This function updates a dictionary of word counts.
+
+The input is `counts`, a dictionary that maps words to integers, and `words`, a list of words. For each word in `words`, increase its value by 1 if it already exists in the dictionary. If the word does not exist yet, add it to the dictionary with value 1.
+
+You are not allowed to use `+=` or `-=` in this exercise. Refer to the ["updating existing values" section on the Dictionaries theory-page](/python/en/dictionaries/use#updating-existing-values).
+
+Example usage:
+
+    counts = {'apple': 2, 'banana': 1}
+    words = ['banana', 'apple', 'orange']
+
+    print(increment_counts(counts, words))
+
+Expected output:
+
+    {'apple': 3, 'banana': 2, 'orange': 1}
+
+### 4. Library
 
 We have loaded information about book genres into a dictionary called `library`. The dictionary has the titles of the books as keys and the genres as values (see usage example below). We would like to group the titles by genre. Write a function called `group_titles_by_genre(library)`, that takes the dictionary and outputs a new dictionary where each key is a genre and each value is a list of all titles that belong to the given genre.
 
@@ -78,6 +97,8 @@ Example usage:
 Expected output:
 
     {'Adventure': ['Life of Pi', 'The Three Musketeers', 'The Call of the Wild'], 'Fantasy': ['One World The Water Dancer', 'Circe'], 'Classics': ['To Kill a Mockingbird', 'Little Women']}
+
+*Hint:* Think about how updating values in a dictionary works. When do you assign a new value to a key, and when do you modify an existing value?
 
 ## Test
 
