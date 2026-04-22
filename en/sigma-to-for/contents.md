@@ -6,7 +6,7 @@ You have written `sum.py`before. It adds up all integers from `a` to `b`. The al
     for i in range(a, b + 1):
         total = total + i
 
-This pattern (start at zero, loop over a range of numbers, add something each step) is very common programming. And it is closely related the mathematical **summation** $$\Sigma$$ (sigma).
+This pattern (start at zero, loop over a range of numbers, add something each step) is very common in programming. And it is closely related the **mathematical summation: $$\Sigma$$** (sigma).
 
 ## The $$\Sigma$$ notation
 
