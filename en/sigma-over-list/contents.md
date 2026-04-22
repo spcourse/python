@@ -2,7 +2,7 @@
 
  You saw before that $$\Sigma_{i=a}^b$$ maps directly onto `for i in range(a, b + 1)`. 
  
- You have now written `sum_list.py`, which sums the elements of a list. Your solution probably looked something like this:
+ You have just written `sum_list.py`, which sums the elements of a list. Your solution probably looked something like this:
 
     total = 0
     for x in numbers:
@@ -15,8 +15,6 @@ $$
 $$
 
 where $$a$$ is a collection (e.g. the list `numbers`) and $$n$$ is its length. The subscript $$a_i$$ means *"the element of $$a$$ at position $$i$$"*. So $$a_0$$ is the first element, $$a_1$$ is the second, and so on.
-
-## The index version
 
 If you follow the same translation as last week, you would write:
 
