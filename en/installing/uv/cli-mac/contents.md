@@ -40,14 +40,14 @@ A **path** is a complete description of where some file can be found, including 
 For example, you probably have been saving files in the `Documents` folder on your computer. Here is an example of the full path to a folder inside your documents directory:
 
 ~~~text
-/Users/isaiah/Documents/UvA/intro
+/Users/isaiah/Documents/
 ~~~
 
-> On Linux, home directories usually live in `/home` instead of `/Users`, so the same path would be `/home/isaiah/Documents/UvA/intro`.
+> On Linux, home directories usually live in `/home` instead of `/Users`, so the same path would be `/home/isaiah/Documents/`.
 
 #### Home directory
 
-The path above starts with `/Users/isaiah/`. This is the path pointing to your "home directory". Your home directory is your personal space on the computer where your files live, separate from other people that might use the same computer.
+The path above starts with `/Users/isaiah/` (or `/home/isaiah/`). This is the path pointing to your "home directory". Your home directory is your personal space on the computer where your files live, separate from other people that might use the same computer.
 
 #### Shortcuts
 
@@ -56,7 +56,7 @@ Because many of your files are in your home directory, there is a shortcut! Inst
 This means that you can use a slightly shorter path to the same location:
 
 ~~~text
-~/Documents/UvA/intro
+~/Documents/
 ~~~
 
 ## Working with your computer from a shell
@@ -69,11 +69,14 @@ You access the shell through a program called a **terminal**.
 
 ### Opening the terminal
 
+This is slightly different on macOS and Linux.
+
+#### macOS
+
+On macOS:
 1. Press `Cmd + Space` to open Spotlight search
 2. Type `Terminal`
 3. Press Enter
-
-> On Linux, the terminal application is usually called Terminal, Konsole or GNOME Terminal, depending on your desktop environment. Most systems open one with `Ctrl + Alt + T`.
 
 A window opens with text like this:
 
@@ -82,9 +85,17 @@ Last login: ...
 username@macbook ~ %
 ~~~
 
+#### Linux
+
+If you work on Linux, you probably already know how to open the terminal. But if not:
+The terminal application is usually called Terminal, Konsole or GNOME Terminal, depending on your desktop environment. Most systems open one with `Ctrl + Alt + T`.
+
+
+### Prompt
+
 The `%` is the **prompt**. The prompt is the place where you type commands. It means the terminal is ready to take a command.
 
-> Depending on your shell, the prompt may be a `$` instead of a `%`. That makes no difference for anything in this guide.
+Depending on your shell, the prompt may be a `$` instead of a `%`. That makes no difference for anything in this guide.
 
 Also, do you see that tiny `~` before the percent sign? This is the directory that the shell is attached to. In this case it's your home directory, like you learned earlier.
 
@@ -112,14 +123,20 @@ This is such an important concept that we elaborate on it once more. You have pr
 
 You will be doing this very often, especially when you start the terminal again. The shell will always load attached to your home directory. That is *not* where you will be saving your files! So you need to move into the right folder before doing anything.
 
-For example, you might want to run a Python program called `mario.py` which is in the `Programming/pyprog` directory in your `Nextcloud` directory:
+For example, you might want to list the contents of a directory called `SP` which might be in the `Programming` directory in your home directory:
 
 ~~~bash
-cd ~/Nextcloud/Programming/pyprog
-uv run mario.py
+cd ~/Programming/SP
+ls
 ~~~
 
-The second command, `uv run`, would not work at all if you did not `cd` into the `pyprog` directory first. (You will install `uv` in the next part of this guide; for now, only the `cd` matters.)
+After a few `cd` commands it is easy to lose track of where you are. You can always ask the shell:
+
+~~~bash
+pwd
+~~~
+
+`pwd` means "print working directory". It prints the full path of the directory your shell is attached to right now.
 
 ### How the shell relates to normal computer use
 
@@ -131,18 +148,38 @@ For example:
 - list files → `ls`
 - run a program → type its name
 
-This guide uses the shell because programming tools like `uv` are controlled with commands.
+This guide uses the shell because programming tools like `uv` and `Python` are controlled with commands.
 
 #### Why this matters
 
-Programmers generally work in the shell a lot, because it helps them work better:
+Programmers generally work in the terminal most of the time, because it helps them work better:
 
 - Commands are precise and repeatable
+- You can more easily automate tasks
 - You can follow instructions exactly as written
-- Many programming tools are designed for shell use
+- Most programming tools are designed for shell use
 
-Working in the shell does not replace your normal way of using the computer; you add the shell as a second way of working.
+### Making a new folder
 
-## Next step
+Apart from moving around, you will also need to create folders from the terminal. The command for that is `mkdir` ("make directory"):
 
-You can now find your way around your computer from the terminal. Continue with installing Python and `uv`.
+~~~bash
+cd ~
+mkdir Programming
+~~~
+
+This first moves you to your home directory, then creates a folder called `Programming` in your home directory.
+
+Pro-tip: Use simple names **without spaces** (for example `python101`, not `Amazing Python 101 Course`). You have to type the name frequently, so shorter is better. And, directory names with spaces can be annoying to work with in the shell.
+
+### More commands
+
+You do not need these for the course yet, but it is good to know that they exist. Besides moving around and making folders, you can also work with the files themselves:
+
+- `cp` — copy a file ("copy")
+- `mv` — move a file to another folder, or rename it ("move")
+- `rm` — delete a file ("remove")
+
+Look them up when you need them.
+
+Warning: `rm` deletes a file immediately. It does not go to the Trash, and there is no undo.

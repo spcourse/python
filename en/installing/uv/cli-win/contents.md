@@ -111,14 +111,20 @@ This is such an important concept that we elaborate on it once more. You have pr
 
 You will be doing this very often, especially when you start the terminal again. The shell will always load attached to your home directory. That is *not* where you will be saving your files! So you need to move into the right folder before doing anything.
 
-For example, you might want to run a Python program called `mario.py` which is in the `Programming\pyprog` directory in your `Nextcloud` directory:
+For example, you might want to list the contents of a directory called `SP` which might be in the `Programming` directory in your home directory:
 
 ~~~powershell
-cd $HOME\Nextcloud\Programming\pyprog
-uv run mario.py
+cd $HOME\Programming\SP
+dir
 ~~~
 
-The second command, `uv run`, would not work at all if you did not `cd` into the `pyprog` directory first. (You will install `uv` in the next part of this guide; for now, only the `cd` matters.)
+After a few `cd` commands it is easy to lose track of where you are. You can always ask the shell:
+
+~~~powershell
+pwd
+~~~
+
+`pwd` means "print working directory". It prints the full path of the directory your shell is attached to right now.
 
 ### How the shell relates to normal computer use
 
@@ -130,18 +136,38 @@ For example:
 - list files → `dir`
 - run a program → type its name
 
-This guide uses the shell because programming tools like `uv` are controlled with commands.
+This guide uses the shell because programming tools like `uv` and `Python` are controlled with commands.
 
 #### Why this matters
 
-Programmers generally work in the shell a lot, because it helps them work better:
+Programmers generally work in the terminal most of the time, because it helps them work better:
 
 - Commands are precise and repeatable
+- You can more easily automate tasks
 - You can follow instructions exactly as written
-- Many programming tools are designed for shell use
+- Most programming tools are designed for shell use
 
-Working in the shell does not replace your normal way of using the computer; you add the shell as a second way of working.
+### Making a new folder
 
-## Next step
+Apart from moving around, you will also need to create folders from the terminal. The command for that is `mkdir` ("make directory"):
 
-You can now find your way around your computer from the terminal. Continue with installing Python and `uv`.
+~~~powershell
+cd $HOME
+mkdir Programming
+~~~
+
+This first moves you to your home directory, then creates a folder called `Programming` in your home directory.
+
+Pro-tip: Use simple names **without spaces** (for example `python101`, not `Amazing Python 101 Course`). You have to type the name frequently, so shorter is better. And, directory names with spaces can be annoying to work with in the shell.
+
+### More commands
+
+You do not need these for the course yet, but it is good to know that they exist. Besides moving around and making folders, you can also work with the files themselves:
+
+- `cp` — copy a file (short for `Copy-Item`)
+- `mv` — move a file to another folder, or rename it (short for `Move-Item`)
+- `rm` — delete a file (short for `Remove-Item`)
+
+In PowerShell these short names are nicknames for longer commands. The nicknames are the same as the ones used on macOS and Linux, which is handy when you follow instructions written for those systems. The options they accept are different, though, so look up the PowerShell version when you need more than the basics.
+
+Warning: `rm` deletes a file immediately. It does not go to the Recycle Bin, and there is no undo.
