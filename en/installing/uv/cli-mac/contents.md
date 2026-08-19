@@ -182,4 +182,4 @@ You do not need these for the course yet, but it is good to know that they exist
 
 Look them up when you need them.
 
-Warning: `rm` deletes a file immediately. It does not go to the Trash, and there is no undo.
+Warning: `rm` deletes a file immediately. It does not go to the Trash, there is no undo, and you do not receive 200,-.

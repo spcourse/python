@@ -170,4 +170,4 @@ You do not need these for the course yet, but it is good to know that they exist
 
 In PowerShell these short names are nicknames for longer commands. The nicknames are the same as the ones used on macOS and Linux, which is handy when you follow instructions written for those systems. The options they accept are different, though, so look up the PowerShell version when you need more than the basics.
 
-Warning: `rm` deletes a file immediately. It does not go to the Recycle Bin, and there is no undo.
+Warning: `rm` deletes a file immediately. It does not go to the Recycle Bin, there is no undo, and you do not receive 200,-.
