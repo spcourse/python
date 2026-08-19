@@ -1,16 +1,10 @@
 ---
 layout: welkom-tutorial
-title: Python setup with uv
+title: Python setup with uv (macOS and Linux)
 tutorial_questions:
-  os:
-    question: "What operating system are you using?"
-    choices:
-      mac: "macOS"
-      linux: "Linux"
-      windows: "Windows"
   setup:
     question: "What did your course provide?"
-    description: "If you don't know what we're asking, please read the previous section."
+    description: "If you don't know what we're asking, check the course page or ask your teacher."
     choices:
       nothing: "Nothing (no config file)"
       requirements: "A requirements.txt file"
@@ -20,7 +14,7 @@ tutorial_questions:
 * Auto-generated table of contents for this page
 {:toc}
 
-# Python setup manual with `uv`
+# Python setup with `uv` (macOS and Linux)
 
 This guide shows how to:
 
@@ -31,190 +25,9 @@ This guide shows how to:
 
 There are other ways to manage Python! But in this tutorial, we try to provide a consistent experience that is useful in a university setting.
 
-## Some background on files and folders
+> This guide assumes you can already open a terminal and move between folders with `cd`. If that is new to you, first work through the command line tutorial.
 
-If you are new to programming, it is important to understand how files and folders work. All your documents are stored on your computer as a file. To help you organize a large number of files, you can use folders.
-
-- A **file** is a document or piece of data, such as a Python program (the name will end in `.py`), but it could also literally be a data file (for example, ending in `.csv`) or a Word document (ending in `.docx`).
-
-- A **folder** (also called a directory) is a container, and it can hold files. But a directory can also contain other directories. This means that you can organize your files in a hierarchical structure.
-
-For example:
-
-- `programming/` → a main folder
-- `my-course/` → a folder inside `programming`
-- `hello.py` → a file inside `my-course`
-
-Adding two other files, the structure may look like this:
-
-~~~text
-programming/
-└── my-course/
-    ├── hello.py
-    └── week1.py
-    └── zac-data-2026.csv
-~~~
-
-The files that you will be mostly concerned with are **Python files**. You will often start with an empty (blank) file, write Python code, save the file and then **Run** it. But more on that later.
-
-### Paths
-
-A **path** is a complete description of where some file can be found, including the names of all the directories it is contained in. Instead of a file, a path can also point to a directory.
-
-For example, you probably have been saving files in the `Documents` folder on your computer. Here are examples of the full path to a folder inside your documents directory:
-
-- `/Users/isaiah/Documents/UvA/intro` (macOS/Linux)
-- `C:\Users\isaiah\Documents\UvA\intro` (Windows)
-- `C:\Users\isaiah\OneDrive\Documents\UvA\intro` (Windows with OneDrive)
-
-#### Home directory
-
-The paths above start with `/Users/isaiah/` and `C:\Users\isaiah`. These are the paths pointing to your "home directory". Your home directory is your personal space on the computer where your files live, separate from other people that might use the same computer.
-
-#### Shortcuts
-
-Because many of your files are in your home directory, there is a shortcut! Instead of the full path, you can use `~` (macOS/Linux) or `$HOME` (Windows PowerShell).
-
-This means that you can use slightly shorter paths to the same location:
-
-- `~/Documents/UvA/intro` (macOS/Linux)
-- `$HOME\Documents\UvA\intro` (Windows)
-- `$env:OneDrive\Documents\UvA\intro` (Windows with OneDrive)
-
-> That last one can be used when you are on Windows and use OneDrive. In that case the directory `$HOME\Documents` may be empty, and instead your real `Documents` directory is inside the `OneDrive` directory. This is because OneDrive can only manage file inside the `OneDrive` directory. It is also possible that you have files in both places. That's something you should fix.
-
-## Working with your computer from a shell
-
-When you normally use your computer, you click on icons, open folders, and drag files. This is called a **graphical user interface (GUI)**.
-
-A **shell** is a different way to interact with your computer. Instead of clicking, you type commands.
-
-You access the shell through a program called a **terminal**.
-
-- On macOS: Terminal
-- On Linux: Terminal
-- On Windows: PowerShell or Windows Terminal
-
-### Opening the terminal
-
-#### macOS [mac]
-
-1. Press `Cmd + Space` to open Spotlight search
-2. Type `Terminal`
-3. Press Enter
-
-A window opens with text like this:
-
-~~~text
-Last login: ...
-username@macbook ~ %
-~~~
-
-The `%` is the **prompt**. The prompt is the place where you type commands. It means the terminal is ready to take a command.
-
-Also, do you see that tiny `~` before the percent sign? This is the directory that the shell is attached to. In this case it's your home directory, like you learned earlier.
-
-#### Windows (PowerShell) [windows]
-
-1. Press the Windows key
-2. Type `PowerShell` or `Windows Terminal`
-3. Press Enter
-
-A window opens with text like this:
-
-~~~text
-PS C:\Users\YourName>
-~~~
-
-The `>` is the **prompt**. The prompt is the place where you type commands. It means the terminal is ready to take a command.
-
-The shell also displays the path of the directory that it is attached to; in this case `C:\Users\YourName`.
-
-### First steps in the terminal
-
-You can try a few simple commands to look inside directories and see what files and directories are there:
-
-#### macOS/Linux [mac/linux]
-
-Show a list of files in the current folder:
-
-~~~bash
-ls
-~~~
-
-Move into your Documents folder:
-
-~~~bash
-cd ~/Documents
-~~~
-
-"Moving into" here means attaching the shell to another directory. If you then issue `ls` again, you will get a listing of the files in *that* directory.
-
-#### Windows PowerShell [windows]
-
-Show a list of files in the current folder:
-
-~~~powershell
-dir
-~~~
-
-Move into your Documents folder:
-
-~~~powershell
-cd $HOME\Documents
-~~~
-
-"Moving into" here means attaching the shell to another directory. If you then issue `dir` again, you will get a listing of the files in *that* directory.
-
-### Moving between folders
-
-This is such an important concept that we elaborate on it once more. You have previously seen that you can move into a different directory by typing the command `cd` in the shell (change directory).
-
-You will be doing this very often, especially when you start the terminal again. The shell will always load attached to your home directory. That is *not* where you will be saving your files! So you need to move into the right folder before doing anything.
-
-For example, you might want to run a Python program called `mario.py` which is in the `Programming/pyprog` directory in your `Nextcloud` directory.
-
-#### macOS and Linux [mac/linux]
-
-~~~bash
-cd ~/Nextcloud/Programming/pyprog
-uv run mario.py
-~~~
-
-#### Windows [windows]
-
-~~~powershell
-cd $HOME\Nextcloud\Programming\pyprog
-uv run mario.py
-~~~
-
-The second command, `uv run`, would not work at all if you did not `cd` into the `pyprog` directory first.
-
-### How the shell relates to normal computer use
-
-The shell lets you do the same things as clicking, but using text commands.
-
-For example:
-
-- open a folder → `cd foldername`
-- list files → `ls` (macOS/Linux) or `dir` (Windows)
-- run a program → type its name
-
-This guide uses the shell because programming tools like `uv` are controlled with commands.
-
-
-#### Why this matters
-
-Programmers generally work in the shell a lot, because it helps them work better:
-
-- Commands are precise and repeatable
-- You can follow instructions exactly as written
-- Many programming tools are designed for shell use
-
-Working in the shell do not replace your normal way of using the computer; you add the shell as a second way of working.
-
-
-
+This guide covers macOS and Linux. The two are almost identical for our purposes; where they differ, you will find a remark.
 
 ## Installing uv and Python
 
@@ -228,11 +41,7 @@ Instead of learning multiple tools, you use **one tool (uv) for everything**. Th
 
 ### Install uv now
 
-Open a terminal and install it.
-
-#### macOS and Linux [mac/linux]
-
-Run the following command from your terminal:
+Open a terminal and run the following command:
 
 ~~~bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -247,20 +56,6 @@ uv --version
 ~~~
 
 There could be errors! In that case ask your teacher.
-
-#### Windows [windows]
-
-In PowerShell, run:
-
-~~~powershell
-powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
-~~~
-
-Then reopen PowerShell and check:
-
-~~~powershell
-uv --version
-~~~
 
 ### Install a Python version with `uv`
 
@@ -280,8 +75,6 @@ uv python list
 
 Sometimes this will list a few older versions, as well. That is fine: in a later step, you will configure to use Python 3.14 during your course work.
 
-
-
 ## Creating folders for all your courses
 
 You will now need to decide where your course files are going to be saved on your computer. Probably you have already created a place for university work, for example in your `Documents` directory. You may or may not have organized it, for example by making a folder for each separate course.
@@ -290,10 +83,9 @@ Your first task is to create a directory where all your **programming-related co
 
 > In the next section, we will suggest the best options. It's fine if you make a different decision. However, do **not** save your work in Downloads, on the Desktop, or inside other "easy to access" folders. Such directories are not backed up, which will be very sad when your computer crashes and you lose all of it.
 
-
 ### Installing Nextcloud
 
-Ideally, your work is automatically backed up. Unfortunately, saving Python projects in iCloud or OneDrive is a bit of a problem. Hence, you will install Nextcloud, as provided by the University of Amsterdam. It will take care of automatic backup.
+Ideally, your work is automatically backed up. Unfortunately, saving Python projects in iCloud is a bit of a problem. Hence, you will install Nextcloud, as provided by the University of Amsterdam. It will take care of automatic backup.
 
 1. Install <a href="https://nextcloud.com/install/#desktop-files" target="_blank" rel="noopener">Nextcloud</a>, a tiny program that synchronizes files from your computer to the cloud (only files in a specific directory).
 
@@ -317,51 +109,25 @@ Ideally, your work is automatically backed up. Unfortunately, saving Python proj
 
     ![](ignorevenv.png)
 
-
 ### Good locations for your work
 
 Choosing the right location matters because you do not want to lose your work and you want it to be easy to find.
 
-> **Do not save your Python work on OneDrive or iCloud**. You should have installed Nextcloud in the previous step.
-
-#### macOS [mac/linux]
+> **Do not save your Python work on iCloud.** You should have installed Nextcloud in the previous step.
 
 Put a `Programming` folder inside your `Nextcloud` folder:
 
 - example: `~/Nextcloud/Programming`
 
-
-#### Windows [windows]
-
-Put a `Programming` folder inside your `Nextcloud` folder:
-
-- example: `C:\Users\<you>\Nextcloud\Programming`
-
 ### Creating a subfolder for one course or project
 
-Let's say that you are using the following path as your programming folder:
+Let's say that you are using `~/Nextcloud/Programming` as your programming folder. Now it's time to create a course-specific subfolder.
 
-- macOS/Linux: `~/Nextcloud/Programming`
-- Windows: `$HOME\Nextcloud\Programming`
-
-Now it's time to create a course-specific subfolder.
-
-#### macOS and Linux [mac/linux]
-
-`mkdir` means “make directory” (create a folder).
+`mkdir` means "make directory" (create a folder).
 
 ~~~bash
 mkdir -p ~/Nextcloud/Programming/my-course
 cd ~/Nextcloud/Programming/my-course
-~~~
-
-#### Windows PowerShell [windows]
-
-`mkdir` means “make directory” (create a folder).
-
-~~~powershell
-mkdir $HOME\Nextcloud\Programming\my-course
-cd $HOME\Nextcloud\Programming\my-course
 ~~~
 
 Replace `my-course` with the actual name of your course.
@@ -373,7 +139,6 @@ Good examples:
 - `python101`
 - `intro-programming`
 - `datascience-course`
-
 
 ## Create a virtual environment for the course
 
@@ -444,7 +209,7 @@ You may have received a `zip` file for the course or just a single `pyproject.to
 Make sure that you have extracted the files from the zip into an appropriate course folder, or you have placed the downloaded `pyproject.toml`. Then it's just two steps:
 
 ~~~bash
-cd ~/Nextcloud/programming/course-with-project
+cd ~/Nextcloud/Programming/course-with-project
 uv sync
 ~~~
 
@@ -458,7 +223,7 @@ Note that you now have a `.venv` folder in the course directory. Although it mus
 
 ### Before you continue: confirm that the environment exists
 
-After setting up the virtual enviroment, you should now have a folder structure like this:
+After setting up the virtual environment, you should now have a folder structure like this:
 
 ~~~text
 programming/
@@ -476,17 +241,15 @@ programming/
     └── week1.py
 ~~~
 
-
 ## Running Python programs
 
 Now that everything is installed, you can get into the routine of running your self-written Python programs.
-
 
 #### Once again: work from inside the course folder
 
 Each time you work on a course, you connect your shell to the course directory (folder). Only then will it pick up on the packages you installed.
 
-So when working of the course you always start with:
+So when working on the course you always start with:
 
 1. open a terminal
 2. go to your course folder (`cd`)
@@ -496,17 +259,8 @@ So when working of the course you always start with:
 And recall, to go to your course folder, use:
 
 ~~~bash
-cd ~/Nextcloud/programming/my-course
+cd ~/Nextcloud/Programming/my-course
 ~~~
-
-On Windows PowerShell:
-
-~~~powershell
-cd $HOME\Nextcloud\programming\my-course
-~~~
-
-
-
 
 ## Run commands with `uv run`
 
@@ -517,7 +271,7 @@ When you are inside the course folder, use `uv run` to execute Python and tools.
 `uv run` makes sure that:
 
 - the correct Python version for this course is used
-- the packages installed in this course’s environment are used
+- the packages installed in this course's environment are used
 - you do not accidentally use system-wide (global) Python or packages
 
 So that's why you always use the following workflow:
@@ -539,7 +293,6 @@ uv run hello.py
 ~~~
 
 That's all! You can use `uv run` every time to run your programs.
-
 
 ## Adding packages to your course environment
 
@@ -584,7 +337,7 @@ When you need extra packages for the course, install them from **inside the cour
 Example:
 
 ~~~bash
-cd ~/Nextcloud/programming/my-course
+cd ~/Nextcloud/Programming/my-course
 uv pip install requests
 ~~~
 
@@ -601,7 +354,7 @@ uv pip install numpy pandas matplotlib
 In case your teacher provided a `requirements.txt` they already had some packages in mind that you need. Run this command once to install the packages into your environment:
 
 ~~~bash
-cd ~/Nextcloud/programming/my-course
+cd ~/Nextcloud/Programming/my-course
 uv pip install -r requirements.txt
 ~~~
 
@@ -610,42 +363,27 @@ uv pip install -r requirements.txt
 If your course works with a `pyproject.toml` you need to add your package to the project using another command:
 
 ~~~bash
-cd ~/Nextcloud/programming/my-course
+cd ~/Nextcloud/Programming/my-course
 uv add rich
 ~~~
 
 To understand projects with `pyproject.toml` better, read the [Projects guide](https://docs.astral.sh/uv/guides/projects/) on the **uv** website.
 
-
-
-
 ## Recommended workflow
 
 For each new course:
 
-- create a new course subfolder inside `~/Nextcloud/programming`
-- go into that subfolder create a virtual environment with `uv venv`
+- create a new course subfolder inside `~/Nextcloud/Programming`
+- go into that subfolder and create a virtual environment with `uv venv`
 - keep your course files there
 - use `uv run` from inside that folder
 - add packages with `uv pip install ...` when needed
 
 ### Example from start to finish
 
-#### macOS and Linux [mac/linux]
-
 ~~~bash
-mkdir -p ~/Nextcloud/programming/python101
-cd ~/Nextcloud/programming/python101
-uv venv --python 3.14
-uv pip install requests
-uv run python
-~~~
-
-#### Windows PowerShell [windows]
-
-~~~powershell
-mkdir $HOME\Nextcloud\programming\python101
-cd $HOME\Nextcloud\programming\python101
+mkdir -p ~/Nextcloud/Programming/python101
+cd ~/Nextcloud/Programming/python101
 uv venv --python 3.14
 uv pip install requests
 uv run python
@@ -660,21 +398,12 @@ Do not:
 - mix multiple courses in one folder
 - forget to move into the course folder before running commands
 
-
 ## Check your installation
 
 Not sure whether everything above actually worked? Paste the command below into your terminal. It checks that `uv` is installed, that it can run a recent enough Python version, and that your `Nextcloud` folder is set up correctly (including the `.venv` exclusion).
 
-#### macOS and Linux [mac/linux]
-
 ~~~bash
 curl -LsSf https://www.proglab.nl/welkom/install/uv/check.sh | bash
-~~~
-
-#### Windows PowerShell [windows]
-
-~~~powershell
-irm https://www.proglab.nl/welkom/install/uv/check.ps1 | iex
 ~~~
 
 If anything is reported as failed or a warning, fix it and run the command again.
