@@ -123,10 +123,10 @@ This is such an important concept that we elaborate on it once more. You have pr
 
 You will be doing this very often, especially when you start the terminal again. The shell will always load attached to your home directory. That is *not* where you will be saving your files! So you need to move into the right folder before doing anything.
 
-For example, you might want to list the contents of a directory called `SP` which might be in the `Programming` directory in your home directory:
+For example, you might want to list the contents of a directory called `my-course` which might be in the `Programming` directory in your home directory:
 
 ~~~bash
-cd ~/Programming/SP
+cd ~/Programming/my-course
 ls
 ~~~
 
