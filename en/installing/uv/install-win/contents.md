@@ -1,7 +1,7 @@
+# Installing Python and uv (Windows)
+
 * Auto-generated table of contents for this page
 {:toc}
-
-# Installing Python and uv (Windows)
 
 On this page you install Python and `uv` on your own computer, and set up the environment you will use for this course. Work through it from top to bottom.
 

@@ -1,7 +1,7 @@
+# Working with the command line (macOS and Linux)
+
 * Auto-generated table of contents for this page
 {:toc}
-
-# Working with the command line (macOS and Linux)
 
 Before you install anything, you need to be able to find your way around your own computer from a terminal. This page teaches you that. In the next part you will install Python and `uv`.
 

@@ -1,7 +1,7 @@
+# Fallback: Python without uv (macOS)
+
 * Auto-generated table of contents for this page
 {:toc}
-
-# Fallback: Python without uv (macOS)
 
 > **This page is not part of the course material.** It is not linked from any schedule. It exists for teachers and teaching assistants to use with a student for whom the normal setup cannot be made to work. Hand out the link only when you need it.
 

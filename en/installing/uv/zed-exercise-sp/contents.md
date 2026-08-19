@@ -1,7 +1,7 @@
+# Exercise: your first files in Zed
+
 * Auto-generated table of contents for this page
 {:toc}
-
-# Exercise: your first files in Zed
 
 In this exercise you open your course folder in Zed, make two files in it, and look at them from the terminal. It is the first time you use the editor and the terminal together, which is how you will work for the rest of the course.
 

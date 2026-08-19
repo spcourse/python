@@ -1,7 +1,7 @@
+# Fallback: Windows without script execution
+
 * Auto-generated table of contents for this page
 {:toc}
-
-# Fallback: Windows without script execution
 
 > **This page is not part of the course material.** It is not linked from any schedule. It exists for teachers and teaching assistants to use with a student whose laptop will not allow the normal setup. Hand out the link only when you need it.
 

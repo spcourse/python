@@ -1,7 +1,7 @@
+# Exercise: create your course folders
+
 * Auto-generated table of contents for this page
 {:toc}
-
-# Exercise: create your course folders
 
 Time to use the terminal for real. In this exercise you create the folders that you will use for the rest of the course.
 
