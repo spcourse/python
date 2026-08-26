@@ -35,9 +35,7 @@ To link GitHub to the IDE, you need to create a token.
 * [Go to the Terra IDE](https://ide.proglab.nl/)
 * In the Git menu, choose **Add credentials** and paste the token, then save
 * In the Git menu, choose **Connect repository** and enter your GitHub repo. It looks like this:
-  ```
-    https://github.com/<githubusername>/<githubreponame>
-  ```
+      https://github.com/<githubusername>/<githubreponame>
 * Fill in your information there, without the `<>`.
 
 
