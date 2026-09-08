@@ -171,3 +171,32 @@ uname -m
 > On Linux, use the install command shown on the Zed download page instead.
 
 Use the installer to install Zed on your computer.
+
+## Configure Zed
+
+Zed is built for professional programmers, and it can do a lot of work for you. This can be convenient once you know Python, but it gets in the way while you are learning it. So, for now, we switch those features off.
+
+Download the settings file here: [settings.json](../downloads/settings.json) (right-click -> save/download)
+
+Zed keeps its settings in `~/.config/zed/settings.json`. You are about to overwrite that file, so first make a copy of it:
+
+~~~bash
+mkdir -p ~/.config/zed
+cp ~/.config/zed/settings.json ~/.config/zed/settings-backup.json
+~~~
+
+In the terminal, **navigate to the new settings file's location**:
+
+Then, copy it into place:
+
+~~~bash
+cp settings.json ~/.config/zed/settings.json
+~~~
+
+### Going back to the old settings
+
+**Don't run this now**, but if you ever want your old settings back, copy the backup over it again:
+
+~~~bash
+(don't run this now) cp ~/.config/zed/settings-backup.json ~/.config/zed/settings.json
+~~~
