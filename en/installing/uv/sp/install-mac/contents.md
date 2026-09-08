@@ -181,7 +181,6 @@ Download the settings file here: [settings.json](../downloads/settings.json) (ri
 Zed keeps its settings in `~/.config/zed/settings.json`. You are about to overwrite that file, so first make a copy of it:
 
 ~~~bash
-mkdir -p ~/.config/zed
 cp ~/.config/zed/settings.json ~/.config/zed/settings-backup.json
 ~~~
 

@@ -172,3 +172,33 @@ $env:PROCESSOR_ARCHITECTURE
 `AMD64` means a normal Intel or AMD processor, so use the Intel/AMD download. `ARM64` means you have an ARM processor.
 
 Use the installer to install Zed on your computer.
+
+## Configure Zed
+
+Zed is built for professional programmers, and it can do a lot of work for you. This can be convenient once you know Python, but it gets in the way while you are learning it. So, for now, we switch those features off.
+
+Download the settings file here: [settings.json](../downloads/settings.json) (right-click -> save/download)
+
+> Windows hides file extensions, and browsers sometimes add `.txt` to a downloaded file. If the copy command below cannot find `settings.json`, you probably have `settings.json.txt` instead.
+
+Zed keeps its settings in `%APPDATA%\Zed\settings.json`. You are about to overwrite that file, so first make a copy of it:
+
+~~~powershell
+Copy-Item $env:APPDATA\Zed\settings.json $env:APPDATA\Zed\settings-backup.json
+~~~
+
+In PowerShell, **navigate to the new settings file's location**:
+
+Then, copy it into place:
+
+~~~powershell
+Copy-Item settings.json $env:APPDATA\Zed\settings.json
+~~~
+
+### Going back to the old settings
+
+**Don't run this now**, but if you ever want your old settings back, copy the backup over it again:
+
+~~~powershell
+(don't run this now) Copy-Item $env:APPDATA\Zed\settings-backup.json $env:APPDATA\Zed\settings.json
+~~~
