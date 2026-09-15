@@ -22,7 +22,7 @@ There are also some known issues with Jupyter Notebooks and IDE's that display t
 
 Make sure to update `conda` to the most recent version before installing our environment. After updating, proceed with installing the environment. If so desired, you can skip the steps that activate our environment by default, but you will need to make sure you activate it every time you start a Jupyter server.
 
-If you are unsure of how any of this works (or what we are even talking about here), we recommend you to uninstall conda, and then to follow the instructions on our webpages for installation.
+If you are unsure of how any of this works (or what we are even talking about here), we recommend you to uninstall `conda`, and then to follow the instructions on our webpages for installation.
 
 **What if I've already done the installation for Scientific Programming?**
 
@@ -31,3 +31,19 @@ You should already have an editor and Anaconda installed and can skip steps 1, 2
 If you have multiple environments installed, it is possible to switch between environments by using the following command in the terminal:
 
     conda activate <name_of_environment>
+
+**What if I've already done the installation for Introduction to Machine Learning 1?**
+
+If you have already installed the `minai` environment before (or if you are unsure), you can check your installation by running the following command:
+
+    conda env list
+
+This command will show you all currently installed environments. If the `minai` environment is not present, continue at step 4.
+
+**What if I would like to make sure that my environment is up to date?**
+
+In addition, if the environment is present, but you wish to update it for any reason, it is easiest to remove the environment entirely, and re-install it. To remove the environment, run the following command:
+
+    conda remove -n ENV_NAME --all
+
+Replacing `ENV_NAME` with the name of the environment you wish to remove. Afterwards, you can continue at step 4.
