@@ -4,9 +4,7 @@ In previous theory pages we've explained about the different types of loops, and
 
 Consider the following list:
 
-```
-l = ['a', 'b', 'c', 'd', 'e']
-```
+    l = ['a', 'b', 'c', 'd', 'e']
 
 We can print every element in the list using either of the following two design patterns:
 

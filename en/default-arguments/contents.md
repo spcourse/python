@@ -33,7 +33,7 @@ Suppose we have a function that takes a list of inputs and returns a long string
 
     def create_long_string(lst, separator='_', lowercase=True):
         if lowercase:
-            lst = [str(element).lower() for element in list]
+            lst = [str(element).lower() for element in lst]
         else:
             lst = [str(element) for element in lst]
 
@@ -42,7 +42,7 @@ Suppose we have a function that takes a list of inputs and returns a long string
 You can set the optional arguments `separator` and `lowercase` to desired values. Here are some examples of using this function:
 
     print(create_long_string(['a', 'B', 'c']))
-    print(create_long_string(['a', 'B', 'c'], '-')
+    print(create_long_string(['a', 'B', 'c'], '-'))
     print(create_long_string(['a', 'B', 'c'], '-', False))
 
 which would give the following output:
