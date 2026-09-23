@@ -29,3 +29,5 @@ Design is subjective to a certain extent. There are many choices you can make an
 - **Separate** blocks of code into functions with a clear name, and complex formula's into multiple lines of code. Not only does this make things easier to find, it also enables you to easily debug specific functions or lines of code by studying inputs and outputs. Try to keep code that performs a distinct task away from code that doesn't have anything to do with this specific task. This might cause you to repeat structures, but your code becomes easier to read.
 
 - Add layers of **abstraction**. If your code starts to get a bit long, you can often give pieces of code their own place; a new function. Even if you only use a function once, it can be useful to create one. Such a function has its own name, and if you read through the code quickly, you don't even have to read the entire contents of the function to understand it.
+
+For completeness, refer to the [styleguide](/python/en/style), which references some of these concepts and also explains in more detail what your code should look like.
