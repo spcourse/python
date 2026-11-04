@@ -1,6 +1,6 @@
 # From $$\Sigma$$ to `for`
 
-You have written `sum.py`before. It adds up all integers from `a` to `b`. The algorithm you wrote probably looks something like this:
+You have written `sum.py` before. It adds up all integers from `a` to `b`. The algorithm you wrote probably looks something like this:
 
     total = 0
     for i in range(a, b + 1):

@@ -23,7 +23,9 @@ Plan to move the student to the normal setup when whatever blocked `uv` is resol
 
 ## Install Python
 
-Download the latest Windows installer from <a href="https://www.python.org/downloads/" target="_blank" rel="noopener">python.org/downloads</a> and run it.
+Go to <a href="https://www.python.org/downloads/windows/" target="_blank" rel="noopener">python.org/downloads/windows</a>, download the installer for the newest **Python 3.14** release and run it.
+
+> Do not take the "latest" version (3.15 or newer). Not all course packages are available for it yet, so installing the requirements fails.
 
 On the first screen of the installer, **tick "Add python.exe to PATH"** before pressing Install. This is the step people miss, and it is the cause of most of the trouble that follows.
 
@@ -33,7 +35,7 @@ Then **close and reopen PowerShell** and check:
 python --version
 ~~~
 
-This should print the version you just installed.
+This should print a version starting with 3.14.
 
 > If instead the Microsoft Store opens, or you get a message about Python not being found, the PATH checkbox was missed. Run the installer again, choose **Modify**, and make sure the option is on. Do not install Python from the Microsoft Store.
 
@@ -54,7 +56,7 @@ python -c "import matplotlib; print('matplotlib works')"
 Get-Command checkpy
 ~~~
 
-You should see the version you installed, the message `matplotlib works`, and a path to `checkpy.exe` inside the Python `Scripts` folder.
+You should see version 3.14, the message `matplotlib works`, and a path to `checkpy.exe` inside the Python `Scripts` folder.
 
 > If `checkpy` is not found but the install reported success, the `Scripts` folder is not on the PATH. It sits next to `python.exe`; the installer normally adds it along with the PATH checkbox above.
 
