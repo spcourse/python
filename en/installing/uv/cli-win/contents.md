@@ -171,3 +171,23 @@ You do not need these for the course yet, but it is good to know that they exist
 In PowerShell these short names are nicknames for longer commands. The nicknames are the same as the ones used on macOS and Linux, which is handy when you follow instructions written for those systems. The options they accept are different, though, so look up the PowerShell version when you need more than the basics.
 
 Warning: `rm` deletes a file immediately. It does not go to the Recycle Bin, there is no undo, and you do not receive 200,-.
+
+## Extra tips
+
+Good to know is that you can also move one folder back up with `cd`:
+
+    cd ..
+
+Here `..` stands for the folder directly 'above' the current one. Want to go back even further up? You can with `..\..`. You can also tell `cd` not to move relatively to your current position, but instead move to an 'absolute' path in respect to your login folder:
+
+    cd $HOME\Programming\module1
+
+This immediately brings you back to the folder `module1` inside of `Programming`.
+
+### Terminal shortcuts
+
+- Oftentimes, you will want to execute a previous terminal command again. To navigate through the terminal commands you previously executed, use your `up` and `down` arrow keys.
+
+- Having typed in the start of a folder or filename, you can use the `Tab` key to autocomplete. This is especially useful for quick path navigation.
+
+    Try it out! Imagine you want to change directory to your `Programming` folder. In your terminal, type: `cd $HOME\Progr`  --  and then hit `Tab`, to autocomplete the path and command.
